@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — PsyAgenda</title>
+    <meta name="description" content="PsyAgenda Terms of Use">
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <img src="app-icon.png" alt="PsyAgenda">
+        <a href="index-en.html">PsyAgenda</a>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="guide-en.html">Usage Guide</a></li>
+        <li><a href="faq-en.html">FAQ</a></li>
+        <li><a href="terms-en.html" class="active">Terms of Use</a></li>
+        <li><a href="privacy-en.html">Privacy Policy</a></li>
+    </ul>
+</nav>
+
+<div class="lang-switch">
+    <a href="terms-tr.html">TR</a>
+    <a href="terms-en.html" class="active">EN</a>
+</div>
+
+<main>
+    <h1>Terms of Use</h1>
+    <p class="subtitle">PsyAgenda — Important Information and Terms of Use</p>
+
+    <p>PsyAgenda is a professional tool designed to help therapists (psychologists, psychiatrists, counselors) manage appointments, client records, psychological tests, session notes, budgets, and encrypted cloud synchronization from a single application. The app is available on Android, iOS (iPhone, iPad), macOS, and Windows (Desktop) platforms.</p>
+
+    <h2>1. Data Collection and Local Storage</h2>
+    <p>PsyAgenda collects and stores the following data categories to manage therapy processes:</p>
+    <ul>
+        <li><strong>Client Information:</strong> Only first name and surname are required. All other fields — phone, email, date of birth, gender, marital status, education, profession, and therapist notes — are entirely optional.</li>
+        <li><strong>Appointment/Session Data:</strong> Date, time, duration, pre-session notes, session notes, next-session notes, AI session analysis, session images, and alarm settings.</li>
+        <li><strong>Psychological Test Data:</strong> Rorschach test, Projective Drawing Test, and Manual Test data.</li>
+        <li><strong>Financial Data:</strong> Session fees, expenses, expense categories, and payment statuses.</li>
+    </ul>
+    <p>All data is stored exclusively on your device's local storage (SQLite database). No data leaves your device unless cloud synchronization is enabled.</p>
+
+    <h2>2. Data Privacy and Device Responsibility</h2>
+    <ul>
+        <li><strong>Data Security and Responsibility:</strong> Data stored in PsyAgenda may contain sensitive health information. The security and privacy of this data are entirely your responsibility.</li>
+        <li><strong>Physical Security:</strong> It is your duty to ensure the physical security of your device.</li>
+        <li><strong>Digital Security:</strong> Ensuring the digital security of your device is also your responsibility.</li>
+        <li><strong>Data Loss:</strong> The developer is not responsible for data loss resulting from loss, damage, theft, or software failure of the device.</li>
+        <li><strong>App Lock:</strong> PsyAgenda offers an optional password lock feature. If you forget both your app lock password and your security question answer, you will permanently lose access to your data.</li>
+    </ul>
+
+    <h2>3. Cloud Synchronization (Google Drive / iCloud)</h2>
+    <ul>
+        <li>PsyAgenda optionally allows you to synchronize your data across devices via cloud services. This feature is disabled by default.</li>
+        <li><strong>Google Drive:</strong> The application only requests the "drive.appDataFolder" scope (app-private, user-invisible storage).</li>
+        <li><strong>iCloud:</strong> On iOS and macOS devices, iCloud may optionally be used for synchronization.</li>
+        <li><strong>End-to-End Encryption:</strong> All data uploaded to cloud services is encrypted client-side with your synchronization password (PBKDF2 + AES-256-GCM).</li>
+        <li><strong>Sync Password:</strong> If you lose this password, you will permanently lose access to your encrypted data on the cloud.</li>
+    </ul>
+
+    <h2>4. AI Usage and Data Sharing</h2>
+    <ul>
+        <li>PsyAgenda uses the Google Gemini API for various clinical analysis features. AI features are optional.</li>
+        <li><strong>Data Transmitted:</strong> During AI analysis, session notes, client age and gender, test responses, and images are sent to the Google Gemini API.</li>
+        <li><strong>API Key:</strong> You use your own Google Gemini API key. This key is stored encrypted on your device.</li>
+        <li><strong>Anonymity Responsibility:</strong> It is entirely your responsibility not to enter any personal information that could reveal your client's identity into free-text fields.</li>
+        <li><strong>Clinical Responsibility:</strong> All evaluations produced by AI are solely supportive tools and preliminary analyses. All clinical responsibility rests with the user.</li>
+    </ul>
+
+    <h2>5. Backup and Data Recovery</h2>
+    <ul>
+        <li>You can export your data as an encrypted backup file (.thnbak).</li>
+        <li>Backup files are encrypted using AES-256-GCM. If you lose this password, you will not be able to restore your backup file.</li>
+        <li>Regular backups are entirely your responsibility.</li>
+    </ul>
+
+    <h2>6. Notifications and Communication</h2>
+    <ul>
+        <li>Session reminder and alarm notifications operate locally on your device.</li>
+        <li>The application optionally allows you to send appointment notifications to your clients via SMS, WhatsApp, or email.</li>
+    </ul>
+
+    <h2>7. License and Subscription</h2>
+    <ul>
+        <li><strong>Trial Period:</strong> The application offers a 30-day free trial from the initial installation.</li>
+        <li><strong>Expiration:</strong> When the trial period or subscription expires, the application switches to read-only mode.</li>
+        <li>All purchases are processed through Google Play Store or Apple App Store.</li>
+    </ul>
+
+    <h2>8. Reports and Exports</h2>
+    <p>PsyAgenda offers reports and data exports in DOCX (Word), PDF, and XLSX (Excel) formats. Exported files are not encrypted and are unprotected. Securing these files is your responsibility.</p>
+
+    <h2>9. Third-Party Services</h2>
+    <ul>
+        <li><strong>Google Gemini API:</strong> For AI analysis features (optional).</li>
+        <li><strong>Google Drive API:</strong> For cloud synchronization (optional).</li>
+        <li><strong>Apple iCloud:</strong> For cloud synchronization on iOS and macOS devices (optional).</li>
+        <li><strong>Google Play Store / Apple App Store:</strong> For subscription purchases.</li>
+        <li>Beyond these, PsyAgenda does not communicate with any analytics service, error reporting service, ad network, or external server.</li>
+    </ul>
+
+    <h2>10. Disclaimer of Liability</h2>
+    <ul>
+        <li>The developer is not responsible for data loss due to user error, incorrect AI analyses, API service disruptions, device failures, or password loss.</li>
+        <li><strong>Service Continuity:</strong> The uninterrupted operation of third-party services is not guaranteed.</li>
+        <li><strong>Medical/Clinical Notice:</strong> PsyAgenda is not a medical device. It is not designed as a diagnostic, treatment planning, or clinical decision-making tool.</li>
+    </ul>
+
+    <h2>11. Changes to Terms</h2>
+    <p>The developer reserves the right to update these terms of use. Updated terms will be presented to the user upon the next app update and will require re-acceptance.</p>
+
+    <p><strong>By using this application, you declare that you have read, understood, and agreed to all of the above terms.</strong></p>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 PsyAgenda. All rights reserved.</p>
+    <p>
+        <a href="privacy-en.html">Privacy Policy</a> &middot;
+        <a href="terms-en.html">Terms of Use</a>
+    </p>
+</footer>
+
+</body>
+</html>

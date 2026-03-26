@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanım Koşulları — PsyAgenda</title>
+    <meta name="description" content="PsyAgenda Kullanım Koşulları">
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <img src="app-icon.png" alt="PsyAgenda">
+        <a href="index.html">PsyAgenda</a>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="guide-tr.html">Kullanım Rehberi</a></li>
+        <li><a href="faq-tr.html">SSS</a></li>
+        <li><a href="terms-tr.html" class="active">Kullanım Koşulları</a></li>
+        <li><a href="privacy-tr.html">Gizlilik Politikası</a></li>
+    </ul>
+</nav>
+
+<div class="lang-switch">
+    <a href="terms-tr.html" class="active">TR</a>
+    <a href="terms-en.html">EN</a>
+</div>
+
+<main>
+    <h1>Kullanım Koşulları</h1>
+    <p class="subtitle">PsyAgenda — Önemli Bilgilendirmeler ve Kullanım Koşulları</p>
+
+    <p>PsyAgenda, terapistlerin (psikolog, psikiyatrist, psikolojik danışman) randevu, danışan takibi, psikolojik test, seans notu, bütçe ve şifreli bulut senkronizasyonu işlemlerini tek bir uygulama üzerinden yönetmesine yardımcı olmak amacıyla tasarlanmış profesyonel bir araçtır. Uygulama Android, iOS (iPhone, iPad), macOS ve Windows (Masaüstü) platformlarında kullanılabilir.</p>
+
+    <h2>1. Toplanan Veriler ve Yerel Depolama</h2>
+    <p>PsyAgenda, terapi süreçlerini yönetmek için aşağıdaki veri kategorilerini toplar ve saklar:</p>
+    <ul>
+        <li><strong>Danışan Bilgileri:</strong> Yalnızca ad ve soyad zorunludur. Telefon, e-posta, doğum tarihi, cinsiyet, medeni durum, eğitim durumu, meslek ve terapist notları gibi diğer tüm alanlar tamamen isteğe bağlıdır.</li>
+        <li><strong>Randevu/Seans Verileri:</strong> Tarih, saat, süre, seans öncesi notlar, seans notları, sonraki seans notları, YZ seans analizi, seans görselleri ve alarm ayarları.</li>
+        <li><strong>Psikolojik Test Verileri:</strong> Rorschach testi, Projektif Çizim Testi ve Manuel Test verileri.</li>
+        <li><strong>Finansal Veriler:</strong> Seans ücretleri, giderler, gider kategorileri ve ödeme durumları.</li>
+    </ul>
+    <p>Tüm bu veriler yalnızca cihazınızın yerel hafızasında saklanır (SQLite veritabanı). Bulut senkronizasyonu etkinleştirilmediği sürece hiçbir veri cihazınızın dışına çıkmaz.</p>
+
+    <h2>2. Veri Gizliliği ve Cihaz Sorumluluğu</h2>
+    <ul>
+        <li><strong>Veri Güvenliği ve Sorumluluk:</strong> PsyAgenda'da saklanan veriler hassas sağlık verileri içerebilir. Bu verilerin güvenliği ve mahremiyeti tamamen sizin sorumluluğunuzdadır.</li>
+        <li><strong>Fiziksel Güvenlik:</strong> Cihazınızın fiziksel güvenliğini sağlamak sizin görevinizdir.</li>
+        <li><strong>Dijital Güvenlik:</strong> Cihazınızın dijital güvenliğini sağlamak da sizin sorumluluğunuzdadır.</li>
+        <li><strong>Veri Kaybı:</strong> Cihazın kaybolması, bozulması, çalınması veya yazılımsal arıza sonucu yaşanacak veri kayıplarından geliştirici sorumlu değildir.</li>
+        <li><strong>Uygulama Kilidi:</strong> PsyAgenda, isteğe bağlı bir şifre kilidi özelliği sunar. Uygulama kilidi şifrenizi ve güvenlik sorusu cevabınızı unutmanız durumunda verilerinize bir daha erişmeniz mümkün olmayacaktır.</li>
+    </ul>
+
+    <h2>3. Bulut Senkronizasyonu (Google Drive / iCloud)</h2>
+    <ul>
+        <li>PsyAgenda, isteğe bağlı olarak verilerinizi bulut hizmetleri üzerinden cihazlar arası senkronize etme imkanı sunar. Bu özellik varsayılan olarak kapalıdır.</li>
+        <li><strong>Google Drive:</strong> Uygulama yalnızca "drive.appDataFolder" (uygulamaya özel, kullanıcı tarafından görünmeyen alan) iznini talep eder.</li>
+        <li><strong>iCloud:</strong> iOS ve macOS cihazlarda senkronizasyon için isteğe bağlı olarak iCloud kullanılabilir.</li>
+        <li><strong>Uçtan Uca Şifreleme:</strong> Bulut hizmetlerine yüklenen tüm veriler, sizin belirlediğiniz senkronizasyon şifresi ile istemci tarafında şifrelenir (PBKDF2 + AES-256-GCM).</li>
+        <li><strong>Senkronizasyon Şifresi:</strong> Bu şifreyi kaybetmeniz durumunda, bulut üzerindeki şifreli verilerinize bir daha erişemezsiniz.</li>
+    </ul>
+
+    <h2>4. Yapay Zeka Kullanımı ve Veri Paylaşımı</h2>
+    <ul>
+        <li>PsyAgenda, çeşitli klinik analiz özellikleri için Google Gemini API'sini kullanır. YZ özellikleri isteğe bağlıdır.</li>
+        <li><strong>Gönderilen Veriler:</strong> YZ analizi sırasında seans notları, danışan yaşı ve cinsiyeti, test yanıtları ve görseller Google Gemini API'sine gönderilir.</li>
+        <li><strong>API Anahtarı:</strong> Kendi Google Gemini API anahtarınızı kullanırsınız. Bu anahtar cihazınızda şifreli olarak saklanır.</li>
+        <li><strong>Anonimlik Sorumluluğu:</strong> Serbest metin alanlarına danışanınızın kimliğini ifşa edebilecek kişisel bilgi girmemek tamamen sizin sorumluluğunuzdadır.</li>
+        <li><strong>Klinik Sorumluluk:</strong> Yapay zeka tarafından üretilen tüm değerlendirmeler, yalnızca destekleyici araç ve ön analiz niteliğindedir. Tüm klinik sorumluluk kullanıcıya aittir.</li>
+    </ul>
+
+    <h2>5. Yedekleme ve Veri Kurtarma</h2>
+    <ul>
+        <li>Verilerinizi şifreli yedek dosyası (.thnbak) olarak dışa aktarabilirsiniz.</li>
+        <li>Yedek dosyaları AES-256-GCM ile şifrelenir. Bu şifreyi kaybetmeniz durumunda yedek dosyanızı geri yükleyemezsiniz.</li>
+        <li>Düzenli yedekleme yapılması tamamen sizin sorumluluğunuzdadır.</li>
+    </ul>
+
+    <h2>6. Bildirimler ve İletişim</h2>
+    <ul>
+        <li>Seans hatırlatma ve alarm bildirimleri cihazınızda yerel olarak çalışır.</li>
+        <li>Uygulama, isteğe bağlı olarak danışanlarınıza SMS, WhatsApp veya e-posta yoluyla randevu bildirimi göndermenizi sağlar.</li>
+    </ul>
+
+    <h2>7. Lisans ve Abonelik</h2>
+    <ul>
+        <li><strong>Deneme Süresi:</strong> Uygulama ilk kurulumdan itibaren 30 gün ücretsiz deneme süresi sunar.</li>
+        <li><strong>Süre Sonu:</strong> Deneme süresi veya abonelik sona erdiğinde uygulama salt okunur moduna geçer.</li>
+        <li>Tüm satın alma işlemleri Google Play Store veya Apple App Store üzerinden gerçekleştirilir.</li>
+    </ul>
+
+    <h2>8. Rapor ve Dışa Aktarım</h2>
+    <p>PsyAgenda, DOCX (Word), PDF ve XLSX (Excel) formatlarında rapor ve dışa aktarım imkanı sunar. Dışa aktarılan dosyalar şifrelenmez ve korumasız durumdadır. Bu dosyaların güvenliğini sağlamak sizin sorumluluğunuzdadır.</p>
+
+    <h2>9. Üçüncü Taraf Hizmetler</h2>
+    <ul>
+        <li><strong>Google Gemini API:</strong> YZ analiz özellikleri için (isteğe bağlı).</li>
+        <li><strong>Google Drive API:</strong> Bulut senkronizasyonu için (isteğe bağlı).</li>
+        <li><strong>Apple iCloud:</strong> iOS ve macOS cihazlarda bulut senkronizasyonu için (isteğe bağlı).</li>
+        <li><strong>Google Play Store / Apple App Store:</strong> Abonelik satın alma işlemleri için.</li>
+        <li>Bunların dışında PsyAgenda hiçbir analitik servisi, hata raporlama hizmeti, reklam ağı veya harici sunucu ile iletişim kurmaz.</li>
+    </ul>
+
+    <h2>10. Sorumluluk Reddi</h2>
+    <ul>
+        <li>Geliştirici, kullanıcı hatası kaynaklı veri kaybı, yanlış YZ analizleri, API hizmetlerindeki aksaklıklar, cihaz arızaları veya şifre kaybından kaynaklanan sorunlardan sorumlu değildir.</li>
+        <li><strong>Hizmet Sürekliliği:</strong> Üçüncü taraf hizmetlerin kesintisiz çalışacağı garanti edilmez.</li>
+        <li><strong>Tıbbi/Klinik Uyarı:</strong> PsyAgenda bir tıbbi cihaz değildir. Tanı koyma, tedavi planlama veya klinik karar verme aracı olarak tasarlanmamıştır.</li>
+    </ul>
+
+    <h2>11. Sözleşme Değişiklikleri</h2>
+    <p>Geliştirici, bu kullanım koşullarını güncelleme hakkını saklı tutar. Güncellenmiş koşullar, uygulama güncellemesiyle birlikte kullanıcıya bildirilecek ve yeniden onay istenecektir.</p>
+
+    <p><strong>Bu uygulamayı kullanarak yukarıdaki tüm koşulları okuduğunuzu, anladığınızı ve kabul ettiğinizi beyan etmiş olursunuz.</strong></p>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 PsyAgenda. Tüm hakları saklıdır.</p>
+    <p>
+        <a href="privacy-tr.html">Gizlilik Politikası</a> &middot;
+        <a href="terms-tr.html">Kullanım Koşulları</a>
+    </p>
+</footer>
+
+</body>
+</html>

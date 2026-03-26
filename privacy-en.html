@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — PsyAgenda</title>
+    <meta name="description" content="PsyAgenda Privacy Policy">
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <img src="app-icon.png" alt="PsyAgenda">
+        <a href="index-en.html">PsyAgenda</a>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="guide-en.html">Usage Guide</a></li>
+        <li><a href="faq-en.html">FAQ</a></li>
+        <li><a href="terms-en.html">Terms of Use</a></li>
+        <li><a href="privacy-en.html" class="active">Privacy Policy</a></li>
+    </ul>
+</nav>
+
+<div class="lang-switch">
+    <a href="privacy-tr.html">TR</a>
+    <a href="privacy-en.html" class="active">EN</a>
+</div>
+
+<main>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Last updated: March 2026</p>
+
+    <h2>Data Controller</h2>
+    <p>This application is developed by Mustafa Can. For questions regarding data processing, you can contact <strong>psyagenda.info@gmail.com</strong>.</p>
+
+    <h2>Data Collected and Processed</h2>
+    <p>The application stores the following data categories locally on your device only:</p>
+    <ul>
+        <li><strong>Client information:</strong> Name (required), phone, email, address, date of birth, notes (all optional).</li>
+        <li><strong>Appointment and session data:</strong> Date, time, duration, session notes, pre/post-session notes.</li>
+        <li><strong>Test data:</strong> Rorschach, drawing test, and manual test records, images, and AI evaluations.</li>
+        <li><strong>Financial data:</strong> Session fees, income-expense records, payment tracking.</li>
+        <li><strong>Settings and preferences:</strong> Language, currency, calendar preferences, notification templates.</li>
+    </ul>
+
+    <h2>Data Storage</h2>
+    <ul>
+        <li>All data is stored only in the local database (SQLite or IndexedDB) on the user's device.</li>
+        <li>No third party, including the developer, can access this data.</li>
+        <li>When app lock is enabled, data is protected by a password.</li>
+    </ul>
+
+    <h2>Synchronization and Cloud Storage</h2>
+    <ul>
+        <li>Synchronization is entirely optional and disabled by default.</li>
+        <li>When enabled, data is encrypted with a user-defined password using AES-256-GCM standard and stored only in the user's own Google Drive account in the private app data folder (appDataFolder).</li>
+        <li>The encryption key is derived only on the user's device; no one, including the developer, can decrypt the data.</li>
+    </ul>
+
+    <h2>AI Usage and Data Sharing</h2>
+    <ul>
+        <li>AI features are entirely optional. Users enter their own API key and decide which data to process.</li>
+        <li>When AI is used, only the relevant session notes, test data, or images are sent to the Google Gemini API.</li>
+        <li>Client identifying information (name, phone, email, address) is never sent to the AI service.</li>
+        <li>Google's data usage policies vary depending on the user's API plan (free/paid). Detailed information is available in the in-app API guide.</li>
+    </ul>
+
+    <h2>Third-Party Services</h2>
+    <ul>
+        <li><strong>Google Gemini API:</strong> Optional AI analysis (with the user's own API key).</li>
+        <li><strong>Google Drive:</strong> Optional encrypted synchronization (the user's own account).</li>
+        <li><strong>Google Play / App Store:</strong> App distribution and license verification.</li>
+        <li>No data is transferred to any third-party service beyond these.</li>
+    </ul>
+
+    <h2>User Rights</h2>
+    <p>All data is under the user's control. Users can at any time:</p>
+    <ul>
+        <li>Back up and export their data.</li>
+        <li>Permanently delete all data from the device.</li>
+        <li>Remove the sync connection and delete the cloud copy.</li>
+        <li>Stop using AI and synchronization features.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>For questions regarding the privacy policy, you can contact <strong>psyagenda.info@gmail.com</strong>.</p>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 PsyAgenda. All rights reserved.</p>
+    <p>
+        <a href="privacy-en.html">Privacy Policy</a> &middot;
+        <a href="terms-en.html">Terms of Use</a>
+    </p>
+</footer>
+
+</body>
+</html>

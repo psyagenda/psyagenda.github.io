@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik Politikası — PsyAgenda</title>
+    <meta name="description" content="PsyAgenda Gizlilik Politikası ve KVKK Bilgilendirmesi">
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <img src="app-icon.png" alt="PsyAgenda">
+        <a href="index.html">PsyAgenda</a>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="guide-tr.html">Kullanım Rehberi</a></li>
+        <li><a href="faq-tr.html">SSS</a></li>
+        <li><a href="terms-tr.html">Kullanım Koşulları</a></li>
+        <li><a href="privacy-tr.html" class="active">Gizlilik Politikası</a></li>
+    </ul>
+</nav>
+
+<div class="lang-switch">
+    <a href="privacy-tr.html" class="active">TR</a>
+    <a href="privacy-en.html">EN</a>
+</div>
+
+<main>
+    <h1>Gizlilik Politikası</h1>
+    <p class="subtitle">Son güncelleme: Mart 2026</p>
+
+    <h2>Veri Sorumlusu</h2>
+    <p>Bu uygulama Mustafa Can tarafından geliştirilmiştir. Veri işleme süreçlerine ilişkin sorularınız için <strong>psyagenda.info@gmail.com</strong> adresinden iletişime geçebilirsiniz.</p>
+
+    <h2>Toplanan ve İşlenen Veriler</h2>
+    <p>Uygulama aşağıdaki veri kategorilerini yalnızca cihazınızda yerel olarak saklar:</p>
+    <ul>
+        <li><strong>Danışan bilgileri:</strong> Ad-soyad (zorunlu), telefon, e-posta, adres, doğum tarihi, notlar (tümü isteğe bağlı).</li>
+        <li><strong>Randevu ve seans verileri:</strong> Tarih, saat, süre, seans notları, seans öncesi/sonrası notlar.</li>
+        <li><strong>Test verileri:</strong> Rorschach, çizim testi ve manuel test kayıtları, görseller ve AI değerlendirmeleri.</li>
+        <li><strong>Finansal veriler:</strong> Seans ücretleri, gelir-gider kayıtları, ödeme takibi.</li>
+        <li><strong>Ayarlar ve tercihler:</strong> Dil, para birimi, takvim tercihleri, bildirim şablonları.</li>
+    </ul>
+
+    <h2>Verilerin Saklanması</h2>
+    <ul>
+        <li>Tüm veriler yalnızca kullanıcının cihazında yerel veritabanında (SQLite veya IndexedDB) saklanır.</li>
+        <li>Geliştirici dahil hiçbir üçüncü taraf bu verilere erişemez.</li>
+        <li>Uygulama kilidi etkinleştirildiğinde veriler şifre koruması altındadır.</li>
+    </ul>
+
+    <h2>Senkronizasyon ve Bulut Depolama</h2>
+    <ul>
+        <li>Senkronizasyon tamamen isteğe bağlıdır ve varsayılan olarak kapalıdır.</li>
+        <li>Etkinleştirildiğinde veriler kullanıcının belirlediği şifre ile AES-256-GCM standardında şifrelenir ve yalnızca kullanıcının kendi Google Drive hesabındaki özel uygulama alanında (appDataFolder) saklanır.</li>
+        <li>Şifreleme anahtarı yalnızca kullanıcının cihazında türetilir; geliştirici dahil hiç kimse şifrelenmiş verileri çözemez.</li>
+    </ul>
+
+    <h2>Yapay Zeka Kullanımı ve Veri Paylaşımı</h2>
+    <ul>
+        <li>AI özellikleri tamamen isteğe bağlıdır. Kullanıcı kendi API anahtarını girer ve hangi verilerin işleneceğine kendisi karar verir.</li>
+        <li>AI kullanıldığında yalnızca ilgili seans notları, test verileri veya görseller Google Gemini API'ye gönderilir.</li>
+        <li>Danışan kimlik bilgileri (ad-soyad, telefon, e-posta, adres) hiçbir koşulda AI servisine gönderilmez.</li>
+        <li>Google'ın veri kullanım politikaları, kullanıcının API planına (ücretsiz/ücretli) göre değişir. Detaylı bilgi uygulama içi API rehberinde mevcuttur.</li>
+    </ul>
+
+    <h2>Üçüncü Taraf Hizmetler</h2>
+    <ul>
+        <li><strong>Google Gemini API:</strong> İsteğe bağlı AI analiz (kullanıcının kendi API anahtarı ile).</li>
+        <li><strong>Google Drive:</strong> İsteğe bağlı şifreli senkronizasyon (kullanıcının kendi hesabı).</li>
+        <li><strong>Google Play / App Store:</strong> Uygulama dağıtımı ve lisans doğrulama.</li>
+        <li>Bunlar dışında hiçbir üçüncü taraf servisine veri aktarımı yapılmaz.</li>
+    </ul>
+
+    <h2>Kullanıcı Hakları</h2>
+    <p>Tüm veriler kullanıcının kontrolündedir. Kullanıcı istediği zaman:</p>
+    <ul>
+        <li>Verilerini yedekleyebilir ve dışa aktarabilir.</li>
+        <li>Tüm verilerini cihazdan kalıcı olarak silebilir.</li>
+        <li>Senkronizasyon bağlantısını kaldırarak bulut kopyasını silebilir.</li>
+        <li>AI ve senkronizasyon özelliklerini kullanmayı bırakabilir.</li>
+    </ul>
+
+    <h2>İletişim</h2>
+    <p>Gizlilik politikası ile ilgili sorularınız için <strong>psyagenda.info@gmail.com</strong> adresinden iletişime geçebilirsiniz.</p>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 PsyAgenda. Tüm hakları saklıdır.</p>
+    <p>
+        <a href="privacy-tr.html">Gizlilik Politikası</a> &middot;
+        <a href="terms-tr.html">Kullanım Koşulları</a>
+    </p>
+</footer>
+
+</body>
+</html>
