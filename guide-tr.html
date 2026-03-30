@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kullanım Rehberi — PsyAgenda</title>
-    <meta name="description" content="PsyAgenda kullanım rehberi: özellikler, başlangıç adımları ve ipuçları.">
+    <meta name="description" content="PsyAgenda kullanım rehberi: danışan yönetimi, randevu oluşturma, takvim, testler, yapay zeka, senkronizasyon ve daha fazlası.">
     <link rel="icon" type="image/png" href="app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,39 +37,516 @@
 
 <main>
     <h1>Kullanım Rehberi</h1>
-    <p class="subtitle">PsyAgenda, terapistlerin seans, danışan, test ve finansal süreçlerini tek bir yerden yönetmesini sağlayan akıllı bir ajanda uygulamasıdır.</p>
+    <p class="subtitle">PsyAgenda'nın tüm özelliklerini adım adım anlatan kapsamlı kullanım kılavuzu. Her bölümü açarak detaylı talimatları görüntüleyebilirsiniz.</p>
 
-    <h2>Ana Özellikler</h2>
-    <ul>
-        <li><strong>Takvim ve Randevu Yönetimi:</strong> Günlük, haftalık ve aylık takvim görünümleriyle randevularınızı kolayca planlayın. Tekrarlayan seanslar, sürükle-bırak ile taşıma ve çakışma kontrolü desteklenir.</li>
-        <li><strong>Danışan Yönetimi:</strong> Her danışan için detaylı kart oluşturun. Seans geçmişi, notlar, testler ve finansal bilgiler tek bir yerde toplanır. Danışan kartını Word veya PDF olarak dışa aktarabilirsiniz.</li>
-        <li><strong>Yapay Zeka Destekli Analiz:</strong> Google Gemini API entegrasyonu ile seans notlarınızı analiz edin, Rorschach ve çizim testlerini değerlendirin, danışan hakkında genel AI raporu oluşturun.</li>
-        <li><strong>Test Modülleri:</strong> Rorschach, projektif çizim testleri ve manuel testleri dijital ortamda uygulayın ve sonuçlandırın. Test raporlarını Word/PDF olarak indirin.</li>
-        <li><strong>Bütçe ve Finansal Takip:</strong> Seans ücretleri, gelir-gider takibi, vadesi geçmiş borç uyarıları ve finansal analiz grafikleri ile mali durumunuzu yönetin.</li>
-        <li><strong>Bilgilendirme Mesajları:</strong> Danışanlarınıza WhatsApp, SMS veya e-posta ile randevu bilgilendirmesi ve hatırlatma mesajı gönderin.</li>
-        <li><strong>Senkronizasyon:</strong> Google Drive üzerinden cihazlar arası şifreli senkronizasyon yapın. Tüm veriler AES-256 ile şifrelenir; sunucuda açık metin saklanmaz.</li>
-        <li><strong>Yedekleme ve Geri Yükleme:</strong> Verilerinizi şifreli .thnbak dosyası olarak yedekleyin; istediğiniz zaman geri yükleyin.</li>
-        <li><strong>%100 Yerel Veri Depolama:</strong> Tüm verileriniz yalnızca sizin cihazınızda saklanır. Senkronizasyon ve AI kullanımı tamamen isteğe bağlıdır.</li>
-    </ul>
+    <!-- 1. İlk Adımlar -->
+    <details class="guide-section">
+        <summary>İlk Adımlar</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">PsyAgenda'yı ilk kez kullanırken yapmanız gereken temel ayarları bu bölümde bulabilirsiniz.</p>
 
-    <h2>Başlarken</h2>
-    <ol>
-        <li><strong>Dil ve Para Birimi:</strong> İlk açılışta uygulamanın dilini ve para birimini seçin. Bunları daha sonra Ayarlar'dan değiştirebilirsiniz.</li>
-        <li><strong>Uygulama Kilidi:</strong> Verilerinizi korumak için bir uygulama şifresi belirleyin. Güvenlik sorusunu mutlaka doldurun — şifrenizi unutursanız tek kurtarma yöntemdir.</li>
-        <li><strong>İşletme Adı:</strong> Anasayfa başlığında görünecek işletme adınızı Ayarlar > Kişiselleştirme'den belirleyin.</li>
-        <li><strong>Danışan Ekleyin:</strong> Danışanlar ekranından ilk danışanınızı ekleyin. Ad-soyad zorunludur; diğer alanlar isteğe bağlıdır.</li>
-        <li><strong>Randevu Oluşturun:</strong> Takvim ekranında istediğiniz saate tıklayarak randevu oluşturun. Danışanı seçin, seans süresini ayarlayın ve kaydedin.</li>
-        <li><strong>Senkronizasyon (İsteğe Bağlı):</strong> Birden fazla cihazda kullanmak istiyorsanız Ayarlar > Senkronizasyon'dan Google hesabınızla bağlantı kurun ve bir senkronizasyon şifresi belirleyin.</li>
-    </ol>
+            <h4>Ana Ekranı Tanıma</h4>
+            <ol>
+                <li>Uygulamayı açtığınızda <strong>Ana Sayfa</strong> ekranı karşınıza gelir.</li>
+                <li>Üst kısımda işletme adınız ve <strong>Ayarlar</strong> (dişli çark) ile <strong>Senkronizasyon</strong> butonları yer alır.</li>
+                <li>Ortada dört büyük navigasyon butonu bulunur: <strong>Takvim</strong>, <strong>Danışanlar</strong>, <strong>Bütçe</strong> ve <strong>Test Modülü</strong>.</li>
+                <li><strong>Günün Notları</strong> bölümünde bugünkü seanslarınız listelenir. Biten seansları göz ikonuyla gizleyebilirsiniz.</li>
+            </ol>
 
-    <h2>İpuçları</h2>
-    <ul>
-        <li>Randevu oluşturma sırasında "Hızlı Danışan Ekle" ile listeye dönmeden yeni danışan oluşturabilirsiniz.</li>
-        <li>Takvimde randevuları sürükleyerek farklı saatlere taşıyabilirsiniz.</li>
-        <li>Anasayfada biten seansları göz ikonuyla gizleyerek gününüzün geri kalanına odaklanabilirsiniz.</li>
-        <li>Danışan kartı raporu, o danışana ait tüm seans notlarını, test sonuçlarını ve AI değerlendirmelerini içerir.</li>
-        <li>AI özellikleri için Ayarlar > API Yönetimi'nden Google Gemini API anahtarınızı girin. Detaylı rehber için bilgi ikonuna tıklayın.</li>
-    </ul>
+            <h4>Dil Değiştirme</h4>
+            <ol>
+                <li>Ana ekranda sağ üstteki <strong>Ayarlar</strong> (dişli çark) ikonuna dokunun.</li>
+                <li><strong>Kişiselleştirme</strong> sekmesinde <strong>Dil</strong> alanına dokunun.</li>
+                <li>Açılan listeden istediğiniz dili seçin ve onaylayın. Uygulama anında seçtiğiniz dile geçer.</li>
+            </ol>
+
+            <h4>Para Birimi Ayarlama</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; Kişiselleştirme</strong> bölümüne gidin.</li>
+                <li><strong>Para Birimi</strong> alanına dokunun.</li>
+                <li>Listeden kullanmak istediğiniz para birimini seçin. Tüm ücret ve bütçe alanları bu birimle gösterilecektir.</li>
+            </ol>
+
+            <h4>Standart Seans Ücreti Belirleme</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; Kişiselleştirme</strong> bölümüne gidin.</li>
+                <li><strong>Standart Seans Ücreti</strong> alanına dokunun.</li>
+                <li>Varsayılan seans ücretinizi girin ve <strong>Kaydet</strong> butonuna basın. Bu ücret yeni randevu oluştururken otomatik olarak gelir.</li>
+            </ol>
+
+            <h4>İşletme Adı Ayarlama</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; Kişiselleştirme</strong> bölümüne gidin.</li>
+                <li><strong>İşletme Adı</strong> alanına klinik veya ofis adınızı yazın.</li>
+                <li>Girdiğiniz isim ana ekranın üst kısmında başlık olarak görünecektir.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 2. Danışan Yönetimi -->
+    <details class="guide-section">
+        <summary>Danışan Yönetimi</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Danışanlarınızı ekleyebilir, düzenleyebilir, detaylarını görüntüleyebilir ve raporlarını indirebilirsiniz.</p>
+
+            <h4>Yeni Danışan Ekleme</h4>
+            <ol>
+                <li>Alt menüden veya ana ekrandan <strong>Danışanlar</strong> ekranına gidin.</li>
+                <li>Üstteki <strong>Yeni Danışan Kartı</strong> butonuna dokunun.</li>
+                <li>Açılan formda <strong>Ad</strong> ve <strong>Soyad</strong> alanlarını doldurun (zorunlu).</li>
+                <li>İsteğe bağlı olarak telefon, e-posta, doğum tarihi, cinsiyet, medeni durum, meslek, eğitim durumu ve özel notlar alanlarını doldurun.</li>
+                <li><strong>Net Seans Ücreti</strong> alanına bu danışana özel ücret girebilirsiniz. Boş bırakırsanız standart ücret kullanılır.</li>
+                <li><strong>Kaydet</strong> butonuna basarak danışanı oluşturun.</li>
+            </ol>
+
+            <h4>Danışan Bilgilerini Düzenleme</h4>
+            <ol>
+                <li><strong>Danışanlar</strong> ekranında düzenlemek istediğiniz danışanın adına dokunun.</li>
+                <li>Açılan detay ekranında sağ üstteki <strong>Düzenle</strong> (kalem ikonu) butonuna dokunun.</li>
+                <li>İstediğiniz alanları güncelleyin.</li>
+                <li><strong>Kaydet</strong> butonuna basarak değişiklikleri kaydedin.</li>
+            </ol>
+
+            <h4>Danışan Detaylarını Görüntüleme</h4>
+            <ol>
+                <li><strong>Danışanlar</strong> ekranında danışanın adına dokunun.</li>
+                <li>Açılan detay ekranında danışanın tüm bilgileri, seans geçmişi, test kayıtları ve finansal bilgileri görüntülenir.</li>
+                <li>Seans geçmişinde her seansın tarih, süre, notlar ve ödeme durumu listelenir. Bir seansa dokunarak o seansın detayına gidebilirsiniz.</li>
+                <li>Arama çubuğunu kullanarak seans geçmişinde anahtar kelimeyle arama yapabilirsiniz.</li>
+            </ol>
+
+            <h4>Danışanı Aktif/Pasif Yapma</h4>
+            <ol>
+                <li>Danışan detay ekranını açın.</li>
+                <li>Üst kısımdaki <strong>Durum Değiştir</strong> butonuna dokunun.</li>
+                <li>Pasif danışanlar listede gri görünür ve varsayılan olarak gizlenir. <strong>Danışanlar</strong> ekranındaki filtre ile pasif danışanları gösterebilirsiniz.</li>
+            </ol>
+
+            <h4>Danışan Kartını İndirme</h4>
+            <ol>
+                <li>Danışan detay ekranını açın.</li>
+                <li><strong>Rapor İndir</strong> (indirme ikonu) butonuna dokunun.</li>
+                <li>Açılan pencerede rapor formatını seçin: <strong>Word</strong> veya <strong>PDF</strong>.</li>
+                <li>Rapor otomatik olarak oluşturulup cihazınıza indirilir. Rapor, danışanın bilgilerini, seans geçmişini, test sonuçlarını ve AI değerlendirmelerini içerir.</li>
+            </ol>
+
+            <h4>Danışan Silme</h4>
+            <ol>
+                <li>Danışan detay ekranını açın.</li>
+                <li><strong>Sil</strong> (çöp kutusu ikonu) butonuna dokunun.</li>
+                <li>Onay penceresinde <strong>Evet</strong> butonuna basarak silme işlemini onaylayın. Bu işlem geri alınamaz.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 3. Randevu ve Seans Yönetimi -->
+    <details class="guide-section">
+        <summary>Randevu ve Seans Yönetimi</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Randevu oluşturma, düzenleme, tekrarlayan seanslar ve seans notları hakkında bilgi edinebilirsiniz.</p>
+
+            <h4>Yeni Randevu Oluşturma</h4>
+            <ol>
+                <li><strong>Takvim</strong> ekranına gidin.</li>
+                <li>Randevu oluşturmak istediğiniz gün ve saate dokunun. Randevu modalı açılır.</li>
+                <li><strong>Kayıtlı Danışan</strong> açılır listesinden danışanınızı seçin. Arama kutusuna yazarak filtreleyebilirsiniz.</li>
+                <li><strong>Süre</strong> alanından seans süresini seçin (30, 45, 60 veya 90 dakika).</li>
+                <li>Gerekirse <strong>Ön Seans Notları</strong> alanına seans öncesi notlarınızı yazın.</li>
+                <li><strong>Kaydet</strong> veya <strong>Kaydet ve Çık</strong> butonuna basın.</li>
+            </ol>
+
+            <h4>Randevu Sırasında Hızlı Danışan Ekleme</h4>
+            <ol>
+                <li>Randevu modalında <strong>Kayıtlı Danışan</strong> yerine <strong>Hızlı Danışan Ekle</strong> alanına danışanın adını yazın.</li>
+                <li>Randevuyu kaydettiğinizde, yeni danışan otomatik olarak sisteme eklenir.</li>
+            </ol>
+
+            <h4>Randevu Düzenleme</h4>
+            <ol>
+                <li>Takvimde veya ana ekranda düzenlemek istediğiniz randevuya dokunun.</li>
+                <li>Açılan modalda istediğiniz alanları değiştirin (saat, süre, notlar, ücret vb.).</li>
+                <li><strong>Kaydet</strong> butonuna basın. Randevu bir serinin parçasıysa güncelleme kapsamını seçmeniz istenir.</li>
+            </ol>
+
+            <h4>Tekrarlayan Randevu Oluşturma</h4>
+            <ol>
+                <li>Yeni randevu oluştururken <strong>Tekrarla</strong> kutusunu işaretleyin.</li>
+                <li><strong>Sıklık</strong> alanından tekrar aralığını seçin: 1 hafta, 2 hafta, 3 hafta veya aylık.</li>
+                <li><strong>Tekrar Sayısı</strong> alanına kaç seans oluşturulacağını girin (1-52 arası).</li>
+                <li><strong>Kaydet</strong> butonuna basın. Belirtilen sıklıkta otomatik olarak randevular oluşturulur.</li>
+                <li>Seri sonuna yaklaştığınızda randevu modalında <strong>Seriyi Uzat</strong> butonu görünür. Bu butonla ek seanslar ekleyebilirsiniz.</li>
+            </ol>
+
+            <h4>Seans Notları Yazma</h4>
+            <ol>
+                <li>Randevu modalında üç farklı not alanı bulunur:</li>
+                <li><strong>Ön Seans Notları</strong> (turuncu): Seans öncesinde hazırlamak istediğiniz notlar.</li>
+                <li><strong>Seans Notları</strong> (yeşil): Seans sırasında veya sonrasında yazdığınız notlar. Bu alan AI analizi için kullanılır.</li>
+                <li><strong>Sonraki Seans Notları</strong> (mor): Bir sonraki seansta ele alınacak konular.</li>
+                <li>Her not alanının yanındaki <strong>Okuma Modu</strong> butonu ile notları tam ekranda okuyabilirsiniz.</li>
+            </ol>
+
+            <h4>Zaman Bloklama (Meşgul İşaretleme)</h4>
+            <ol>
+                <li>Randevu modalında <strong>Bu saati blokla</strong> kutusunu işaretleyin.</li>
+                <li>Bu mod danışan ve ücret alanlarını devre dışı bırakır. Sadece tarih, saat ve süre ayarlanır.</li>
+                <li><strong>Kaydet</strong> butonuna basın. Takvimde bu zaman dilimi "Meşgul" olarak işaretlenir.</li>
+                <li>Bloklanmış zamanlar da tekrarlayan olarak ayarlanabilir.</li>
+            </ol>
+
+            <h4>Randevu Silme</h4>
+            <ol>
+                <li>Silmek istediğiniz randevuya dokunarak modalı açın.</li>
+                <li>Sol alttaki kırmızı <strong>Sil</strong> butonuna dokunun.</li>
+                <li>Onay penceresinde <strong>Evet</strong> butonuna basın.</li>
+                <li>Tekrarlayan bir randevuysa silme kapsamını seçin: <strong>Sadece bu seans</strong>, <strong>Bu ve sonraki seanslar</strong> veya <strong>Tüm seanslar</strong>.</li>
+            </ol>
+
+            <h4>Ödeme Takibi</h4>
+            <ol>
+                <li>Randevu modalında <strong>Seans Notları</strong> bölümünün altında <strong>Tahsil Edildi</strong> kutucuğu bulunur.</li>
+                <li>Danışan ödeme yaptığında bu kutuyu işaretleyin.</li>
+                <li>Ödenmemiş seanslar biriktiğinde, danışanın randevu modalında <strong>birikmiş borç uyarısı</strong> görüntülenir.</li>
+                <li>Tüm ödemeleri <strong>Bütçe &gt; Gelirler</strong> sekmesinden takip edebilirsiniz.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 4. Takvim Kullanımı -->
+    <details class="guide-section">
+        <summary>Takvim Kullanımı</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Takvim ekranı randevularınızı görsel olarak yönetmenizi sağlar.</p>
+
+            <h4>Aylık Görünüm</h4>
+            <ol>
+                <li><strong>Takvim</strong> ekranına gidin. Varsayılan olarak aylık görünüm açılır.</li>
+                <li>Her gün hücresinde o güne ait randevular kısa başlıklarla listelenir.</li>
+                <li>Bir güne dokunarak o günün detaylı randevu listesini görebilirsiniz.</li>
+                <li>Üstteki <strong>◀</strong> ve <strong>▶</strong> oklarıyla aylar arasında gezinin. <strong>Bugün</strong> butonuyla bugüne dönün.</li>
+            </ol>
+
+            <h4>Dinamik (Haftalık) Görünüm</h4>
+            <ol>
+                <li>Takvim ekranında sağ üstteki <strong>görünüm değiştir</strong> butonuna dokunun.</li>
+                <li>Dinamik görünümde günler yan yana sütunlar halinde, saatler satır satır gösterilir (08:00-21:00).</li>
+                <li>Gösterilecek gün sayısını <strong>Ayarlar &gt; Kişiselleştirme &gt; Dinamik Görünüm Gün Sayısı</strong>'ndan ayarlayabilirsiniz.</li>
+                <li>Bir saat dilimine dokunarak o zaman için yeni randevu oluşturabilirsiniz.</li>
+            </ol>
+
+            <h4>Takvimde Gezinme</h4>
+            <ol>
+                <li><strong>◀</strong> / <strong>▶</strong> okları ile bir dönem ileri veya geri gidin.</li>
+                <li><strong>◀◀</strong> / <strong>▶▶</strong> çift okları ile birden fazla dönem atlayın.</li>
+                <li><strong>Bugün</strong> butonuna dokunarak bugüne dönün.</li>
+                <li>Takvimde randevuları sürükle-bırak ile farklı saatlere taşıyabilirsiniz.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 5. Fotoğraf ve Ekler -->
+    <details class="guide-section">
+        <summary>Fotoğraf ve Ekler</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Seanslara fotoğraf ekleyebilir, kamerayla çekim yapabilir ve el yazısı tanıma özelliğini kullanabilirsiniz.</p>
+
+            <h4>Seansa Fotoğraf Ekleme</h4>
+            <ol>
+                <li>Randevu modalını açın.</li>
+                <li><strong>Seans Görselleri</strong> bölümünde <strong>Dosya Yükle</strong> butonuna dokunun.</li>
+                <li>Cihazınızdan bir resim dosyası seçin. Seçilen resim küçük resim olarak seans görselleri alanında görünür.</li>
+                <li>Küçük resme dokunarak tam ekran görüntüleyicide açabilirsiniz.</li>
+                <li>Silmek için küçük resmin sağ üstündeki kırmızı <strong>✕</strong> butonuna dokunun.</li>
+            </ol>
+
+            <h4>Kamera ile Fotoğraf Çekme (Android)</h4>
+            <ol>
+                <li>Randevu modalında <strong>Seans Görselleri</strong> bölümünde <strong>Fotoğraf Ekle</strong> butonuna dokunun.</li>
+                <li>Kamera izni istendiğinde <strong>İzin Ver</strong> butonuna basın.</li>
+                <li>Kamera görüntüsü açılır. Fotoğraf çekmek için <strong>Çek</strong> butonuna dokunun.</li>
+                <li>Çekilen fotoğraf otomatik olarak seans görsellerine eklenir.</li>
+            </ol>
+
+            <h4>El Yazısı Tanıma</h4>
+            <ol>
+                <li>Bir seans görseli ekledikten sonra, küçük resmin sol altındaki <strong>El Yazısını Dijitalleştir</strong> butonuna dokunun.</li>
+                <li>Açılan pencerede el yazısı stilini seçin.</li>
+                <li>AI, görseldeki el yazısını metne dönüştürür ve <strong>Seans Notları</strong> alanına ekler.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 6. Bütçe ve Finans Yönetimi -->
+    <details class="guide-section">
+        <summary>Bütçe ve Finans Yönetimi</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Gelir-gider takibi, finansal analiz ve dışa aktarma özelliklerini bu bölümden öğrenebilirsiniz.</p>
+
+            <h4>Gelir Takibi</h4>
+            <ol>
+                <li><strong>Bütçe</strong> ekranına gidin. Varsayılan olarak <strong>Gelirler</strong> sekmesi açılır.</li>
+                <li>Tüm seanslarınız tarih, danışan adı, ücret ve tahsil durumu ile listelenir.</li>
+                <li>Üstteki tarih filtresini kullanarak belirli bir ay veya yıla göre filtreleme yapabilirsiniz.</li>
+                <li>Danışan filtresini kullanarak belirli bir danışanın ödemelerini görebilirsiniz.</li>
+                <li>Tablonun altında toplam gelir ve tahsil edilen/edilmeyen özet bilgileri görüntülenir.</li>
+            </ol>
+
+            <h4>Gider Ekleme ve Yönetme</h4>
+            <ol>
+                <li><strong>Bütçe &gt; Giderler</strong> sekmesine geçin.</li>
+                <li><strong>Yeni Gider Ekle</strong> butonuna dokunun.</li>
+                <li>Açılan formda tarih, açıklama, kategori ve tutar bilgilerini girin.</li>
+                <li><strong>Kaydet</strong> butonuna basın. Gider listeye eklenir.</li>
+                <li>Mevcut bir gideri düzenlemek veya silmek için üzerine dokunun.</li>
+            </ol>
+
+            <h4>Gider Kategorileri Yönetme</h4>
+            <ol>
+                <li><strong>Bütçe &gt; Giderler</strong> sekmesinde <strong>Gider Kategorilerini Yönet</strong> butonuna dokunun.</li>
+                <li>Yeni kategori eklemek için üstteki alana kategori adını yazın ve <strong>Ekle</strong> butonuna basın.</li>
+                <li>Mevcut kategorileri aktif/pasif yapabilir veya silebilirsiniz.</li>
+            </ol>
+
+            <h4>Finansal Analiz Grafikleri</h4>
+            <ol>
+                <li><strong>Bütçe &gt; Analiz</strong> sekmesine geçin.</li>
+                <li>Üst kısımda toplam gelir, toplam gider ve net kâr/zarar özet kartları görüntülenir.</li>
+                <li>12 aylık gelir-gider trend grafiği ve seans sayısı grafiği otomatik olarak yüklenir.</li>
+                <li>Aylık kırılım kartlarında her ayın gelir, gider, net durum ve seans detaylarını görebilirsiniz.</li>
+            </ol>
+
+            <h4>Excel'e Aktarma</h4>
+            <ol>
+                <li><strong>Bütçe</strong> ekranında üstteki <strong>Excel'e Aktar</strong> butonuna dokunun.</li>
+                <li>İki seçenek sunulur: <strong>Filtrelenen Verileri Aktar</strong> veya <strong>Tüm Verileri Aktar</strong>.</li>
+                <li>Seçiminize göre gelirler, giderler ve analiz verilerini içeren bir Excel dosyası (.xlsx) oluşturulup indirilir.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 7. Psikolojik Testler -->
+    <details class="guide-section">
+        <summary>Psikolojik Testler</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Rorschach, projektif çizim ve manuel test modüllerini kullanarak testleri dijital ortamda uygulayabilir ve raporlayabilirsiniz.</p>
+
+            <h4>Rorschach Testi Uygulama</h4>
+            <ol>
+                <li><strong>Test Modülü</strong> ekranına gidin ve <strong>Yeni Test Başlat</strong> sekmesinde <strong>Rorschach Testi</strong>'ni seçin.</li>
+                <li>Kurulum penceresinde danışanın yaşını ve cinsiyetini girin, <strong>Başla</strong> butonuna basın.</li>
+                <li>10 kartlık Rorschach setinde sağa/sola kaydırarak kartlar arasında gezinin.</li>
+                <li>Her kart için <strong>Danışan Tepkileri</strong> alanına danışanın yanıtını yazın.</li>
+                <li><strong>Değerlendirme Al</strong> butonu ile yapay zekanın o kart için değerlendirme yapmasını sağlayabilirsiniz.</li>
+                <li><strong>Terapist Değerlendirmesi</strong> alanına kendi klinik gözlemlerinizi yazın.</li>
+                <li>Tüm kartları tamamladıktan sonra <strong>Rapor</strong> sekmesine geçerek final raporlarını oluşturun.</li>
+            </ol>
+
+            <h4>Çizim Testi Uygulama</h4>
+            <ol>
+                <li><strong>Test Modülü &gt; Yeni Test Başlat &gt; Projektif Çizim Testi</strong>'ni seçin.</li>
+                <li>Kurulum penceresinde test türünü (Ev-Ağaç-İnsan, Kinetik Aile vb.), yaş ve cinsiyet bilgilerini girin.</li>
+                <li>Test ekranında çizim görselini yükleyin veya kamerayla çekin.</li>
+                <li><strong>Değerlendirme Al</strong> butonu ile çizimin analizini alabilirsiniz.</li>
+                <li><strong>Terapist Raporu</strong> alanına kendi yorumlarınızı yazın.</li>
+                <li><strong>Hibrit Rapor</strong> butonu ile AI ve terapist değerlendirmelerini birleştirilmiş bir rapor olarak oluşturabilirsiniz.</li>
+            </ol>
+
+            <h4>Manuel Test Girişi</h4>
+            <ol>
+                <li><strong>Test Modülü &gt; Yeni Test Başlat &gt; Manuel Test Girişi</strong>'ni seçin.</li>
+                <li>Kurulum penceresinde test adı, yaş ve cinsiyet bilgilerini girin.</li>
+                <li>Serbest metin alanına test verilerini ve bulgularınızı yazın.</li>
+                <li>Gerekirse dosya/görsel yükleyebilirsiniz.</li>
+                <li><strong>Kaydet</strong> butonuyla testi kaydedin.</li>
+            </ol>
+
+            <h4>Test Raporu Oluşturma ve İndirme</h4>
+            <ol>
+                <li>Test ekranında <strong>Rapor</strong> sekmesine geçin (Rorschach ve Çizim testleri için).</li>
+                <li>Oluşturmak istediğiniz rapor türünü seçin: <strong>AI Raporu</strong>, <strong>Terapist Raporu</strong> veya <strong>Hibrit Rapor</strong>.</li>
+                <li><strong>Rapor İndir</strong> butonuna dokunun.</li>
+                <li>Açılan pencerede dahil etmek istediğiniz rapor bölümlerini seçin ve formatı belirleyin (<strong>Word</strong> veya <strong>PDF</strong>).</li>
+                <li>Rapor otomatik oluşturulup cihazınıza indirilir.</li>
+            </ol>
+
+            <h4>Uygulanan Testleri Görüntüleme</h4>
+            <ol>
+                <li><strong>Test Modülü</strong> ekranında <strong>Uygulanan Testler</strong> sekmesine geçin.</li>
+                <li>Tüm testler tarih, danışan adı ve test türüne göre listelenir.</li>
+                <li>Bir teste dokunarak detaylarını görüntüleyebilir, düzenleyebilir veya rapor indirebilirsiniz.</li>
+                <li>Testi silmek için detay ekranında <strong>Sil</strong> butonuna dokunun.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 8. Yapay Zeka Özellikleri -->
+    <details class="guide-section">
+        <summary>Yapay Zeka Özellikleri</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">PsyAgenda, Google Gemini API entegrasyonu ile seans notlarınızı analiz edebilir, testleri değerlendirebilir ve danışan raporları oluşturabilir. Bu özellikleri kullanmak için bir API anahtarı gereklidir.</p>
+
+            <h4>API Anahtarı Ayarlama</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; API Yönetimi</strong> bölümüne gidin.</li>
+                <li><strong>API Anahtarı</strong> alanına Google Gemini API anahtarınızı yapıştırın.</li>
+                <li><strong>Kaydet</strong> butonuna basın. Anahtar doğrulanacak ve durumu gösterilecektir.</li>
+                <li>API anahtarı edinme hakkında detaylı bilgi için alandaki <strong>bilgi ikonu</strong>'na dokunun.</li>
+            </ol>
+
+            <h4>Seans Notu Analizi</h4>
+            <ol>
+                <li>Randevu modalında <strong>Seans Notları</strong> alanına notlarınızı yazın.</li>
+                <li>Not alanının yanındaki mavi <strong>Yapay Zeka Değerlendirmesi</strong> butonuna dokunun.</li>
+                <li>Açılan pencerede yaklaşım, detay seviyesi ve AI modelini seçin.</li>
+                <li>AI analizi tamamlandığında sonuçlar <strong>AI Değerlendirmesi</strong> alanında görüntülenir.</li>
+                <li><strong>Sonraki Seans AI</strong> butonuyla, mevcut notlar ve AI değerlendirmesine dayalı olarak bir sonraki seans için öneriler alabilirsiniz.</li>
+            </ol>
+
+            <h4>Danışan Genel AI Analizi</h4>
+            <ol>
+                <li>Danışan detay ekranını açın.</li>
+                <li><strong>Genel Analiz</strong> butonuna dokunun.</li>
+                <li>AI onay penceresi açılır. Yaklaşım, detay seviyesi ve model seçimini yapın.</li>
+                <li>AI, danışanın tüm seans notlarını ve test sonuçlarını analiz ederek kapsamlı bir değerlendirme raporu oluşturur.</li>
+                <li>Oluşturulan raporu kaydedebilir, yeniden oluşturabilir veya okuma modunda görüntüleyebilirsiniz.</li>
+            </ol>
+
+            <h4>Test AI Değerlendirmesi</h4>
+            <ol>
+                <li>Rorschach veya çizim testi ekranında her kart/sayfa için <strong>Değerlendirme Al</strong> butonuna dokunun.</li>
+                <li>Detay seviyesi ve analiz yöntemini seçin.</li>
+                <li>AI, danışanın cevabını veya çizimini analiz eder ve sonucu ilgili alana yazar.</li>
+                <li><strong>Yazımı Düzelt</strong> butonu ile AI'dan terapist notlarınızı düzeltmesini ve zenginleştirmesini isteyebilirsiniz.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 9. Yedekleme ve Geri Yükleme -->
+    <details class="guide-section">
+        <summary>Yedekleme ve Geri Yükleme</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Verilerinizi şifreli yedek dosyası olarak saklayabilir ve istediğiniz zaman geri yükleyebilirsiniz.</p>
+
+            <h4>Yedek Oluşturma</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; Yedekleme</strong> bölümüne gidin.</li>
+                <li><strong>Verileri Yedekle</strong> butonuna dokunun.</li>
+                <li>Yedek dosyanız için bir şifre belirlemeniz istenir. Bu şifre dosyayı korumak için kullanılır.</li>
+                <li>İşlem başlar ve ilerleme çubuğu gösterilir. Tamamlandığında <strong>.thnbak</strong> uzantılı şifreli yedek dosyası cihazınıza indirilir.</li>
+            </ol>
+
+            <h4>Yedekten Geri Yükleme</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; Yedekleme</strong> bölümüne gidin.</li>
+                <li><strong>Yedekten Geri Yükle</strong> butonuna dokunun.</li>
+                <li>Cihazınızdan daha önce oluşturulmuş <strong>.thnbak</strong> dosyasını seçin.</li>
+                <li>Yedek oluştururken belirlediğiniz şifreyi girin.</li>
+                <li>İlerleme çubuğu gösterilir. Tamamlandığında verileriniz geri yüklenir. Senkronizasyon ayarlarınız korunur.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 10. Google Drive Senkronizasyonu -->
+    <details class="guide-section">
+        <summary>Google Drive Senkronizasyonu</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Verilerinizi Google Drive üzerinden şifreli olarak birden fazla cihaz arasında senkronize edebilirsiniz.</p>
+
+            <h4>Google Hesabı Bağlama</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; Senkronizasyon</strong> bölümüne gidin.</li>
+                <li><strong>Google ile Bağlan</strong> butonuna dokunun.</li>
+                <li>Google hesabınızla oturum açın ve gerekli izinleri verin.</li>
+                <li>Bağlantı başarılı olduğunda hesap e-postanız gösterilir.</li>
+            </ol>
+
+            <h4>Senkronizasyon Şifresi Belirleme</h4>
+            <ol>
+                <li>Google hesabınızı bağladıktan sonra <strong>şifre belirleme</strong> ekranı açılır.</li>
+                <li>En az 4 karakter uzunluğunda bir senkronizasyon şifresi girin ve tekrar onaylayın.</li>
+                <li><strong>Kaydet</strong> butonuna basın. İlk senkronizasyon otomatik başlar.</li>
+                <li><strong>Önemli:</strong> Bu şifreyi unutmayın. Tüm verileriniz bu şifre ile şifrelenir. Şifreyi kaybetmeniz durumunda verilere erişilemez.</li>
+            </ol>
+
+            <h4>Manuel Senkronizasyon</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; Senkronizasyon</strong> bölümüne gidin.</li>
+                <li><strong>Şimdi Senkronize Et</strong> butonuna dokunun.</li>
+                <li>İlerleme çubuğu gösterilir. Senkronizasyon tamamlandığında son senkronizasyon zamanı güncellenir.</li>
+                <li>Sorun olduğunda <strong>Zorla Yükle</strong> (cihazdaki veriyi Drive'a gönderir) veya <strong>Zorla İndir</strong> (Drive'daki veriyi cihaza indirir) butonlarını kullanabilirsiniz.</li>
+            </ol>
+
+            <h4>Bağlı Cihazları Görüntüleme</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; Senkronizasyon</strong> bölümünde <strong>Bağlı Cihazlar</strong> listesi görüntülenir.</li>
+                <li>Her cihazın adı, platformu (Android/Masaüstü) ve son görülme zamanı gösterilir.</li>
+                <li>Mevcut cihazınız bir etiketle işaretlenir.</li>
+            </ol>
+
+            <h4>Senkronizasyonu Kapatma</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; Senkronizasyon</strong> bölümünde <strong>Bağlantıyı Kes</strong> butonuna dokunun.</li>
+                <li>Onay penceresinde <strong>Evet</strong> butonuna basın.</li>
+                <li>Senkronizasyon kapatılır. Cihazdaki verileriniz korunur, ancak artık diğer cihazlarla eşleştirilmez.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 11. Güvenlik Ayarları -->
+    <details class="guide-section">
+        <summary>Güvenlik Ayarları</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Uygulama kilidi ve şifre ayarlarıyla verilerinizi yetkisiz erişime karşı koruyabilirsiniz.</p>
+
+            <h4>Uygulama Kilidi Ayarlama</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; Güvenlik</strong> bölümüne gidin.</li>
+                <li><strong>Uygulama Kilidi</strong> seçeneğini açın.</li>
+                <li>Bir şifre belirleyin ve tekrar onaylayın.</li>
+                <li><strong>Güvenlik sorusu</strong> ve cevabını mutlaka doldurun — şifrenizi unutursanız tek kurtarma yöntemidir.</li>
+                <li><strong>Otomatik Kilitleme Süresi</strong>'ni ayarlayarak uygulama arka plana alındıktan ne kadar süre sonra kilitlenmesini istediğinizi belirleyin.</li>
+            </ol>
+
+            <h4>Şifre Değiştirme</h4>
+            <ol>
+                <li><strong>Ayarlar &gt; Güvenlik</strong> bölümüne gidin.</li>
+                <li><strong>Şifre Değiştir</strong> butonuna dokunun.</li>
+                <li>Mevcut şifrenizi, ardından yeni şifrenizi girin ve onaylayın.</li>
+            </ol>
+
+            <h4>Şifre Unutma Durumunda</h4>
+            <ol>
+                <li>Uygulama kilit ekranında <strong>Şifremi Unuttum</strong> bağlantısına dokunun.</li>
+                <li>Güvenlik sorunuz gösterilir. Cevabı doğru girin.</li>
+                <li>Doğrulama başarılıysa yeni bir şifre belirlemeniz istenir.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 12. Bildirimler ve Hatırlatmalar -->
+    <details class="guide-section">
+        <summary>Bildirimler ve Hatırlatmalar</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Randevu hatırlatmaları ve danışan bilgilendirme mesajları ile seanslarınızı yönetebilirsiniz.</p>
+
+            <h4>Alarm Ayarları (Android)</h4>
+            <ol>
+                <li>Randevu modalında <strong>Bildirim Ayarları</strong> bölümünde <strong>Alarm</strong> seçeneğini açın.</li>
+                <li>Seanstan kaç dakika önce alarm çalmasını istediğinizi seçin: 5, 10, 15 veya 30 dakika.</li>
+                <li>Alarm aktifken takvimde ve ana ekranda randevunun yanında çan ikonu görünür.</li>
+                <li>Varsayılan alarm ayarlarını <strong>Ayarlar &gt; Bildirimler</strong> bölümünden yapabilirsiniz.</li>
+            </ol>
+
+            <h4>Danışan Bilgilendirme Mesajı</h4>
+            <ol>
+                <li>Randevu modalında <strong>Danışanı Bilgilendir</strong> kutucuğunu işaretleyin.</li>
+                <li>Randevuyu kaydettiğinizde danışana WhatsApp, SMS veya e-posta ile bilgilendirme gönderilir (telefon numarası veya e-posta kayıtlı olmalıdır).</li>
+                <li>Daha önce bildirim gönderilmiş bir randevuda <strong>Hatırlatma Gönder</strong> butonu görünür. Bu butonla ek bir hatırlatma mesajı gönderebilirsiniz.</li>
+                <li>Tekrarlayan bir randevuda bildirim kapsamını seçebilirsiniz: <strong>Sadece bu seans</strong> veya <strong>Tüm seri</strong>.</li>
+            </ol>
+        </div>
+    </details>
+
 </main>
 
 <footer class="site-footer">

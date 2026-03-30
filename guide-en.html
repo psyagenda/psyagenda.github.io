@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usage Guide — PsyAgenda</title>
-    <meta name="description" content="PsyAgenda usage guide: features, getting started, and tips.">
+    <meta name="description" content="PsyAgenda usage guide: client management, appointments, calendar, tests, AI features, sync, and more.">
     <link rel="icon" type="image/png" href="app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,39 +37,516 @@
 
 <main>
     <h1>Usage Guide</h1>
-    <p class="subtitle">PsyAgenda is a smart agenda application that enables therapists to manage their sessions, clients, tests, and financial processes from one place.</p>
+    <p class="subtitle">A comprehensive step-by-step guide covering all PsyAgenda features. Open each section to view detailed instructions.</p>
 
-    <h2>Key Features</h2>
-    <ul>
-        <li><strong>Calendar & Appointment Management:</strong> Plan your appointments easily with daily, weekly, and monthly calendar views. Recurring sessions, drag-and-drop rescheduling, and collision detection are supported.</li>
-        <li><strong>Client Management:</strong> Create detailed cards for each client. Session history, notes, tests, and financial information are gathered in one place. Export client cards as Word or PDF.</li>
-        <li><strong>AI-Powered Analysis:</strong> Analyze your session notes, evaluate Rorschach and drawing tests, and generate comprehensive AI reports about clients using Google Gemini API integration.</li>
-        <li><strong>Test Modules:</strong> Administer and finalize Rorschach, projective drawing tests, and manual tests digitally. Download test reports as Word/PDF.</li>
-        <li><strong>Budget & Financial Tracking:</strong> Manage your finances with session fees, income-expense tracking, overdue debt alerts, and financial analysis charts.</li>
-        <li><strong>Notification Messages:</strong> Send appointment notifications and reminders to your clients via WhatsApp, SMS, or email.</li>
-        <li><strong>Synchronization:</strong> Sync across devices via Google Drive with encrypted synchronization. All data is encrypted with AES-256; no plaintext is stored on the server.</li>
-        <li><strong>Backup & Restore:</strong> Back up your data as an encrypted .thnbak file; restore anytime.</li>
-        <li><strong>100% Local Data Storage:</strong> All your data is stored only on your device. Synchronization and AI usage are entirely optional.</li>
-    </ul>
+    <!-- 1. Getting Started -->
+    <details class="guide-section">
+        <summary>Getting Started</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Learn the essential settings to configure when you first use PsyAgenda.</p>
 
-    <h2>Getting Started</h2>
-    <ol>
-        <li><strong>Language & Currency:</strong> Select the app language and currency on first launch. You can change these later from Settings.</li>
-        <li><strong>App Lock:</strong> Set an app password to protect your data. Be sure to fill in the security question — it's the only recovery method if you forget your password.</li>
-        <li><strong>Business Name:</strong> Set your business name to appear in the home screen header from Settings > Personalization.</li>
-        <li><strong>Add a Client:</strong> Add your first client from the Clients screen. Name is required; all other fields are optional.</li>
-        <li><strong>Create an Appointment:</strong> Tap on the desired time slot in the Calendar screen to create an appointment. Select a client, set the session duration, and save.</li>
-        <li><strong>Sync (Optional):</strong> To use on multiple devices, connect your Google account from Settings > Synchronization and set a sync password.</li>
-    </ol>
+            <h4>Getting to Know the Home Screen</h4>
+            <ol>
+                <li>When you open the app, the <strong>Home Screen</strong> appears.</li>
+                <li>At the top you'll find your business name, and the <strong>Settings</strong> (gear icon) and <strong>Sync</strong> buttons.</li>
+                <li>In the center there are four main navigation buttons: <strong>Calendar</strong>, <strong>Clients</strong>, <strong>Budget</strong>, and <strong>Test Module</strong>.</li>
+                <li>The <strong>Today's Notes</strong> section lists your sessions for today. You can hide finished sessions using the eye icon.</li>
+            </ol>
 
-    <h2>Tips</h2>
-    <ul>
-        <li>During appointment creation, use "Quick Add Client" to create a new client without leaving the form.</li>
-        <li>Drag appointments in the calendar to reschedule them to different time slots.</li>
-        <li>Hide finished sessions on the home screen using the eye icon to focus on the rest of your day.</li>
-        <li>Client card reports include all session notes, test results, and AI evaluations for that client.</li>
-        <li>For AI features, enter your Google Gemini API key from Settings > API Management. Click the info icon for a detailed guide.</li>
-    </ul>
+            <h4>Changing Language</h4>
+            <ol>
+                <li>Tap the <strong>Settings</strong> (gear icon) in the top right of the home screen.</li>
+                <li>In the <strong>Personalization</strong> tab, tap the <strong>Language</strong> field.</li>
+                <li>Select your preferred language from the list and confirm. The app will switch immediately.</li>
+            </ol>
+
+            <h4>Setting Currency</h4>
+            <ol>
+                <li>Go to <strong>Settings &gt; Personalization</strong>.</li>
+                <li>Tap the <strong>Currency</strong> field.</li>
+                <li>Select your preferred currency from the list. All fees and budget fields will be displayed in this currency.</li>
+            </ol>
+
+            <h4>Setting the Standard Session Fee</h4>
+            <ol>
+                <li>Go to <strong>Settings &gt; Personalization</strong>.</li>
+                <li>Tap the <strong>Standard Session Fee</strong> field.</li>
+                <li>Enter your default session fee and tap <strong>Save</strong>. This fee will auto-populate when creating new appointments.</li>
+            </ol>
+
+            <h4>Setting a Business Name</h4>
+            <ol>
+                <li>Go to <strong>Settings &gt; Personalization</strong>.</li>
+                <li>Enter your clinic or office name in the <strong>Business Name</strong> field.</li>
+                <li>The name you enter will appear as the header on the home screen.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 2. Client Management -->
+    <details class="guide-section">
+        <summary>Client Management</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Add, edit, view details, and download reports for your clients.</p>
+
+            <h4>Adding a New Client</h4>
+            <ol>
+                <li>Go to the <strong>Clients</strong> screen from the bottom menu or home screen.</li>
+                <li>Tap the <strong>New Client Card</strong> button at the top.</li>
+                <li>Fill in the <strong>Name</strong> and <strong>Surname</strong> fields (required).</li>
+                <li>Optionally fill in phone, email, date of birth, gender, marital status, profession, education, and special notes.</li>
+                <li>Enter a custom fee in the <strong>Net Session Fee</strong> field for this client. If left empty, the standard tariff is used.</li>
+                <li>Tap <strong>Save</strong> to create the client.</li>
+            </ol>
+
+            <h4>Editing Client Information</h4>
+            <ol>
+                <li>On the <strong>Clients</strong> screen, tap the name of the client you want to edit.</li>
+                <li>In the detail view, tap the <strong>Edit</strong> (pencil icon) button in the top right.</li>
+                <li>Update the desired fields.</li>
+                <li>Tap <strong>Save</strong> to save your changes.</li>
+            </ol>
+
+            <h4>Viewing Client Details</h4>
+            <ol>
+                <li>On the <strong>Clients</strong> screen, tap the client's name.</li>
+                <li>The detail view displays all client information, session history, test records, and financial details.</li>
+                <li>In the session history, each session's date, duration, notes, and payment status are listed. Tap a session to view its details.</li>
+                <li>Use the search bar to search through session history by keyword.</li>
+            </ol>
+
+            <h4>Setting a Client as Active/Inactive</h4>
+            <ol>
+                <li>Open the client detail view.</li>
+                <li>Tap the <strong>Toggle Status</strong> button at the top.</li>
+                <li>Inactive clients appear grayed out and are hidden by default. Use the filter on the <strong>Clients</strong> screen to show inactive clients.</li>
+            </ol>
+
+            <h4>Downloading a Client Card</h4>
+            <ol>
+                <li>Open the client detail view.</li>
+                <li>Tap the <strong>Download Report</strong> (download icon) button.</li>
+                <li>In the dialog, select the report format: <strong>Word</strong> or <strong>PDF</strong>.</li>
+                <li>The report is generated and downloaded to your device. It includes the client's information, session history, test results, and AI evaluations.</li>
+            </ol>
+
+            <h4>Deleting a Client</h4>
+            <ol>
+                <li>Open the client detail view.</li>
+                <li>Tap the <strong>Delete</strong> (trash icon) button.</li>
+                <li>Tap <strong>Yes</strong> in the confirmation dialog to confirm. This action cannot be undone.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 3. Appointments & Sessions -->
+    <details class="guide-section">
+        <summary>Appointments & Sessions</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Learn how to create, edit, and manage appointments, recurring sessions, and session notes.</p>
+
+            <h4>Creating a New Appointment</h4>
+            <ol>
+                <li>Go to the <strong>Calendar</strong> screen.</li>
+                <li>Tap on the day and time where you want to create an appointment. The appointment modal opens.</li>
+                <li>Select your client from the <strong>Registered Client</strong> dropdown. You can type to search and filter.</li>
+                <li>Choose the session duration from the <strong>Duration</strong> field (30, 45, 60, or 90 minutes).</li>
+                <li>If needed, write your pre-session notes in the <strong>Pre-Session Notes</strong> area.</li>
+                <li>Tap <strong>Save</strong> or <strong>Save and Exit</strong>.</li>
+            </ol>
+
+            <h4>Quick-Adding a Client During Appointment Creation</h4>
+            <ol>
+                <li>In the appointment modal, instead of selecting a <strong>Registered Client</strong>, type the client's name in the <strong>Quick Add Client</strong> field.</li>
+                <li>When you save the appointment, the new client is automatically added to the system.</li>
+            </ol>
+
+            <h4>Editing an Appointment</h4>
+            <ol>
+                <li>Tap on the appointment you want to edit in the calendar or home screen.</li>
+                <li>In the modal, change any fields you need (time, duration, notes, fee, etc.).</li>
+                <li>Tap <strong>Save</strong>. If the appointment is part of a series, you'll be asked to choose the update scope.</li>
+            </ol>
+
+            <h4>Creating Recurring Appointments</h4>
+            <ol>
+                <li>When creating a new appointment, check the <strong>Repeat</strong> checkbox.</li>
+                <li>Select the repeat interval from the <strong>Frequency</strong> field: 1 week, 2 weeks, 3 weeks, or monthly.</li>
+                <li>Enter the number of sessions in the <strong>Repeat Count</strong> field (1-52).</li>
+                <li>Tap <strong>Save</strong>. Appointments are automatically created at the specified frequency.</li>
+                <li>When nearing the end of a series, an <strong>Extend Series</strong> button appears in the appointment modal. Use it to add more sessions.</li>
+            </ol>
+
+            <h4>Writing Session Notes</h4>
+            <ol>
+                <li>The appointment modal has three separate note areas:</li>
+                <li><strong>Pre-Session Notes</strong> (amber): Notes you prepare before the session.</li>
+                <li><strong>Session Notes</strong> (green): Notes written during or after the session. This field is used for AI analysis.</li>
+                <li><strong>Next Session Notes</strong> (purple): Topics to address in the next session.</li>
+                <li>Each note area has a <strong>Reading Mode</strong> button to view the notes in full screen.</li>
+            </ol>
+
+            <h4>Blocking Time (Marking as Busy)</h4>
+            <ol>
+                <li>In the appointment modal, check the <strong>Block this time</strong> checkbox.</li>
+                <li>This mode disables client and fee fields. Only date, time, and duration are set.</li>
+                <li>Tap <strong>Save</strong>. The time slot is marked as "Busy" in the calendar.</li>
+                <li>Blocked times can also be set as recurring.</li>
+            </ol>
+
+            <h4>Deleting an Appointment</h4>
+            <ol>
+                <li>Tap the appointment you want to delete to open the modal.</li>
+                <li>Tap the red <strong>Delete</strong> button at the bottom left.</li>
+                <li>Tap <strong>Yes</strong> in the confirmation dialog.</li>
+                <li>If it's a recurring appointment, choose the deletion scope: <strong>Only this session</strong>, <strong>This and following sessions</strong>, or <strong>All sessions</strong>.</li>
+            </ol>
+
+            <h4>Payment Tracking</h4>
+            <ol>
+                <li>In the appointment modal, below the <strong>Session Notes</strong> section, there is a <strong>Collected</strong> checkbox.</li>
+                <li>Check this box when the client has made their payment.</li>
+                <li>When unpaid sessions accumulate, an <strong>overdue balance warning</strong> is displayed in the client's appointment modal.</li>
+                <li>Track all payments from the <strong>Budget &gt; Incomes</strong> tab.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 4. Using the Calendar -->
+    <details class="guide-section">
+        <summary>Using the Calendar</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">The calendar screen lets you visually manage your appointments.</p>
+
+            <h4>Monthly View</h4>
+            <ol>
+                <li>Go to the <strong>Calendar</strong> screen. The monthly view opens by default.</li>
+                <li>Each day cell shows the appointments for that day with brief titles.</li>
+                <li>Tap on a day to see the detailed list of appointments for that day.</li>
+                <li>Use the <strong>&#9664;</strong> and <strong>&#9654;</strong> arrows at the top to navigate between months. Tap <strong>Today</strong> to jump back to the current date.</li>
+            </ol>
+
+            <h4>Dynamic (Weekly) View</h4>
+            <ol>
+                <li>On the calendar screen, tap the <strong>toggle view</strong> button in the top right.</li>
+                <li>In the dynamic view, days are shown as side-by-side columns with hours as rows (08:00–21:00).</li>
+                <li>You can adjust the number of days shown from <strong>Settings &gt; Personalization &gt; Dynamic View Days</strong>.</li>
+                <li>Tap on a time slot to create a new appointment at that time.</li>
+            </ol>
+
+            <h4>Navigating the Calendar</h4>
+            <ol>
+                <li>Use <strong>&#9664;</strong> / <strong>&#9654;</strong> arrows to move one period forward or back.</li>
+                <li>Use <strong>&#9664;&#9664;</strong> / <strong>&#9654;&#9654;</strong> double arrows to skip multiple periods.</li>
+                <li>Tap the <strong>Today</strong> button to return to the current date.</li>
+                <li>Drag and drop appointments in the calendar to reschedule them to different time slots.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 5. Photos & Attachments -->
+    <details class="guide-section">
+        <summary>Photos & Attachments</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Add photos to sessions, capture images with the camera, and use handwriting recognition.</p>
+
+            <h4>Adding a Photo to a Session</h4>
+            <ol>
+                <li>Open the appointment modal.</li>
+                <li>In the <strong>Session Images</strong> section, tap the <strong>Upload File</strong> button.</li>
+                <li>Select an image file from your device. The selected image appears as a thumbnail in the session images area.</li>
+                <li>Tap on a thumbnail to open it in the full-screen image viewer.</li>
+                <li>To delete, tap the red <strong>&#10005;</strong> button in the top right of the thumbnail.</li>
+            </ol>
+
+            <h4>Taking a Photo with the Camera (Android)</h4>
+            <ol>
+                <li>In the appointment modal, tap the <strong>Add Photo</strong> button in the <strong>Session Images</strong> section.</li>
+                <li>When prompted for camera permission, tap <strong>Allow</strong>.</li>
+                <li>The camera feed opens. Tap the <strong>Capture</strong> button to take a photo.</li>
+                <li>The captured photo is automatically added to the session images.</li>
+            </ol>
+
+            <h4>Handwriting Recognition</h4>
+            <ol>
+                <li>After adding a session image, tap the <strong>Digitize Handwriting</strong> button at the bottom left of the thumbnail.</li>
+                <li>In the dialog, select the handwriting style.</li>
+                <li>The AI converts the handwriting in the image to text and appends it to the <strong>Session Notes</strong> field.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 6. Budget & Finance -->
+    <details class="guide-section">
+        <summary>Budget & Finance</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Learn about income/expense tracking, financial analysis, and data export features.</p>
+
+            <h4>Tracking Income</h4>
+            <ol>
+                <li>Go to the <strong>Budget</strong> screen. The <strong>Incomes</strong> tab opens by default.</li>
+                <li>All your sessions are listed with date, client name, fee, and collection status.</li>
+                <li>Use the date filter at the top to filter by a specific month or year.</li>
+                <li>Use the client filter to view payments for a specific client.</li>
+                <li>At the bottom of the table, total income and collected/uncollected summaries are displayed.</li>
+            </ol>
+
+            <h4>Adding and Managing Expenses</h4>
+            <ol>
+                <li>Switch to the <strong>Budget &gt; Expenses</strong> tab.</li>
+                <li>Tap the <strong>Add New Expense</strong> button.</li>
+                <li>In the form, enter the date, description, category, and amount.</li>
+                <li>Tap <strong>Save</strong>. The expense is added to the list.</li>
+                <li>Tap on an existing expense to edit or delete it.</li>
+            </ol>
+
+            <h4>Managing Expense Categories</h4>
+            <ol>
+                <li>In the <strong>Budget &gt; Expenses</strong> tab, tap the <strong>Manage Expense Categories</strong> button.</li>
+                <li>To add a new category, type the category name in the field at the top and tap <strong>Add</strong>.</li>
+                <li>You can toggle existing categories as active/inactive or delete them.</li>
+            </ol>
+
+            <h4>Financial Analysis Charts</h4>
+            <ol>
+                <li>Switch to the <strong>Budget &gt; Analysis</strong> tab.</li>
+                <li>At the top, summary cards show total income, total expenses, and net profit/loss.</li>
+                <li>A 12-month income-expense trend chart and a session count chart load automatically.</li>
+                <li>Monthly breakdown cards show each month's income, expenses, net balance, and session details.</li>
+            </ol>
+
+            <h4>Exporting to Excel</h4>
+            <ol>
+                <li>On the <strong>Budget</strong> screen, tap the <strong>Export to Excel</strong> button at the top.</li>
+                <li>Two options are presented: <strong>Export Filtered Data</strong> or <strong>Export All Data</strong>.</li>
+                <li>An Excel file (.xlsx) containing incomes, expenses, and analysis data is generated and downloaded.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 7. Psychological Tests -->
+    <details class="guide-section">
+        <summary>Psychological Tests</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Administer Rorschach, projective drawing, and manual tests digitally, and generate professional reports.</p>
+
+            <h4>Administering a Rorschach Test</h4>
+            <ol>
+                <li>Go to the <strong>Test Module</strong> screen and select <strong>Rorschach Test</strong> under the <strong>Start New Test</strong> tab.</li>
+                <li>In the setup dialog, enter the client's age and gender, then tap <strong>Start</strong>.</li>
+                <li>Navigate through the 10-card Rorschach set by swiping left/right.</li>
+                <li>For each card, write the client's response in the <strong>Client Responses</strong> field.</li>
+                <li>Tap the <strong>Get Evaluation</strong> button to have the AI analyze that card.</li>
+                <li>Write your own clinical observations in the <strong>Therapist Evaluation</strong> field.</li>
+                <li>After completing all cards, switch to the <strong>Report</strong> tab to generate final reports.</li>
+            </ol>
+
+            <h4>Administering a Drawing Test</h4>
+            <ol>
+                <li>Select <strong>Test Module &gt; Start New Test &gt; Projective Drawing Test</strong>.</li>
+                <li>In the setup dialog, select the test type (House-Tree-Person, Kinetic Family, etc.), age, and gender.</li>
+                <li>On the test screen, upload the drawing image or capture it with the camera.</li>
+                <li>Tap the <strong>Get Evaluation</strong> button to get an analysis of the drawing.</li>
+                <li>Write your interpretations in the <strong>Therapist Report</strong> field.</li>
+                <li>Tap the <strong>Hybrid Report</strong> button to create a combined AI and therapist report.</li>
+            </ol>
+
+            <h4>Manual Test Entry</h4>
+            <ol>
+                <li>Select <strong>Test Module &gt; Start New Test &gt; Manual Test Entry</strong>.</li>
+                <li>In the setup dialog, enter the test name, age, and gender.</li>
+                <li>Write test data and findings in the free-text area.</li>
+                <li>Upload files or images if needed.</li>
+                <li>Tap <strong>Save</strong> to save the test.</li>
+            </ol>
+
+            <h4>Generating and Downloading Test Reports</h4>
+            <ol>
+                <li>On the test screen, switch to the <strong>Report</strong> tab (for Rorschach and Drawing tests).</li>
+                <li>Select the type of report to generate: <strong>AI Report</strong>, <strong>Therapist Report</strong>, or <strong>Hybrid Report</strong>.</li>
+                <li>Tap the <strong>Download Report</strong> button.</li>
+                <li>In the dialog, select which report sections to include and choose the format (<strong>Word</strong> or <strong>PDF</strong>).</li>
+                <li>The report is automatically generated and downloaded to your device.</li>
+            </ol>
+
+            <h4>Viewing Applied Tests</h4>
+            <ol>
+                <li>On the <strong>Test Module</strong> screen, switch to the <strong>Applied Tests</strong> tab.</li>
+                <li>All tests are listed by date, client name, and test type.</li>
+                <li>Tap a test to view its details, edit it, or download a report.</li>
+                <li>To delete a test, tap the <strong>Delete</strong> button in the detail view.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 8. AI Features -->
+    <details class="guide-section">
+        <summary>AI Features</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">PsyAgenda uses Google Gemini API integration to analyze session notes, evaluate tests, and generate client reports. An API key is required to use these features.</p>
+
+            <h4>Setting Up an API Key</h4>
+            <ol>
+                <li>Go to <strong>Settings &gt; API Management</strong>.</li>
+                <li>Paste your Google Gemini API key into the <strong>API Key</strong> field.</li>
+                <li>Tap <strong>Save</strong>. The key will be validated and its status displayed.</li>
+                <li>For detailed information on obtaining an API key, tap the <strong>info icon</strong> next to the field.</li>
+            </ol>
+
+            <h4>Session Note Analysis</h4>
+            <ol>
+                <li>Write your notes in the <strong>Session Notes</strong> field of the appointment modal.</li>
+                <li>Tap the blue <strong>AI Evaluation</strong> button next to the notes field.</li>
+                <li>In the dialog, select the approach, detail level, and AI model.</li>
+                <li>When the analysis is complete, the results appear in the <strong>AI Insights</strong> area.</li>
+                <li>Tap the <strong>Next Session AI</strong> button to get suggestions for the next session based on the current notes and AI insights.</li>
+            </ol>
+
+            <h4>General Client AI Analysis</h4>
+            <ol>
+                <li>Open the client detail view.</li>
+                <li>Tap the <strong>General Analysis</strong> button.</li>
+                <li>The AI consent dialog opens. Select the approach, detail level, and model.</li>
+                <li>The AI analyzes all of the client's session notes and test results to produce a comprehensive evaluation report.</li>
+                <li>You can save the generated report, regenerate it, or view it in reading mode.</li>
+            </ol>
+
+            <h4>Test AI Evaluation</h4>
+            <ol>
+                <li>On the Rorschach or drawing test screen, tap the <strong>Get Evaluation</strong> button for each card/page.</li>
+                <li>Select the detail level and analysis method.</li>
+                <li>The AI analyzes the client's response or drawing and writes the result in the corresponding field.</li>
+                <li>Use the <strong>Correct Spelling</strong> button to have the AI refine and enrich your therapist notes.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 9. Backup & Restore -->
+    <details class="guide-section">
+        <summary>Backup & Restore</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Save your data as an encrypted backup file and restore it whenever you need.</p>
+
+            <h4>Creating a Backup</h4>
+            <ol>
+                <li>Go to <strong>Settings &gt; Backup</strong>.</li>
+                <li>Tap the <strong>Back Up Data</strong> button.</li>
+                <li>You'll be asked to set a password for the backup file. This password protects the file.</li>
+                <li>The process starts and a progress bar is shown. When complete, an encrypted <strong>.thnbak</strong> backup file is downloaded to your device.</li>
+            </ol>
+
+            <h4>Restoring from a Backup</h4>
+            <ol>
+                <li>Go to <strong>Settings &gt; Backup</strong>.</li>
+                <li>Tap the <strong>Restore from Backup</strong> button.</li>
+                <li>Select a previously created <strong>.thnbak</strong> file from your device.</li>
+                <li>Enter the password you set when creating the backup.</li>
+                <li>A progress bar is shown. When complete, your data is restored. Your sync settings are preserved.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 10. Google Drive Sync -->
+    <details class="guide-section">
+        <summary>Google Drive Sync</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Synchronize your data securely across multiple devices via Google Drive with end-to-end encryption.</p>
+
+            <h4>Connecting a Google Account</h4>
+            <ol>
+                <li>Go to <strong>Settings &gt; Synchronization</strong>.</li>
+                <li>Tap the <strong>Connect with Google</strong> button.</li>
+                <li>Sign in with your Google account and grant the required permissions.</li>
+                <li>When the connection is successful, your account email is displayed.</li>
+            </ol>
+
+            <h4>Setting a Sync Password</h4>
+            <ol>
+                <li>After connecting your Google account, the <strong>password setup</strong> screen appears.</li>
+                <li>Enter a sync password of at least 4 characters and confirm it.</li>
+                <li>Tap <strong>Save</strong>. The initial sync starts automatically.</li>
+                <li><strong>Important:</strong> Do not forget this password. All your data is encrypted with it. If you lose the password, your data cannot be accessed.</li>
+            </ol>
+
+            <h4>Manual Synchronization</h4>
+            <ol>
+                <li>Go to <strong>Settings &gt; Synchronization</strong>.</li>
+                <li>Tap the <strong>Sync Now</strong> button.</li>
+                <li>A progress bar is shown. When sync completes, the last sync time is updated.</li>
+                <li>If there are issues, use <strong>Force Upload</strong> (sends device data to Drive) or <strong>Force Download</strong> (downloads Drive data to device).</li>
+            </ol>
+
+            <h4>Viewing Connected Devices</h4>
+            <ol>
+                <li>In <strong>Settings &gt; Synchronization</strong>, the <strong>Connected Devices</strong> list is displayed.</li>
+                <li>Each device shows its name, platform (Android/Desktop), and last seen time.</li>
+                <li>Your current device is marked with a badge.</li>
+            </ol>
+
+            <h4>Disconnecting Sync</h4>
+            <ol>
+                <li>In <strong>Settings &gt; Synchronization</strong>, tap the <strong>Disconnect</strong> button.</li>
+                <li>Tap <strong>Yes</strong> in the confirmation dialog.</li>
+                <li>Sync is disabled. Your data on the device is preserved, but it will no longer sync with other devices.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 11. Security Settings -->
+    <details class="guide-section">
+        <summary>Security Settings</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Protect your data from unauthorized access with app lock and password settings.</p>
+
+            <h4>Setting Up App Lock</h4>
+            <ol>
+                <li>Go to <strong>Settings &gt; Security</strong>.</li>
+                <li>Turn on the <strong>App Lock</strong> option.</li>
+                <li>Set a password and confirm it.</li>
+                <li>Fill in the <strong>security question</strong> and answer — this is the only recovery method if you forget your password.</li>
+                <li>Set the <strong>Auto-Lock Timeout</strong> to control how long after going to the background the app locks.</li>
+            </ol>
+
+            <h4>Changing Your Password</h4>
+            <ol>
+                <li>Go to <strong>Settings &gt; Security</strong>.</li>
+                <li>Tap the <strong>Change Password</strong> button.</li>
+                <li>Enter your current password, then enter and confirm your new password.</li>
+            </ol>
+
+            <h4>If You Forget Your Password</h4>
+            <ol>
+                <li>On the app lock screen, tap the <strong>Forgot Password</strong> link.</li>
+                <li>Your security question is displayed. Enter the correct answer.</li>
+                <li>If verification succeeds, you'll be prompted to set a new password.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 12. Notifications & Reminders -->
+    <details class="guide-section">
+        <summary>Notifications & Reminders</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Manage your sessions with appointment reminders and client notification messages.</p>
+
+            <h4>Alarm Settings (Android)</h4>
+            <ol>
+                <li>In the appointment modal, turn on the <strong>Alarm</strong> option in the <strong>Notification Settings</strong> section.</li>
+                <li>Choose how many minutes before the session the alarm should ring: 5, 10, 15, or 30 minutes.</li>
+                <li>When the alarm is active, a bell icon appears next to the appointment in the calendar and home screen.</li>
+                <li>Set default alarm preferences from <strong>Settings &gt; Notifications</strong>.</li>
+            </ol>
+
+            <h4>Client Notification Messages</h4>
+            <ol>
+                <li>In the appointment modal, check the <strong>Notify Client</strong> checkbox.</li>
+                <li>When you save the appointment, a notification is sent to the client via WhatsApp, SMS, or email (phone number or email must be on file).</li>
+                <li>For appointments where a notification was previously sent, a <strong>Send Reminder</strong> button appears. Use it to send an additional reminder.</li>
+                <li>For recurring appointments, you can choose the notification scope: <strong>Only this session</strong> or <strong>Entire series</strong>.</li>
+            </ol>
+        </div>
+    </details>
+
 </main>
 
 <footer class="site-footer">
