@@ -85,10 +85,12 @@
     <h2>Cihaz İzinleri</h2>
     <p>Uygulama, belirli özellikleri sunabilmek için aşağıdaki cihaz izinlerini talep edebilir. Tüm izinler isteğe bağlıdır ve yalnızca ilgili özellik kullanıldığında istenir:</p>
     <ul>
+        <li><strong>İnternet (INTERNET):</strong> Google Drive senkronizasyonu ve Gemini AI özelliklerine bağlanmak için kullanılır. Senkronizasyon ve AI özelliklerini kullanmadığınız sürece ağ bağlantısı kurulmaz.</li>
         <li><strong>Kamera (CAMERA):</strong> Seans notlarına veya test kayıtlarına fotoğraf eki eklemek için kullanılır.</li>
         <li><strong>Bildirimler (POST_NOTIFICATIONS):</strong> Randevu hatırlatma bildirimleri göndermek için kullanılır.</li>
         <li><strong>Hassas Alarmlar (SCHEDULE_EXACT_ALARM):</strong> Randevu hatırlatmalarının tam zamanında tetiklenmesi için kullanılır.</li>
         <li><strong>Kişiler (READ_CONTACTS):</strong> Rehberden danışan ekleme özelliği için kullanılır. Yalnızca kullanıcının seçtiği kişinin ad, telefon ve e-posta bilgileri okunur; rehberdeki diğer kişilere erişilmez ve hiçbir kişi bilgisi cihaz dışına aktarılmaz.</li>
+        <li><strong>Harici Depolama (WRITE_EXTERNAL_STORAGE — yalnızca Android 9 ve altı):</strong> Rapor (PDF/DOCX) indirme dosyalarını cihazın "İndirilenler" klasörüne kaydetmek için kullanılır. Android 10 ve üzeri sürümlerde bu izin gerekmez.</li>
     </ul>
     <p>Reddedilen izinler ilgili özelliğin devre dışı kalmasına neden olur; uygulamanın diğer işlevleri etkilenmez.</p>
 

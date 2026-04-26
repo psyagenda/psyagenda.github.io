@@ -85,10 +85,12 @@
     <h2>Device Permissions</h2>
     <p>The application may request the following device permissions to provide certain features. All permissions are optional and are only requested when the related feature is used:</p>
     <ul>
+        <li><strong>Internet (INTERNET):</strong> Used to connect to Google Drive sync and Gemini AI features. No network connection is established unless you use sync or AI features.</li>
         <li><strong>Camera (CAMERA):</strong> Used to attach photos to session notes or test records.</li>
         <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used to send appointment reminder notifications.</li>
         <li><strong>Exact Alarms (SCHEDULE_EXACT_ALARM):</strong> Used to trigger appointment reminders at the exact scheduled time.</li>
         <li><strong>Contacts (READ_CONTACTS):</strong> Used for the add-from-contacts feature. Only the name, phone number, and email of the contact selected by the user are read; no other contacts are accessed and no contact data is transmitted outside the device.</li>
+        <li><strong>External Storage (WRITE_EXTERNAL_STORAGE — only on Android 9 and below):</strong> Used to save report downloads (PDF/DOCX) to the device's "Downloads" folder. This permission is not needed on Android 10 and later.</li>
     </ul>
     <p>Denying a permission disables the related feature; the rest of the application remains unaffected.</p>
 
