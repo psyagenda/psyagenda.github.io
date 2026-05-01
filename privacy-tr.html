@@ -51,7 +51,7 @@
 
 <main>
     <h1>Gizlilik Politikası</h1>
-    <p class="subtitle">Son güncelleme: Nisan 2026</p>
+    <p class="subtitle">Son güncelleme: Mayıs 2026</p>
 
     <h2>Veri Sorumlusu</h2>
     <p>Bu uygulama Mustafa Can tarafından geliştirilmiştir. Veri işleme süreçlerine ilişkin sorularınız için <strong>info@psyagenda.app</strong> adresinden iletişime geçebilirsiniz.</p>
@@ -69,7 +69,7 @@
     <h2>Verilerin Saklanması</h2>
     <ul>
         <li>Tüm veriler yalnızca kullanıcının cihazında yerel veritabanında (SQLite veya IndexedDB) saklanır.</li>
-        <li>Geliştirici dahil hiçbir üçüncü taraf bu verilere erişemez.</li>
+        <li>Kullanıcının açıkça başlattığı senkronizasyon ve destek e-postaları dışında, geliştirici dahil hiçbir üçüncü taraf bu verilere erişemez.</li>
         <li>Uygulama kilidi etkinleştirildiğinde veriler şifre koruması altındadır.</li>
     </ul>
 
@@ -93,7 +93,17 @@
         <li><strong>Google Gemini API:</strong> İsteğe bağlı AI analiz (kullanıcının kendi API anahtarı ile).</li>
         <li><strong>Google Drive:</strong> İsteğe bağlı şifreli senkronizasyon (kullanıcının kendi hesabı).</li>
         <li><strong>Google Play / App Store:</strong> Uygulama dağıtımı ve lisans doğrulama.</li>
-        <li>Bunlar dışında hiçbir üçüncü taraf servisine veri aktarımı yapılmaz.</li>
+        <li><strong>Hata Raporu E-postaları:</strong> Kullanıcının Hakkında > Destek/Geri Bildirim akışıyla gönüllü olarak başlattığı destek e-postaları (info@psyagenda.app).</li>
+        <li>Bunlar dışında, kullanıcının Hakkında > Destek/Geri Bildirim akışıyla gönüllü olarak başlattığı destek e-postaları haricinde, hiçbir üçüncü taraf servisine veri aktarımı yapılmaz.</li>
+    </ul>
+
+    <h2>Hata Raporu ve Tanı Verileri</h2>
+    <ul>
+        <li>Uygulama, çalışırken oluşan hatalar için teknik tanı kayıtları üretir ve yalnızca cihazınızda yerel olarak saklar (yaklaşık 500 KB tavanlı kayan pencere; eski kayıtlar otomatik silinir).</li>
+        <li>Bu kayıtlar yalnızca şunları içerir: hata mesajları ve teknik yığın izi (stack trace), kullanıcının uygulama içindeki eylem türleri (örn. "ekran değişti", "modal açıldı", "yapay zeka butonu tıklandı"), aktif ekran adı, cihaz platformu, uygulama sürümü, dil, lisans türü ve ağ durumu.</li>
+        <li>Bu kayıtlar <strong>danışan kimlik bilgilerini, telefon, e-posta, adres, seans notu içeriğini, randevu başlığını, finansal kayıtları, fotoğrafları veya başka herhangi bir kişisel veriyi içermez</strong>. Kaydedilen yalnızca eylemin türüdür; içeriği değil.</li>
+        <li>Tanı kayıtları yalnızca cihazınızda saklanır. Kullanıcı, Hakkında > Destek/Geri Bildirim > "Bir sorun yaşıyorum" akışını kullanıp gönder dediğinde, son hata kayıtları kullanıcının yazdığı şikayet metniyle birlikte info@psyagenda.app adresine gönderilir.</li>
+        <li>Gönderim öncesi mail uygulaması açılır; içeriği inceleyebilir, düzenleyebilir veya gönderimden vazgeçebilirsiniz. Bu özellik tamamen sizin kontrolünüzdedir; otomatik veya arka planda hiçbir gönderim yapılmaz.</li>
     </ul>
 
     <h2>Cihaz İzinleri</h2>

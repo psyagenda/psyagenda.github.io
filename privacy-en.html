@@ -51,7 +51,7 @@
 
 <main>
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Last updated: April 2026</p>
+    <p class="subtitle">Last updated: May 2026</p>
 
     <h2>Data Controller</h2>
     <p>This application is developed by Mustafa Can. For questions regarding data processing, you can contact <strong>info@psyagenda.app</strong>.</p>
@@ -69,7 +69,7 @@
     <h2>Data Storage</h2>
     <ul>
         <li>All data is stored only in the local database (SQLite or IndexedDB) on the user's device.</li>
-        <li>No third party, including the developer, can access this data.</li>
+        <li>Beyond user-initiated synchronization and support emails, no third party including the developer can access this data.</li>
         <li>When app lock is enabled, data is protected by a password.</li>
     </ul>
 
@@ -93,7 +93,17 @@
         <li><strong>Google Gemini API:</strong> Optional AI analysis (with the user's own API key).</li>
         <li><strong>Google Drive:</strong> Optional encrypted synchronization (the user's own account).</li>
         <li><strong>Google Play / App Store:</strong> App distribution and license verification.</li>
-        <li>No data is transferred to any third-party service beyond these.</li>
+        <li><strong>Bug Report Emails:</strong> Support emails the user voluntarily initiates via About > Support/Feedback (info@psyagenda.app).</li>
+        <li>Beyond these, and beyond support emails the user voluntarily initiates via About > Support/Feedback, no data is transferred to any third-party service.</li>
+    </ul>
+
+    <h2>Bug Reports and Diagnostic Data</h2>
+    <ul>
+        <li>The application generates technical diagnostic logs for errors that occur during use, and stores them locally on your device only (a sliding window of approximately 500 KB; older entries are automatically discarded).</li>
+        <li>These logs contain only: error messages and technical stack traces, action types within the app (e.g. "screen changed", "modal opened", "AI button clicked"), the active screen name, device platform, app version, language, license type, and network status.</li>
+        <li>These logs <strong>do not contain client identifying information, phone numbers, emails, addresses, session note content, appointment titles, financial records, photos, or any other personal data</strong>. Only the type of action is recorded — never its content.</li>
+        <li>Diagnostic logs stay on your device. They are sent to info@psyagenda.app only when you use About > Support/Feedback > "I'm having a problem" and tap Send — together with the description you wrote.</li>
+        <li>Before sending, the email client opens so you can review, edit, or cancel the message. This feature is fully under your control; no automatic or background submissions occur.</li>
     </ul>
 
     <h2>Device Permissions</h2>
