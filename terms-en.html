@@ -74,11 +74,10 @@
         <li><strong>App Lock:</strong> PsyAgenda offers an optional password lock feature. If you forget both your app lock password and your security question answer, you will permanently lose access to your data.</li>
     </ul>
 
-    <h2>3. Cloud Synchronization (Google Drive / iCloud)</h2>
+    <h2>3. Cloud Synchronization (Google Drive)</h2>
     <ul>
-        <li>PsyAgenda optionally allows you to synchronize your data across devices via cloud services. This feature is disabled by default.</li>
+        <li>PsyAgenda optionally allows you to synchronize your data across devices via Google Drive. This feature is available on all platforms and is disabled by default.</li>
         <li><strong>Google Drive:</strong> The application only requests the "drive.appDataFolder" scope (app-private, user-invisible storage).</li>
-        <li><strong>iCloud:</strong> On iOS and macOS devices, iCloud may optionally be used for synchronization.</li>
         <li><strong>End-to-End Encryption:</strong> All data uploaded to cloud services is encrypted client-side with your synchronization password (PBKDF2 + AES-256-GCM).</li>
         <li><strong>Sync Password:</strong> If you lose this password, you will permanently lose access to your encrypted data on the cloud.</li>
     </ul>
@@ -122,7 +121,6 @@
     <ul>
         <li><strong>Google Gemini API:</strong> For AI analysis features (optional).</li>
         <li><strong>Google Drive API:</strong> For cloud synchronization (optional).</li>
-        <li><strong>Apple iCloud:</strong> For cloud synchronization on iOS and macOS devices (optional).</li>
         <li><strong>Google Play Store / Apple App Store:</strong> For subscription purchases.</li>
         <li><strong>Bug Report Emails (info@psyagenda.app):</strong> When the user uses About > Support/Feedback > "I'm having a problem", the description they wrote and technical diagnostic logs (error messages, action types, platform/version info — no personal data) are sent to the developer through the device's default mail app. This channel is fully under user control; the content can be reviewed, edited, or canceled before sending.</li>
         <li>Beyond these, PsyAgenda does not communicate with any analytics service (Google Analytics, etc.), automatic error reporting service, ad network, or external server. Outside the user-controlled flows explicitly listed above (synchronization, AI, support emails), the developer has no access to any user data.</li>
