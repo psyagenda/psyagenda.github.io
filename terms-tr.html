@@ -52,6 +52,7 @@
 <main>
     <h1>Kullanım Koşulları</h1>
     <p class="subtitle">PsyAgenda — Önemli Bilgilendirmeler ve Kullanım Koşulları</p>
+    <p class="subtitle"><em>Son güncelleme: 6 Mayıs 2026 &middot; Sözleşme sürümü: 3</em></p>
 
     <p>PsyAgenda, terapistlerin (psikolog, psikiyatrist, psikolojik danışman) randevu, danışan takibi, psikolojik test, seans notu, bütçe ve şifreli bulut senkronizasyonu işlemlerini tek bir uygulama üzerinden yönetmesine yardımcı olmak amacıyla tasarlanmış profesyonel bir araçtır. Uygulama Android, iOS (iPhone, iPad), macOS ve Windows (Masaüstü) platformlarında kullanılabilir.</p>
 
@@ -88,6 +89,7 @@
         <li><strong>Gönderilen Veriler:</strong> YZ analizi sırasında seans notları, danışan yaşı ve cinsiyeti, test yanıtları ve görseller Google Gemini API'sine gönderilir.</li>
         <li><strong>API Anahtarı:</strong> Kendi Google Gemini API anahtarınızı kullanırsınız. Bu anahtar cihazınızda şifreli olarak saklanır.</li>
         <li><strong>Anonimlik Sorumluluğu:</strong> Serbest metin alanlarına danışanınızın kimliğini ifşa edebilecek kişisel bilgi girmemek tamamen sizin sorumluluğunuzdadır.</li>
+        <li><strong>Google Veri Politikası:</strong> Google Gemini API'sine gönderilen veriler Google'ın hizmet şartlarına tabidir. <em>Ücretsiz API planı:</em> Google, gönderilen verileri AI modellerini iyileştirmek için kullanabilir. <em>Ücretli API planı:</em> Google, ücretli plan üzerinden gönderilen verileri model eğitimi için kullanmaz. Klinik veri hassasiyeti nedeniyle ücretli plan kullanılması önerilir.</li>
         <li><strong>Klinik Sorumluluk:</strong> Yapay zeka tarafından üretilen tüm değerlendirmeler, yalnızca destekleyici araç ve ön analiz niteliğindedir. Tüm klinik sorumluluk kullanıcıya aittir.</li>
     </ul>
 
@@ -101,7 +103,7 @@
     <h2>6. Bildirimler ve İletişim</h2>
     <ul>
         <li>Seans hatırlatma ve alarm bildirimleri cihazınızda yerel olarak çalışır.</li>
-        <li>Uygulama, isteğe bağlı olarak danışanlarınıza SMS, WhatsApp veya e-posta yoluyla randevu bildirimi göndermenizi sağlar.</li>
+        <li>Uygulama, isteğe bağlı olarak danışanlarınıza SMS, WhatsApp veya e-posta yoluyla randevu bildirimi göndermenizi <strong>kolaylaştırır</strong>. Mesajlar uygulama tarafından doğrudan gönderilmez; cihazınızdaki SMS/WhatsApp/e-posta uygulamasını ön-doldurulmuş metinle açar ve gönderim sizin manuel onayınızla gerçekleşir.</li>
     </ul>
 
     <h2>7. Cihaz İzinleri</h2>
@@ -126,15 +128,26 @@
         <li>Bunların dışında PsyAgenda hiçbir analitik servisi (Google Analytics vb.), otomatik hata raporlama hizmeti, reklam ağı veya harici sunucu ile iletişim kurmaz. Yukarıda açıkça listelenen kullanıcı kontrollü akışlar (senkronizasyon, AI, destek e-postaları) dışında geliştirici, kullanıcıların hiçbir verisine erişemez.</li>
     </ul>
 
-    <h2>11. Sorumluluk Reddi</h2>
+    <h2>11. Sorumluluk Reddi ve Mimari Beyanlar</h2>
     <ul>
         <li>Geliştirici, kullanıcı hatası kaynaklı veri kaybı, yanlış YZ analizleri, API hizmetlerindeki aksaklıklar, cihaz arızaları veya şifre kaybından kaynaklanan sorunlardan sorumlu değildir.</li>
         <li><strong>Hizmet Sürekliliği:</strong> Üçüncü taraf hizmetlerin kesintisiz çalışacağı garanti edilmez.</li>
         <li><strong>Tıbbi/Klinik Uyarı:</strong> PsyAgenda bir tıbbi cihaz değildir. Tanı koyma, tedavi planlama veya klinik karar verme aracı olarak tasarlanmamıştır.</li>
+        <li><strong>Çalıştırılabilir Kod Yokluğu:</strong> PsyAgenda hiçbir koşulda harici kaynaklardan çalıştırılabilir kod indirmez, üretmez veya çalıştırmaz. Tüm kullanıcı arayüzü, mantık ve özellikler uygulama ikilisinin (binary) içinde paketlenmiştir. YZ özellikleri yalnızca metin tabanlı yorumlar ve raporlar üretir; uygulamanın çalışma zamanı davranışını değiştirmez.</li>
+        <li><strong>Rorschach Görselleri:</strong> Hermann Rorschach'ın 1921'de yayımladığı orijinal 10 mürekkep lekesi 100+ yıldır kamuya açık alandadır (public domain) ve uygulamada bu bağlamda kullanılmaktadır.</li>
     </ul>
 
     <h2>12. Sözleşme Değişiklikleri</h2>
     <p>Geliştirici, bu kullanım koşullarını güncelleme hakkını saklı tutar. Güncellenmiş koşullar, uygulama güncellemesiyle birlikte kullanıcıya bildirilecek ve yeniden onay istenecektir.</p>
+
+    <h2>13. Hesap ve Verileri Silme</h2>
+    <ul>
+        <li><strong>Hesap Yapısı:</strong> PsyAgenda uygulama içinde hesap oluşturma gerektirmez. Google ile oturum açma yalnızca isteğe bağlı senkronizasyon için kullanılır ve kullanıcının kendi Google hesabı üzerinden işler. Bu nedenle ayrıca bir "hesap silme" işlemi gerekmez; veri silme işlemleri doğrudan kullanıcı kontrolündedir.</li>
+        <li><strong>Yerel Veriyi Silme:</strong> Ayarlar &gt; Depolama Alanı &gt; Tehlikeli Bölge &gt; "Tüm Yerel Veriyi Sil" seçeneğiyle bu cihazdaki tüm veriler (danışan, randevu, seans notları, testler, finansal kayıtlar, ekli dosyalar, ayarlar, şifreler) kalıcı olarak silinir. İşlem yazarak onay (TÜM VERİLERİ SİL) gerektirir ve geri alınamaz.</li>
+        <li><strong>Drive Verisini Silme:</strong> Ayarlar &gt; Senkronizasyon &gt; Tehlikeli Bölge &gt; "Drive'daki Tüm Veriyi Sil" seçeneğiyle Google Drive üzerindeki şifreli yedekler, görseller ve manifest kalıcı olarak silinir; bu cihazın senkronizasyon bağlantısı kesilir. Lokal veriler korunur. Aynı hesaba bağlı diğer cihazlar bir sonraki senkronizasyonda kendi verilerini Drive'a yeniden yükleyebilir; tüm cihazlardaki Drive verisini kalıcı temiz tutmak için bu işlemi her cihazda tekrarlamanız gerekir.</li>
+        <li><strong>Uygulamayı Kaldırma:</strong> iOS'ta Ayarlar &gt; Genel &gt; iPhone Depolama &gt; PsyAgenda &gt; Uygulamayı Sil; Android'de Ayarlar &gt; Uygulamalar &gt; PsyAgenda &gt; Depolama &gt; Verileri Temizle/Uygulamayı Kaldır işlemiyle tüm yerel veri silinir. macOS/Windows'ta uygulama kaldırıldığında uygulamaya özel yerel veritabanı dosyaları silinir.</li>
+        <li><strong>Silinmeyen Yedekler:</strong> Kullanıcının kendi seçimiyle .thnbak dosyası olarak dışa aktardığı şifreli yedekler kullanıcının cihazında veya dış medyalarında kalır; bu yedeklerin yönetimi kullanıcının sorumluluğundadır.</li>
+    </ul>
 
     <p><strong>Bu uygulamayı kullanarak yukarıdaki tüm koşulları okuduğunuzu, anladığınızı ve kabul ettiğinizi beyan etmiş olursunuz.</strong></p>
 </main>

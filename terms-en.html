@@ -52,6 +52,7 @@
 <main>
     <h1>Terms of Use</h1>
     <p class="subtitle">PsyAgenda — Important Information and Terms of Use</p>
+    <p class="subtitle"><em>Last updated: 6 May 2026 &middot; Agreement version: 3</em></p>
 
     <p>PsyAgenda is a professional tool designed to help therapists (psychologists, psychiatrists, counselors) manage appointments, client records, psychological tests, session notes, budgets, and encrypted cloud synchronization from a single application. The app is available on Android, iOS (iPhone, iPad), macOS, and Windows (Desktop) platforms.</p>
 
@@ -88,6 +89,7 @@
         <li><strong>Data Transmitted:</strong> During AI analysis, session notes, client age and gender, test responses, and images are sent to the Google Gemini API.</li>
         <li><strong>API Key:</strong> You use your own Google Gemini API key. This key is stored encrypted on your device.</li>
         <li><strong>Anonymity Responsibility:</strong> It is entirely your responsibility not to enter any personal information that could reveal your client's identity into free-text fields.</li>
+        <li><strong>Google Data Policy:</strong> Data sent to the Google Gemini API is subject to Google's terms of service. <em>Free API tier:</em> Google may use the data sent to improve its AI models. <em>Paid API tier:</em> Google does not use data sent on the paid plan for model training. Given the sensitivity of clinical data, the paid tier is recommended.</li>
         <li><strong>Clinical Responsibility:</strong> All evaluations produced by AI are solely supportive tools and preliminary analyses. All clinical responsibility rests with the user.</li>
     </ul>
 
@@ -101,7 +103,7 @@
     <h2>6. Notifications and Communication</h2>
     <ul>
         <li>Session reminder and alarm notifications operate locally on your device.</li>
-        <li>The application optionally allows you to send appointment notifications to your clients via SMS, WhatsApp, or email.</li>
+        <li>The application optionally <strong>helps</strong> you send appointment notifications to your clients via SMS, WhatsApp, or email. Messages are not sent directly by the app; instead, the app opens your device's SMS/WhatsApp/email application with a pre-filled message, and delivery occurs only with your manual confirmation.</li>
     </ul>
 
     <h2>7. Device Permissions</h2>
@@ -126,15 +128,26 @@
         <li>Beyond these, PsyAgenda does not communicate with any analytics service (Google Analytics, etc.), automatic error reporting service, ad network, or external server. Outside the user-controlled flows explicitly listed above (synchronization, AI, support emails), the developer has no access to any user data.</li>
     </ul>
 
-    <h2>11. Disclaimer of Liability</h2>
+    <h2>11. Disclaimer of Liability and Architectural Declarations</h2>
     <ul>
         <li>The developer is not responsible for data loss due to user error, incorrect AI analyses, API service disruptions, device failures, or password loss.</li>
         <li><strong>Service Continuity:</strong> The uninterrupted operation of third-party services is not guaranteed.</li>
         <li><strong>Medical/Clinical Notice:</strong> PsyAgenda is not a medical device. It is not designed as a diagnostic, treatment planning, or clinical decision-making tool.</li>
+        <li><strong>No Executable Code:</strong> PsyAgenda does not download, generate, or execute any external code under any circumstances. All user interface, logic, and features are bundled within the application binary. AI features only produce text-based interpretations and reports; they do not alter the runtime behavior of the application.</li>
+        <li><strong>Rorschach Imagery:</strong> The original 10 inkblots published by Hermann Rorschach in 1921 have been in the public domain for 100+ years and are used in the application within this context.</li>
     </ul>
 
     <h2>12. Changes to Terms</h2>
     <p>The developer reserves the right to update these terms of use. Updated terms will be presented to the user upon the next app update and will require re-acceptance.</p>
+
+    <h2>13. Account and Data Deletion</h2>
+    <ul>
+        <li><strong>Account Structure:</strong> PsyAgenda does not require an in-app account to be created. Google sign-in is used only for optional synchronization and operates through the user's own Google account. Therefore, no separate "account deletion" process is needed; data deletion is directly under user control.</li>
+        <li><strong>Deleting Local Data:</strong> Via Settings &gt; Storage &gt; Danger Zone &gt; "Delete All Local Data", all data on this device (clients, appointments, session notes, tests, financial records, attached files, settings, passwords) is permanently deleted. The action requires typed confirmation (DELETE ALL DATA) and cannot be undone.</li>
+        <li><strong>Deleting Drive Data:</strong> Via Settings &gt; Sync &gt; Danger Zone &gt; "Delete All Drive Data", encrypted backups, images, and the manifest on Google Drive are permanently deleted; this device's sync connection is disconnected. Local data is preserved. Other active devices on the same account may re-upload their own data on the next sync; to keep Drive permanently clean across all devices, you must repeat this action on each device.</li>
+        <li><strong>Uninstalling the App:</strong> On iOS, Settings &gt; General &gt; iPhone Storage &gt; PsyAgenda &gt; Delete App; on Android, Settings &gt; Apps &gt; PsyAgenda &gt; Storage &gt; Clear Data / Uninstall removes all local data. On macOS/Windows, uninstalling the app removes the app-specific local database files.</li>
+        <li><strong>Backups Not Auto-Deleted:</strong> Encrypted .thnbak backups exported voluntarily by the user remain on the user's device or external media; managing these backups is the user's responsibility.</li>
+    </ul>
 
     <p><strong>By using this application, you declare that you have read, understood, and agreed to all of the above terms.</strong></p>
 </main>

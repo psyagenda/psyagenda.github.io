@@ -51,10 +51,16 @@
 
 <main>
     <h1>Gizlilik Politikası</h1>
-    <p class="subtitle">Son güncelleme: Mayıs 2026</p>
+    <p class="subtitle">Son güncelleme: 6 Mayıs 2026 &middot; Sözleşme sürümü: 3</p>
+
+    <h2>Yasal Çerçeve</h2>
+    <p>Bu Gizlilik Politikası, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve 2016/679 sayılı AB Genel Veri Koruma Yönetmeliği (GDPR) uyarınca hazırlanmıştır. Politika, kullanıcının cihazında saklanan ve isteğe bağlı bulut/AI özellikleriyle işlenen kişisel verilerin yönetimini kapsar.</p>
 
     <h2>Veri Sorumlusu</h2>
     <p>Bu uygulama Mustafa Can tarafından geliştirilmiştir. Veri işleme süreçlerine ilişkin sorularınız için <strong>info@psyagenda.app</strong> adresinden iletişime geçebilirsiniz.</p>
+
+    <h2>Veri Sahipliği</h2>
+    <p>Uygulamada üretilen ve saklanan tüm veri (danışan kayıtları, randevular, seans notları, finansal kayıtlar, testler, görseller) tamamen kullanıcının mülkiyetindedir. Geliştirici bu veriler üzerinde hiçbir hak iddia etmez; verileri analiz etmez, satmaz, lisanslamaz veya üçüncü taraflarla paylaşmaz.</p>
 
     <h2>Toplanan ve İşlenen Veriler</h2>
     <p>Uygulama aşağıdaki veri kategorilerini yalnızca cihazınızda yerel olarak saklar:</p>
@@ -97,6 +103,33 @@
         <li>Bunlar dışında, kullanıcının Hakkında > Destek/Geri Bildirim akışıyla gönüllü olarak başlattığı destek e-postaları haricinde, hiçbir üçüncü taraf servisine veri aktarımı yapılmaz.</li>
     </ul>
 
+    <h2>Reklam ve İzleme Yokluğu</h2>
+    <ul>
+        <li>PsyAgenda hiçbir reklam göstermez. Hiçbir reklam ağı entegrasyonu yoktur.</li>
+        <li>Hiçbir analitik servis (Google Analytics, Firebase Analytics, Mixpanel vb.) içermez; hiçbir kullanım istatistiği toplanmaz.</li>
+        <li>Apple App Tracking Transparency (ATT) kapsamında hiçbir izleme yapılmaz; IDFA gibi reklam tanımlayıcıları talep edilmez.</li>
+        <li>Hiçbir crash reporting / otomatik hata raporlama servisi kullanılmaz. Hata tanı kayıtları yalnızca kullanıcının elle başlattığı destek e-postalarıyla iletilir.</li>
+    </ul>
+
+    <h2>Yaş Sınırı ve Çocuk Verileri</h2>
+    <ul>
+        <li>PsyAgenda 17 yaş ve üzeri profesyonel terapistler (psikolog, psikiyatrist, danışman) için tasarlanmıştır. Çocuk-yönelimli içerik veya etkileşim sunmaz ve çocuklardan doğrudan veri toplamaz.</li>
+        <li>Kullanıcı (terapist), reşit olmayan bir danışanın bilgilerini girer ise, bu velinin onayı altında ve kullanıcının kendi profesyonel/etik sorumluluğu çerçevesinde gerçekleşir. Geliştirici, bu kullanıma yönelik onay sürecine müdahil değildir.</li>
+    </ul>
+
+    <h2>Şifreleme ve İhracat Uyumluluğu</h2>
+    <ul>
+        <li>Uygulama yalnızca standart, kamuya açık şifreleme algoritmalarını kullanır: AES-256-GCM (veri ve yedek şifreleme), PBKDF2-HMAC-SHA-256 (anahtar türetme), SHA-256 (bütünlük denetimi).</li>
+        <li>Bu algoritmalar Apple App Store ve U.S. ihracat regülasyonları kapsamında "standard exempt" kategorisindedir. Uygulama özel/proprietary kriptografik algoritma uygulamaz.</li>
+    </ul>
+
+    <h2>Veri Saklama Süresi</h2>
+    <ul>
+        <li>Veriler kullanıcı kendi isteğiyle silene kadar cihazda yerel olarak saklanır. Otomatik silme yoktur.</li>
+        <li>Kullanıcı her zaman Ayarlar &gt; Depolama Alanı &gt; "Tüm Yerel Veriyi Sil" ile tüm cihaz verisini, Ayarlar &gt; Senkronizasyon &gt; "Drive'daki Tüm Veriyi Sil" ile bulut verisini kalıcı olarak silebilir.</li>
+        <li>Hata tanı kayıtları (DIAG_ERRORS) yaklaşık 500 KB tavanlı kayan pencerede tutulur; eski kayıtlar otomatik silinir.</li>
+    </ul>
+
     <h2>Hata Raporu ve Tanı Verileri</h2>
     <ul>
         <li>Uygulama, çalışırken oluşan hatalar için teknik tanı kayıtları üretir ve yalnızca cihazınızda yerel olarak saklar (yaklaşık 500 KB tavanlı kayan pencere; eski kayıtlar otomatik silinir).</li>
@@ -118,13 +151,16 @@
     </ul>
     <p>Reddedilen izinler ilgili özelliğin devre dışı kalmasına neden olur; uygulamanın diğer işlevleri etkilenmez.</p>
 
-    <h2>Kullanıcı Hakları</h2>
-    <p>Tüm veriler kullanıcının kontrolündedir. Kullanıcı istediği zaman:</p>
+    <h2>Kullanıcı Hakları (KVKK md. 11 / GDPR md. 15-22)</h2>
+    <p>Tüm veriler kullanıcının kontrolündedir. Kullanıcı istediği zaman aşağıdaki hakları kullanabilir:</p>
     <ul>
-        <li>Verilerini yedekleyebilir ve dışa aktarabilir.</li>
-        <li>Tüm verilerini cihazdan kalıcı olarak silebilir.</li>
-        <li>Senkronizasyon bağlantısını kaldırarak bulut kopyasını silebilir.</li>
-        <li>AI ve senkronizasyon özelliklerini kullanmayı bırakabilir.</li>
+        <li><strong>Yedekleme ve taşınabilirlik (GDPR md. 20):</strong> Verilerini şifreli .thnbak yedeği olarak dışa aktarabilir.</li>
+        <li><strong>Silme hakkı (KVKK md. 7 / GDPR md. 17):</strong> Tüm verilerini cihazdan kalıcı olarak silebilir.</li>
+        <li><strong>Bulut kopyasını silme:</strong> Senkronizasyon bağlantısını kaldırarak veya "Drive'daki Tüm Veriyi Sil" butonuyla bulut kopyasını silebilir.</li>
+        <li><strong>İşleme reddi (GDPR md. 21):</strong> AI ve senkronizasyon özelliklerini kullanmayı bırakabilir; bu özellikler isteğe bağlıdır ve varsayılan olarak kapalıdır.</li>
+        <li><strong>Erişim hakkı (KVKK md. 11 / GDPR md. 15):</strong> Uygulamada kayıtlı tüm verilere doğrudan kullanıcı arayüzünden erişebilir.</li>
+        <li><strong>Düzeltme hakkı (KVKK md. 11 / GDPR md. 16):</strong> Uygulamadaki tüm danışan, randevu, finansal vb. kayıtları doğrudan düzenleyebilir.</li>
+        <li><strong>İtiraz ve şikayet hakkı:</strong> Kullanıcı, KVKK kapsamında Kişisel Verileri Koruma Kurumu'na (KVKK), GDPR kapsamında ilgili AB üye devlet veri koruma otoritesine başvurma hakkına sahiptir.</li>
     </ul>
 
     <h2>İletişim</h2>
