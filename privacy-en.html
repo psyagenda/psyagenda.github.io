@@ -51,7 +51,7 @@
 
 <main>
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Last updated: 6 May 2026 &middot; Agreement version: 3</p>
+    <p class="subtitle">Last updated: 16 May 2026 &middot; Agreement version: 4</p>
 
     <h2>Legal Framework</h2>
     <p>This Privacy Policy is prepared in accordance with Turkey's Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation 2016/679 (GDPR). The policy covers the management of personal data stored on the user's device and processed via optional cloud/AI features.</p>
@@ -127,14 +127,14 @@
     <ul>
         <li>Data is stored locally on the device until the user deletes it themselves. There is no automatic deletion.</li>
         <li>The user can permanently delete all device data via Settings &gt; Storage &gt; "Delete All Local Data" and cloud data via Settings &gt; Sync &gt; "Delete All Drive Data".</li>
-        <li>Diagnostic logs (DIAG_ERRORS) are kept in a sliding window of approximately 500 KB; older entries are automatically discarded.</li>
+        <li>Diagnostic logs (DIAG_ERRORS) are kept in a sliding window of approximately 1 MB; older entries are automatically discarded.</li>
     </ul>
 
     <h2>Bug Reports and Diagnostic Data</h2>
     <ul>
-        <li>The application generates technical diagnostic logs for errors that occur during use, and stores them locally on your device only (a sliding window of approximately 500 KB; older entries are automatically discarded).</li>
-        <li>These logs contain only: error messages and technical stack traces, action types within the app (e.g. "screen changed", "modal opened", "AI button clicked"), the active screen name, device platform, app version, language, license type, and network status.</li>
-        <li>These logs <strong>do not contain client identifying information, phone numbers, emails, addresses, session note content, appointment titles, financial records, photos, or any other personal data</strong>. Only the type of action is recorded — never its content.</li>
+        <li>The application generates technical diagnostic logs for errors that occur during use, and stores them locally on your device only (a sliding window of approximately 1 MB; older entries are automatically discarded).</li>
+        <li>These logs contain only: error messages and technical stack traces, action types within the app (e.g. "screen changed", "modal opened/closed", "notification toast displayed", "synchronization started/completed", "license state changed", "AI button clicked", "native system operation (file save/delete, notification scheduling) result"), the active screen name, device platform, app version, language, license type, and network status.</li>
+        <li>These logs <strong>do not contain client identifying information, phone numbers, emails, addresses, session note content, appointment titles, financial records, photos, or any other personal data</strong> &mdash; this is technically guaranteed by the application architecture: every log point that could carry user content is designed to record only short static identifiers rather than the content itself. Only the type of action is recorded — never its content.</li>
         <li>Diagnostic logs stay on your device. They are sent to info@psyagenda.app only when you use About > Support/Feedback > "I'm having a problem" and tap Send — together with the description you wrote.</li>
         <li>Before sending, the email client opens so you can review, edit, or cancel the message. This feature is fully under your control; no automatic or background submissions occur.</li>
     </ul>
