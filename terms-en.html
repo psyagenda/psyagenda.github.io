@@ -59,12 +59,12 @@
     <h2>1. Data Collection and Local Storage</h2>
     <p>PsyAgenda collects and stores the following data categories to manage therapy processes:</p>
     <ul>
-        <li><strong>Client Information:</strong> Only first name and surname are required. All other fields — phone, email, date of birth, gender, marital status, education, profession, and therapist notes — are entirely optional.</li>
+        <li><strong>Client Information:</strong> Only first name and surname are required. All other fields — phone, email, date of birth, gender, marital status, education, profession, and therapist notes — are entirely optional. This information is stored only if you enter it; otherwise, the application does not request or collect it.</li>
         <li><strong>Appointment/Session Data:</strong> Date, time, duration, pre-session notes, session notes, next-session notes, AI session analysis, session images, and alarm settings.</li>
-        <li><strong>Psychological Test Data:</strong> Rorschach test, Projective Drawing Test, and Manual Test data.</li>
+        <li><strong>Psychological Test Data:</strong> Rorschach test (card-by-card responses, AI and therapist evaluations, final reports), Projective Drawing Test (drawing images, AI and therapist analyses), and Manual Test (images, therapist reports).</li>
         <li><strong>Financial Data:</strong> Session fees, expenses, expense categories, and payment statuses.</li>
     </ul>
-    <p>All data is stored exclusively on your device's local storage (SQLite database). No data leaves your device unless cloud synchronization is enabled.</p>
+    <p>All data is stored exclusively on your device's local storage (SQLite database). No data leaves your device unless you enable cloud synchronization or voluntarily initiate a support email via About &gt; Support/Feedback. Outside of these two user-controlled channels, no third party — including the developer — can access the client/appointment/financial data stored on your device, regardless of whether fields are required or optional.</p>
 
     <h2>2. Data Privacy and Device Responsibility</h2>
     <ul>
@@ -79,17 +79,22 @@
     <ul>
         <li>PsyAgenda optionally allows you to synchronize your data across devices via Google Drive. This feature is available on all platforms and is disabled by default.</li>
         <li><strong>Google Drive:</strong> The application only requests the "drive.appDataFolder" scope (app-private, user-invisible storage).</li>
-        <li><strong>End-to-End Encryption:</strong> All data uploaded to cloud services is encrypted client-side with your synchronization password (PBKDF2 + AES-256-GCM).</li>
+        <li><strong>End-to-End Encryption:</strong> All data uploaded to cloud services is encrypted client-side with your synchronization password (PBKDF2 + AES-256-GCM). No third party, including Google, can decrypt this data. The encryption key is derived solely from the password you set.</li>
         <li><strong>Sync Password:</strong> If you lose this password, you will permanently lose access to your encrypted data on the cloud.</li>
+        <li><strong>Synchronized Data:</strong> Client records, appointments, expenses, expense categories, test data, app settings, and session images are synchronized in encrypted form.</li>
+        <li><strong>Device Registry:</strong> The sync system records a device ID, device name, platform, and last-seen timestamp for each connected device. This information is written to the sync manifest.</li>
+        <li><strong>Conflict Resolution:</strong> When multiple devices modify the same record, the most recently modified record prevails (last-write-wins). This may result in data loss in rare scenarios.</li>
+        <li><strong>Disconnecting:</strong> You may sign out of your cloud account; however, this does not automatically delete existing encrypted data on the cloud.</li>
     </ul>
 
     <h2>4. AI Usage and Data Sharing</h2>
     <ul>
         <li>PsyAgenda uses the Google Gemini API for various clinical analysis features. AI features are optional.</li>
-        <li><strong>Data Transmitted:</strong> During AI analysis, session notes, client age and gender, test responses, and images are sent to the Google Gemini API.</li>
-        <li><strong>API Key:</strong> You use your own Google Gemini API key. This key is stored encrypted on your device.</li>
-        <li><strong>Anonymity Responsibility:</strong> It is entirely your responsibility not to enter any personal information that could reveal your client's identity into free-text fields.</li>
-        <li><strong>Google Data Policy:</strong> Data sent to the Google Gemini API is subject to Google's terms of service. <em>Free API tier:</em> Google may use the data sent to improve its AI models. <em>Paid API tier:</em> Google does not use data sent on the paid plan for model training. Given the sensitivity of clinical data, the paid tier is recommended.</li>
+        <li><strong>AI-Powered Features:</strong> Session note analysis, next-session suggestions, handwriting recognition, Rorschach test card analysis and final reports, Projective Drawing Test analysis, Manual Test correction, and Client General Evaluation.</li>
+        <li><strong>Data Transmitted:</strong> During AI analysis, session notes (text), client age and gender (optional), test responses (text), and drawing/handwriting images are sent to the Google Gemini API over HTTPS.</li>
+        <li><strong>API Key:</strong> You use your own Google Gemini API key. This key is stored encrypted (AES-256-GCM) on your device and is never transmitted to the developer or any other server. API calls are made directly from your device to Google's servers.</li>
+        <li><strong>Anonymity Responsibility:</strong> By default, the application sends only anonymous demographic information (age, gender) for AI analysis. However, free-text fields such as session notes, therapist notes, and client responses are also included in the analysis. It is entirely YOUR responsibility NOT to enter any personal information that could reveal your client's identity (name, surname, ID number, phone, address, etc.) into these fields.</li>
+        <li><strong>Google Data Policy:</strong> Data sent to the Google Gemini API is subject to Google's terms of service. <em>Free API tier:</em> Google may use the data sent to improve its AI models. <em>Paid API tier:</em> Google does not use data sent on the paid plan for model training. Given the sensitivity of clinical data, the paid tier is recommended. Google may also temporarily retain data on all tiers for abuse detection. Please refer to Google's AI terms of service for detailed information.</li>
         <li><strong>Clinical Responsibility:</strong> All evaluations produced by AI are solely supportive tools and preliminary analyses. All clinical responsibility rests with the user.</li>
     </ul>
 
@@ -97,13 +102,14 @@
     <ul>
         <li>You can export your data as an encrypted backup file (.thnbak).</li>
         <li>Backup files are encrypted using AES-256-GCM. If you lose this password, you will not be able to restore your backup file.</li>
+        <li><strong>Backup Contents:</strong> The backup file includes all client, appointment, expense, test data, and session images. Synchronization settings, Google authentication credentials, and the app lock password are NOT included in the backup.</li>
         <li>Regular backups are entirely your responsibility.</li>
     </ul>
 
     <h2>6. Notifications and Communication</h2>
     <ul>
         <li>Session reminder and alarm notifications operate locally on your device.</li>
-        <li>The application optionally <strong>helps</strong> you send appointment notifications to your clients via SMS, WhatsApp, or email. Messages are not sent directly by the app; instead, the app opens your device's SMS/WhatsApp/email application with a pre-filled message, and delivery occurs only with your manual confirmation.</li>
+        <li>The application optionally <strong>helps</strong> you send appointment notifications to your clients via SMS, WhatsApp, or email. Messages are not sent directly by the app; instead, the app opens your device's SMS/WhatsApp/email application with a pre-filled message, and delivery occurs only with your manual confirmation. This feature is disabled by default. The content of messages depends on the templates you define in the application.</li>
     </ul>
 
     <h2>7. Device Permissions</h2>
@@ -127,23 +133,24 @@
     <ul>
         <li><strong>Google Gemini API:</strong> For AI analysis features (optional).</li>
         <li><strong>Google Drive API:</strong> For cloud synchronization (optional).</li>
+        <li><strong>Google Authentication:</strong> For optionally signing in with a Google account for Google Drive synchronization.</li>
         <li><strong>Google Play Store / Apple App Store:</strong> For subscription purchases.</li>
-        <li><strong>RevenueCat:</strong> An anonymous per-device user identifier (App User ID) and the store purchase receipt are shared for subscription purchase flow and receipt validation. No personal data (name, email, session notes, confidential client information) is shared.</li>
+        <li><strong>RevenueCat:</strong> A device-specific random user identifier (App User ID) and the store purchase receipt are shared for subscription purchase flow and receipt validation. No personal data (name, email, session notes, confidential client information) is shared.</li>
         <li><strong>Bug Report Emails (info@psyagenda.app):</strong> When the user uses About > Support/Feedback > "I'm having a problem", the description they wrote and technical diagnostic logs (error messages, action types, platform/version info — no personal data) are sent to the developer through the device's default mail app. This channel is fully under user control; the content can be reviewed, edited, or canceled before sending.</li>
         <li>Beyond these, PsyAgenda does not communicate with any analytics service (Google Analytics, etc.), automatic error reporting service, ad network, or external server. Outside the user-controlled flows explicitly listed above (synchronization, AI, support emails), the developer has no access to any user data.</li>
     </ul>
 
     <h2>11. Disclaimer of Liability and Architectural Declarations</h2>
     <ul>
-        <li>The developer is not responsible for data loss due to user error, incorrect AI analyses, API service disruptions, device failures, or password loss.</li>
-        <li><strong>Service Continuity:</strong> The uninterrupted operation of third-party services is not guaranteed.</li>
-        <li><strong>Medical/Clinical Notice:</strong> PsyAgenda is not a medical device. It is not designed as a diagnostic, treatment planning, or clinical decision-making tool.</li>
+        <li>The developer is not responsible for data loss due to user error, incorrect AI analyses, API service disruptions, device failures, unauthorized access, or password loss.</li>
+        <li><strong>Service Continuity:</strong> The uninterrupted operation of third-party services (Google Gemini API, Google Drive) is not guaranteed. Changes to these services may affect certain features of the application.</li>
+        <li><strong>Medical/Clinical Notice:</strong> PsyAgenda is not a medical device. It is not designed as a diagnostic, treatment planning, or clinical decision-making tool. All content in the application (including AI analyses) is for informational and organizational purposes only.</li>
         <li><strong>No Executable Code:</strong> PsyAgenda does not download, generate, or execute any external code under any circumstances. All user interface, logic, and features are bundled within the application binary. AI features only produce text-based interpretations and reports; they do not alter the runtime behavior of the application.</li>
         <li><strong>Rorschach Imagery:</strong> The original 10 inkblots published by Hermann Rorschach in 1921 have been in the public domain for 100+ years and are used in the application within this context.</li>
     </ul>
 
     <h2>12. Changes to Terms</h2>
-    <p>The developer reserves the right to update these terms of use. Updated terms will be presented to the user upon the next app update and will require re-acceptance.</p>
+    <p>The developer reserves the right to update these terms of use. Updated terms will be presented to the user upon the next app update and will require re-acceptance. If you do not accept the updated terms, you must discontinue use of the application.</p>
 
     <h2>13. Account and Data Deletion</h2>
     <ul>
