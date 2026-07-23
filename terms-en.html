@@ -52,19 +52,19 @@
 <main>
     <h1>Terms of Use</h1>
     <p class="subtitle">PsyAgenda — Important Information and Terms of Use</p>
-    <p class="subtitle"><em>Last updated: 6 May 2026 &middot; Agreement version: 3</em></p>
+    <p class="subtitle"><em>Last updated: July 23, 2026 &middot; Agreement version: 5</em></p>
 
     <p>PsyAgenda is a professional tool designed to help therapists (psychologists, psychiatrists, counselors) manage appointments, client records, psychological tests, session notes, budgets, and encrypted cloud synchronization from a single application. The app is available on Android, iOS (iPhone, iPad), macOS, and Windows (Desktop) platforms.</p>
 
     <h2>1. Data Collection and Local Storage</h2>
-    <p>PsyAgenda collects and stores the following data categories to manage therapy processes:</p>
+    <p>PsyAgenda collects and stores the following data categories to support the therapist's practice management (appointments, client records, session organization):</p>
     <ul>
         <li><strong>Client Information:</strong> Only first name and surname are required. All other fields — phone, email, date of birth, gender, marital status, education, profession, and therapist notes — are entirely optional. This information is stored only if you enter it; otherwise, the application does not request or collect it.</li>
         <li><strong>Appointment/Session Data:</strong> Date, time, duration, pre-session notes, session notes, next-session notes, AI session analysis, session images, and alarm settings.</li>
         <li><strong>Psychological Test Data:</strong> Rorschach test (card-by-card responses, AI and therapist evaluations, final reports), Projective Drawing Test (drawing images, AI and therapist analyses), and Manual Test (images, therapist reports).</li>
         <li><strong>Financial Data:</strong> Session fees, expenses, expense categories, and payment statuses.</li>
     </ul>
-    <p>All data is stored exclusively on your device's local storage (SQLite database). No data leaves your device unless you enable cloud synchronization or voluntarily initiate a support email via About &gt; Support/Feedback. Outside of these two user-controlled channels, no third party — including the developer — can access the client/appointment/financial data stored on your device, regardless of whether fields are required or optional.</p>
+    <p>All data is stored exclusively on your device's local storage (SQLite database). No data leaves your device outside the user-controlled channels listed in these terms (cloud synchronization, AI analysis, license verification, support email). Outside of these channels, no third party — including the developer — can access the client/appointment/financial data stored on your device, regardless of whether fields are required or optional.</p>
 
     <h2>2. Data Privacy and Device Responsibility</h2>
     <ul>
@@ -89,20 +89,20 @@
 
     <h2>4. AI Usage and Data Sharing</h2>
     <ul>
-        <li>PsyAgenda uses the Google Gemini API for various clinical analysis features. AI features are optional.</li>
+        <li>PsyAgenda uses the Google Gemini API for various AI-assisted analysis features that support the therapist's own professional evaluation. AI features are optional.</li>
         <li><strong>AI-Powered Features:</strong> Session note analysis, next-session suggestions, handwriting recognition, Rorschach test card analysis and final reports, Projective Drawing Test analysis, Manual Test correction, and Client General Evaluation.</li>
-        <li><strong>Data Transmitted:</strong> During AI analysis, session notes (text), client age and gender (optional), test responses (text), and drawing/handwriting images are sent to the Google Gemini API over HTTPS.</li>
+        <li><strong>Data Transmitted:</strong> During AI analysis, session notes (text), client age and gender (optional), test responses (text), and drawing/handwriting images are sent to the Google Gemini API over HTTPS. This data is transferred to Google's servers located abroad (cross-border data transfer).</li>
         <li><strong>API Key:</strong> You use your own Google Gemini API key. This key is stored encrypted (AES-256-GCM) on your device and is never transmitted to the developer or any other server. API calls are made directly from your device to Google's servers.</li>
         <li><strong>Anonymity Responsibility:</strong> By default, the application sends only anonymous demographic information (age, gender) for AI analysis. However, free-text fields such as session notes, therapist notes, and client responses are also included in the analysis. It is entirely YOUR responsibility NOT to enter any personal information that could reveal your client's identity (name, surname, ID number, phone, address, etc.) into these fields.</li>
-        <li><strong>Google Data Policy:</strong> Data sent to the Google Gemini API is subject to Google's terms of service. <em>Free API tier:</em> Google may use the data sent to improve its AI models. <em>Paid API tier:</em> Google does not use data sent on the paid plan for model training. Given the sensitivity of clinical data, the paid tier is recommended. Google may also temporarily retain data on all tiers for abuse detection. Please refer to Google's AI terms of service for detailed information.</li>
-        <li><strong>Clinical Responsibility:</strong> All evaluations produced by AI are solely supportive tools and preliminary analyses. All clinical responsibility rests with the user.</li>
+        <li><strong>Google Data Policy:</strong> Data sent to the Google Gemini API is subject to Google's terms of service. <em>Free API tier:</em> Google may use the data sent to improve its AI models. <em>Paid API tier:</em> Google does not use data sent on the paid plan for model training. Given the sensitivity of confidential client information, the paid tier is recommended. Google may also temporarily retain data on all tiers for abuse detection. Please refer to Google's AI terms of service for detailed information.</li>
+        <li><strong>Clinical Responsibility:</strong> All evaluations produced by AI are solely supportive tools and preliminary analyses. They can in no way replace — and are not intended to replace — professional clinical judgment, supervision, or final therapeutic decisions. All clinical responsibility rests with the user.</li>
     </ul>
 
     <h2>5. Backup and Data Recovery</h2>
     <ul>
         <li>You can export your data as an encrypted backup file (.thnbak).</li>
         <li>Backup files are encrypted using AES-256-GCM. If you lose this password, you will not be able to restore your backup file.</li>
-        <li><strong>Backup Contents:</strong> The backup file includes all client, appointment, expense, test data, and session images. Synchronization settings, Google authentication credentials, and the app lock password are NOT included in the backup.</li>
+        <li><strong>Backup Contents:</strong> The backup file includes all client, appointment, expense, test data, and session images. The backup file also includes app settings (including encrypted sync/API credentials and a digest of your app-lock password); the entire file is encrypted with AES-256 using your backup password. Keep your backup file and its password safe.</li>
         <li>Regular backups are entirely your responsibility.</li>
     </ul>
 
@@ -119,15 +119,15 @@
     <ul>
         <li><strong>Trial Period:</strong> The application offers a 30-day free trial from the initial installation.</li>
         <li><strong>Expiration:</strong> When the trial period or subscription expires, the application switches to read-only mode.</li>
-        <li><strong>Subscription Types:</strong> Monthly (1 month) and annual (1 year) subscription options are available. All purchases are processed through Apple App Store or Google Play Store; your payment information is handled solely by the respective platform, and PsyAgenda does not access your payment details. Additionally, a Lifetime license can only be granted by the developer via gift code; there is no direct purchase option.</li>
+        <li><strong>Subscription Types:</strong> Monthly (1 month) and annual (1 year) subscription options are available. All purchases are processed through Apple App Store or Google Play Store; your payment information is handled solely by the respective platform, and PsyAgenda does not access your payment details. Lifetime or time-limited free full access may be granted by the developer as a gift (via the store infrastructure, assigned to your device's Installation ID); the app has no code entry and no direct Lifetime purchase option.</li>
         <li><strong>Auto-Renewal:</strong> Your subscription automatically renews unless cancelled at least 24 hours before the end of the current period. The renewal fee is automatically charged to your Apple ID or Google Play account after the current period ends. The renewed period is billed at the current price at the time of purchase.</li>
-        <li><strong>Cancelling Your Subscription:</strong> You can cancel your active subscription at any time. On iOS devices: Settings → Apple ID → Subscriptions. On Android devices: Google Play Store → Subscriptions. Cancellation must be made at least 24 hours before the end of the current period; otherwise the subscription will renew for one more period.</li>
+        <li><strong>Cancelling Your Subscription:</strong> You can cancel your active subscription at any time. On iOS devices: Settings → Apple ID → Subscriptions. On Android devices: Google Play Store → Subscriptions. On macOS: App Store app → Account → Subscriptions. Cancellation must be made at least 24 hours before the end of the current period; otherwise the subscription will renew for one more period.</li>
         <li><strong>Pricing and Duration:</strong> Current subscription prices and durations are displayed on the License page within the application and on the store purchase screen. Apple and Google may apply regional pricing variations; the price shown on the store purchase screen is the one that applies.</li>
         <li><strong>Billing and Refunds:</strong> Subscription fees are charged at the end of the free trial period (if any), or at the time of purchase if no trial applies. Refund requests are subject to the refund policies of the Apple App Store / Google Play; PsyAgenda cannot directly intervene in the refund process. You must contact the respective store's support channel for refunds.</li>
     </ul>
 
     <h2>9. Reports and Exports</h2>
-    <p>PsyAgenda offers reports and data exports in DOCX (Word), PDF, and XLSX (Excel) formats. Exported files are not encrypted and are unprotected. Securing these files is your responsibility.</p>
+    <p>PsyAgenda offers reports and data exports in DOCX (Word), PDF, and XLSX (Excel) formats. Optional password-protected ZIP encryption is offered during export (traditional ZIP protection for universal compatibility — it deters casual access but is not AES-grade); if you decline, the file is saved unprotected and its security is your responsibility.</p>
 
     <h2>10. Third-Party Services</h2>
     <ul>
@@ -136,7 +136,7 @@
         <li><strong>Google Authentication:</strong> For optionally signing in with a Google account for Google Drive synchronization.</li>
         <li><strong>Google Play Store / Apple App Store:</strong> For subscription purchases.</li>
         <li><strong>RevenueCat:</strong> A device-specific random user identifier (App User ID) and the store purchase receipt are shared for subscription purchase flow and receipt validation. No personal data (name, email, session notes, confidential client information) is shared.</li>
-        <li><strong>Bug Report Emails (info@psyagenda.app):</strong> When the user uses About > Support/Feedback > "I'm having a problem", the description they wrote and technical diagnostic logs (error messages, action types, platform/version info — no personal data) are sent to the developer through the device's default mail app. This channel is fully under user control; the content can be reviewed, edited, or canceled before sending.</li>
+        <li><strong>Bug Report Emails (info@psyagenda.app):</strong> When the user uses About > Support/Feedback > "I'm having a problem", the description they wrote and technical error records (error messages, action types, platform/version info, the device-specific random Installation ID — so we can look up your subscription status for support — and browser/device info (User-Agent); contains no client/session content) are sent to the developer through the device's default mail app. This channel is fully under user control; the content can be reviewed, edited, or canceled before sending.</li>
         <li>Beyond these, PsyAgenda does not communicate with any analytics service (Google Analytics, etc.), automatic error reporting service, ad network, or external server. Outside the user-controlled flows explicitly listed above (synchronization, AI, support emails), the developer has no access to any user data.</li>
     </ul>
 

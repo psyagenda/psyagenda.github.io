@@ -51,7 +51,7 @@
 
 <main>
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Last updated: 16 May 2026 &middot; Agreement version: 4</p>
+    <p class="subtitle">Last updated: July 23, 2026 &middot; Agreement version: 5</p>
 
     <h2>Legal Framework</h2>
     <p>This Privacy Policy is prepared in accordance with Turkey's Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation 2016/679 (GDPR). The policy covers the management of personal data stored on the user's device and processed via optional cloud/AI features.</p>
@@ -65,7 +65,7 @@
     <h2>Data Collected and Processed</h2>
     <p>The application stores the following data categories locally on your device only:</p>
     <ul>
-        <li><strong>Client information:</strong> Name (required), phone, email, address, date of birth, notes (all optional).</li>
+        <li><strong>Client information:</strong> Name (required); phone, email, date of birth, gender, marital status, education, profession, and therapist notes (all optional).</li>
         <li><strong>Appointment and session data:</strong> Date, time, duration, session notes, pre/post-session notes.</li>
         <li><strong>Test data:</strong> Rorschach, drawing test, and manual test records, images, and AI evaluations.</li>
         <li><strong>Financial data:</strong> Session fees, income-expense records, payment tracking.</li>
@@ -74,9 +74,9 @@
 
     <h2>Data Storage</h2>
     <ul>
-        <li>All data is stored only in the local database (SQLite or IndexedDB) on the user's device.</li>
+        <li>All data is stored only in the local database (encrypted SQLite — SQLCipher/AES-256 — or IndexedDB) on the user's device.</li>
         <li>Beyond user-initiated synchronization and support emails, no third party including the developer can access this data.</li>
-        <li>When App Lock is enabled, data is protected by a password.</li>
+        <li>The local database is stored encrypted (SQLCipher/AES-256); your App Lock password protects the encryption key.</li>
     </ul>
 
     <h2>Synchronization and Cloud Storage</h2>
@@ -99,8 +99,8 @@
         <li><strong>Google Gemini API:</strong> Optional AI analysis (with the user's own API key).</li>
         <li><strong>Google Drive:</strong> Optional encrypted synchronization (the user's own account).</li>
         <li><strong>Google Play / App Store:</strong> App distribution and license verification.</li>
-        <li><strong>RevenueCat:</strong> A device-specific random user identifier (App User ID) and the store purchase receipt are shared for subscription purchase flow and receipt validation. No personal data (name, email, session notes, confidential client information) is shared.</li>
-        <li>Beyond these, and beyond support emails the user voluntarily initiates via About > Support/Feedback, no data is transferred to any third-party service.</li>
+        <li><strong>RevenueCat:</strong> A device-specific random user identifier (App User ID) and the store purchase receipt are shared for the subscription purchase flow, receipt validation, and verification of subscription/license status at app launch. Gift licenses are also granted via this identifier. No personal data (name, email, session notes, confidential client information) is shared.</li>
+        <li>The app also performs a periodic reachability check, carrying no user data, to detect whether an internet connection is available. Beyond these, and beyond support emails the user voluntarily initiates via About > Support/Feedback, no data is transferred to any third-party service.</li>
     </ul>
 
     <h2>No Advertising or Tracking</h2>
@@ -108,7 +108,7 @@
         <li>PsyAgenda displays no advertisements. There is no integration with any ad network.</li>
         <li>It contains no analytics services (Google Analytics, Firebase Analytics, Mixpanel, etc.); no usage statistics are collected.</li>
         <li>Under Apple's App Tracking Transparency (ATT), no tracking is performed; advertising identifiers such as IDFA are not requested.</li>
-        <li>No crash reporting / automatic error reporting service is used. Diagnostic logs are transmitted only via support emails the user manually initiates.</li>
+        <li>No crash reporting / automatic error reporting service is used. Technical error records are transmitted only via support emails the user manually initiates.</li>
     </ul>
 
     <h2>Age Restriction and Children's Data</h2>
@@ -119,7 +119,7 @@
 
     <h2>Encryption and Export Compliance</h2>
     <ul>
-        <li>The application uses only standard, publicly available encryption algorithms: AES-256-GCM (data and backup encryption), PBKDF2-HMAC-SHA-256 (key derivation), SHA-256 (integrity verification).</li>
+        <li>The application uses only standard, publicly available encryption algorithms: AES-256-GCM (data and backup encryption), SQLCipher/AES-256 (local database at-rest encryption), PBKDF2-HMAC-SHA-256 (key derivation), SHA-256 (integrity verification), and optional traditional ZIP password protection (ZipCrypto) for exports.</li>
         <li>These algorithms fall under the "standard exempt" category under Apple App Store and U.S. export regulations. The application does not implement any proprietary cryptographic algorithm.</li>
     </ul>
 
@@ -127,27 +127,29 @@
     <ul>
         <li>Data is stored locally on the device until the user deletes it themselves. There is no automatic deletion.</li>
         <li>The user can permanently delete all device data via Settings &gt; Storage &gt; "Delete All Local Data" and cloud data via Settings &gt; Sync &gt; "Delete All Drive Data".</li>
-        <li>Diagnostic logs (DIAG_ERRORS) are kept in a sliding window of approximately 1 MB; older entries are automatically discarded.</li>
+        <li>Technical error records (DIAG_ERRORS and DIAG_BREADCRUMBS) are kept in a sliding window of approximately 1 MB; older entries are automatically discarded.</li>
     </ul>
 
-    <h2>Bug Reports and Diagnostic Data</h2>
+    <h2>Bug Reports and Technical Records</h2>
     <ul>
-        <li>The application generates technical diagnostic logs for errors that occur during use, and stores them locally on your device only (a sliding window of approximately 1 MB; older entries are automatically discarded).</li>
+        <li>The application generates technical error records for errors that occur during use, and stores them locally on your device only (a sliding window of approximately 1 MB; older entries are automatically discarded).</li>
         <li>These logs contain only: error messages and technical stack traces, action types within the app (e.g. "screen changed", "modal opened/closed", "notification toast displayed", "synchronization started/completed", "license state changed", "AI button clicked", "native system operation (file save/delete, notification scheduling) result"), the active screen name, device platform, app version, language, license type, and network status.</li>
-        <li>These logs <strong>do not contain client identifying information, phone numbers, emails, addresses, session note content, appointment titles, financial records, photos, or any other personal data</strong> &mdash; this is technically guaranteed by the application architecture: every log point that could carry user content is designed to record only short static identifiers rather than the content itself. Only the type of action is recorded — never its content.</li>
-        <li>Diagnostic logs stay on your device. They are sent to info@psyagenda.app only when you use About > Support/Feedback > "I'm having a problem" and tap Send — together with the description you wrote.</li>
+        <li>These logs <strong>do not contain client identifying information, phone numbers, emails, addresses, session note content, appointment titles, financial records, photos, or any other client/session content</strong> &mdash; this is technically guaranteed by the application architecture: every log point that could carry user content is designed to record only short static identifiers rather than the content itself. Only the type of action is recorded — never its content.</li>
+        <li>Error records stay on your device. They are sent to info@psyagenda.app only when you use About > Support/Feedback > "I'm having a problem" and tap Send — together with the description you wrote. The email also includes the device-specific random Installation ID (so we can look up your subscription status for support) and browser/device info (User-Agent).</li>
         <li>Before sending, the email client opens so you can review, edit, or cancel the message. This feature is fully under your control; no automatic or background submissions occur.</li>
     </ul>
 
     <h2>Device Permissions</h2>
     <p>The application may request the following device permissions to provide certain features. All permissions are optional and are only requested when the related feature is used:</p>
     <ul>
-        <li><strong>Internet (INTERNET):</strong> Used to connect to Google Drive sync and Gemini AI features. No network connection is established unless you use sync or AI features.</li>
+        <li><strong>Internet (INTERNET):</strong> Used to connect to Google Drive sync and Gemini AI features. The internet is also used for a periodic connectivity check that carries no user data, and for verifying license status (RevenueCat) at app launch.</li>
         <li><strong>Camera (CAMERA):</strong> Used to attach photos to session notes or test records.</li>
         <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used to send appointment reminder notifications.</li>
         <li><strong>Exact Alarms (SCHEDULE_EXACT_ALARM):</strong> Used to trigger appointment reminders at the exact scheduled time.</li>
         <li><strong>Contacts (READ_CONTACTS):</strong> Used for the add-from-contacts feature. Only the name, phone number, and email of the contact selected by the user are read; no other contacts are accessed and no contact data is transmitted outside the device.</li>
         <li><strong>External Storage (WRITE_EXTERNAL_STORAGE — only on Android 9 and below):</strong> Used to save report downloads (PDF/DOCX) to the device's "Downloads" folder. This permission is not needed on Android 10 and later.</li>
+        <li><strong>Biometric Authentication (Face ID / Touch ID / fingerprint):</strong> Used for optional quick unlock; biometric data stays within the operating system — the app never accesses, stores, or transmits it.</li>
+        <li><strong>Photo Library:</strong> Only the photos you select are read, to attach images to session/test records; write access is used to save camera photos to your library.</li>
     </ul>
     <p>Denying a permission disables the related feature; the rest of the application remains unaffected.</p>
 
