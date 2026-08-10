@@ -183,17 +183,43 @@ strong { color: var(--heading); }
 }
 
 /* FAQ */
+.faq-group {
+  margin: 2.5rem 0 0.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+  font-size: 1.15rem;
+}
+.faq-group:first-of-type { margin-top: 1.5rem; }
 .faq-item {
   border-bottom: 1px solid var(--border);
-  padding: 1.25rem 0;
 }
-.faq-item:last-child { border-bottom: none; }
+.faq-item:last-of-type { border-bottom: none; }
 .faq-q {
+  padding: 1rem 0;
   font-weight: 600;
   color: var(--heading);
-  margin-bottom: 0.5rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  transition: color 0.2s;
 }
-.faq-a { color: var(--text-light); margin: 0; }
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::before {
+  content: '▶';
+  font-size: 0.625rem;
+  color: var(--accent);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.faq-item[open] > .faq-q::before { transform: rotate(90deg); }
+.faq-q:hover { color: var(--accent); }
+.faq-a {
+  color: var(--text-light);
+  margin: 0;
+  padding: 0 0 1.25rem 1.125rem;
+}
 
 /* Hero (landing page) */
 .hero {

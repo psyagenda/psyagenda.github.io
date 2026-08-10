@@ -53,55 +53,213 @@
     <h1>Frequently Asked Questions</h1>
     <p class="subtitle">Common questions and answers about PsyAgenda.</p>
 
-    <div class="faq-item">
-        <p class="faq-q">Where is my data stored?</p>
-        <p class="faq-a">All your data is stored locally on your device (phone, tablet, or computer) only. If sync is enabled, data is uploaded encrypted to your Google Drive account. Beyond that, data only leaves your device through emails you voluntarily initiate via About > Support/Feedback (technical error records that contain no client/session content).</p>
-    </div>
+<!-- GENERATED:FAQ-START -->
+    <h2 class="faq-group">General</h2>
 
-    <div class="faq-item">
-        <p class="faq-q">Can I use it without an internet connection?</p>
-        <p class="faq-a">Yes. The app works fully offline. Internet is only required for synchronization, AI analysis, and email notifications.</p>
-    </div>
+    <details class="faq-item">
+        <summary class="faq-q">Can I use it without an internet connection?</summary>
+        <p class="faq-a">Yes. Appointments, client records, session notes, tests, and budget records work without an internet connection; data is kept locally on the device. An internet connection is required for the following operations: Google Drive sync, connecting a Google account, AI analyses, purchasing a subscription and restoring purchases, and delivering client notifications via WhatsApp or email. Notification messages are not sent by the app itself; the message text is passed to the WhatsApp, SMS, or email app on your device, and sending is completed there.</p>
+    </details>
 
-    <div class="faq-item">
-        <p class="faq-q">Is my data secure?</p>
-        <p class="faq-a">Yes. Data is stored locally on your device. If you use sync, data is protected with AES-256 encryption and uploaded only to the app-private folder of your own Google Drive account. Backup files are encrypted with the same standard. You can also enable App Lock for additional security. If you submit a bug report, the technical error records are yours; they contain no client/session content such as client names, session notes, or financial information.</p>
-    </div>
+    <details class="faq-item">
+        <summary class="faq-q">What platforms does the app support?</summary>
+        <p class="faq-a">PsyAgenda works on Android, iOS (iPhone, iPad), macOS, and Windows (desktop) platforms. Appointment, client, test, report, and sync functions are common to all platforms. Session reminder notifications and alarms are available only on the Android and iOS versions; these settings sections are not visible on the macOS and Windows versions. Some platform-specific capabilities such as the camera, biometric lock, and store purchase options may also differ.</p>
+    </details>
 
-    <div class="faq-item">
-        <p class="faq-q">Can I use it on multiple devices?</p>
-        <p class="faq-a">Yes. Enable Google Drive synchronization to sync your data across devices. All data is transferred encrypted.</p>
-    </div>
+    <h2 class="faq-group">Data, security and privacy</h2>
 
-    <div class="faq-item">
-        <p class="faq-q">I forgot my sync password, what can I do?</p>
-        <p class="faq-a">The sync password is stored only on your device; no one, including the developer, can access it. If forgotten, you can remove the existing sync connection and set up a new one with a new password. However, encrypted data on other devices cannot be read without the old password.</p>
-    </div>
+    <details class="faq-item">
+        <summary class="faq-q">Where is my data stored?</summary>
+        <p class="faq-a">All your data is stored locally on your device (phone, tablet, or computer) only. If sync is enabled, data is uploaded encrypted to your Google Drive account. Apart from these, data leaves your device only through operations you initiate: when you use AI features, the relevant session note, test data, or drawing image is sent to the Google Gemini API; the emails you send through the About &gt; Support/Feedback flow contain technical error records that carry no client/session content; when you send a client notification message, the message text you preview on screen is passed to the WhatsApp, SMS, or email app you select. In addition, a randomly generated installation identifier and the purchase receipt are sent to the subscription infrastructure (RevenueCat) to verify subscription status; client data is not included in these requests.</p>
+    </details>
 
-    <div class="faq-item">
-        <p class="faq-q">What data is shared when using AI features?</p>
-        <p class="faq-a">When AI features are used, only the relevant session notes, test data, or drawing images are sent to the Google Gemini API. Client names, contact information, or financial data are never shared. See the info icon in Settings > API Management for details.</p>
-    </div>
+    <details class="faq-item">
+        <summary class="faq-q">Is my data secure?</summary>
+        <p class="faq-a">Yes. Data is stored locally on your device and the local database is encrypted with SQLCipher/AES-256. The app lock password you set when you first install the app protects this encryption key; you can change the password later from Settings, and if your device supports it you can additionally enable biometric login. If you use sync, data is encrypted with AES-256 and uploaded only to the app-private area in your own Google Drive account; backup files are encrypted to the same standard. If you send a problem report, the email contains the error text, the operation steps, the platform, the app version, device information, and the random installation identifier used for support; these records are designed not to carry client names, session notes, or financial information, and you can view and edit the content before sending.</p>
+    </details>
 
-    <div class="faq-item">
-        <p class="faq-q">I forgot my App Lock password, what can I do?</p>
-        <p class="faq-a">Tap "Forgot Password" on the lock screen. You can set a new password by correctly answering the security question you set during setup. If you don't remember the security question either, there is an option to delete all data.</p>
-    </div>
+    <details class="faq-item">
+        <summary class="faq-q">I forgot my App Lock password, what can I do?</summary>
+        <p class="faq-a">Tap "Forgot Password" on the lock screen. When you correctly enter the answer to the security question you set during setup, you are asked to set a new password; if you performed the recovery from the startup lock screen, you also need to set a new security question and answer in the same step. If you don't remember the answer to the security question either, there is a last-resort option to delete all data; this option asks you to type "DELETE ALL DATA" into the confirmation box, permanently deletes all records on the device, and cannot be undone. If you have no backup or sync, the data cannot be recovered.</p>
+    </details>
 
-    <div class="faq-item">
-        <p class="faq-q">How does backup and restore work?</p>
-        <p class="faq-a">From Settings > Backup, you can export your data as an encrypted .thnbak file. To restore, select the file from the same section and enter its password. If you forget the backup password, you cannot access that backup.</p>
-    </div>
+    <details class="faq-item">
+        <summary class="faq-q">What happens to my data if I delete the app from my device or change my phone?</summary>
+        <p class="faq-a">Data is kept in an encrypted database in the device's own app storage area; on iOS and Android, removing the app removes this area as well. On macOS and Windows, uninstalling deletes the program files, and the database can remain in the application data directory in the user folder; when handing the computer over, the Settings &gt; Storage &gt; "Delete All Local Data" step can be applied. If sync is enabled, the encrypted copy on Google Drive is not affected by the app's removal; when you connect on a new device with the same Google account and the same sync password, the first sync downloads this content to the device. If sync is disabled, recovery is only possible with a previously created backup file.</p>
+    </details>
 
-    <div class="faq-item">
-        <p class="faq-q">How can I send notification messages to my clients?</p>
-        <p class="faq-a">In the appointment modal (by tapping an appointment), use the notification and reminder buttons. WhatsApp, SMS, and email channels are supported. Customize message templates from Settings > Notifications.</p>
-    </div>
+    <details class="faq-item">
+        <summary class="faq-q">Can I recover a client or an appointment I deleted by mistake?</summary>
+        <p class="faq-a">The app has no trash bin or undo; the delete confirmation window states that the action cannot be undone. When a client is deleted, all appointments and test records linked to that client are deleted along with it. Since income is not kept as a separate record, collected session fees are deleted along with those appointments; your budget history and income reports will change. Business expenses, which are not tied to a client, are not affected. Recovery is only possible by restoring a backup file created before the deletion, and restoring replaces all of the existing data on the device; selective recovery is not possible. If you want to hide a record from the lists instead of removing it entirely, the client can be deactivated with the "Deactivate" option.</p>
+    </details>
 
-    <div class="faq-item">
-        <p class="faq-q">What platforms does the app support?</p>
-        <p class="faq-a">PsyAgenda works on Android, iOS (iPhone, iPad), macOS, and Windows (desktop). Core features are shared across all platforms; some platform-specific capabilities (camera, biometric lock, store purchase options) may differ.</p>
-    </div>
+    <details class="faq-item">
+        <summary class="faq-q">Does my client's name appear on the lock screen in notifications?</summary>
+        <p class="faq-a">By default it does not; notification and alarm titles are sent with generic text that contains no client name, and the name appears only when the app is opened. If the "Hide client name in notifications" preference under Settings &gt; Notifications is turned off, the client name can be shown in the title. This preference is not synced; it is set separately on each device.</p>
+    </details>
+
+    <h2 class="faq-group">License and subscription</h2>
+
+    <details class="faq-item">
+        <summary class="faq-q">Are my records deleted when the trial period ends?</summary>
+        <p class="faq-a">Records are not deleted and the app continues to open. When the trial period ends, the app switches to read-only mode: client, appointment, test, and budget records can be viewed; creating new records and saving changes to existing records are blocked. Backup and export can also be used in read-only mode. When a subscription is started, writing is enabled again.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">When I switch to a new device, does my subscription come over automatically?</summary>
+        <p class="faq-a">It does not come over automatically. License information is kept locally on the device and is not carried over by sync; even though data is synced, the subscription status is not carried over. With the "Restore Purchases" option on the Settings &gt; License screen, a subscription on the same store account can be registered on the new device. Stores are independent of each other; a subscription purchased from one store is not transferred to a device of another store.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">If I cancel my subscription, does the app close immediately?</summary>
+        <p class="faq-a">No. Cancellation is done from the store's subscription settings; the app continues to run as the full version until the recorded end date passes. After the period ends, the store status is synchronized at startup; if there is no active subscription and the trial period has also expired, the app switches to read-only mode, and records can still be viewed. When 7 days or less remain until the end date, an informational message is shown once at startup.</p>
+    </details>
+
+    <h2 class="faq-group">AI</h2>
+
+    <details class="faq-item">
+        <summary class="faq-q">What data is shared when using AI features?</summary>
+        <p class="faq-a">When AI features are used, only the relevant analysis input is sent to the Google Gemini API: session notes, test responses and reports, drawing images, the note photo used for handwriting recognition, the client private notes field, and (if entered) the client's age and gender. Client name, contact information, and financial records are not transferred from the app's record fields. That said, since session notes and private notes are sent as you write them, it is recommended that you do not write information that could identify the client in these fields. For a detailed list, you can see the API Guide in the Settings &gt; API Management section.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Do I need to enter my own API key for the AI features? Does the app work if I don't?</summary>
+        <p class="faq-a">The AI features work with the user's own Google Gemini API key; the app does not come with a built-in key. The key is obtained through Google AI Studio, and its usage counts against your own account quota at Google, independently of the app license. If there is no key, only that AI operation does not start and a warning is shown; appointments, client records, filling in tests manually, budget, backup, and sync work without a key as well.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Where is my API key stored, do I need to enter it separately on each device?</summary>
+        <p class="faq-a">The key is written to the device's database encrypted with AES-256-GCM; the master key used for the encryption is kept in the operating system's key store. AI requests go from the device directly to Google; there is no developer server and the key does not reach the developer. If you use sync, the key is carried to your other devices within the settings bundle that is encrypted with your sync password; if you do not use it, it needs to be entered separately on each device. The key is shown masked on the settings screen and can be deleted when desired.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">I have already connected my Google account for sync; can't the AI use it?</summary>
+        <p class="faq-a">These are two separate connections. Sync connects to your Google account only with permission for the app-specific Drive folder; the AI features work with a separate Gemini API key. Having connected your Google account for sync does not enable the AI features; and entering an API key does not grant access to your Drive data.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Which AI model is used, can I choose it?</summary>
+        <p class="faq-a">In the Settings &gt; API Management section, one of the Gemini models can be selected as the default, and it can also be changed for that particular operation in each analysis window. Pro models labeled "Paid API" in the list may not work with the free quota. When the quota is exhausted or the selected model is not available on the free plan, the app shows an error message suggesting switching to the Flash model.</p>
+    </details>
+
+    <h2 class="faq-group">Tests and reports</h2>
+
+    <details class="faq-item">
+        <summary class="faq-q">Does the app score Rorschach automatically, does it perform scoring?</summary>
+        <p class="faq-a">No. There is no score calculation, ratio/norm table, or automatic protocol coding in the app; the records contain the response texts you enter, the AI drafts obtained if requested, and your own evaluation notes. When an AI evaluation is requested, the card name, the client's age and gender information if entered, and the response text you wrote are sent; in return a free-text draft is received, and card images are not sent. Selecting the evaluation method only indicates which framework this text will be written with. Approving, correcting, and using the text is up to the therapist.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">I downloaded a report but can't find the file, where is it saved?</summary>
+        <p class="faq-a">On Android, the file is written directly to the Downloads folder. On macOS and Windows, a save dialog opens and you choose the location. On iOS, since there is no system-wide Downloads folder, the file is first written to the app's own Downloads folder and then the share sheet opens; from there it can be moved to the location you want with "Save to Files" or sent directly. Even if the share sheet is closed, the file is not lost: it can be reached at Files &gt; On My iPhone (On My iPad on iPad) &gt; PsyAgenda &gt; Downloads.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">After I select "Complete Test" I can't add anything to the test, can this be undone?</summary>
+        <p class="faq-a">When a test moves to the "Completed" state, that test's text fields, image upload, and save buttons are disabled; the record becomes read-only. The app has no option to undo this state. For a completed test, the report can be downloaded and the record can be deleted, but the content cannot be changed. If you plan to continue later, you can save your progress with "Save Test" instead of "Complete Test".</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Do the Rorschach cards come with the app, can I use my own card images?</summary>
+        <p class="faq-a">The 10-card set comes with the app and is installed into the device's database on first launch. If you wish, each card's image can be replaced with your own copy and the card name can be edited. These card changes are specific to the device: card images are outside the scope of sync and backup, so on another device or after restoring from a backup the cards appear in their default state.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">In which format can I get the test report, and what does the report contain?</summary>
+        <p class="faq-a">The report can be generated as Word (.docx) or PDF. For the Rorschach and drawing tests, the AI evaluation, therapist report, hybrid report, and appendix section can be selected individually in the download dialog; in the manual test, the report contains the therapist text you wrote. In the appendix section of the Rorschach report, the client's responses and the evaluation texts are written card by card, and card images are not included in the report; in the drawing test the drawing image, and in the manual test the images you select, are added to the report as an appendix.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">A password is requested when I download a report, is it mandatory? What happens if I forget the password?</summary>
+        <p class="faq-a">It is not mandatory. Encryption is offered for every document export (test report, client card, Excel); if you accept, the file is placed inside a ZIP protected with the password you enter. If you do not want encryption, you are asked to confirm a warning and the file is saved unencrypted; if you close the password dialog, the export is cancelled and no file is created. The password is not stored anywhere; if it is forgotten, that file cannot be opened, but you can generate the report again from the app.</p>
+    </details>
+
+    <h2 class="faq-group">Sync and devices</h2>
+
+    <details class="faq-item">
+        <summary class="faq-q">Can I use it on multiple devices?</summary>
+        <p class="faq-a">Yes. You can sync your data across devices by enabling Google Drive sync. To do this, you need to sign in with the same Google account on each device and enter the same sync password. Data is encrypted on your device and uploaded to Google Drive's app-private area; if the passwords do not match, the data on the other device cannot be decrypted. Your subscription, however, is tied to the store account you made the purchase with and is not carried over by sync; on devices where you are signed in with the same store account, you can use the "Restore Purchases" option.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">I forgot my sync password, what can I do?</summary>
+        <p class="faq-a">When setting up sync, you are asked to define a security question and its answer. If you forget your password, you can recover it by entering the answer to this question from the "Forgot Password" link on the Settings &gt; Sync screen, and set a new password in its place. Disconnecting and reconnecting does not reset the password; when the app finds data on Google Drive, it asks for the existing password. The password is stored encrypted on your device; for recovery, a copy encrypted with the answer to your security question is also kept in the app folder of your own Google Drive account, and it is not shared with the developer or third parties. The only thing that becomes inaccessible when you forget the password is the encrypted copy on Drive; the local data on your devices is not affected by this.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">If I delete a record on one device, is it deleted from my other devices as well?</summary>
+        <p class="faq-a">Yes. A deletion is stored with a "deleted" marker on the record and a timestamp, and is carried to the other devices through sync; the device in question removes the record from its lists on its next sync. This does not happen until the device syncs — on a device that stays offline for a long time, the record remains visible.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">If I change the same record on two devices, which one is kept?</summary>
+        <p class="faq-a">Merging is done at the record (row) level: changes made to different records are kept from both devices. If the same record has been changed on both devices, the most recent change applies; field-by-field merging is not performed. A deletion is processed as a change as well — if a record deleted on one device was edited later on the other device, the edit applies. Records that have not yet gone to the cloud and exist on only one device are not deleted during merging.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">If my internet connection drops, will the records I am entering at that moment be lost?</summary>
+        <p class="faq-a">Records are always written to the device's own database first, so you can keep working while there is no connection. While there is no connection, sync is not attempted; changes are marked as pending and are uploaded to the cloud on the first sync after the connection returns. During this time the sync icon appears red and indicates that sync is suspended.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">If I disconnect a device from sync, is my data deleted?</summary>
+        <p class="faq-a">When you disconnect, that device is removed from the device list in the cloud and the sync settings on the device (Google session, sync password, status information) are deleted. Your client, appointment, and budget records remain on the device as they are; the data on Google Drive is not deleted either. There is no option to remove another device from the list remotely; this is done from that device. Deleting all data in the cloud is a separate operation and requires typed confirmation.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Do the settings I change on one device carry over to my other devices?</summary>
+        <p class="faq-a">Some carry over, some stay separate on each device. Working hours, days off, break times, default session duration, standard session fee, business name, currency, default analysis approach, and notification message templates are carried between devices by sync. The app lock password and security question, auto-lock duration, app language, notification and alarm preferences, calendar view preferences, and license status are not synced; they are set separately on each device.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Does sync run on its own, and how often?</summary>
+        <p class="faq-a">Sync runs quietly in the background while the app is open: about 10 seconds after a change, when the app comes to the foreground after being in the background, and during a lightweight cloud check performed at regular intervals. If there is no change on the cloud side in this check, no data is transferred. For sync triggered by coming to the foreground, a certain amount of time must have passed since the last sync; this limits back-to-back triggers. You can also start it manually at any time by tapping the sync icon.</p>
+    </details>
+
+    <h2 class="faq-group">Backup and data transfer</h2>
+
+    <details class="faq-item">
+        <summary class="faq-q">How does backup and restore work?</summary>
+        <p class="faq-a">From Settings &gt; Backup, you can export your data as an encrypted .thnbak file. On Android the file is saved to the Downloads folder, and on macOS and Windows to the location you choose; on iOS it is first written to the app's own area and the share screen opens — if you do not send the file to yourself from there and keep it outside the device, the backup is deleted when the app is deleted. When you want to restore, you select the file from the same section and enter its password; restoring permanently deletes all existing data on the device and replaces it with the data in the backup, and this operation cannot be undone. If you forget the backup password, you cannot access that backup.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Can I import my client list from another app or from Excel into PsyAgenda?</summary>
+        <p class="faq-a">No. There is no import for client, appointment, or budget data; Excel, CSV, vCard, calendar, or any other agenda format is not supported. The only file the app can take in as data is an encrypted backup file that was itself created with PsyAgenda (.thnbak). Client records are entered manually; on iOS and Android, when creating a new client, the first name, last name, phone, and email fields can be filled in by selecting a contact from the phone's address book.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Can I get my data out of the app in a readable format?</summary>
+        <p class="faq-a">Yes. The client card can be exported as Word (.docx) or PDF together with its session and test contents; budget records as Excel (.xlsx) with income, expense, and analysis sheets; and test reports as Word or PDF. Every document export offers the option to save the file as a password-protected compressed (.zip) file. Apart from these, an encrypted backup of the entire database (.thnbak) can be created; this file can only be restored with PsyAgenda.</p>
+    </details>
+
+    <h2 class="faq-group">Appointments and notifications</h2>
+
+    <details class="faq-item">
+        <summary class="faq-q">How can I send notification messages to my clients?</summary>
+        <p class="faq-a">Client notification messages are off by default. When you turn on the "Client Notification Messages" option in Settings &gt; Notifications, a message preview screen opens when you create an appointment, change its date or time, or delete it. While the option is off, you can open the same screen by checking the "Notify Client" box in the appointment window. For today's or future appointments to which a notification has already been sent, a "Send Reminder" button also appears. The message can be delivered via WhatsApp, text message (SMS), or email; the channel you select opens in the corresponding app on your device, and you send it yourself. On the macOS and Windows versions, the text message link is handed over to the operating system; if no app that can send text messages is defined on the computer, this channel does not work. You can customize the message templates from Settings &gt; Notifications.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Do session reminders and alarms work on my computer as well?</summary>
+        <p class="faq-a">No. Notification and alarm scheduling works only on iOS and Android; in the macOS and Windows versions the reminder and alarm sections under Settings &gt; Notifications are not shown, while the client notification message templates remain visible. The option to set a custom alarm for a session is also shown only on phones and tablets. A custom alarm you set for a session on your phone is synced as a field of the appointment record and applies on your other synced mobile devices as well.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Can I attach a PDF, Word, or audio file to an appointment?</summary>
+        <p class="faq-a">Only image files are accepted as appointment attachments. The file picker is limited to images, and if a non-image file is selected, a warning states that the file could not be attached. If you want to attach a document to a session, you can add a photo or screenshot of the document as an image.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">I selected "Monthly" for a recurring appointment, but the dates don't fall on the same day of each month, why?</summary>
+        <p class="faq-a">The "Monthly" option means a 4-week (28-day) interval, not a calendar month; each repeat is placed 28 days after the previous one. For this reason the session always stays on the same weekday, but the day of the month shifts earlier over time. The same calculation is also used when extending an existing series.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">I set holidays and break hours; the calendar says "Busy" but I can still place an appointment at that time, is this normal?</summary>
+        <p class="faq-a">Yes, this is normal. Holidays and break hours are shown on the calendar with a red "Busy" box; these boxes are a visual reminder, and when the time slot beneath them is tapped, the appointment window opens as usual and the record can be completed. The note on the Settings screen states this as well: these settings do not delete existing appointments, they only create default "Busy" areas on the calendar. Busy records you create with "Block this hour" and existing session appointments, on the other hand, are real records, so a new appointment that overlaps those hours cannot be saved or dragged onto them; a conflict warning is shown.</p>
+    </details>
+<!-- GENERATED:FAQ-END -->
 </main>
 
 <footer class="site-footer">
