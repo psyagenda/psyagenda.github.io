@@ -167,14 +167,17 @@
                 <li>Randevu oluşturmak istediğiniz gün ve saate dokunun. Randevu modalı açılır.</li>
                 <li><strong>Kayıtlı Danışan</strong> açılır listesinden danışanınızı seçin. Arama kutusuna yazarak filtreleyebilirsiniz.</li>
                 <li><strong>Süre (Dakika)</strong> alanı, Ayarlar'daki varsayılan süreyle hazır gelir. Değiştirmek isterseniz listeden seçin: 15, 30, 45, 60, 75, 90, 120, 150 veya 180 dakika.</li>
-                <li>Gerekirse <strong>Ön Seans Notları</strong> alanına seans öncesi notlarınızı yazın.</li>
+                <li>Gerekirse <strong>Seans Öncesi Notlar</strong> alanına seanstan önce hatırlamanız gerekenleri yazın; bu not ana ekrandaki Günün Notları akışında randevuyla birlikte görünür.</li>
                 <li><strong>Kaydet</strong> veya <strong>Kaydet ve Çık</strong> butonuna basın.</li>
             </ol>
 
-            <h4>Randevu Sırasında Hızlı Danışan Ekleme</h4>
+            <h4>Hızlı Danışan Ekleme</h4>
             <ol>
-                <li>Randevu modalında <strong>Kayıtlı Danışan</strong> yerine <strong>Hızlı Danışan Ekle</strong> alanına danışanın adını yazın.</li>
-                <li>Randevuyu kaydettiğinizde, yeni danışan otomatik olarak sisteme eklenir.</li>
+                <li>Bu yol, henüz kaydı olmayan bir danışan için tek işlemde hem danışan kartını hem de randevuyu oluşturur. Randevu penceresinde listeden seçim yapmak yerine <strong>Hızlı Danışan Ekle</strong> alanına danışanın ad ve soyadını yazın.</li>
+                <li>Yazmaya başladığınızda ücret alanı açılır. Boş bırakırsanız randevuya standart seans ücretiniz uygulanır; bu randevuya özel bir tutar da girebilirsiniz.</li>
+                <li>Randevuyu kaydedin. Danışan kartı arka planda kendiliğinden oluşturulur — yazdığınız metnin son kelimesi soyad, öncesi ad olarak ayrılır — ve randevu bu karta bağlanır.</li>
+                <li>Aynı ada sahip kayıtlı bir danışan varsa uyarı gösterilir; farklı bir kişiyse onaylayarak yeni kaydı oluşturabilirsiniz.</li>
+                <li>Oluşan kart sıradan bir danışan kartıdır; telefon, e-posta, doğum tarihi gibi alanları sonradan Danışanlar ekranından tamamlayabilirsiniz. Kartın kendi seans ücreti boş kalır, dolayısıyla sonraki randevularında da standart ücret geçerli olur.</li>
             </ol>
 
             <h4>Randevu Düzenleme</h4>
@@ -196,9 +199,10 @@
             <h4>Seans Notları Yazma</h4>
             <ol>
                 <li>Randevu modalında üç farklı not alanı bulunur:</li>
-                <li><strong>Ön Seans Notları</strong> (turuncu): Seans öncesinde hazırlamak istediğiniz notlar.</li>
-                <li><strong>Seans Notları</strong> (yeşil): Seans sırasında veya sonrasında yazdığınız notlar. Bu alan AI analizi için kullanılır.</li>
-                <li><strong>Sonraki Seans Notları</strong> (mor): Bir sonraki seansta ele alınacak konular.</li>
+                <li><strong>Seans Öncesi Notlar</strong> (turuncu): Seanstan önce hatırlamanız veya kontrol etmeniz gerekenler. Randevuyu oluştururken yazdığınız bu not, ana ekrandaki <strong>Günün Notları</strong> akışında randevunun altında görünür; böylece güne başlarken hangi seansta neye bakacağınız önünüzde olur.</li>
+                <li><strong>Seans Notları</strong> (yeşil): Seansın asıl kaydı. Seans sırasında veya sonrasında aldığınız tüm notlar ve gözlemler — o seansta konuşulan ve önemli olan her şey — burada tutulur. İsteğe bağlı olarak yapay zeka seans analizi çalıştırırsanız, analiz de bu alandaki metni okur.</li>
+                <li><strong>Sonraki Seans Notları</strong> (mor): Seans gözlemlerinize dayanarak bir sonraki seansta ele almak istediğiniz konular. Kendiniz yazabilir ya da isteğe bağlı olarak yapay zekadan öneri isteyebilirsiniz; öneri alırsanız alandaki mevcut metnin yerine geçer. Aynı danışana yeni bir randevu oluşturup danışanı seçtiğinizde, bir önceki seansın bu notları yeni randevunun <strong>Seans Öncesi Notlar</strong> alanına kendiliğinden aktarılır (alan doluysa sonuna eklenir) ve bir bildirim gösterilir.</li>
+                <li>Seans sırasında kâğıda not aldıysanız notun fotoğrafını çekip randevuya ekleyebilirsiniz. Eklediğiniz görselin üzerindeki <strong>el yazısı tanıma</strong> butonuna dokunduğunuzda yapay zeka yazıyı dijitale döker; onay penceresinin ardından not formatını (Serbest Not, SOAP veya DAP) seçersiniz. Çıkan metin Seans Notları alanının sonuna eklenir, mevcut yazdıklarınızın üzerine yazmaz.</li>
                 <li>Her not alanının yanındaki <strong>Okuma Modu</strong> butonu ile notları tam ekranda okuyabilirsiniz.</li>
             </ol>
 
@@ -239,22 +243,22 @@
                 <li><strong>Takvim</strong> ekranına gidin. Varsayılan olarak dinamik (günlük) görünüm açılır; aylık görünüm için görünüm satırının sağındaki <strong>Aylık</strong> butonuna dokunun.</li>
                 <li>Her gün hücresinde o günkü seans sayısı tek kutuda özetlenir (ör. <strong>3 Seans</strong>). Meşgul işaretlenen veya tatil günleri kırmızı <strong>Meşgul</strong> kutusuyla gösterilir.</li>
                 <li>Bir güne dokunarak o günün detaylı randevu listesini görebilirsiniz.</li>
-                <li>Üstteki <strong>◀</strong> ve <strong>▶</strong> oklarıyla aylar arasında gezinin. <strong>Bugün</strong> butonuyla bugüne dönün.</li>
+                <li>Üstteki tek ok düğmeleriyle aylar arasında, çift ok düğmeleriyle yıllar arasında gezinin. <strong>Bugün</strong> butonuyla bugüne dönün.</li>
             </ol>
 
             <h4>Dinamik Görünüm (1 / 3 / 5 / 7 Gün)</h4>
             <ol>
                 <li>Takvim ekranında, üst araç çubuğunun alt satırındaki soldaki <strong>3 Günlük</strong> (cihaza göre 1/3/5/7 Günlük) butonuna dokunun. Sağdaki <strong>Aylık</strong> butonu aylık görünüme döner.</li>
                 <li>Dinamik görünümde günler yan yana sütunlar halinde, saatler satır satır gösterilir. Varsayılan aralık <strong>08:00-21:00</strong>'dir; <strong>Ayarlar > Kişiselleştirme > Çalışma Saatlerini Belirleyin</strong>'den değiştirebilirsiniz.</li>
-                <li>Gün sayısını değiştirmek için <strong>{gün} Günlük</strong> butonunun sağındaki <strong>▼</strong> okuna dokunun ve listeden seçin. Seçenekler cihaza göre değişir: telefonda <strong>1 / 3</strong>, tablette <strong>1 / 3 / 5</strong>, masaüstünde <strong>1 / 3 / 5 / 7</strong> gün.</li>
+                <li>Gün sayısını değiştirmek için gün butonunun (üzerinde o an görüntülenen gün sayısı yazar: <strong>3 Günlük</strong>, <strong>5 Günlük</strong> gibi) sağındaki aşağı ok düğmesine dokunun ve listeden seçin. Seçenekler cihaza göre değişir: telefonda <strong>1 / 3</strong>, tablette <strong>1 / 3 / 5</strong>, masaüstünde <strong>1 / 3 / 5 / 7</strong> gün.</li>
                 <li>Bir saat dilimine dokunarak o zaman için yeni randevu oluşturabilirsiniz.</li>
                 <li>Sol üst köşedeki <strong>30 dk</strong> butonuna dokunarak saat ızgarasının aralığını <strong>15 / 30 / 60 dakika</strong> olarak değiştirebilirsiniz.</li>
             </ol>
 
             <h4>Takvimde Gezinme</h4>
             <ol>
-                <li><strong>◀</strong> / <strong>▶</strong> okları ile bir dönem ileri veya geri gidin.</li>
-                <li><strong>◀◀</strong> / <strong>▶▶</strong> çift okları ile birden fazla dönem atlayın.</li>
+                <li><strong>Bugün</strong> butonunun iki yanındaki tek ok düğmeleriyle ilerleyip geri gidin: gün görünümünde bir gün, aylık görünümde bir ay.</li>
+                <li>En dıştaki çift ok düğmeleri (<strong>Hızlı Geri</strong> / <strong>Hızlı İleri</strong>) daha büyük adımlarla atlar: gün görünümünde ekranda kaç gün gösteriliyorsa o kadar, aylık görünümde bir yıl.</li>
                 <li><strong>Bugün</strong> butonuna dokunarak bugüne dönün.</li>
                 <li>Takvimde randevuları sürükle-bırak ile farklı saatlere taşıyabilirsiniz.</li>
                 <li>Dokunmatik cihazlarda takvimi parmağınızla <strong>sağa/sola kaydırarak</strong> da ileri geri gezinebilirsiniz.</li>

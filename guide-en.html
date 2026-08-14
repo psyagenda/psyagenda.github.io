@@ -167,14 +167,17 @@
                 <li>Tap on the day and time where you want to create an appointment. The appointment modal opens.</li>
                 <li>Select your client from the <strong>Registered Client</strong> dropdown. You can type to search and filter.</li>
                 <li>The <strong>Duration (Minutes)</strong> field is pre-filled with the default duration from Settings. To change it, pick from the list: 15, 30, 45, 60, 75, 90, 120, 150 or 180 minutes.</li>
-                <li>If needed, write your pre-session notes in the <strong>Pre-Session Notes</strong> area.</li>
+                <li>If needed, write what you want to remember before the session in the <strong>Pre-Session Notes</strong> area; this note appears together with the appointment in the Today's Notes stream on the main screen.</li>
                 <li>Tap <strong>Save</strong> or <strong>Save and Exit</strong>.</li>
             </ol>
 
-            <h4>Quick-Adding a Client During Appointment Creation</h4>
+            <h4>Quick Client Add</h4>
             <ol>
-                <li>In the appointment modal, instead of selecting a <strong>Registered Client</strong>, type the client's name in the <strong>Quick Add Client</strong> field.</li>
-                <li>When you save the appointment, the new client is automatically added to the system.</li>
+                <li>This path creates both the client card and the appointment in a single step for someone who is not registered yet. In the appointment window, type the client's name and surname into the <strong>Quick Add Client</strong> field instead of picking from the list.</li>
+                <li>The fee field opens as you start typing. If you leave it empty, your standard session fee is applied to the appointment; you can also enter an amount specific to this appointment.</li>
+                <li>Save the appointment. The client card is created in the background — the last word of what you typed becomes the surname and the rest becomes the first name — and the appointment is linked to that card.</li>
+                <li>If a registered client with the same name already exists, a warning is shown; if this is a different person, you can confirm to create the new record.</li>
+                <li>The resulting card is an ordinary client card; you can fill in fields such as phone, email, and date of birth later from the Clients screen. The card's own session fee is left empty, so your standard fee also applies to their future appointments.</li>
             </ol>
 
             <h4>Editing an Appointment</h4>
@@ -196,9 +199,10 @@
             <h4>Writing Session Notes</h4>
             <ol>
                 <li>The appointment modal has three separate note areas:</li>
-                <li><strong>Pre-Session Notes</strong> (amber): Notes you prepare before the session.</li>
-                <li><strong>Session Notes</strong> (green): Notes written during or after the session. This field is used for AI analysis.</li>
-                <li><strong>Next Session Notes</strong> (purple): Topics to address in the next session.</li>
+                <li><strong>Pre-Session Notes</strong> (amber): Things you need to remember or check before the session. The note you write while creating the appointment appears under that appointment in the <strong>Today's Notes</strong> stream on the main screen, so you start the day already knowing what to look at in each session.</li>
+                <li><strong>Session Notes</strong> (green): The main record of the session. All the notes and observations you take during or after the session — everything discussed and everything that mattered — are kept here. If you optionally run the AI session analysis, it reads the text in this field.</li>
+                <li><strong>Next Session Notes</strong> (purple): Topics you want to address in the next session, based on your observations. You can write them yourself or optionally ask the AI for a suggestion; a suggestion replaces the current text in the field. When you create a new appointment for the same client and select that client, these notes from the previous session are carried over into the new appointment's <strong>Pre-Session Notes</strong> field automatically (appended if the field already has text), and a notification is shown.</li>
+                <li>If you took notes on paper during the session, you can photograph them and attach the photo to the appointment. Tapping the <strong>handwriting recognition</strong> button on the attached image has the AI convert the writing into text; after the consent dialog you choose the note format (Freeform, SOAP, or DAP). The result is appended to the end of the Session Notes field and does not overwrite what you have already written.</li>
                 <li>Each note area has a <strong>Reading Mode</strong> button to view the notes in full screen.</li>
             </ol>
 
@@ -239,22 +243,22 @@
                 <li>Go to the <strong>Calendar</strong> screen. The dynamic (daily) view opens by default; to switch to the monthly view, tap the <strong>Monthly</strong> button on the right of the view row.</li>
                 <li>Each day cell summarizes that day's session count in a single box (e.g. <strong>3 Sessions</strong>). Days marked as busy and holidays are shown with a red <strong>Unavailable</strong> box.</li>
                 <li>Tap on a day to see the detailed list of appointments for that day.</li>
-                <li>Use the <strong>◀</strong> and <strong>▶</strong> arrows at the top to navigate between months. Tap <strong>Today</strong> to jump back to the current date.</li>
+                <li>Use the single-arrow buttons at the top to move between months and the double-arrow buttons to move between years. Tap <strong>Today</strong> to jump back to the current date.</li>
             </ol>
 
             <h4>Dynamic View (1 / 3 / 5 / 7 Days)</h4>
             <ol>
                 <li>On the calendar screen, tap the <strong>3-Day</strong> button (1/3/5/7-Day depending on your device) on the left of the toolbar's bottom row. The <strong>Monthly</strong> button on the right returns to the monthly view.</li>
                 <li>In the dynamic view, days are shown as side-by-side columns and hours as rows. The default range is <strong>08:00-21:00</strong>; you can change it from <strong>Settings > Personalization > Set Your Working Hours</strong>.</li>
-                <li>To change the number of days, tap the <strong>▼</strong> arrow to the right of the <strong>{days}-Day</strong> button and pick from the list. The options vary by device: <strong>1 / 3</strong> on phones, <strong>1 / 3 / 5</strong> on tablets, <strong>1 / 3 / 5 / 7</strong> days on desktop.</li>
+                <li>To change the number of days, tap the down-arrow button to the right of the day button (which shows the number of days currently displayed, e.g. <strong>3 Days</strong> or <strong>5 Days</strong>) and pick from the list. The options vary by device: <strong>1 / 3</strong> on phones, <strong>1 / 3 / 5</strong> on tablets, <strong>1 / 3 / 5 / 7</strong> days on desktop.</li>
                 <li>Tap on a time slot to create a new appointment at that time.</li>
                 <li>Tap the <strong>30 min</strong> button in the top left corner to change the hour grid interval to <strong>15 / 30 / 60 minutes</strong>.</li>
             </ol>
 
             <h4>Navigating the Calendar</h4>
             <ol>
-                <li>Use <strong>◀</strong> / <strong>▶</strong> arrows to move one period forward or back.</li>
-                <li>Use <strong>◀◀</strong> / <strong>▶▶</strong> double arrows to skip multiple periods.</li>
+                <li>Use the single-arrow buttons on either side of <strong>Today</strong> to move forward and back: one day in the day view, one month in the monthly view.</li>
+                <li>The outermost double-arrow buttons (<strong>Fast Back</strong> / <strong>Fast Forward</strong>) jump in larger steps: as many days as are currently shown on screen in the day view, and one year in the monthly view.</li>
                 <li>Tap the <strong>Today</strong> button to return to the current date.</li>
                 <li>Drag and drop appointments in the calendar to reschedule them to different time slots.</li>
                 <li>On touch devices you can also navigate back and forth by <strong>swiping left/right</strong> on the calendar.</li>
