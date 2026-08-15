@@ -150,7 +150,8 @@
                 <li>Danışan detay ekranını açın.</li>
                 <li>Üstteki buton grubunda yer alan kırmızı <strong>Sil</strong> butonuna dokunun.</li>
                 <li>Açılan onay penceresi neyin silineceğini belirtir: danışan kartı, bu danışana ait tüm randevular ve test kayıtları. Tahsil edilmiş seans ücretleri de bu randevularla birlikte silindiği için bütçe geçmişiniz ve gelir raporlarınız değişir; danışana bağlı olmayan işletme giderleri etkilenmez.</li>
-                <li>Silmeyi onaylamak için <strong>Evet</strong> butonuna dokunun. Bu işlem geri alınamaz; geri dönüş yalnızca silme öncesinde alınmış bir yedeği geri yüklemekle mümkündür. Kaydı yalnızca listelerden gizlemek istiyorsanız silmek yerine <strong>Pasif Yap</strong> seçeneğini kullanabilirsiniz.</li>
+                <li>Silme geri alınamaz. Danışanla çalışmanız bittiği için kaydı görünürden kaldırmak istiyorsanız <strong>silmek yerine Pasif Yap önerilir</strong>: randevu geçmişi, test kayıtları ve bütçe verileri olduğu gibi kalır, danışan yalnızca listelerden gizlenir ve istediğiniz zaman yeniden aktif edilebilir. Bu yüzden aktif bir danışanda onay penceresinde üç buton bulunur: <strong>İptal</strong>, <strong>Pasif Yap</strong> ve <strong>Evet, Sil</strong>. Danışan zaten pasifse <strong>Pasif Yap</strong> butonu görünmez; yalnızca <strong>İptal</strong> ve <strong>Evet, Sil</strong> kalır.</li>
+                <li>Silmeyi onaylamak için <strong>Evet, Sil</strong> butonuna dokunun. Bu işlem geri alınamaz; geri dönüş yalnızca silme öncesinde alınmış bir yedeği geri yüklemekle mümkündür.</li>
             </ol>
         </div>
     </details>
@@ -183,7 +184,7 @@
             <h4>Randevu Düzenleme</h4>
             <ol>
                 <li>Takvimde veya ana ekranda düzenlemek istediğiniz randevuya dokunun.</li>
-                <li>Açılan modalda istediğiniz alanları değiştirin (süre, notlar, ücret, tahsilat vb.). Randevunun gün veya saatini değiştirmek için modalı kapatıp randevuyu takvimde yeni yerine sürükleyin.</li>
+                <li>Açılan modalda istediğiniz alanları değiştirin (süre, notlar, ücret, tahsilat vb.). Randevunun gün veya saatini değiştirmek için modalı kapatıp randevuyu takvimde yeni yerine sürükleyin. Randevu yerinden oynamıyorsa sürükleme kilidi devrede olabilir; görünüm seçicinin ortasındaki asma kilit butonuna bakın.</li>
                 <li><strong>Kaydet</strong> butonuna basın. Randevu bir serinin parçasıysa güncelleme kapsamını seçmeniz istenir.</li>
             </ol>
 
@@ -193,7 +194,8 @@
                 <li><strong>Tekrarla</strong> kutusunun yanındaki açılır listeden tekrar aralığını seçin: <strong>Her Hafta</strong>, <strong>2 Haftada Bir</strong>, <strong>3 Haftada Bir</strong> veya <strong>Ayda Bir</strong>.</li>
                 <li><strong>Tekrar Sayısı</strong> alanına kaç seans oluşturulacağını girin (1-52 arası).</li>
                 <li><strong>Kaydet</strong> butonuna basın. Belirtilen sıklıkta otomatik olarak randevular oluşturulur.</li>
-                <li>Serideki herhangi bir randevuyu açtığınızda modalın üstünde seri bilgi paneli görünür (son randevuda turuncu uyarı olarak). Buradaki sıklık ve <strong>Kez</strong> kutusunu ayarlayıp <strong>Uzat</strong> butonuna basarak seriye ek seanslar ekleyebilirsiniz.</li>
+                <li>Serinin son seansı takvimde <strong>mor renkte</strong> görünür ve kutusunun sağ alt köşesinde bir <strong>bitiş bayrağı (🏁)</strong> belirir; böylece serinin nerede bittiğini takvime bakar bakmaz görürsünüz. Aylık görünümde bayrak çıkmaz, o günün seans sayısı kutusu mor olur.</li>
+                <li>Serideki herhangi bir randevuyu açtığınızda modalın üstünde seri bilgi paneli görünür (son randevuda turuncu uyarı olarak). Buradaki sıklık ve <strong>Kez</strong> kutusunu ayarlayıp <strong>Uzat</strong> butonuna basarak seriye ek seanslar ekleyebilirsiniz. Seriyi uzattığınızda mor renk ve bayrak kendiliğinden yeni son seansa taşınır.</li>
             </ol>
 
             <h4>Seans Notları Yazma</h4>
@@ -201,8 +203,8 @@
                 <li>Randevu modalında üç farklı not alanı bulunur:</li>
                 <li><strong>Seans Öncesi Notlar</strong> (turuncu): Seanstan önce hatırlamanız veya kontrol etmeniz gerekenler. Randevuyu oluştururken yazdığınız bu not, ana ekrandaki <strong>Günün Notları</strong> akışında randevunun altında görünür; böylece güne başlarken hangi seansta neye bakacağınız önünüzde olur.</li>
                 <li><strong>Seans Notları</strong> (yeşil): Seansın asıl kaydı. Seans sırasında veya sonrasında aldığınız tüm notlar ve gözlemler — o seansta konuşulan ve önemli olan her şey — burada tutulur. İsteğe bağlı olarak yapay zeka seans analizi çalıştırırsanız, analiz de bu alandaki metni okur.</li>
-                <li><strong>Sonraki Seans Notları</strong> (mor): Seans gözlemlerinize dayanarak bir sonraki seansta ele almak istediğiniz konular. Kendiniz yazabilir ya da isteğe bağlı olarak yapay zekadan öneri isteyebilirsiniz; öneri alırsanız alandaki mevcut metnin yerine geçer. Aynı danışana yeni bir randevu oluşturup danışanı seçtiğinizde, bir önceki seansın bu notları yeni randevunun <strong>Seans Öncesi Notlar</strong> alanına kendiliğinden aktarılır (alan doluysa sonuna eklenir) ve bir bildirim gösterilir.</li>
-                <li>Seans sırasında kâğıda not aldıysanız notun fotoğrafını çekip randevuya ekleyebilirsiniz. Eklediğiniz görselin üzerindeki <strong>el yazısı tanıma</strong> butonuna dokunduğunuzda yapay zeka yazıyı dijitale döker; onay penceresinin ardından not formatını (Serbest Not, SOAP veya DAP) seçersiniz. Çıkan metin Seans Notları alanının sonuna eklenir, mevcut yazdıklarınızın üzerine yazmaz.</li>
+                <li><strong>Sonraki Seans Notları</strong> (mor): Seans gözlemlerinize dayanarak bir sonraki seansta ele almak istediğiniz konular. Kendiniz yazabilir ya da isteğe bağlı olarak yapay zekadan öneri isteyebilirsiniz; öneri, alan doluysa yazdıklarınızın sonuna eklenir, üzerine yazmaz. Aynı danışana yeni bir randevu oluşturup danışanı seçtiğinizde, bir önceki seansın bu notları yeni randevunun <strong>Seans Öncesi Notlar</strong> alanına kendiliğinden aktarılır (alan doluysa sonuna eklenir) ve bir bildirim gösterilir.</li>
+                <li><strong>Seans Notları</strong>'nı elle yazmak yerine: seans sırasında kâğıda not aldıysanız notun fotoğrafını çekip randevuya ekleyebilirsiniz. Eklediğiniz görselin üzerindeki <strong>el yazısı tanıma</strong> butonuna dokunduğunuzda yapay zeka yazıyı dijitale döker; onay penceresinin ardından not formatını (Serbest Not, SOAP veya DAP) seçersiniz. Çıkan metin bu alanın sonuna eklenir, mevcut yazdıklarınızın üzerine yazmaz.</li>
                 <li>Her not alanının yanındaki <strong>Okuma Modu</strong> butonu ile notları tam ekranda okuyabilirsiniz.</li>
             </ol>
 
@@ -224,10 +226,12 @@
 
             <h4>Ödeme Takibi</h4>
             <ol>
-                <li>Randevu modalında <strong>Seans Notları</strong> bölümünün altında <strong>Tahsil Edildi</strong> kutucuğu bulunur.</li>
+                <li>Kaydedilmiş bir randevuyu açtığınızda <strong>Seans Notları</strong> başlığının sağında <strong>Tahsil Edildi</strong> kutucuğu yer alır. Yeni randevu oluştururken bu kutucuk görünmez; randevu kaydedildikten sonra gelir.</li>
                 <li>Danışan ödeme yaptığında bu kutuyu işaretleyin.</li>
                 <li>Ödenmemiş seanslar biriktiğinde, danışanın randevu modalında <strong>birikmiş borç uyarısı</strong> görüntülenir.</li>
-                <li>Tüm ödemeleri <strong>Bütçe > Gelirler</strong> sekmesinden takip edebilirsiniz.</li>
+                <li>Ödemeleri tek tek randevu açarak işlemek zorunda değilsiniz: <strong>Bütçe > Gelirler</strong> sekmesinde bütün seanslar liste halinde durur ve <strong>Tahsil Edildi</strong> kutucuğu doğrudan bu listeden de işaretlenebilir.</li>
+                <li>Listenin üstündeki danışan filtresinden bir danışan seçerek yalnız onun ödeme geçmişini görebilirsiniz. <strong>Sadece Tahsil Edilmemişleri Göster</strong> ve <strong>Sadece Tahsil Edilmişleri Göster</strong> kutucuklarıyla listeyi daraltabilir, tarih filtresiyle dönem seçebilirsiniz.</li>
+                <li>Listede tahsil edilmiş seanslar soluk görünür; tarihi geçtiği hâlde tahsil edilmemiş seanslar <strong>kırmızı</strong> ile işaretlenir, böylece geciken ödemeler ilk bakışta ayırt edilir.</li>
             </ol>
         </div>
     </details>
@@ -260,8 +264,17 @@
                 <li><strong>Bugün</strong> butonunun iki yanındaki tek ok düğmeleriyle ilerleyip geri gidin: gün görünümünde bir gün, aylık görünümde bir ay.</li>
                 <li>En dıştaki çift ok düğmeleri (<strong>Hızlı Geri</strong> / <strong>Hızlı İleri</strong>) daha büyük adımlarla atlar: gün görünümünde ekranda kaç gün gösteriliyorsa o kadar, aylık görünümde bir yıl.</li>
                 <li><strong>Bugün</strong> butonuna dokunarak bugüne dönün.</li>
-                <li>Takvimde randevuları sürükle-bırak ile farklı saatlere taşıyabilirsiniz.</li>
+                <li>Takvimde randevuları sürükle-bırak ile farklı saatlere taşıyabilirsiniz. Kazara taşımaktan çekiniyorsanız bunu kapatabilirsiniz; aşağıdaki <strong>Kazara Taşımayı Önleme</strong> başlığına bakın.</li>
                 <li>Dokunmatik cihazlarda takvimi parmağınızla <strong>sağa/sola kaydırarak</strong> da ileri geri gezinebilirsiniz.</li>
+            </ol>
+
+            <h4>Kazara Taşımayı Önleme (Sürükleme Kilidi)</h4>
+            <ol>
+                <li>Görünüm seçicinin ortasında, <strong>7 Günlük</strong> ile <strong>Aylık</strong> düğmelerinin arasında bir asma kilit butonu bulunur. Uygulama açıldığında bu kilit kapalıdır, yani sürükleme açıktır.</li>
+                <li>Butona dokunduğunuzda kilit devreye girer: buton kehribar rengine döner, simge kapalı asma kilide dönüşür ve "Sürükle-bırak kapatıldı" bildirimi çıkar. Artık randevular yerinden oynatılamaz.</li>
+                <li>Kilit devredeyken takvimde gezinmeye normal şekilde devam edersiniz: parmağınızla sağa/sola kaydırma ve yukarı/aşağı kaydırma etkilenmez. Yalnızca randevuların ve <strong>Meşgul</strong> bloklarının sürüklenmesi engellenir.</li>
+                <li>Sürüklemeyi yeniden açmak için aynı butona dokunun; buton normal rengine döner ve randevuları tekrar taşıyabilirsiniz.</li>
+                <li>Bu tercih kullandığınız cihaza özeldir; kapatana kadar o cihazda geçerli kalır ve diğer cihazlarınıza aktarılmaz. Bir randevuyu taşıyamıyorsanız ilk olarak bu butonun kehribar renkte olup olmadığına bakın.</li>
             </ol>
         </div>
     </details>
@@ -534,7 +547,7 @@
             <h4>Uygulama Kilidi Ayarlama</h4>
             <ol>
                 <li><strong>Uygulamayı ilk açtığınızda</strong> parola kurulum ekranı otomatik olarak gelir; bu adım atlanamaz.</li>
-                <li>Bu adımı kaldırın. Yerine: "Uygulama kilidi ayrı bir seçenekle açılmaz — parola kurulumu ilk açılışta zorunlu olarak yapılır; Ayarlar > Güvenlik yalnızca mevcut kilidin ayarlarını içerir."</li>
+                <li>Uygulama kilidi ayrı bir seçenekle açılmaz — parola kurulumu ilk açılışta zorunlu olarak yapılır. <strong>Ayarlar > Güvenlik</strong> yalnızca mevcut kilidin ayarlarını içerir.</li>
                 <li>Bir şifre belirleyin ve tekrar onaylayın.</li>
                 <li><strong>Güvenlik sorusu</strong> ve cevabını mutlaka doldurun — şifrenizi unutursanız tek kurtarma yöntemidir.</li>
                 <li><strong>Otomatik Kilit Zaman Aşımı</strong> altındaki <strong>Hareketsizlik Süresi</strong>'ni seçerek uygulamada hiçbir işlem yapılmadığında ne kadar sonra kilitleneceğini belirleyin: Asla, 30 Saniye, 1, 5, 15, 30 Dakika veya 1 Saat.</li>

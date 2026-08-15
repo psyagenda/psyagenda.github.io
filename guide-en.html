@@ -150,7 +150,8 @@
                 <li>Open the client detail view.</li>
                 <li>Tap the red <strong>Delete</strong> button in the button group at the top.</li>
                 <li>The confirmation dialog states what will be deleted: the client card, all appointments belonging to this client, and their test records. Collected session fees are removed along with those appointments, so your budget history and income reports will change; business expenses, which are not tied to a client, are not affected.</li>
-                <li>Tap <strong>Yes</strong> to confirm the deletion. This action cannot be undone; the only way back is restoring a backup taken before the deletion. If you only want to hide the record from your lists, you can use <strong>Deactivate</strong> instead of deleting.</li>
+                <li>Because deletion cannot be undone, if you have simply finished working with the client and want the record out of sight, <strong>deactivating is recommended over deleting</strong>: the appointment history, test records, and budget data all stay intact, the client is only hidden from your lists, and you can reactivate them at any time. For this reason an active client's confirmation dialog offers three buttons: <strong>Cancel</strong>, <strong>Deactivate</strong>, and <strong>Yes, Delete</strong>. If the client is already inactive, the <strong>Deactivate</strong> button does not appear; only <strong>Cancel</strong> and <strong>Yes, Delete</strong> remain.</li>
+                <li>Tap <strong>Yes, Delete</strong> to confirm the deletion. This action cannot be undone; the only way back is restoring a backup taken before the deletion.</li>
             </ol>
         </div>
     </details>
@@ -183,7 +184,7 @@
             <h4>Editing an Appointment</h4>
             <ol>
                 <li>Tap on the appointment you want to edit in the calendar or home screen.</li>
-                <li>In the modal that opens, change any fields you need (duration, notes, fee, payment status, etc.). To change the appointment's day or time, close the modal and drag the appointment to its new slot in the calendar.</li>
+                <li>In the modal that opens, change any fields you need (duration, notes, fee, payment status, etc.). To change the appointment's day or time, close the modal and drag the appointment to its new slot in the calendar. If the appointment will not move, the drag lock may be engaged; check the padlock button in the middle of the view selector.</li>
                 <li>Tap <strong>Save</strong>. If the appointment is part of a series, you'll be asked to choose the update scope.</li>
             </ol>
 
@@ -193,7 +194,8 @@
                 <li>Select the repeat interval from the dropdown next to the <strong>Repeat</strong> checkbox: <strong>Every Week</strong>, <strong>Every 2 Weeks</strong>, <strong>Every 3 Weeks</strong> or <strong>Monthly</strong>.</li>
                 <li>Enter the number of sessions in the <strong>Repeat Count</strong> field (1-52).</li>
                 <li>Tap <strong>Save</strong>. Appointments are automatically created at the specified frequency.</li>
-                <li>When you open any appointment in the series, a series info panel appears at the top of the modal (shown as an amber warning on the last appointment). Set the frequency and the <strong>Times</strong> box there, then tap <strong>Extend</strong> to add more sessions to the series.</li>
+                <li>The last session in the series appears in <strong>purple</strong> on the calendar, with a <strong>finish flag (🏁)</strong> in the bottom-right corner of its box, so you can see where the series ends at a glance. The flag does not appear in the monthly view; there the day's session-count box turns purple instead.</li>
+                <li>When you open any appointment in the series, a series info panel appears at the top of the modal (shown as an amber warning on the last appointment). Set the frequency and the <strong>Times</strong> box there, then tap <strong>Extend</strong> to add more sessions to the series. When you extend the series, the purple color and the flag move to the new last session automatically.</li>
             </ol>
 
             <h4>Writing Session Notes</h4>
@@ -201,8 +203,8 @@
                 <li>The appointment modal has three separate note areas:</li>
                 <li><strong>Pre-Session Notes</strong> (amber): Things you need to remember or check before the session. The note you write while creating the appointment appears under that appointment in the <strong>Today's Notes</strong> stream on the main screen, so you start the day already knowing what to look at in each session.</li>
                 <li><strong>Session Notes</strong> (green): The main record of the session. All the notes and observations you take during or after the session — everything discussed and everything that mattered — are kept here. If you optionally run the AI session analysis, it reads the text in this field.</li>
-                <li><strong>Next Session Notes</strong> (purple): Topics you want to address in the next session, based on your observations. You can write them yourself or optionally ask the AI for a suggestion; a suggestion replaces the current text in the field. When you create a new appointment for the same client and select that client, these notes from the previous session are carried over into the new appointment's <strong>Pre-Session Notes</strong> field automatically (appended if the field already has text), and a notification is shown.</li>
-                <li>If you took notes on paper during the session, you can photograph them and attach the photo to the appointment. Tapping the <strong>handwriting recognition</strong> button on the attached image has the AI convert the writing into text; after the consent dialog you choose the note format (Freeform, SOAP, or DAP). The result is appended to the end of the Session Notes field and does not overwrite what you have already written.</li>
+                <li><strong>Next Session Notes</strong> (purple): Topics you want to address in the next session, based on your observations. You can write them yourself or optionally ask the AI for a suggestion; if the field already has text, the suggestion is appended to what you wrote rather than overwriting it. When you create a new appointment for the same client and select that client, these notes from the previous session are carried over into the new appointment's <strong>Pre-Session Notes</strong> field automatically (appended if the field already has text), and a notification is shown.</li>
+                <li>Instead of typing <strong>Session Notes</strong> out by hand: if you took notes on paper during the session, you can photograph them and attach the photo to the appointment. Tapping the <strong>handwriting recognition</strong> button on the attached image has the AI convert the writing into text; after the consent dialog you choose the note format (Freeform, SOAP, or DAP). The result is appended to the end of that field and does not overwrite what you have already written.</li>
                 <li>Each note area has a <strong>Reading Mode</strong> button to view the notes in full screen.</li>
             </ol>
 
@@ -224,10 +226,12 @@
 
             <h4>Payment Tracking</h4>
             <ol>
-                <li>In the appointment modal, below the <strong>Session Notes</strong> section, there is a <strong>Collected</strong> checkbox.</li>
+                <li>When you open a saved appointment, a <strong>Collected</strong> checkbox sits to the right of the <strong>Session Notes</strong> heading. The checkbox is not shown while you are creating a new appointment; it appears once the appointment has been saved.</li>
                 <li>Check this box when the client has made their payment.</li>
                 <li>When unpaid sessions accumulate, an <strong>overdue balance warning</strong> is displayed in the client's appointment modal.</li>
-                <li>Track all payments from the <strong>Budget > Income</strong> tab.</li>
+                <li>You do not have to open each appointment to record payments: the <strong>Budget > Income</strong> tab lists every session, and the <strong>Collected</strong> checkbox can be ticked directly from that list.</li>
+                <li>Use the client filter above the list to see a single client's entire payment history. The <strong>Show Uncollected Only</strong> and <strong>Show Collected Only</strong> checkboxes narrow the list further, and the date filter selects a period.</li>
+                <li>Collected sessions appear dimmed in the list; sessions that are past due and still uncollected are marked in <strong>red</strong>, so late payments stand out at a glance.</li>
             </ol>
         </div>
     </details>
@@ -260,8 +264,17 @@
                 <li>Use the single-arrow buttons on either side of <strong>Today</strong> to move forward and back: one day in the day view, one month in the monthly view.</li>
                 <li>The outermost double-arrow buttons (<strong>Fast Back</strong> / <strong>Fast Forward</strong>) jump in larger steps: as many days as are currently shown on screen in the day view, and one year in the monthly view.</li>
                 <li>Tap the <strong>Today</strong> button to return to the current date.</li>
-                <li>Drag and drop appointments in the calendar to reschedule them to different time slots.</li>
+                <li>Drag and drop appointments in the calendar to reschedule them to different time slots. If you would rather not risk moving one by accident, you can turn this off; see <strong>Preventing Accidental Moves</strong> below.</li>
                 <li>On touch devices you can also navigate back and forth by <strong>swiping left/right</strong> on the calendar.</li>
+            </ol>
+
+            <h4>Preventing Accidental Moves (Drag Lock)</h4>
+            <ol>
+                <li>In the middle of the view selector, between the <strong>7 Days</strong> and <strong>Monthly</strong> buttons, there is a padlock button. The lock is off when the app opens, meaning dragging is enabled.</li>
+                <li>Tapping the button engages the lock: it turns amber, the icon becomes a closed padlock, and a "Drag-and-drop disabled" message appears. Appointments can no longer be moved.</li>
+                <li>While the lock is engaged you navigate the calendar as usual: swiping left/right and scrolling up/down are unaffected. Only dragging appointments and <strong>Busy</strong> blocks is prevented.</li>
+                <li>To enable dragging again, tap the same button; it returns to its normal color and you can move appointments once more.</li>
+                <li>This preference belongs to the device you are using; it stays in effect on that device until you turn it off and is not carried over to your other devices. If an appointment will not move, first check whether this button is amber.</li>
             </ol>
         </div>
     </details>
