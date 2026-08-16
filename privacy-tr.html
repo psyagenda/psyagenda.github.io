@@ -52,18 +52,19 @@
 <main>
     <h1>Gizlilik Politikası</h1>
     <p class="subtitle">Son güncelleme: 23 Temmuz 2026 &middot; Sözleşme sürümü: 5</p>
-
+<!-- GENERATED:PRIVACY-START -->
     <h2>Yasal Çerçeve</h2>
     <p>Bu Gizlilik Politikası, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve 2016/679 sayılı AB Genel Veri Koruma Yönetmeliği (GDPR) uyarınca hazırlanmıştır. Politika, kullanıcının cihazında saklanan ve isteğe bağlı bulut/AI özellikleriyle işlenen kişisel verilerin yönetimini kapsar.</p>
 
     <h2>Veri Sorumlusu</h2>
-    <p>Bu uygulama Mustafa Can tarafından geliştirilmiştir. Veri işleme süreçlerine ilişkin sorularınız için <strong>info@psyagenda.app</strong> adresinden iletişime geçebilirsiniz.</p>
+    <p>Danışanlara ait kişisel veriler bakımından KVKK ve GDPR anlamında veri sorumlusu, bu verileri mesleki faaliyeti kapsamında işleyen kullanıcıdır (terapist). Bu veriler kullanıcının cihazında saklanır; isteğe bağlı senkronizasyon ve yapay zeka özellikleri kullanıldığında dahi veriler yalnızca kullanıcının kendi hesapları üzerinden (kendi Google Drive alanı, kendi API anahtarı) aktarılır. Geliştiricinin bu verilere erişimi yoktur; geliştirici bu veriler bakımından veri sorumlusu veya veri işleyen sıfatı taşımaz, yalnızca araç sağlayıcıdır. Danışanlara yönelik aydınlatma yükümlülüğünün yerine getirilmesi, gerekli açık rızaların alınması ve ilgili kişi başvurularının karşılanması kullanıcının sorumluluğundadır. Uygulamanın kendisine ilişkin sınırlı veriler (kullanıcının kendi başlattığı destek e-postaları ve bunlarla iletilen Kurulum Kimliği ile abonelik doğrulamasında kullanılan rastgele kullanıcı kimliği) bakımından veri sorumlusu geliştirici Mustafa Can'dır. Veri işleme süreçlerine ilişkin sorularınız için info@psyagenda.app adresinden iletişime geçebilirsiniz.</p>
 
     <h2>Veri Sahipliği</h2>
     <p>Uygulamada üretilen ve saklanan tüm veri (danışan kayıtları, randevular, seans notları, finansal kayıtlar, testler, görseller) tamamen kullanıcının mülkiyetindedir. Geliştirici bu veriler üzerinde hiçbir hak iddia etmez; verileri analiz etmez, satmaz, lisanslamaz veya üçüncü taraflarla paylaşmaz.</p>
 
     <h2>Toplanan ve İşlenen Veriler</h2>
     <p>Uygulama aşağıdaki veri kategorilerini yalnızca cihazınızda yerel olarak saklar:</p>
+
     <ul>
         <li><strong>Danışan bilgileri:</strong> Ad-soyad (zorunlu); telefon, e-posta, doğum tarihi, cinsiyet, medeni durum, eğitim durumu, meslek ve terapist notları (tümü isteğe bağlı).</li>
         <li><strong>Randevu ve seans verileri:</strong> Tarih, saat, süre, seans notları, seans öncesi/sonrası notlar.</li>
@@ -74,7 +75,7 @@
 
     <h2>Verilerin Saklanması</h2>
     <ul>
-        <li>Tüm veriler yalnızca kullanıcının cihazında yerel veritabanında (şifreli SQLite — SQLCipher/AES-256 — veya IndexedDB) saklanır.</li>
+        <li>Danışan, randevu, seans notu, test ve finansal kayıtlar yalnızca kullanıcının cihazında şifreli yerel veritabanında (SQLCipher/AES-256; Web sürümünde IndexedDB) saklanır. Seans ve test görselleri ise cihazda uygulamanın özel veri alanında ayrı dosyalar olarak tutulur; bu dosyalar veritabanı şifrelemesinin kapsamında değildir ve işletim sisteminin uygulama alanı koruması ile — etkinse — cihaz şifrelemesine tabidir. Senkronizasyon etkinleştirildiğinde görseller buluta yalnızca şifrelenmiş olarak yüklenir.</li>
         <li>Kullanıcının açıkça başlattığı senkronizasyon ve destek e-postaları dışında, geliştirici dahil hiçbir üçüncü taraf bu verilere erişemez.</li>
         <li>Yerel veritabanı şifreli saklanır (SQLCipher/AES-256); uygulama kilidi parolası bu şifreleme anahtarını korur.</li>
     </ul>
@@ -90,8 +91,17 @@
     <ul>
         <li>AI özellikleri tamamen isteğe bağlıdır. Kullanıcı kendi API anahtarını girer ve hangi verilerin işleneceğine kendisi karar verir.</li>
         <li>AI kullanıldığında yalnızca ilgili seans notları, test verileri veya görseller Google Gemini API'ye gönderilir.</li>
-        <li>Danışan kimlik bilgileri (ad-soyad, telefon, e-posta, adres) hiçbir koşulda AI servisine gönderilmez.</li>
+        <li>Danışan kimlik bilgileri (ad-soyad, telefon, e-posta, adres) uygulama tarafından AI servisine gönderilmez; bu kayıt alanları hiçbir analize dahil edilmez. Ancak seans notları, test yanıtları ve danışan kartındaki notlar gibi serbest metin alanları analize olduğu gibi dahil edilir — bu alanlara danışanın kimliğini ifşa edebilecek bilgi girmemek kullanıcının sorumluluğundadır.</li>
         <li>Google'ın veri kullanım politikaları, kullanıcının API planına (ücretsiz/ücretli) göre değişir. Detaylı bilgi uygulama içi API rehberinde mevcuttur.</li>
+    </ul>
+
+    <h2>Hata Raporu ve Teknik Kayıtlar</h2>
+    <ul>
+        <li>Uygulama, çalışırken oluşan hatalar için teknik hata kayıtları üretir ve yalnızca cihazınızda yerel olarak saklar (yaklaşık 1 MB tavanlı kayan pencere; eski kayıtlar otomatik silinir).</li>
+        <li><strong>Bu kayıtlar yalnızca şunları içerir:</strong> hata mesajları ve teknik yığın izi (stack trace), kullanıcının uygulama içindeki eylem türleri (örn. "ekran değişti", "modal açıldı/kapatıldı", "bildirim mesajı görüntülendi", "senkronizasyon başlatıldı/tamamlandı", "lisans durumu değişti", "yapay zeka butonu tıklandı", "yerel sistem işlemi (dosya kayıt/silme, bildirim zamanlama) sonucu"), aktif ekran adı, cihaz platformu, uygulama sürümü, dil, lisans türü ve ağ durumu.</li>
+        <li>Bu kayıtlar <strong>danışan kimlik bilgilerini, telefon, e-posta, adres, seans notu içeriğini, randevu başlığını, finansal kayıtları, fotoğrafları veya başka herhangi bir danışan/seans içeriğini içermez</strong> — bu, uygulama mimarisi tarafından teknik olarak garanti altındadır: kullanıcı içeriği taşıyabilecek tüm log noktaları, içerik yerine yalnızca kısa statik tanımlayıcılar kayda alacak şekilde tasarlanmıştır. Kaydedilen yalnızca eylemin türüdür; içeriği değil.</li>
+        <li>Hata kayıtları yalnızca cihazınızda saklanır. Kullanıcı, Hakkında > Destek/Geri Bildirim > "Bir sorun yaşıyorum" akışını kullanıp gönder dediğinde, son hata kayıtları kullanıcının yazdığı şikayet metniyle birlikte info@psyagenda.app adresine gönderilir. E-postaya ayrıca cihaza özel rastgele Kurulum Kimliği (abonelik durumunuzu destek amacıyla sorgulayabilmemiz için) ve tarayıcı/cihaz bilgisi (User-Agent) eklenir.</li>
+        <li>Gönderim öncesi mail uygulaması açılır; içeriği inceleyebilir, düzenleyebilir veya gönderimden vazgeçebilirsiniz. Bu özellik tamamen sizin kontrolünüzdedir; otomatik veya arka planda hiçbir gönderim yapılmaz.</li>
     </ul>
 
     <h2>Üçüncü Taraf Hizmetler</h2>
@@ -120,27 +130,19 @@
     <h2>Şifreleme ve İhracat Uyumluluğu</h2>
     <ul>
         <li>Uygulama yalnızca standart, kamuya açık şifreleme algoritmalarını kullanır: AES-256-GCM (veri ve yedek şifreleme), SQLCipher/AES-256 (yerel veritabanı at-rest şifrelemesi), PBKDF2-HMAC-SHA-256 (anahtar türetme), SHA-256 (bütünlük denetimi) ve isteğe bağlı dışa aktarım için klasik ZIP parola koruması (ZipCrypto).</li>
-        <li>Bu algoritmalar Apple App Store ve U.S. ihracat regülasyonları kapsamında "standard exempt" kategorisindedir. Uygulama özel/proprietary kriptografik algoritma uygulamaz.</li>
+        <li>Bu algoritmalar Apple App Store ve U.S. ihracat regülasyonları kapsamında 'standard exempt' kategorisindedir. Uygulama özel/proprietary kriptografik algoritma uygulamaz.</li>
     </ul>
 
     <h2>Veri Saklama Süresi</h2>
     <ul>
         <li>Veriler kullanıcı kendi isteğiyle silene kadar cihazda yerel olarak saklanır. Otomatik silme yoktur.</li>
-        <li>Kullanıcı her zaman Ayarlar &gt; Depolama Alanı &gt; "Tüm Yerel Veriyi Sil" ile tüm cihaz verisini, Ayarlar &gt; Senkronizasyon &gt; "Drive'daki Tüm Veriyi Sil" ile bulut verisini kalıcı olarak silebilir.</li>
+        <li>Kullanıcı her zaman Ayarlar > Depolama Alanı > 'Tüm Yerel Veriyi Sil' ile tüm cihaz verisini, Ayarlar > Senkronizasyon > 'Drive'daki Tüm Veriyi Sil' ile bulut verisini kalıcı olarak silebilir.</li>
         <li>Teknik hata kayıtları (DIAG_ERRORS ve DIAG_BREADCRUMBS) yaklaşık 1 MB tavanlı kayan pencerede tutulur; eski kayıtlar otomatik silinir.</li>
     </ul>
 
-    <h2>Hata Raporu ve Teknik Kayıtlar</h2>
-    <ul>
-        <li>Uygulama, çalışırken oluşan hatalar için teknik hata kayıtları üretir ve yalnızca cihazınızda yerel olarak saklar (yaklaşık 1 MB tavanlı kayan pencere; eski kayıtlar otomatik silinir).</li>
-        <li>Bu kayıtlar yalnızca şunları içerir: hata mesajları ve teknik yığın izi (stack trace), kullanıcının uygulama içindeki eylem türleri (örn. "ekran değişti", "modal açıldı/kapatıldı", "bildirim mesajı görüntülendi", "senkronizasyon başlatıldı/tamamlandı", "lisans durumu değişti", "yapay zeka butonu tıklandı", "yerel sistem işlemi (dosya kayıt/silme, bildirim zamanlama) sonucu"), aktif ekran adı, cihaz platformu, uygulama sürümü, dil, lisans türü ve ağ durumu.</li>
-        <li>Bu kayıtlar <strong>danışan kimlik bilgilerini, telefon, e-posta, adres, seans notu içeriğini, randevu başlığını, finansal kayıtları, fotoğrafları veya başka herhangi bir danışan/seans içeriğini içermez</strong> &mdash; bu, uygulama mimarisi tarafından teknik olarak garanti altındadır: kullanıcı içeriği taşıyabilecek tüm log noktaları, içerik yerine yalnızca kısa statik tanımlayıcılar kayda alacak şekilde tasarlanmıştır. Kaydedilen yalnızca eylemin türüdür; içeriği değil.</li>
-        <li>Hata kayıtları yalnızca cihazınızda saklanır. Kullanıcı, Hakkında > Destek/Geri Bildirim > "Bir sorun yaşıyorum" akışını kullanıp gönder dediğinde, son hata kayıtları kullanıcının yazdığı şikayet metniyle birlikte info@psyagenda.app adresine gönderilir. E-postaya ayrıca cihaza özel rastgele Kurulum Kimliği (abonelik durumunuzu destek amacıyla sorgulayabilmemiz için) ve tarayıcı/cihaz bilgisi (User-Agent) eklenir.</li>
-        <li>Gönderim öncesi mail uygulaması açılır; içeriği inceleyebilir, düzenleyebilir veya gönderimden vazgeçebilirsiniz. Bu özellik tamamen sizin kontrolünüzdedir; otomatik veya arka planda hiçbir gönderim yapılmaz.</li>
-    </ul>
-
     <h2>Cihaz İzinleri</h2>
-    <p>Uygulama, belirli özellikleri sunabilmek için aşağıdaki cihaz izinlerini talep edebilir. Tüm izinler isteğe bağlıdır ve yalnızca ilgili özellik kullanıldığında istenir:</p>
+    <p>Uygulama, belirli özellikleri sunabilmek için aşağıdaki cihaz izinlerini talep edebilir. İnternet erişimi dışındaki tüm izinler isteğe bağlıdır ve yalnızca ilgili özellik kullanıldığında istenir; internet izni ise işletim sistemi tarafından kurulumla birlikte verilir ve ayrıca sorulmaz:</p>
+
     <ul>
         <li><strong>İnternet (INTERNET):</strong> Google Drive senkronizasyonu ve Gemini AI özelliklerine bağlanmak için kullanılır. Ayrıca internet, kullanıcı verisi taşımayan periyodik bağlantı-durumu denetimi ve uygulama açılışında lisans durumunun doğrulanması (RevenueCat) için kullanılır.</li>
         <li><strong>Kamera (CAMERA):</strong> Seans notlarına veya test kayıtlarına fotoğraf eki eklemek için kullanılır.</li>
@@ -150,15 +152,16 @@
         <li><strong>Harici Depolama (WRITE_EXTERNAL_STORAGE — yalnızca Android 9 ve altı):</strong> Rapor (PDF/DOCX) indirme dosyalarını cihazın "İndirilenler" klasörüne kaydetmek için kullanılır. Android 10 ve üzeri sürümlerde bu izin gerekmez.</li>
         <li><strong>Biyometrik Doğrulama (Face ID / Touch ID / parmak izi):</strong> İsteğe bağlı hızlı kilit açma için kullanılır; biyometrik veriler işletim sisteminde kalır, uygulama bunlara asla erişmez, saklamaz veya aktarmaz.</li>
         <li><strong>Fotoğraf Arşivi:</strong> Seans/test kayıtlarına görsel eklemek için yalnızca seçtiğiniz fotoğraflar okunur; kamerayla çekilen fotoğrafların arşive kaydı için yazma izni kullanılır.</li>
+        <li>Reddedilen izinler ilgili özelliğin devre dışı kalmasına neden olur; uygulamanın diğer işlevleri etkilenmez.</li>
     </ul>
-    <p>Reddedilen izinler ilgili özelliğin devre dışı kalmasına neden olur; uygulamanın diğer işlevleri etkilenmez.</p>
 
     <h2>Kullanıcı Hakları (KVKK md. 11 / GDPR md. 15-22)</h2>
     <p>Tüm veriler kullanıcının kontrolündedir. Kullanıcı istediği zaman aşağıdaki hakları kullanabilir:</p>
+
     <ul>
         <li><strong>Yedekleme ve taşınabilirlik (GDPR md. 20):</strong> Verilerini şifreli .thnbak yedeği olarak dışa aktarabilir.</li>
         <li><strong>Silme hakkı (KVKK md. 7 / GDPR md. 17):</strong> Tüm verilerini cihazdan kalıcı olarak silebilir.</li>
-        <li><strong>Bulut kopyasını silme:</strong> Senkronizasyon bağlantısını kaldırarak veya "Drive'daki Tüm Veriyi Sil" butonuyla bulut kopyasını silebilir.</li>
+        <li><strong>Bulut kopyasını silme:</strong> Ayarlar > Senkronizasyon > Tehlikeli Bölge > 'Drive'daki Tüm Veriyi Sil' seçeneğiyle bulut kopyasını kalıcı olarak silebilir. Yalnızca senkronizasyon bağlantısını kesmek bulut üzerindeki veriyi silmez.</li>
         <li><strong>İşleme reddi (GDPR md. 21):</strong> AI ve senkronizasyon özelliklerini kullanmayı bırakabilir; bu özellikler isteğe bağlıdır ve varsayılan olarak kapalıdır.</li>
         <li><strong>Erişim hakkı (KVKK md. 11 / GDPR md. 15):</strong> Uygulamada kayıtlı tüm verilere doğrudan kullanıcı arayüzünden erişebilir; veriler şifreli değilken kullanıcının kontrolündedir.</li>
         <li><strong>Düzeltme hakkı (KVKK md. 11 / GDPR md. 16):</strong> Uygulamadaki tüm danışan, randevu, finansal vb. kayıtları doğrudan düzenleyebilir.</li>
@@ -166,7 +169,8 @@
     </ul>
 
     <h2>İletişim</h2>
-    <p>Gizlilik politikası ile ilgili sorularınız için <strong>info@psyagenda.app</strong> adresinden iletişime geçebilirsiniz.</p>
+    <p>Gizlilik politikası ile ilgili sorularınız için info@psyagenda.app adresinden iletişime geçebilirsiniz.</p>
+<!-- GENERATED:PRIVACY-END -->
 </main>
 
 <footer class="site-footer">

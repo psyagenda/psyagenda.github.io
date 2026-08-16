@@ -53,34 +53,34 @@
     <h1>Terms of Use</h1>
     <p class="subtitle">PsyAgenda — Important Information and Terms of Use</p>
     <p class="subtitle"><em>Last updated: July 23, 2026 &middot; Agreement version: 5</em></p>
-
-    <p>PsyAgenda is a professional tool designed to help therapists (psychologists, psychiatrists, counselors) manage appointments, client records, psychological tests, session notes, budgets, and encrypted cloud synchronization from a single application. The app is available on Android, iOS (iPhone, iPad), macOS, and Windows (Desktop) platforms.</p>
+<!-- GENERATED:TERMS-START -->
+    <p>PsyAgenda is a professional tool designed to help therapists (psychologists, psychiatrists, counselors) manage appointments, client records, psychological tests, session notes, budgets, and encrypted cloud synchronization from a single application. The app is available on Android, iOS (iPhone, iPad), macOS, and Windows (Desktop) platforms. Please read the following important information carefully before you begin.</p>
 
     <h2>1. Data Collection and Local Storage</h2>
-    <p>PsyAgenda collects and stores the following data categories to support the therapist's practice management (appointments, client records, session organization):</p>
     <ul>
+        <li>PsyAgenda collects and stores the following data categories to support the therapist's practice management (appointments, client records, session organization):</li>
         <li><strong>Client Information:</strong> Only first name and surname are required. All other fields — phone, email, date of birth, gender, marital status, education, profession, and therapist notes — are entirely optional. This information is stored only if you enter it; otherwise, the application does not request or collect it.</li>
         <li><strong>Appointment/Session Data:</strong> Date, time, duration, pre-session notes, session notes, next-session notes, AI session analysis, session images, and alarm settings.</li>
         <li><strong>Psychological Test Data:</strong> Rorschach test (card-by-card responses, AI and therapist evaluations, final reports), Projective Drawing Test (drawing images, AI and therapist analyses), and Manual Test (images, therapist reports).</li>
         <li><strong>Financial Data:</strong> Session fees, expenses, expense categories, and payment statuses.</li>
+        <li><strong>Local Storage:</strong> All data is stored exclusively on your device's local storage (SQLite database). No data leaves your device outside the user-controlled channels listed in this agreement (cloud synchronization, AI analysis, license verification, support email). Outside of these channels, no third party — including the developer — can access the client/appointment/financial data stored on your device, regardless of whether fields are required or optional.</li>
     </ul>
-    <p>All data is stored exclusively on your device's local storage (SQLite database). No data leaves your device outside the user-controlled channels listed in these terms (cloud synchronization, AI analysis, license verification, support email). Outside of these channels, no third party — including the developer — can access the client/appointment/financial data stored on your device, regardless of whether fields are required or optional.</p>
 
     <h2>2. Data Privacy and Device Responsibility</h2>
     <ul>
         <li><strong>Data Security and Responsibility:</strong> Data stored in PsyAgenda may contain sensitive confidential information. The security and privacy of this data are entirely your responsibility.</li>
-        <li><strong>Physical Security:</strong> It is your duty to ensure the physical security of your device.</li>
-        <li><strong>Digital Security:</strong> Ensuring the digital security of your device is also your responsibility.</li>
-        <li><strong>Data Loss:</strong> The developer is not responsible for data loss resulting from loss, damage, theft, or software failure of the device.</li>
-        <li><strong>App Lock:</strong> PsyAgenda offers an optional password lock feature. If you forget both your app lock password and your security question answer, you will permanently lose access to your data.</li>
+        <li><strong>Physical Security:</strong> It is your duty to ensure the physical security of your device (screen lock, password protection, preventing unauthorized access, etc.). In the event your device is stolen or falls into the hands of unauthorized persons, you are solely responsible for any legal and ethical consequences arising from the disclosure of confidential client information.</li>
+        <li><strong>Digital Security:</strong> Ensuring the digital security of your device (malware protection, keeping operating system and security updates current, etc.) is also your responsibility. The developer cannot be held responsible for data breaches caused by malicious software that may infiltrate the device.</li>
+        <li><strong>Data Loss:</strong> The developer is not responsible for data loss resulting from loss, damage, theft, or software failure of the device. Regular backups are recommended.</li>
+        <li><strong>App Lock:</strong> The app lock (password + security question) is created during initial setup and is mandatory; your data is stored on your device in an encrypted database (AES-256 / SQLCipher) and your app lock password protects that encryption key. After setup you may, if you wish, turn off the password prompt at launch via Settings > Security > "Trust This Device"; in that case anyone who can access your device can open the app, so the level of protection is reduced. On devices with root access, no single protection is sufficient on its own. IMPORTANT: If you forget your app lock password and your security question answer, you will never be able to access your data again. No one, including the developer, can help you in this situation; your data becomes permanently inaccessible.</li>
     </ul>
 
     <h2>3. Cloud Synchronization (Google Drive)</h2>
     <ul>
-        <li>PsyAgenda optionally allows you to synchronize your data across devices via Google Drive. This feature is available on all platforms and is disabled by default.</li>
-        <li><strong>Google Drive:</strong> The application only requests the "drive.appDataFolder" scope (app-private, user-invisible storage).</li>
-        <li><strong>End-to-End Encryption:</strong> All data uploaded to cloud services is encrypted client-side with your synchronization password (PBKDF2 + AES-256-GCM). No third party, including Google, can decrypt this data. The encryption key is derived solely from the password you set.</li>
-        <li><strong>Sync Password:</strong> If you lose this password, you will permanently lose access to your encrypted data on the cloud.</li>
+        <li>PsyAgenda optionally allows you to synchronize your data across devices via Google Drive. This feature is available on all platforms, is entirely at the user's discretion, and is disabled by default.</li>
+        <li><strong>Google Drive:</strong> You may optionally sign in with your Google account for synchronization. The application only requests the "drive.appDataFolder" scope (app-private, user-invisible storage). It does not access your personal Google Drive files, Gmail, or any other Google services.</li>
+        <li><strong>End-to-End Encryption:</strong> All client, appointment, financial, test and image data uploaded to cloud services is encrypted on the client side with the sync password you define (PBKDF2 + AES-256-GCM). No third party, including Google, can decrypt this data. Only synchronization's own record file (device name and platform, last-seen time, file integrity digests and the text of your security question) is kept unencrypted; that record carries no client or session content.</li>
+        <li><strong>Sync Password:</strong> During setup you are required to define a security question and answer; your sync password is stored, encrypted with that answer, in the synchronization file in the cloud. If you forget your password, you can recover it by answering the security question. However, if you lose both your sync password and the answer to your security question, you will never be able to access your encrypted data in the cloud again; keeping both in a safe place is vitally important.</li>
         <li><strong>Synchronized Data:</strong> Client records, appointments, expenses, expense categories, test data, app settings, and session images are synchronized in encrypted form.</li>
         <li><strong>Device Registry:</strong> The sync system records a device ID, device name, platform, and last-seen timestamp for each connected device. This information is written to the sync manifest.</li>
         <li><strong>Conflict Resolution:</strong> When multiple devices modify the same record, the most recently modified record prevails (last-write-wins). This may result in data loss in rare scenarios.</li>
@@ -89,37 +89,48 @@
 
     <h2>4. AI Usage and Data Sharing</h2>
     <ul>
-        <li>PsyAgenda uses the Google Gemini API for various AI-assisted analysis features that support the therapist's own professional evaluation. AI features are optional.</li>
+        <li>PsyAgenda uses the Google Gemini API for various AI-assisted analysis features that support the therapist's own professional evaluation. AI features are optional and require the user to provide their own Google Gemini API key.</li>
         <li><strong>AI-Powered Features:</strong> Session note analysis, next-session suggestions, handwriting recognition, Rorschach test card analysis and final reports, Projective Drawing Test analysis, Manual Test correction, and Client General Evaluation.</li>
         <li><strong>Data Transmitted:</strong> During AI analysis, session notes (text), client age and gender (optional), test responses (text), and drawing/handwriting images are sent to the Google Gemini API over HTTPS. This data is transferred to Google's servers located abroad (cross-border data transfer).</li>
-        <li><strong>API Key:</strong> You use your own Google Gemini API key. This key is stored encrypted (AES-256-GCM) on your device and is never transmitted to the developer or any other server. API calls are made directly from your device to Google's servers.</li>
+        <li><strong>API Key:</strong> You use your own Google Gemini API key. This key is stored encrypted (AES-256-GCM) on your device and is not transmitted to the developer. If synchronization is enabled, the key is transferred, together with your other application settings and encrypted with your sync password, only to the private application area in your own Google Drive account; it is sent to no other server. API calls are made directly from your device to Google servers.</li>
         <li><strong>Anonymity Responsibility:</strong> By default, the application sends only anonymous demographic information (age, gender) for AI analysis. However, free-text fields such as session notes, therapist notes, and client responses are also included in the analysis. It is entirely YOUR responsibility NOT to enter any personal information that could reveal your client's identity (name, surname, ID number, phone, address, etc.) into these fields.</li>
-        <li><strong>Google Data Policy:</strong> Data sent to the Google Gemini API is subject to Google's terms of service. <em>Free API tier:</em> Google may use the data sent to improve its AI models. <em>Paid API tier:</em> Google does not use data sent on the paid plan for model training. Given the sensitivity of confidential client information, the paid tier is recommended. Google may also temporarily retain data on all tiers for abuse detection. Please refer to Google's AI terms of service for detailed information.</li>
-        <li><strong>Clinical Responsibility:</strong> All evaluations produced by AI are solely supportive tools and preliminary analyses. They can in no way replace — and are not intended to replace — professional clinical judgment, supervision, or final therapeutic decisions. All clinical responsibility rests with the user.</li>
+        <li><strong>Google Data Policy:</strong> Data sent to the Google Gemini API is subject to Google's AI terms of service and privacy policy. <strong>Free API tier:</strong> Google may use the data sent to improve its AI models. <strong>Paid API tier:</strong> Google does not use data sent on the paid plan for model training. Given the sensitivity of confidential client information, the paid tier is recommended. Google may also temporarily retain data on all tiers for abuse detection. Please refer to Google's AI terms of service for detailed information.</li>
+        <li><strong>Clinical Responsibility:</strong> All evaluations produced by AI (session analyses, test interpretations, reports) are solely supportive tools and preliminary analyses. They can in no way replace — and are not intended to replace — professional clinical judgment, supervision, or final therapeutic decisions. All clinical responsibility rests with the user.</li>
     </ul>
 
     <h2>5. Backup and Data Recovery</h2>
     <ul>
-        <li>You can export your data as an encrypted backup file (.thnbak).</li>
-        <li>Backup files are encrypted using AES-256-GCM. If you lose this password, you will not be able to restore your backup file.</li>
-        <li><strong>Backup Contents:</strong> The backup file includes all client, appointment, expense, test data, and session images. The backup file also includes app settings (including encrypted sync/API credentials and a digest of your app-lock password); the entire file is encrypted with AES-256 using your backup password. Keep your backup file and its password safe.</li>
-        <li>Regular backups are entirely your responsibility.</li>
+        <li>PsyAgenda allows you to export your data as an encrypted backup file (.thnbak).</li>
+        <li><strong>Backup Encryption:</strong> Backup files are encrypted using the AES-256-GCM algorithm with the password you set. If you lose this password, you will not be able to restore your backup file.</li>
+        <li><strong>Backup Contents:</strong> The backup file contains all client, appointment, expense and test data and session images, together with your application settings (including synchronization/API credentials, the master encryption key that decrypts them, and the digest of your app lock password); the entire file is encrypted with your backup password using AES-256. For this reason, anyone who holds both your backup file and your backup password can also access those credentials; keep both of them safe.</li>
+        <li><strong>Backup Responsibility:</strong> Regular backups are entirely your responsibility. The developer is not responsible for data loss resulting from failure to back up.</li>
     </ul>
 
     <h2>6. Notifications and Communication</h2>
     <ul>
-        <li>Session reminder and alarm notifications operate locally on your device.</li>
-        <li>The application optionally <strong>helps</strong> you send appointment notifications to your clients via SMS, WhatsApp, or email. Messages are not sent directly by the app; instead, the app opens your device's SMS/WhatsApp/email application with a pre-filled message, and delivery occurs only with your manual confirmation. This feature is disabled by default. The content of messages depends on the templates you define in the application.</li>
+        <li><strong>Local Notifications:</strong> Session reminder and alarm notifications operate locally on your device. No data is sent to an external notification server or third-party service.</li>
+        <li><strong>Client Notifications:</strong> The app optionally makes it easier for you to send your clients appointment notifications and payment reminders (which may include the number of unpaid sessions and the total amount) via SMS, WhatsApp or e-mail. Messages are not sent directly by the app; it opens the SMS/WhatsApp/e-mail application on your device with pre-filled text, and sending occurs only with your manual confirmation. Automatic appointment notifications are disabled by default; a payment reminder is only ever an action you start yourself. Message contents depend on the templates you define in the app; sharing messages containing financial information with your client is your responsibility.</li>
     </ul>
 
     <h2>7. Device Permissions</h2>
-    <p>PsyAgenda may request device permissions to provide certain features (camera, notifications, contacts, etc.). All permissions are optional, are only requested when the related feature is used, and can be denied. Denying a permission only disables the related feature. A detailed description of requested permissions is provided in the <a href="privacy-en.html">Privacy Policy</a>.</p>
+    <p>PsyAgenda may request device permissions in order to provide certain features. All permissions other than internet access are optional, are requested only while the related feature is being used, and can be declined; a declined permission only disables the related feature. The internet permission is granted by the operating system at installation and is never requested separately; the purposes for which the app accesses the internet are explained below.</p>
+
+    <ul>
+        <li><strong>Internet (INTERNET):</strong> Used to connect to Google Drive sync and Gemini AI features. The internet is also used for a periodic connectivity check that carries no user data, and for verifying license status (RevenueCat) at app launch.</li>
+        <li><strong>Camera (CAMERA):</strong> Used to attach photos to session notes or test records.</li>
+        <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used to send appointment reminder notifications.</li>
+        <li><strong>Exact Alarms (SCHEDULE_EXACT_ALARM):</strong> Used to trigger appointment reminders at the exact scheduled time.</li>
+        <li><strong>Contacts (READ_CONTACTS):</strong> Used for the add-from-contacts feature. Only the name, phone number, and email of the contact selected by the user are read; no other contacts are accessed and no contact data is transmitted outside the device.</li>
+        <li>External Storage (WRITE_EXTERNAL_STORAGE — only on Android 9 and below): Used to save report downloads (PDF/DOCX) to the device's "Downloads" folder. This permission is not needed on Android 10 and later.</li>
+        <li><strong>Biometric Authentication (Face ID / Touch ID / fingerprint):</strong> Used for optional quick unlock; biometric data stays within the operating system — the app never accesses, stores, or transmits it.</li>
+        <li><strong>Photo Library:</strong> Only the photos you select are read, to attach images to session/test records; write access is used to save camera photos to your library.</li>
+    </ul>
 
     <h2>8. License and Subscription</h2>
     <ul>
-        <li><strong>Trial Period:</strong> The application offers a 30-day free trial from the initial installation.</li>
-        <li><strong>Expiration:</strong> When the trial period or subscription expires, the application switches to read-only mode.</li>
-        <li><strong>Subscription Types:</strong> Monthly (1 month) and annual (1 year) subscription options are available. All purchases are processed through Apple App Store or Google Play Store; your payment information is handled solely by the respective platform, and PsyAgenda does not access your payment details. Lifetime or time-limited free full access may be granted by the developer as a gift (via the store infrastructure, assigned to your device's Installation ID); the app has no code entry and no direct Lifetime purchase option.</li>
+        <li><strong>Trial Period:</strong> The application offers a 30-day free trial from the initial installation. All features are available during this period.</li>
+        <li><strong>Expiration:</strong> When the trial period or subscription expires, the application switches to read-only mode. You can view and export your existing data but cannot enter new data.</li>
+        <li><strong>Subscription Types:</strong> Monthly (1 month) and annual (1 year) subscription options are offered. Purchases are made through the Apple App Store on iOS, iPadOS and macOS; your payment details are processed only by Apple, and PsyAgenda has no access to them. On other platforms, purchasing a subscription through a store is not yet offered. Lifetime or time-limited free full access may be granted by the developer as a gift (over the store infrastructure, assigned to your device's Installation ID); the app offers no code entry or direct Lifetime purchase option.</li>
         <li><strong>Auto-Renewal:</strong> Your subscription automatically renews unless cancelled at least 24 hours before the end of the current period. The renewal fee is automatically charged to your Apple ID or Google Play account after the current period ends. The renewed period is billed at the current price at the time of purchase.</li>
         <li><strong>Cancelling Your Subscription:</strong> You can cancel your active subscription at any time. On iOS devices: Settings → Apple ID → Subscriptions. On Android devices: Google Play Store → Subscriptions. On macOS: App Store app → Account → Subscriptions. Cancellation must be made at least 24 hours before the end of the current period; otherwise the subscription will renew for one more period.</li>
         <li><strong>Pricing and Duration:</strong> Current subscription prices and durations are displayed on the License page within the application and on the store purchase screen. Apple and Google may apply regional pricing variations; the price shown on the store purchase screen is the one that applies.</li>
@@ -127,22 +138,26 @@
     </ul>
 
     <h2>9. Reports and Exports</h2>
-    <p>PsyAgenda offers reports and data exports in DOCX (Word), PDF, and XLSX (Excel) formats. Optional password-protected ZIP encryption is offered during export (traditional ZIP protection for universal compatibility — it deters casual access but is not AES-grade); if you decline, the file is saved unprotected and its security is your responsibility.</p>
+    <ul>
+        <li>PsyAgenda offers reports and data exports in DOCX (Word), PDF, and XLSX (Excel) formats. Optional password-protected ZIP encryption is offered during export (traditional ZIP protection for universal compatibility — it deters casual access but is not AES-grade); if you decline, the file is saved unprotected and its security is your responsibility.</li>
+        <li><strong>Exportable content includes:</strong> Client profile reports, Rorschach test reports, Projective Drawing Test reports, Manual Test reports, and budget/income-expense lists.</li>
+    </ul>
 
     <h2>10. Third-Party Services</h2>
     <ul>
-        <li><strong>Google Gemini API:</strong> For AI analysis features (optional).</li>
-        <li><strong>Google Drive API:</strong> For cloud synchronization (optional).</li>
+        <li>PsyAgenda communicates with the following third-party services:</li>
+        <li><strong>Google Gemini API:</strong> For AI analysis features (optional, with the user's own API key).</li>
+        <li><strong>Google Drive API:</strong> For cloud synchronization (optional, appDataFolder access only).</li>
         <li><strong>Google Authentication:</strong> For optionally signing in with a Google account for Google Drive synchronization.</li>
         <li><strong>Google Play Store / Apple App Store:</strong> For subscription purchases.</li>
-        <li><strong>RevenueCat:</strong> A device-specific random user identifier (App User ID) and the store purchase receipt are shared for subscription purchase flow and receipt validation. No personal data (name, email, session notes, confidential client information) is shared.</li>
-        <li><strong>Bug Report Emails (info@psyagenda.app):</strong> When the user uses About > Support/Feedback > "I'm having a problem", the description they wrote and technical error records (error messages, action types, platform/version info, the device-specific random Installation ID — so we can look up your subscription status for support — and browser/device info (User-Agent); contains no client/session content) are sent to the developer through the device's default mail app. This channel is fully under user control; the content can be reviewed, edited, or canceled before sending.</li>
-        <li>Beyond these, PsyAgenda does not communicate with any analytics service (Google Analytics, etc.), automatic error reporting service, ad network, or external server. Outside the user-controlled flows explicitly listed above (synchronization, AI, support emails), the developer has no access to any user data.</li>
+        <li><strong>RevenueCat:</strong> A device-specific random user identifier (App User ID) and the store purchase receipt are shared for the subscription purchase flow, receipt validation, and verification of subscription/license status at app launch. Gift licenses are also granted via this identifier. No personal data (name, email, session notes, confidential client information) is shared.</li>
+        <li>Bug Report Emails (info@psyagenda.app): When the user uses About > Support/Feedback > "I'm having a problem", the description they wrote and technical error records (error messages, action types, platform/version info, the device-specific random Installation ID — so we can look up your subscription status for support — and browser/device info (User-Agent); contains no client/session content) are sent to the developer through the device's default mail app. This channel is fully under user control; the content can be reviewed, edited, or canceled before sending.</li>
+        <li>The app also performs a periodic reachability check, carrying no user data, to detect whether an internet connection is available. Beyond these, PsyAgenda does not communicate with any analytics service (Google Analytics, etc.), automatic error reporting service, ad network, or external server. Outside the user-controlled flows explicitly listed above (synchronization, AI, support emails), the developer has no access to any user data.</li>
     </ul>
 
     <h2>11. Disclaimer of Liability and Architectural Declarations</h2>
     <ul>
-        <li>The developer is not responsible for data loss due to user error, incorrect AI analyses, API service disruptions, device failures, unauthorized access, or password loss.</li>
+        <li>The developer is not responsible for user-error-related data loss, incorrect AI analyses, disruptions in API services, device failures, unauthorized access, or issues arising from password loss.</li>
         <li><strong>Service Continuity:</strong> The uninterrupted operation of third-party services (Google Gemini API, Google Drive) is not guaranteed. Changes to these services may affect certain features of the application.</li>
         <li><strong>Medical/Clinical Notice:</strong> PsyAgenda is not a medical device. It is not designed as a diagnostic, treatment planning, or clinical decision-making tool. All content in the application (including AI analyses) is for informational and organizational purposes only.</li>
         <li><strong>No Executable Code:</strong> PsyAgenda does not download, generate, or execute any external code under any circumstances. All user interface, logic, and features are bundled within the application binary. AI features only produce text-based interpretations and reports; they do not alter the runtime behavior of the application.</li>
@@ -150,18 +165,21 @@
     </ul>
 
     <h2>12. Changes to Terms</h2>
-    <p>The developer reserves the right to update these terms of use. Updated terms will be presented to the user upon the next app update and will require re-acceptance. If you do not accept the updated terms, you must discontinue use of the application.</p>
+    <ul>
+        <li>The developer reserves the right to update these terms of use. When the terms are updated, the current version is published within the app (in the About section); continuing to use the app constitutes acceptance of the current terms. If you do not accept the updated terms, you must discontinue use of the application.</li>
+    </ul>
 
     <h2>13. Account and Data Deletion</h2>
     <ul>
         <li><strong>Account Structure:</strong> PsyAgenda does not require an in-app account to be created. Google sign-in is used only for optional synchronization and operates through the user's own Google account. Therefore, no separate "account deletion" process is needed; data deletion is directly under user control.</li>
-        <li><strong>Deleting Local Data:</strong> Via Settings &gt; Storage &gt; Danger Zone &gt; "Delete All Local Data", all data on this device (clients, appointments, session notes, tests, financial records, attached files, settings, passwords) is permanently deleted. The action requires typed confirmation (DELETE ALL DATA) and cannot be undone.</li>
-        <li><strong>Deleting Drive Data:</strong> Via Settings &gt; Sync &gt; Danger Zone &gt; "Delete All Drive Data", encrypted backups, images, and the manifest on Google Drive are permanently deleted; this device's sync connection is disconnected. Local data is preserved. Other active devices on the same account may re-upload their own data on the next sync; to keep Drive permanently clean across all devices, you must repeat this action on each device.</li>
-        <li><strong>Uninstalling the App:</strong> On iOS, Settings &gt; General &gt; iPhone Storage &gt; PsyAgenda &gt; Delete App; on Android, Settings &gt; Apps &gt; PsyAgenda &gt; Storage &gt; Clear Data / Uninstall removes all local data. On macOS/Windows, uninstalling the app removes the app-specific local database files.</li>
+        <li><strong>Deleting Local Data:</strong> Via Settings > Storage > Danger Zone > 'Delete All Local Data', all data on this device (clients, appointments, session notes, tests, financial records, attached files, settings, passwords) is permanently deleted. The action requires typed confirmation (DELETE ALL DATA) and cannot be undone.</li>
+        <li><strong>Deleting Drive Data:</strong> Via Settings > Sync > Danger Zone > 'Delete All Drive Data', encrypted backups, images, and the manifest on Google Drive are permanently deleted; this device's sync connection is disconnected. Local data is preserved. Other active devices on the same account may re-upload their own data on the next sync; to keep Drive permanently clean across all devices, you must repeat this action on each device.</li>
+        <li><strong>Uninstalling the App:</strong> On iOS via Settings > General > iPhone Storage > PsyAgenda > Delete App, and on Android via Settings > Apps > PsyAgenda > Storage > Clear Data/Uninstall, all local data is deleted. On macOS and Windows, however, uninstalling the app may not automatically delete the encrypted database files in the operating system's application data folder; to permanently erase all local data on desktop, use Settings > Storage > Danger Zone > "Delete All Local Data" before uninstalling.</li>
         <li><strong>Backups Not Auto-Deleted:</strong> Encrypted .thnbak backups exported voluntarily by the user remain on the user's device or external media; managing these backups is the user's responsibility.</li>
     </ul>
 
-    <p><strong>By using this application, you declare that you have read, understood, and agreed to all of the above terms.</strong></p>
+    <p>By using this application, you declare that you have read, understood, and agreed to all of the above terms.</p>
+<!-- GENERATED:TERMS-END -->
 </main>
 
 <footer class="site-footer">
