@@ -98,7 +98,7 @@
     <h2>Bug Reports and Technical Records</h2>
     <ul>
         <li>The application generates technical error records for errors that occur during use, and stores them locally on your device only (a sliding window of approximately 1 MB; older entries are automatically discarded).</li>
-        <li><strong>These logs contain only:</strong> error messages and technical stack traces, action types within the app (e.g. "screen changed", "modal opened/closed", "notification toast displayed", "synchronization started/completed", "license state changed", "AI button clicked", "native system operation (file save/delete, notification scheduling) result"), the active screen name, device platform, app version, language, license type, and network status.</li>
+        <li><strong>These logs contain only:</strong> error messages and technical stack traces, action types within the app (e.g. "screen changed", "modal opened/closed", "notification toast displayed", "synchronization started/completed", "license state changed", "AI button clicked", "native system operation (file save/delete, notification scheduling) result"), the active screen name, device platform, app version, language, license type, network status, and a technical code indicating the local database encryption/migration state.</li>
         <li>These logs <strong>do not contain client identifying information, phone numbers, emails, addresses, session note content, appointment titles, financial records, photos, or any other client/session content</strong> — this is technically guaranteed by the application architecture: every log point that could carry user content is designed to record only short static identifiers rather than the content itself. Only the type of action is recorded — never its content.</li>
         <li>Error records stay on your device. They are sent to info@psyagenda.app only when you use About > Support/Feedback > "I'm having a problem" and tap Send — together with the description you wrote. The email also includes the device-specific random Installation ID (so we can look up your subscription status for support) and browser/device info (User-Agent).</li>
         <li>Before sending, the email client opens so you can review, edit, or cancel the message. This feature is fully under your control; no automatic or background submissions occur.</li>
@@ -171,6 +171,14 @@
     <h2>Contact</h2>
     <p>For questions regarding the privacy policy, you can contact info@psyagenda.app.</p>
 <!-- GENERATED:PRIVACY-END -->
+<h2>About This Website</h2>
+<p>This section covers the <strong>www.psyagenda.app</strong> website, not the application.</p>
+<ul>
+    <li>The site uses no cookies and contains no analytics service; no account or form is required to visit it.</li>
+    <li>The site is hosted on GitHub Pages; GitHub may keep standard server access logs, including your IP address, in order to provide the service.</li>
+    <li>Page fonts are loaded from the Google Fonts service; in doing so your IP address and browser information are transmitted to Google servers.</li>
+</ul>
+
 </main>
 
 <footer class="site-footer">
