@@ -474,8 +474,11 @@
             <ol>
                 <li><strong>Ayarlar > Yedekleme</strong> bölümüne gidin.</li>
                 <li><strong>Verileri Yedekle</strong> butonuna dokunun.</li>
-                <li>Yedek dosyanız için bir şifre belirlemeniz istenir. Bu şifre dosyayı korumak için kullanılır.</li>
-                <li>Masaüstünde (Windows / macOS) kaydetme penceresi açılır; klasörü seçip <strong>Kaydet</strong> deyin — pencereyi iptal ederseniz yedek oluşturulmaz. iPhone / iPad'de yedek önce uygulama içine kaydedilir, ardından paylaşım ekranı açılır; buradan kendinize bir kopya gönderin (AirDrop, WhatsApp, Mail veya iCloud Drive), aksi hâlde uygulamayı sildiğinizde yedek de silinir.</li>
+                <li>Açılan <strong>Yedeklemeyi Şifrele</strong> penceresinde bir şifre belirleyin, aynı şifreyi alttaki alana tekrar yazın ve <strong>Yedekle ve Şifrele</strong> butonuna basın.</li>
+                <li><strong>Bu şifreyi güvenli bir yere not edin.</strong> Yedek dosyası tamamen bu şifreyle şifrelenir; şifreyi unutursanız o yedeğin içindeki verilere bir daha erişemezsiniz.</li>
+                <li>Yedek hazırlanırken ilerleme penceresi görünür. Bu sırada uygulamayı kapatmayın.</li>
+                <li>Yedeğin nereye kaydedileceği cihazınıza göre değişir:<br><strong>Windows / macOS:</strong> kaydetme penceresi açılır; klasörü seçip <strong>Kaydet</strong> deyin. Bu pencereyi iptal ederseniz yedek oluşturulmaz.<br><strong>Android:</strong> yedek doğrudan cihazınızın <strong>İndirilenler</strong> klasörüne kaydedilir.<br><strong>iPhone / iPad:</strong> yedek önce uygulamanın kendi klasörüne kaydedilir; hemen ardından, dosyayı kendi belirleyeceğiniz bir konuma (iCloud Drive, telefon hafızası vb.) kaydetmenize veya dilediğiniz yere göndermenize imkân tanıyan paylaşım ekranı açılır.</li>
+                <li><strong>iPhone / iPad'de bu son adımı atlamayın:</strong> açılan paylaşım ekranından yedeğin bir kopyasını uygulamanın dışına gönderin — <strong>Dosyalara Kaydet</strong>, AirDrop, WhatsApp, Mail veya iCloud Drive. Bu ekranı kapatırsanız yedek yalnızca uygulamanın içinde kalır; uygulamayı sildiğinizde yedek de silinir.</li>
             </ol>
 
             <h4>Yedekten Geri Yükleme</h4>
@@ -506,7 +509,7 @@
             <h4>Senkronizasyon Şifresi Belirleme</h4>
             <ol>
                 <li>Google hesabınızı bağladıktan sonra açılan ekran, bu hesapta daha önce senkronize veri olup olmamasına göre değişir: <strong>ilk cihazınızda</strong> şifre belirleme ekranı, <strong>ikinci ve sonraki cihazlarınızda</strong> "Mevcut şifreniz..." alanı ve <strong>Bağlan</strong> butonu gelir. İkinci cihazda diğer cihazdaki şifrenin aynısını girip <strong>Bağlan</strong>'a basın; şifreyi hatırlamıyorsanız <strong>Şifremi unuttum</strong> bağlantısıyla güvenlik sorunuzu cevaplayın.</li>
-                <li>En az 4 karakter uzunluğunda bir senkronizasyon şifresi girin ve tekrar onaylayın.</li>
+                <li>Senkronizasyon şifrenizi girin ve alttaki alana aynı şifreyi tekrar yazın. Uzunluk zorunluluğu yoktur, ancak tüm verileriniz bu şifreyle şifrelendiği için tahmin edilmesi zor, en az 8 karakterli bir şifre seçmenizi öneririz.</li>
                 <li>Altta <strong>Şifre Kurtarma Sorusu</strong> bölümünü doldurun: bir güvenlik sorusu, cevabı ve cevabın tekrarı. Bu alanlar zorunludur — boş bırakırsanız senkronizasyon başlamaz. Ardından <strong>Senkronizasyonu Başlat</strong> butonuna basın; ilk senkronizasyon otomatik başlar.</li>
                 <li><strong>Önemli:</strong> Bu şifreyi unutmayın. Tüm verileriniz bu şifre ile şifrelenir. Şifreyi kaybetmeniz durumunda verilere erişilemez.</li>
             </ol>
@@ -548,14 +551,14 @@
     <details class="guide-section">
         <summary>Güvenlik Ayarları</summary>
         <div class="guide-section-content">
-            <p class="guide-intro">Uygulama kilidi ve şifre ayarlarıyla verilerinizi yetkisiz erişime karşı koruyabilirsiniz.</p>
+            <p class="guide-intro">Uygulama kilidi ve şifre ayarlarıyla verilerinizi yetkisiz erişime karşı koruyabilirsiniz. Bu bölümdeki ayarların tamamı <strong>o cihaza özeldir</strong>: parolanız, güvenlik sorunuz, otomatik kilit süreniz ve biyometrik girişiniz senkronizasyonla diğer cihazlara geçmez. Her cihazda ayrı parola belirlersiniz ve birinde yaptığınız değişiklik diğerlerini etkilemez.</p>
 
             <h4>Uygulama Kilidi Ayarlama</h4>
             <ol>
-                <li><strong>Uygulamayı ilk açtığınızda</strong> parola kurulum ekranı otomatik olarak gelir; bu adım atlanamaz.</li>
+                <li><strong>Uygulamanın ilk kurulumunda</strong> parola belirleme ekranı otomatik olarak gelir; bu adım atlanamaz.</li>
                 <li>Uygulama kilidi ayrı bir seçenekle açılmaz — parola kurulumu ilk açılışta zorunlu olarak yapılır. <strong>Ayarlar > Güvenlik</strong> yalnızca mevcut kilidin ayarlarını içerir.</li>
-                <li>Bir şifre belirleyin ve tekrar onaylayın.</li>
-                <li><strong>Güvenlik sorusu</strong> ve cevabını mutlaka doldurun — şifrenizi unutursanız tek kurtarma yöntemidir.</li>
+                <li>Kurulum iki adımlıdır. Birinci adımda parolanızı yazın, aynı parolayı alttaki alana tekrar yazın ve <strong>Devam Et</strong> butonuna basın.</li>
+                <li>İkinci adımda bir <strong>güvenlik sorusu</strong>, sorunun cevabı ve cevabın tekrarını yazıp <strong>Kurulumu Tamamla</strong> butonuna basın. Bu üç alan zorunludur, boş bırakılamaz — parolanızı unutursanız tek kurtarma yolu bu sorudur.</li>
                 <li><strong>Otomatik Kilit Zaman Aşımı</strong> altındaki <strong>Hareketsizlik Süresi</strong>'ni seçerek uygulamada hiçbir işlem yapılmadığında ne kadar sonra kilitleneceğini belirleyin: Asla, 30 Saniye, 1, 5, 15, 30 Dakika veya 1 Saat.</li>
                 <li>Uygulamayı her arka plana alıp geri açtığınızda parola sorulmasını isterseniz <strong>Arka Plandan Dönüşte Kilitle</strong> seçeneğini açın (varsayılan olarak kapalıdır).</li>
                 <li>Cihazınız destekliyorsa <strong>Biyometrik Giriş</strong>'i açarak kilidi parmak izi / yüz / cihaz PIN'i ile hızlıca açabilirsiniz; açarken mevcut parolanız istenir.</li>
@@ -579,7 +582,9 @@
             <ol>
                 <li>Uygulama kilit ekranında <strong>Şifremi Unuttum</strong> bağlantısına dokunun.</li>
                 <li>Güvenlik sorunuz gösterilir. Cevabı doğru girin.</li>
-                <li>Doğrulama başarılıysa yeni bir parola belirlemeniz istenir. Açılış kilit ekranından kurtarma yaptıysanız aynı ekranda yeni bir güvenlik sorusu ve cevabı da belirlemeniz gerekir.</li>
+                <li>Doğrulama başarılıysa yeni bir parola belirlemeniz istenir. Uygulama <strong>açılışındaki</strong> kilit ekranından kurtarma yaptıysanız, hemen ardından kurulum ekranı açılır ve yeni parolanızın yanında <strong>yeni bir güvenlik sorusu ile cevabını</strong> da belirlemeniz gerekir. Uygulama açıkken hareketsizlik sonrası gelen kilit ekranından kurtarma yaptıysanız yalnızca yeni parola istenir; güvenlik sorunuz olduğu gibi kalır.</li>
+                <li><strong>Parolanızı ve güvenlik sorunuzun cevabını birlikte unutursanız</strong> (ve o cihazda biyometrik giriş açık değilse) verilerinize erişmenin bir yolu kalmaz. Bu bir eksiklik değil, uygulamanın güvenlik mimarisinin gereğidir: veritabanınız yalnızca sizin parolanızla veya güvenlik cevabınızla açılabilen bir anahtarla şifrelenir — ne bizde ne de başkasında bir ana parola, arka kapı ya da kurtarma kopyası vardır.</li>
+                <li>Bu durumda geriye tek bir seçenek kalır: kilit ekranındaki <strong>verileri silip sıfırdan başlama</strong> adımı (yanlışlıkla basılmasın diye bir onay cümlesini elle yazmanız istenir). Verileriniz Google Drive senkronizasyonunda veya bir yedek dosyasında duruyorsa oradan geri gelir; <strong>ikisi de yoksa veriler kalıcı olarak kaybolur.</strong> Bu yüzden senkronizasyonu açık tutmanızı veya düzenli yedek almanızı öneririz.</li>
             </ol>
         </div>
     </details>
@@ -600,9 +605,11 @@
 
             <h4>Danışan Bilgilendirme Mesajı</h4>
             <ol>
-                <li>Randevu modalında <strong>Danışanı Bilgilendir</strong> kutucuğunu işaretleyin.</li>
-                <li>Randevuyu kaydettiğinizde <strong>Danışanı Bilgilendir</strong> penceresi açılır. Mesajı önizlemede düzenleyebilir, ardından <strong>WhatsApp ile Gönder</strong>, <strong>SMS ile Gönder</strong> veya <strong>E-posta ile Gönder</strong>'i seçebilirsiniz; mesaj ilgili uygulamada hazır olarak açılır, göndermeyi siz onaylarsınız. Danışanın telefonu veya e-postası kayıtlı değilse uygulama o anda girmenizi ister. Göndermek istemiyorsanız <strong>Gönderme</strong>'ye dokunun.</li>
-                <li>Daha önce bildirim gönderilmiş bir randevuda <strong>Hatırlatma Gönder</strong> butonu görünür. Bu butonla ek bir hatırlatma mesajı gönderebilirsiniz.</li>
+                <li>Bilgilendirme penceresinin ne zaman açılacağını <strong>Ayarlar > Bildirimler</strong> bölümündeki <strong>Danışan Bilgilendirme Mesajları</strong> anahtarı belirler. <strong>Açıksa:</strong> danışanlı bir randevu oluşturduğunuzda, tarih veya saatini değiştirdiğinizde, tekli randevuyu seriye çevirdiğinizde, seriyi uzattığınızda ya da randevuyu sildiğinizde pencere kendiliğinden açılır — hiçbir kutucuk işaretlemeniz gerekmez. <strong>Kapalıysa:</strong> hiçbir pencere açılmaz.</li>
+                <li>Anahtar kapalıyken de mesaj gönderebilirsiniz: randevu modalındaki <strong>Danışanı Bilgilendir</strong> kutucuğunu işaretleyip kaydetmeniz yeterlidir. Bu kutucuk anahtarı geçersiz kılar, yani mesajı tek bir randevu için elle tetiklemiş olursunuz. (Anahtar açıkken pencere zaten geleceği için kutucuğu işaretlemenize gerek yoktur.)</li>
+                <li>Anahtar açık olsun ya da olmasın, <strong>mesaj kendiliğinden gönderilmez.</strong> Otomatik olan yalnızca pencerenin açılmasıdır; gönderme kararı her zaman sizindir.</li>
+                <li>Açılan <strong>Danışanı Bilgilendir</strong> penceresinde mesajı önizlemede düzenleyebilir, ardından <strong>WhatsApp ile Gönder</strong>, <strong>SMS ile Gönder</strong> veya <strong>E-posta ile Gönder</strong>'i seçebilirsiniz; mesaj ilgili uygulamada hazır olarak açılır, gönderme tuşuna siz basarsınız. Danışanın telefonu veya e-postası kayıtlı değilse uygulama o anda girmenizi ister. Göndermek istemiyorsanız <strong>Gönderme</strong>'ye dokunun.</li>
+                <li>Bilgilendirme gönderilmiş, bugünkü veya ileri tarihli bir randevuyu açtığınızda <strong>Hatırlatma Gönder</strong> butonu görünür. <strong>Hatırlatmalar hiçbir zaman kendiliğinden tetiklenmez</strong> — otomatik mesajlar açık olsa bile. Danışana ek bir hatırlatma gitmesini istiyorsanız bu butona basmanız gerekir.</li>
                 <li>Tekrarlayan bir randevuda bildirim kapsamını seçebilirsiniz: <strong>Sadece bu seans</strong> veya <strong>Tüm seri</strong>.</li>
             </ol>
         </div>

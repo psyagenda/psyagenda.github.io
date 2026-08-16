@@ -474,8 +474,11 @@
             <ol>
                 <li>Go to <strong>Settings > Backup</strong>.</li>
                 <li>Tap the <strong>Back Up Data</strong> button.</li>
-                <li>You'll be asked to set a password for the backup file. This password protects the file.</li>
-                <li>On desktop (Windows / macOS) a save dialog opens; choose a folder and tap <strong>Save</strong> — if you cancel the dialog, no backup is created. On iPhone / iPad the backup is first saved inside the app, then the share sheet opens; send yourself a copy from there (AirDrop, WhatsApp, Mail or iCloud Drive), otherwise the backup is deleted together with the app when you remove it.</li>
+                <li>In the <strong>Encrypt Backup</strong> window that opens, set a password, type the same password again in the field below and tap <strong>Backup and Encrypt</strong>.</li>
+                <li><strong>Write this password down somewhere safe.</strong> The backup file is fully encrypted with it; if you forget the password, the data inside that backup can never be accessed again.</li>
+                <li>A progress window appears while the backup is being prepared. Don't close the app during this time.</li>
+                <li>Where the backup is saved depends on your device:<br><strong>Windows / macOS:</strong> a save dialog opens; choose a folder and tap <strong>Save</strong>. If you cancel this dialog, no backup is created.<br><strong>Android:</strong> the backup is saved straight to your device's <strong>Downloads</strong> folder.<br><strong>iPhone / iPad:</strong> the backup is first saved inside the app's own folder; right after, the share sheet opens, letting you save the file to a location you choose (iCloud Drive, on-device storage etc.) or send it wherever you like.</li>
+                <li><strong>On iPhone / iPad, don't skip this last step:</strong> use the share sheet to send a copy of the backup outside the app — <strong>Save to Files</strong>, AirDrop, WhatsApp, Mail or iCloud Drive. If you dismiss that sheet, the backup only lives inside the app and is deleted together with the app when you remove it.</li>
             </ol>
 
             <h4>Restoring from a Backup</h4>
@@ -506,7 +509,7 @@
             <h4>Setting a Sync Password</h4>
             <ol>
                 <li>After you connect your Google account, the screen that opens depends on whether this account already has synced data: on <strong>your first device</strong> the password setup screen appears, while on <strong>your second and later devices</strong> the 'Your existing password...' field and the <strong>Connect</strong> button appear. On the second device, enter the same password you set on the other device and tap <strong>Connect</strong>; if you do not remember it, tap the <strong>Forgot password</strong> link and answer your security question.</li>
-                <li>Enter a sync password of at least 4 characters and confirm it.</li>
+                <li>Enter your sync password and type the same password again in the field below. There is no length requirement, but since all your data is encrypted with it, we recommend a hard-to-guess password of at least 8 characters.</li>
                 <li>Fill in the <strong>Password Recovery Question</strong> section below: a security question, its answer, and the answer confirmation. These fields are required — if you leave them empty, synchronization will not start. Then tap the <strong>Start Synchronization</strong> button; the initial sync starts automatically.</li>
                 <li><strong>Important:</strong> Do not forget this password. All your data is encrypted with it. If you lose the password, your data cannot be accessed.</li>
             </ol>
@@ -548,14 +551,14 @@
     <details class="guide-section">
         <summary>Security Settings</summary>
         <div class="guide-section-content">
-            <p class="guide-intro">Protect your data from unauthorized access with app lock and password settings.</p>
+            <p class="guide-intro">Protect your data from unauthorized access with app lock and password settings. Everything in this section is <strong>specific to that device</strong>: your password, security question, auto-lock timeout and biometric login never travel to your other devices through sync. You set a separate password on each device, and a change made on one does not affect the others.</p>
 
             <h4>Setting Up App Lock</h4>
             <ol>
-                <li><strong>The first time you open the app</strong>, the password setup screen appears automatically; this step cannot be skipped.</li>
+                <li><strong>During the app's first-time setup</strong>, the password creation screen appears automatically; this step cannot be skipped.</li>
                 <li>The app lock is not turned on through a separate option — password setup is mandatory on first launch; Settings > Security only holds the settings of the existing lock.</li>
-                <li>Set a password and confirm it.</li>
-                <li>Fill in the <strong>security question</strong> and answer — this is the only recovery method if you forget your password.</li>
+                <li>Setup has two steps. In the first step, type your password, type the same password again in the field below and tap <strong>Continue</strong>.</li>
+                <li>In the second step, write a <strong>security question</strong>, its answer and the answer again, then tap <strong>Complete Setup</strong>. All three fields are required and cannot be left empty — that question is the only way to recover access if you forget your password.</li>
                 <li>Under <strong>Auto-Lock Timeout</strong>, choose the <strong>Inactivity Duration</strong> to set how long the app waits without any activity before it locks: Never, 30 Seconds, 1, 5, 15, 30 Minutes or 1 Hour.</li>
                 <li>Turn on <strong>Lock on Returning from Background</strong> if you want to be asked for your password every time you send the app to the background and reopen it (off by default).</li>
                 <li>If your device supports it, turn on <strong>Biometric Login</strong> to unlock quickly with your fingerprint / face / device PIN; your current password is requested while enabling it.</li>
@@ -579,7 +582,9 @@
             <ol>
                 <li>On the app lock screen, tap the <strong>Forgot Password</strong> link.</li>
                 <li>Your security question is displayed. Enter the correct answer.</li>
-                <li>If verification succeeds, you'll be prompted to set a new password. If you recovered from the startup lock screen, you must also set a new security question and answer on the same screen.</li>
+                <li>If verification succeeds, you'll be prompted to set a new password. If you recovered from the lock screen shown <strong>at app startup</strong>, the setup screen opens right after and you must also set a <strong>new security question and answer</strong> alongside your new password. If you recovered from the lock screen that appears after inactivity while the app is open, only a new password is requested; your security question stays as it is.</li>
+                <li><strong>If you forget both your password and the answer to your security question</strong> (and biometric login is not enabled on that device), there is no way left to reach your data. This is not a shortcoming but a requirement of the app's security architecture: your database is encrypted with a key that only your password or your security answer can open — neither we nor anyone else holds a master password, a back door or a recovery copy.</li>
+                <li>In that case only one option remains: the <strong>erase everything and start over</strong> step on the lock screen (you must type a confirmation phrase by hand so it can't be triggered by accident). If your data is in Google Drive sync or in a backup file, it comes back from there; <strong>if you have neither, the data is lost permanently.</strong> This is why we recommend keeping sync on or taking regular backups.</li>
             </ol>
         </div>
     </details>
@@ -600,9 +605,11 @@
 
             <h4>Client Notification Messages</h4>
             <ol>
-                <li>In the appointment modal, check the <strong>Notify Client</strong> checkbox.</li>
-                <li>When you save the appointment, the <strong>Notify Client</strong> window opens. You can edit the message in the preview, then choose <strong>Send via WhatsApp</strong>, <strong>Send via SMS</strong>, or <strong>Send via Email</strong>; the message opens ready to go in the relevant app, and you confirm the sending yourself. If the client has no phone number or email on file, the app asks you to enter it right then. If you don't want to send it, tap <strong>Don't Send</strong>.</li>
-                <li>For appointments where a notification was previously sent, a <strong>Send Reminder</strong> button appears. Use it to send an additional reminder.</li>
+                <li>When the notification window opens is decided by the <strong>Client Notification Messages</strong> switch in <strong>Settings > Notifications</strong>. <strong>When it is on:</strong> the window opens by itself whenever you create an appointment with a client, change its date or time, turn a single appointment into a series, extend a series or delete the appointment — you don't have to tick any checkbox. <strong>When it is off:</strong> no window opens.</li>
+                <li>You can still send messages while the switch is off: just tick the <strong>Notify Client</strong> checkbox in the appointment modal and save. The checkbox overrides the switch, so you trigger the message manually for that one appointment. (With the switch on, the window comes anyway, so ticking it is unnecessary.)</li>
+                <li>Whether the switch is on or off, <strong>the message is never sent by itself.</strong> Only the opening of the window is automatic; the decision to send is always yours.</li>
+                <li>In the <strong>Notify Client</strong> window you can edit the message in the preview, then choose <strong>Send via WhatsApp</strong>, <strong>Send via SMS</strong>, or <strong>Send via Email</strong>; the message opens ready to go in the relevant app and you press send yourself. If the client has no phone number or email on file, the app asks you to enter it right then. If you don't want to send it, tap <strong>Don't Send</strong>.</li>
+                <li>When you open an appointment that already received a notification and is today or in the future, a <strong>Send Reminder</strong> button appears. <strong>Reminders are never triggered automatically</strong> — not even when automatic messages are on. If you want the client to get an extra reminder, you have to tap this button.</li>
                 <li>For recurring appointments, you can choose the notification scope: <strong>Only this session</strong> or <strong>Entire series</strong>.</li>
             </ol>
         </div>
