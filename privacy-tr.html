@@ -72,7 +72,7 @@
 
     <h2>Verilerin Saklanması</h2>
     <ul>
-        <li>Danışan, randevu, seans notu, test ve finansal kayıtlar yalnızca kullanıcının cihazında şifreli yerel veritabanında (SQLCipher/AES-256) saklanır. Seans ve test görselleri ise cihazda uygulamanın özel veri alanında ayrı dosyalar olarak tutulur; bu dosyalar veritabanı şifrelemesinin kapsamında değildir ve işletim sisteminin uygulama alanı koruması ile — etkinse — cihaz şifrelemesine tabidir. Senkronizasyon etkinleştirildiğinde görseller buluta yalnızca şifrelenmiş olarak yüklenir.</li>
+        <li>Danışan, randevu, seans notu, test ve finansal kayıtlar yalnızca kullanıcının cihazında şifreli yerel veritabanında (SQLCipher/AES-256) saklanır. Seans ve test görselleri veritabanının dışında, uygulamanın özel veri alanında ayrı dosyalar olarak tutulur; bu dosyalar da AES-256 ile şifrelenir ve şifreleme anahtarları veritabanınınkiyle aynı korumaya tabidir. Buna ek olarak işletim sisteminin uygulama alanı koruması ve — etkinse — cihaz şifrelemesi geçerlidir. Senkronizasyon etkinleştirildiğinde görseller buluta yalnızca şifrelenmiş olarak yüklenir.</li>
         <li>Kullanıcının açıkça başlattığı senkronizasyon ve destek e-postaları dışında, geliştirici dahil hiçbir üçüncü taraf bu verilere erişemez.</li>
         <li>Yerel veritabanı şifreli saklanır (SQLCipher/AES-256); uygulama kilidi parolası bu şifreleme anahtarını korur.</li>
     </ul>
