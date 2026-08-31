@@ -72,9 +72,9 @@
 
     <h2>Data Storage</h2>
     <ul>
-        <li>Client, appointment, session note, test and financial records are stored only on the user's device in an encrypted local database (SQLCipher/AES-256). Session and test images are kept outside the database, as separate files within the application's private data area; those files are also encrypted with AES-256, and their encryption keys are protected in the same way as the database's. The operating system's application sandbox and — where enabled — device encryption apply on top of this. When synchronization is enabled, images are uploaded to the cloud only in encrypted form.</li>
+        <li>Client, appointment, session note, test and financial records are stored in an encrypted local database on the device (SQLCipher/AES-256). Session and test images are kept outside the database, as separate files within the application's private data area; those are encrypted with AES-256 as well. All of this data lives only on the user's device.</li>
+        <li>The encryption key is held in the device's own secure key store and is wrapped with your App Lock password; image files are encrypted with keys derived from that same key. The operating system's application sandbox and — where enabled — device encryption apply on top of this.</li>
         <li>Beyond user-initiated synchronization and support emails, no third party including the developer can access this data.</li>
-        <li>The local database is stored encrypted (SQLCipher/AES-256); your App Lock password protects the encryption key.</li>
     </ul>
 
     <h2>Synchronization and Cloud Storage</h2>
