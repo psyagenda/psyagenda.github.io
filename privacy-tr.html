@@ -127,8 +127,8 @@
 
     <h2>Şifreleme ve İhracat Uyumluluğu</h2>
     <ul>
-        <li>Uygulama yalnızca standart, kamuya açık şifreleme algoritmalarını kullanır: AES-256-GCM (veri ve yedek şifreleme), SQLCipher/AES-256 (yerel veritabanı at-rest şifrelemesi), PBKDF2-HMAC-SHA-256 (anahtar türetme), SHA-256 (bütünlük denetimi) ve isteğe bağlı dışa aktarım için klasik ZIP parola koruması (ZipCrypto).</li>
-        <li>Bu algoritmalar Apple App Store ve U.S. ihracat regülasyonları kapsamında 'standard exempt' kategorisindedir. Uygulama özel/proprietary kriptografik algoritma uygulamaz.</li>
+        <li>Uygulama yalnızca standart, kamuya açık şifreleme algoritmalarını kullanır: AES-256-GCM (senkronizasyon, yedekleme ve görsel dosyaların şifrelenmesi), SQLCipher/AES-256 (yerel veritabanı at-rest şifrelemesi), PBKDF2-HMAC-SHA-256 ve HKDF-SHA-256 (anahtar türetme), SHA-256 (bütünlük denetimi) ve isteğe bağlı dışa aktarım için klasik ZIP parola koruması (ZipCrypto).</li>
+        <li>Bu algoritmalar ABD ihracat düzenlemeleri kapsamında 'standard exempt' kategorisindedir; uygulama mağazalarına verilen ihracat uyumluluk beyanı da bu doğrultudadır. Uygulama özel/proprietary kriptografik algoritma uygulamaz.</li>
     </ul>
 
     <h2>Veri Saklama Süresi</h2>

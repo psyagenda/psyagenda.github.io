@@ -127,8 +127,8 @@
 
     <h2>Encryption and Export Compliance</h2>
     <ul>
-        <li>The application uses only standard, publicly available encryption algorithms: AES-256-GCM (data and backup encryption), SQLCipher/AES-256 (local database at-rest encryption), PBKDF2-HMAC-SHA-256 (key derivation), SHA-256 (integrity verification), and optional traditional ZIP password protection (ZipCrypto) for exports.</li>
-        <li>These algorithms fall under the 'standard exempt' category under Apple App Store and U.S. export regulations. The application does not implement any proprietary cryptographic algorithm.</li>
+        <li>The application uses only standard, publicly available encryption algorithms: AES-256-GCM (synchronization, backup and image file encryption), SQLCipher/AES-256 (local database at-rest encryption), PBKDF2-HMAC-SHA-256 and HKDF-SHA-256 (key derivation), SHA-256 (integrity verification), and optional traditional ZIP password protection (ZipCrypto) for exports.</li>
+        <li>These algorithms fall under the 'standard exempt' category under U.S. export regulations; the export compliance declaration provided to app stores reflects this. The application does not implement any proprietary cryptographic algorithm.</li>
     </ul>
 
     <h2>Data Retention</h2>
