@@ -80,8 +80,9 @@
     <h2>Synchronization and Cloud Storage</h2>
     <ul>
         <li>Synchronization is entirely optional and disabled by default.</li>
-        <li>When enabled, data is encrypted with a user-defined password using AES-256-GCM standard and stored only in the user's own Google Drive account in the private app data folder (appDataFolder).</li>
-        <li>The encryption key is derived only on the user's device; no one, including the developer, can decrypt the data.</li>
+        <li>When enabled, data is encrypted with the user's chosen synchronization password using the AES-256-GCM standard before it leaves the device, and is uploaded only to the private app data folder (appDataFolder) in the user's own Google Drive account.</li>
+        <li>Other devices signed in with the same Google account and the same synchronization password download this encrypted data and decrypt it only on the device itself; the decrypted data is written into that device's encrypted database. Synchronization between devices therefore happens without the data ever travelling unencrypted.</li>
+        <li>The encryption key is never transmitted anywhere; it is derived solely on the user's device from the synchronization password. No party, including Google and the developer, can decrypt the data.</li>
     </ul>
 
     <h2>AI Usage and Data Sharing</h2>

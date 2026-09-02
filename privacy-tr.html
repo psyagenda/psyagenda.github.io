@@ -80,8 +80,9 @@
     <h2>Senkronizasyon ve Bulut Depolama</h2>
     <ul>
         <li>Senkronizasyon tamamen isteğe bağlıdır ve varsayılan olarak kapalıdır.</li>
-        <li>Etkinleştirildiğinde veriler kullanıcının belirlediği şifre ile AES-256-GCM standardında şifrelenir ve yalnızca kullanıcının kendi Google Drive hesabındaki özel uygulama alanında (appDataFolder) saklanır.</li>
-        <li>Şifreleme anahtarı yalnızca kullanıcının cihazında türetilir; geliştirici dahil hiç kimse şifrelenmiş verileri çözemez.</li>
+        <li>Etkinleştirildiğinde veriler, cihazdan ayrılmadan önce kullanıcının belirlediği senkronizasyon şifresiyle AES-256-GCM standardında şifrelenir ve yalnızca kullanıcının kendi Google Drive hesabındaki özel uygulama alanına (appDataFolder) yüklenir.</li>
+        <li>Aynı Google hesabı ve aynı senkronizasyon şifresiyle kullanılan diğer cihazlar bu şifreli veriyi indirir ve yalnızca kendi üzerinde çözer; çözülen veriler o cihazın şifreli veritabanına yazılır. Böylece cihazlar arası senkronizasyon, veriler hiçbir aşamada şifresiz dolaşmadan sağlanır.</li>
+        <li>Şifreleme anahtarı hiçbir yere gönderilmez; yalnızca kullanıcının cihazında senkronizasyon şifresinden türetilir. Google dahil hiçbir taraf, geliştirici de dahil, şifrelenmiş verileri çözemez.</li>
     </ul>
 
     <h2>Yapay Zeka Kullanımı ve Veri Paylaşımı</h2>
