@@ -72,11 +72,11 @@
     <div class="feature-grid">
         <div class="feature-card">
             <h3>No servers</h3>
-            <p>The application has no central server; once installed, by default it runs entirely locally, on the user&rsquo;s device alone. All data entered into the application is stored solely on the user&rsquo;s own device, in an encrypted database; no record is sent to any server. No one apart from the user &mdash; not even the developer &mdash; can access this database. There is no central pool of data that could be exposed in a mass breach, and no service outage can stand between the user and their own records. Day-to-day use requires no internet connection; keeping records, searching, and reporting all work offline. The user can permanently and completely delete all data entered into the application at any time.</p>
+            <p>The application has no central server; once installed, by default it runs entirely locally, on the user&rsquo;s device alone. There is no need to create an account or register; at first launch only the language, an app password, and a security question to be used if that password is forgotten are set. All data entered into the application is stored solely on the user&rsquo;s own device, in an encrypted database; no record is sent to any server. No one apart from the user &mdash; not even the developer &mdash; can access this database. There is no central pool of data that could be exposed in a mass breach, and no service outage can stand between the user and their own records. Day-to-day use requires no internet connection; keeping records, searching, and reporting all work offline. The application contains no ads, no analytics, and no user tracking. The user can permanently and completely delete all data entered into the application at any time.</p>
         </div>
         <div class="feature-card">
             <h3>Encrypted at every stage</h3>
-            <p>Data is encrypted not only at rest but also in motion. Client records, session notes, and financial data are held on the device in a database encrypted with AES-256; session and test images sit outside that database as separate files encrypted to the same strength. The key is kept in the operating system&rsquo;s secure key store and protected by the app password. When synchronization is enabled, data is encrypted with a separate password of the user&rsquo;s choosing before it leaves the device; Drive sees only the encrypted block, and the receiving device decrypts it on the device itself. Backup files are always encrypted. At no point along the storage, synchronization, or backup paths does the data sit unencrypted.</p>
+            <p>Data is encrypted not only at rest but also in motion. Client records, session notes, and financial data are held on the device in a database encrypted with AES-256; session and test images sit outside that database as separate files encrypted to the same strength. The key is kept in the operating system&rsquo;s secure key store and protected by the app password. The application is locked with a password and biometric verification; automatic lock takes effect once the configured idle period elapses. When synchronization is enabled, data is encrypted with a separate password of the user&rsquo;s choosing before it leaves the device; Drive sees only the encrypted block, and the receiving device decrypts it on the device itself. Backup files are always encrypted. At no point along the storage, synchronization, or backup paths does the data sit unencrypted.</p>
         </div>
         <div class="feature-card">
             <h3>Optional synchronization</h3>
@@ -116,19 +116,8 @@
         </div>
         <div class="feature-card">
             <h3>Optional AI</h3>
-            <p>AI features are off by default and run only with the user&rsquo;s own Google Gemini key; the key is stored encrypted on the device. Once enabled, a photograph of handwritten notes can be turned into digital text; insights can be drawn from session notes, Rorschach responses, or drawing tests, a suggestion can be requested for the next session, and written text can be improved. For each evaluation, the model, the analysis method, and the level of detail (summary, medium, detailed) can be chosen by the user. Since the request passes directly between the user&rsquo;s device and Google, the developer sees no part of it. The AI does not diagnose; the final judgement and responsibility always rest with the therapist.</p>
+            <p>AI features are off by default and run only with the user&rsquo;s own Google Gemini key; the key is stored encrypted on the device. Once enabled, a photograph of handwritten notes can be turned into digital text; insights can be drawn from session notes, Rorschach responses, or drawing tests, a suggestion can be requested for the next session, and written text can be improved. For each evaluation, the model, the analysis method, and the level of detail (summary, medium, detailed) can be chosen by the user. Since the request passes directly between the user&rsquo;s device and Google, the developer sees no part of it. Requests carry only the client&rsquo;s age, gender, and the relevant content; name, phone number, and email address are never sent. The AI does not diagnose; the final judgement and responsibility always rest with the therapist.</p>
         </div>
-    </div>
-
-    <div class="privacy-box">
-        <h2>Security and privacy</h2>
-        <ul>
-            <li>The database is always kept encrypted on the device (AES-256). The encryption key is stored in the operating system's secure key store.</li>
-            <li>The application is locked with a password and biometric verification. Automatic lock takes effect once the configured idle period elapses.</li>
-            <li>There is no need to create an account or register. At first launch only the language, an app password, and a security question to be used if that password is forgotten are set.</li>
-            <li>AI features run only with the user&rsquo;s own API key; the request goes directly between the user&rsquo;s device and Google, never passing through the developer. Requests carry only the client&rsquo;s age, gender, and the relevant content; name, phone number, and email address are never sent.</li>
-            <li>The application contains no ads, no analytics, and no user tracking.</li>
-        </ul>
     </div>
 
     <h2>License and trial</h2>

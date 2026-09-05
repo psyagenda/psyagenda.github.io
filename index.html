@@ -72,11 +72,11 @@
     <div class="feature-grid">
         <div class="feature-card">
             <h3>Sunucusuz mimari</h3>
-            <p>Uygulamanın merkezi bir sunucusu yoktur; kurulduğunda varsayılan olarak yalnızca kullanıcının cihazında, tamamen yerel çalışır. Uygulamaya girilen tüm veriler yalnızca kullanıcının cihazında, şifreli bir veritabanında saklanır; hiçbir kayıt bir sunucuya gönderilmez. Kullanıcı haricinde, geliştirici dahil başka hiç kimse bu veritabanına erişemez. Toplu bir sızıntıya konu olabilecek merkezi bir veri havuzu bulunmadığı gibi, herhangi bir hizmet kesintisi de kullanıcının kendi kayıtlarına erişimini engellemez. Günlük kullanım internet bağlantısı gerektirmez; kayıt tutma, arama ve raporlama çevrimdışı çalışır. Kullanıcı dilediği anda uygulamaya girdiği tüm verileri tamamen ve kalıcı olarak silebilir.</p>
+            <p>Uygulamanın merkezi bir sunucusu yoktur; kurulduğunda varsayılan olarak yalnızca kullanıcının cihazında, tamamen yerel çalışır. Kullanıma başlamak için hesap oluşturma veya kayıt adımına gerek yoktur; ilk açılışta yalnızca dil seçimi, uygulama parolası ve parola unutulduğunda kullanılacak bir güvenlik sorusu belirlenir. Uygulamaya girilen tüm veriler yalnızca kullanıcının cihazında, şifreli bir veritabanında saklanır; hiçbir kayıt bir sunucuya gönderilmez. Kullanıcı haricinde, geliştirici dahil başka hiç kimse bu veritabanına erişemez. Toplu bir sızıntıya konu olabilecek merkezi bir veri havuzu bulunmadığı gibi, herhangi bir hizmet kesintisi de kullanıcının kendi kayıtlarına erişimini engellemez. Günlük kullanım internet bağlantısı gerektirmez; kayıt tutma, arama ve raporlama çevrimdışı çalışır. Uygulamada reklam, analitik ve kullanıcı izleme bulunmaz. Kullanıcı dilediği anda uygulamaya girdiği tüm verileri tamamen ve kalıcı olarak silebilir.</p>
         </div>
         <div class="feature-card">
             <h3>Her aşamada şifreli</h3>
-            <p>Veriler yalnızca beklerken değil, hareket ederken de şifrelidir. Danışan kayıtları, seans notları ve finansal veriler cihazda AES-256 ile şifreli bir veritabanında saklanır; seans ve test görselleri de veritabanının dışında, aynı güçte şifrelenmiş ayrı dosyalar olarak durur. Anahtar işletim sisteminin güvenli anahtar deposunda tutulur ve uygulama parolasıyla korunur. Senkronizasyon açıldığında veri cihazdan çıkmadan önce kullanıcının belirlediği ayrı bir parolayla şifrelenir; Drive yalnızca şifreli bloğu görür, karşı cihaz onu kendi üzerinde çözer. Yedek dosyaları zorunlu olarak şifrelenir. Kayıt, senkronizasyon ve yedekleme yollarının hiçbirinde verinin şifresiz durduğu bir an yoktur.</p>
+            <p>Veriler yalnızca beklerken değil, hareket ederken de şifrelidir. Danışan kayıtları, seans notları ve finansal veriler cihazda AES-256 ile şifreli bir veritabanında saklanır; seans ve test görselleri de veritabanının dışında, aynı güçte şifrelenmiş ayrı dosyalar olarak durur. Anahtar işletim sisteminin güvenli anahtar deposunda tutulur ve uygulama parolasıyla korunur. Uygulama parola ve biyometrik doğrulama ile kilitlenir; belirlenen hareketsizlik süresi dolduğunda otomatik kilit devreye girer. Senkronizasyon açıldığında veri cihazdan çıkmadan önce kullanıcının belirlediği ayrı bir parolayla şifrelenir; Drive yalnızca şifreli bloğu görür, karşı cihaz onu kendi üzerinde çözer. Yedek dosyaları zorunlu olarak şifrelenir. Kayıt, senkronizasyon ve yedekleme yollarının hiçbirinde verinin şifresiz durduğu bir an yoktur.</p>
         </div>
         <div class="feature-card">
             <h3>İsteğe bağlı senkronizasyon</h3>
@@ -116,19 +116,8 @@
         </div>
         <div class="feature-card">
             <h3>İsteğe bağlı yapay zeka</h3>
-            <p>Yapay zeka özellikleri varsayılan olarak kapalıdır ve yalnızca kullanıcının kendi Google Gemini anahtarıyla çalışır; anahtar cihazda şifreli saklanır. Açıldığında el yazısıyla tutulmuş notların fotoğrafı dijital metne çevrilebilir; seans notları, Rorschach yanıtları veya çizim testlerine istinaden içgörü alınabilir, bir sonraki seans için öneri istenebilir ve yazılan metin iyileştirilebilir. Her değerlendirmede kullanılacak model, analiz yöntemi ve ayrıntı düzeyi (özet, orta, detaylı) kullanıcı tarafından seçilebilir. İşlem doğrudan kullanıcının cihazı ile Google arasında gerçekleştiği için geliştirici hiçbir aşamasını göremez. Yapay zeka tanı koymaz; nihai değerlendirme ve sorumluluk her zaman terapiste aittir.</p>
+            <p>Yapay zeka özellikleri varsayılan olarak kapalıdır ve yalnızca kullanıcının kendi Google Gemini anahtarıyla çalışır; anahtar cihazda şifreli saklanır. Açıldığında el yazısıyla tutulmuş notların fotoğrafı dijital metne çevrilebilir; seans notları, Rorschach yanıtları veya çizim testlerine istinaden içgörü alınabilir, bir sonraki seans için öneri istenebilir ve yazılan metin iyileştirilebilir. Her değerlendirmede kullanılacak model, analiz yöntemi ve ayrıntı düzeyi (özet, orta, detaylı) kullanıcı tarafından seçilebilir. İşlem doğrudan kullanıcının cihazı ile Google arasında gerçekleştiği için geliştirici hiçbir aşamasını göremez. Çağrılarda yalnızca danışanın yaşı, cinsiyeti ve ilgili içerik gönderilir; ad, telefon ve e-posta adresi hiçbir koşulda gönderilmez. Yapay zeka tanı koymaz; nihai değerlendirme ve sorumluluk her zaman terapiste aittir.</p>
         </div>
-    </div>
-
-    <div class="privacy-box">
-        <h2>Güvenlik ve gizlilik</h2>
-        <ul>
-            <li>Veritabanı cihazda her zaman şifreli tutulur (AES-256). Şifreleme anahtarı işletim sisteminin güvenli anahtar deposunda saklanır.</li>
-            <li>Uygulama parola ve biyometrik doğrulama ile kilitlenir. Belirlenen hareketsizlik süresi dolduğunda otomatik kilit devreye girer.</li>
-            <li>Kullanıma başlamak için hesap oluşturma veya kayıt adımına gerek yoktur. İlk açılışta yalnızca dil seçimi, uygulama parolası ve parola unutulduğunda kullanılacak bir güvenlik sorusu belirlenir.</li>
-            <li>Yapay zeka özellikleri yalnızca kullanıcının kendi API anahtarıyla çalışır; istek doğrudan kullanıcının cihazı ile Google arasında gider, geliştiriciye uğramaz. Çağrılarda yalnızca danışanın yaşı, cinsiyeti ve ilgili içerik gönderilir; ad, telefon ve e-posta adresi hiçbir koşulda gönderilmez.</li>
-            <li>Uygulamada reklam, analitik ve kullanıcı izleme bulunmaz.</li>
-        </ul>
     </div>
 
     <h2>Lisans ve deneme</h2>
