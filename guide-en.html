@@ -24,32 +24,48 @@
 </head>
 <body>
 
-<header class="site-header">
-    <div class="header-inner">
-        <img src="app-icon.png" alt="PsyAgenda">
-        <a href="index-en.html">PsyAgenda</a>
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="index-en.html"><img src="app-icon.png" alt=""><span>PsyAgenda</span></a>
+        <div class="nav-right">
+            <nav class="mainnav">
+                <a href="index-en.html">Home</a>
+                <a href="guide-en.html" class="active">User Guide</a>
+                <a href="faq-en.html">FAQ</a>
+                <a href="terms-en.html">Terms of Use</a>
+                <a href="privacy-en.html">Privacy Policy</a>
+            </nav>
+            <div class="lang-menu" id="lang-menu">
+                <button type="button" class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-panel" aria-label="Language selection"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.7 3.9 5.8 3.9 9.2s-1.3 6.5-3.9 9.2c-2.6-2.7-3.9-5.8-3.9-9.2s1.3-6.5 3.9-9.2z"/></svg><span>Language</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                <div class="lang-panel" id="lang-panel">
+                    <label class="lang-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="lang-search" placeholder="Search languages" autocomplete="off" spellcheck="false" aria-label="Search languages"></label>
+                    <ul class="lang-list" id="lang-list">
+                        <li><a href="guide-tr.html" lang="tr" hreflang="tr">Türkçe</a></li>
+                        <li><a href="guide-en.html" lang="en" hreflang="en" class="current" aria-current="true">English</a></li>
+                    </ul>
+                    <p class="lang-empty" id="lang-empty" hidden>No results</p>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
-
-<nav>
-    <ul>
-        <li><a href="index-en.html">Home</a></li>
-        <li><a href="guide-en.html" class="active">Usage Guide</a></li>
-        <li><a href="faq-en.html">FAQ</a></li>
-        <li><a href="terms-en.html">Terms of Use</a></li>
-        <li><a href="privacy-en.html">Privacy Policy</a></li>
-    </ul>
-</nav>
-
-<div class="lang-switch">
-    <a href="guide-tr.html">TR</a>
-    <a href="guide-en.html" class="active">EN</a>
-</div>
+<div class="topbar-spacer" aria-hidden="true"></div>
 
 <main>
-    <h1>Usage Guide</h1>
-    <p class="subtitle">A comprehensive step-by-step guide covering all PsyAgenda features. Open each section to view detailed instructions.</p>
-
+    <div class="wrap page-head">
+        <h1>Usage Guide</h1>
+        <p class="subtitle">A comprehensive step-by-step guide covering all PsyAgenda features. Open each section to view detailed instructions.</p>
+    </div>
+    <div class="wrap doc-layout">
+        <aside class="toc">
+            <div class="doc-search">
+                <label class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="doc-search" placeholder="Search this page..." autocomplete="off" spellcheck="false" aria-label="Search this page..."><button type="button" class="search-clear" id="doc-search-clear" aria-label="Clear" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></label>
+                <p class="search-status" id="doc-search-status" aria-live="polite" data-none="No results found." data-count="{n} match{es} · {m} section{s}"></p>
+            </div>
+            <div class="toc-title">On this page</div>
+            <div class="toc-list" id="toc-list"></div>
+        </aside>
+        <article class="doc" data-toc=".guide-section > summary">
 <!-- GENERATED:GUIDE-START -->
     <!-- 1. Getting Started -->
     <details class="guide-section">
@@ -625,16 +641,219 @@
         </div>
     </details>
 <!-- GENERATED:GUIDE-END -->
-
+        </article>
+    </div>
 </main>
 
 <footer class="site-footer">
-    <p>&copy; 2026 PsyAgenda. All rights reserved.</p>
-    <p>
-        <a href="privacy-en.html">Privacy Policy</a> &middot;
-        <a href="terms-en.html">Terms of Use</a>
-    </p>
+    <div class="wrap">
+        <span>&copy; 2026 PsyAgenda. All rights reserved.</span>
+        <nav>
+            <a href="privacy-en.html">Privacy Policy</a>
+            <a href="terms-en.html">Terms of Use</a>
+            <a href="faq-en.html">FAQ</a>
+        </nav>
+    </div>
 </footer>
 
+<script>
+(function () {
+    /* Dil menüsü: aramalı açılır liste. Diller HTML'deki listeden okunur; JS dil bilgisi taşımaz. */
+    var menu = document.getElementById('lang-menu'), btn = document.getElementById('lang-btn');
+    if (!menu || !btn) return;
+    var input = document.getElementById('lang-search'), empty = document.getElementById('lang-empty');
+    var items = Array.prototype.slice.call(document.getElementById('lang-list').children);
+    var norm = function (s) { return s.toLowerCase().replace(/ı/g, 'i').normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
+    var visible = function () { return items.filter(function (li) { return !li.hidden; }).map(function (li) { return li.firstElementChild; }); };
+    var filter = function () {
+        var q = norm(input.value.trim()), n = 0;
+        items.forEach(function (li) {
+            var a = li.firstElementChild, hit = !q || norm(a.textContent).indexOf(q) !== -1 || a.getAttribute('lang').indexOf(q) === 0;
+            li.hidden = !hit; if (hit) n++;
+        });
+        empty.hidden = n > 0;
+    };
+    var setOpen = function (open) {
+        menu.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { input.value = ''; filter(); setTimeout(function () { input.focus(); }, 0); }
+    };
+    btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+    input.addEventListener('input', filter);
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) setOpen(false); });
+    menu.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { setOpen(false); btn.focus(); return; }
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            var vis = visible(); if (!vis.length) return;
+            var i = vis.indexOf(document.activeElement), next = e.key === 'ArrowDown' ? (i + 1) % vis.length : (i <= 0 ? vis.length - 1 : i - 1);
+            vis[next].focus(); e.preventDefault();
+        } else if (e.key === 'Enter' && e.target === input) { var v = visible(); if (v.length) v[0].click(); }
+    });
+})();
+(function () {
+    /* Özellik kartları: ilk cümle görünür, gerisi tıklayınca açılır. JS yoksa hepsi açık kalır. */
+    var grid = document.querySelector('.feature-grid');
+    if (!grid) return;
+    grid.classList.add('js');
+    Array.prototype.forEach.call(grid.querySelectorAll('.feature-card'), function (card) {
+        var btn = card.querySelector('.acc-btn');
+        if (!btn) return;
+        var set = function (open) {
+            card.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.firstChild.nodeValue = open ? btn.dataset.less : btn.dataset.more;
+        };
+        card.addEventListener('click', function (e) {
+            if (e.target.closest('a')) return;
+            if (window.getSelection && String(window.getSelection()).length) return; /* metin seçerken açma */
+            set(!card.classList.contains('open'));
+        });
+    });
+})();
+(function () {
+    /* Dar ekranda gezinme şeridi yana kayar: aktif sekmeyi görünür alana getir, sağda devam varsa kenarı soldur. */
+    var nav = document.querySelector('.mainnav');
+    if (nav) {
+        var more = function () { nav.classList.toggle('more', nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 2); };
+        var act = nav.querySelector('a.active');
+        var reveal = function () { if (act && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, act.offsetLeft - 16); more(); };
+        nav.addEventListener('scroll', more, { passive: true }); window.addEventListener('resize', more); reveal();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(reveal); /* yazı tipi gelince genişlikler değişir */
+    }
+    var bar = document.getElementById('topbar');
+    if (bar) {
+        var onScroll = function () { bar.classList.toggle('stuck', window.scrollY > 8); };
+        onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    }
+    var rise = document.querySelectorAll('.rise');
+    if ('IntersectionObserver' in window && rise.length) {
+        var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        rise.forEach(function (el) { io.observe(el); });
+        /* Emniyet: gözlemci ne olursa olsun içerik 1.2 sn sonra görünür olur. */
+        setTimeout(function () { rise.forEach(function (el) { el.classList.add('in'); }); }, 1200);
+    } else { rise.forEach(function (el) { el.classList.add('in'); }); }
+
+    /* Bölüm listesi sayfadaki başlıklardan üretilir — içerik iki yere yazılmaz. */
+    var doc = document.querySelector('.doc'), list = document.getElementById('toc-list');
+    if (!doc || !list) return;
+    var sel = doc.dataset.toc || 'h2';
+    var heads = doc.querySelectorAll(sel);
+    if (heads.length < 3) { ['.toc-title', '.toc-list'].forEach(function (c) { var t = document.querySelector(c); if (t) t.hidden = true; }); return; }
+    var links = [];
+    Array.prototype.forEach.call(heads, function (h, i) {
+        var target = h.tagName === 'SUMMARY' ? h.parentNode : h;
+        if (!target.id) target.id = 'b' + (i + 1);
+        var a = document.createElement('a'); a.href = '#' + target.id; a.textContent = h.textContent.trim();
+        if (h.tagName === 'SUMMARY') a.addEventListener('click', function () { h.parentNode.open = true; });
+        list.appendChild(a); links.push(a);
+    });
+    var tick = false;
+    var spy = function () {
+        tick = false; var best = 0;
+        for (var i = 0; i < heads.length; i++) { if (heads[i].closest('[hidden]')) continue; if (heads[i].getBoundingClientRect().top <= 120) best = i; }
+        links.forEach(function (a, i) { a.classList.toggle('current', i === best); });
+    };
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+    spy();
+    /* Arama filtreledikçe bölüm listesi de daralır. */
+    document.addEventListener('docsearch', function () {
+        links.forEach(function (a, i) { var target = heads[i].tagName === 'SUMMARY' ? heads[i].parentNode : heads[i]; a.hidden = !!target.closest('[hidden]'); });
+        spy();
+    });
+})();
+(function () {
+    /* Sayfa içi arama — uygulamadaki "Bu sayfada ara" ile aynı davranış: eşleşen bölümler açılır ve
+       gösterilir, eşleşmeyenler gizlenir, kelimeler işaretlenir. Türkçe harflere ve aksana duyarsız. */
+    var input = document.getElementById('doc-search'), art = document.querySelector('article.doc');
+    if (!input || !art) return;
+    var clearBtn = document.getElementById('doc-search-clear'), status = document.getElementById('doc-search-status');
+    var fold = function (s) {
+        var out = '';
+        for (var i = 0; i < s.length; i++) {
+            var c = s[i];
+            if (c === 'ı' || c === 'İ') { out += 'i'; continue; }
+            var b = c.normalize('NFD')[0] || c, l = b.toLowerCase();
+            out += l.length === 1 ? l : b;
+        }
+        return out;
+    };
+    /* Birimler: h2 bir grup açar; her <details> kendi başına birim; h2 altındaki düz metin tek birim. */
+    var groups = [], cur = null;
+    Array.prototype.forEach.call(art.children, function (el) {
+        if (el.tagName === 'H2') { cur = { head: el, items: [] }; groups.push(cur); return; }
+        if (!cur) { cur = { head: null, items: [] }; groups.push(cur); }
+        if (el.tagName === 'DETAILS') { cur.items.push({ nodes: [el], det: el }); return; }
+        var last = cur.items[cur.items.length - 1];
+        if (!last || last.det) { last = { nodes: [], det: null }; cur.items.push(last); }
+        last.nodes.push(el);
+    });
+    var saved = null; /* arama başlamadan önceki açık/kapalı durumu */
+    var textOf = function (nodes) { return nodes.map(function (n) { return n.textContent; }).join(' '); };
+    var unmark = function () {
+        Array.prototype.forEach.call(art.querySelectorAll('mark.hit'), function (m) { m.replaceWith(m.textContent); });
+        art.normalize();
+    };
+    var mark = function (root, q) {
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), nodes = [], n = 0;
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach(function (t) {
+            var v = t.nodeValue, f = fold(v), i = f.indexOf(q);
+            if (i < 0) return;
+            var frag = document.createDocumentFragment(), last = 0;
+            while (i >= 0) {
+                if (i > last) frag.appendChild(document.createTextNode(v.slice(last, i)));
+                var m = document.createElement('mark'); m.className = 'hit'; m.textContent = v.slice(i, i + q.length); frag.appendChild(m);
+                last = i + q.length; n++; i = f.indexOf(q, last);
+            }
+            if (last < v.length) frag.appendChild(document.createTextNode(v.slice(last)));
+            t.parentNode.replaceChild(frag, t);
+        });
+        return n;
+    };
+    var setHidden = function (nodes, h) { nodes.forEach(function (n) { n.hidden = h; }); };
+    var reset = function () {
+        unmark();
+        groups.forEach(function (g) { if (g.head) g.head.hidden = false; g.items.forEach(function (it) { setHidden(it.nodes, false); }); });
+        if (saved) { saved.forEach(function (o, d) { d.open = o; }); saved = null; }
+        Array.prototype.forEach.call(art.querySelectorAll('h2.first-visible'), function (h) { h.classList.remove('first-visible'); });
+        status.textContent = ''; clearBtn.hidden = true;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var run = function () {
+        var q = fold(input.value.trim());
+        clearBtn.hidden = !input.value;
+        if (q.length < 2) { if (saved) reset(); else { status.textContent = ''; } return; }
+        if (!saved) { saved = new Map(); Array.prototype.forEach.call(art.querySelectorAll('details'), function (d) { saved.set(d, d.open); }); }
+        unmark();
+        var hits = 0, sections = 0;
+        groups.forEach(function (g) {
+            var whole = g.head && g.items.length && !g.items[0].det; /* gizlilik/koşullar: başlık + metin tek birim */
+            var any = false;
+            if (whole) {
+                var all = [g.head].concat(g.items[0].nodes);
+                any = fold(textOf(all)).indexOf(q) !== -1;
+                g.head.hidden = !any; setHidden(g.items[0].nodes, !any);
+                if (any) { sections++; all.forEach(function (n) { hits += mark(n, q); }); }
+            } else {
+                g.items.forEach(function (it) {
+                    var ok = fold(textOf(it.nodes)).indexOf(q) !== -1;
+                    setHidden(it.nodes, !ok);
+                    if (ok) { any = true; sections++; if (it.det) it.det.open = true; it.nodes.forEach(function (n) { hits += mark(n, q); }); }
+                });
+                if (g.head) g.head.hidden = !any;
+            }
+        });
+        var firstSeen = false;
+        Array.prototype.forEach.call(art.querySelectorAll(':scope > h2'), function (h) { var f = !firstSeen && !h.hidden; h.classList.toggle('first-visible', f); if (f) firstSeen = true; });
+        status.textContent = hits ? status.dataset.count.replace('{n}', hits).replace('{m}', sections).replace('{es}', hits === 1 ? '' : 'es').replace('{s}', sections === 1 ? '' : 's') : status.dataset.none;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var timer = null;
+    input.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(run, 220); });
+    input.addEventListener('keydown', function (e) { if (e.key === 'Escape') { input.value = ''; reset(); } });
+    clearBtn.addEventListener('click', function () { input.value = ''; reset(); input.focus(); });
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,4 @@
+_preview/
+_tools/shot/node_modules/
+_tools/shot/*.png
+.DS_Store

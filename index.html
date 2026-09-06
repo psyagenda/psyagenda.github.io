@@ -26,116 +26,345 @@
 </head>
 <body>
 
-<!-- Header -->
-<header class="site-header">
-    <div class="header-inner">
-        <img src="app-icon.png" alt="PsyAgenda">
-        <a href="index.html">PsyAgenda</a>
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="index.html"><img src="app-icon.png" alt=""><span>PsyAgenda</span></a>
+        <div class="nav-right">
+            <nav class="mainnav">
+                <a href="index.html" class="active">Ana Sayfa</a>
+                <a href="guide-tr.html">Kullanım Rehberi</a>
+                <a href="faq-tr.html">SSS</a>
+                <a href="terms-tr.html">Kullanım Koşulları</a>
+                <a href="privacy-tr.html">Gizlilik Politikası</a>
+            </nav>
+            <div class="lang-menu" id="lang-menu">
+                <button type="button" class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-panel" aria-label="Dil seçimi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.7 3.9 5.8 3.9 9.2s-1.3 6.5-3.9 9.2c-2.6-2.7-3.9-5.8-3.9-9.2s1.3-6.5 3.9-9.2z"/></svg><span>Dil</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                <div class="lang-panel" id="lang-panel">
+                    <label class="lang-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="lang-search" placeholder="Dil ara" autocomplete="off" spellcheck="false" aria-label="Dil ara"></label>
+                    <ul class="lang-list" id="lang-list">
+                        <li><a href="index.html" lang="tr" hreflang="tr" class="current" aria-current="true">Türkçe</a></li>
+                        <li><a href="index-en.html" lang="en" hreflang="en">English</a></li>
+                    </ul>
+                    <p class="lang-empty" id="lang-empty" hidden>Sonuç yok</p>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
+<div class="topbar-spacer" aria-hidden="true"></div>
 
-<!-- Navigation -->
-<nav>
-    <ul>
-        <li><a href="index.html" class="active">Ana Sayfa</a></li>
-        <li><a href="guide-tr.html">Kullanım Rehberi</a></li>
-        <li><a href="faq-tr.html">SSS</a></li>
-        <li><a href="terms-tr.html">Kullanım Koşulları</a></li>
-        <li><a href="privacy-tr.html">Gizlilik Politikası</a></li>
-    </ul>
-</nav>
-
-<!-- Language Switch -->
-<div class="lang-switch">
-    <a href="index.html" class="active">TR</a>
-    <a href="index-en.html">EN</a>
-</div>
-
-<!-- Hero -->
 <main>
-    <div class="hero">
-        <img src="app-icon.png" alt="PsyAgenda">
-        <h1>PsyAgenda</h1>
-        <p class="slogan">Akıllı Terapist Ajandası. Hayatını kolaylaştırır.</p>
-        <p class="desc">PsyAgenda; psikolog, psikiyatrist ve danışmanların iş süreçlerini uçtan uca dijitalleştiren bir ajanda uygulamasıdır. Danışan kayıtları, randevu takvimi, seans notları, uygulanan psikolojik testler ve gelir-gider takibi tek bir yerde toplanır. Uygulama sunucusuz bir mimariyle tasarlanmıştır; tüm kayıtlar yalnızca kullanıcının cihazında ve şifreli olarak saklanır.</p>
-        <div class="hero-badges">
-            <span class="hero-badge">iPhone</span>
-            <span class="hero-badge">iPad</span>
-            <span class="hero-badge">Android</span>
-            <span class="hero-badge">Mac</span>
-            <span class="hero-badge">Windows</span>
+    <section class="wrap hero">
+        <div class="hero-text">
+            <h1>Akıllı terapist ajandası. <span class="soft">Hayatını kolaylaştırır.</span></h1>
+        <p class="lede">PsyAgenda; psikolog, psikiyatrist ve danışmanların iş süreçlerini uçtan uca dijitalleştiren bir ajanda uygulamasıdır. Danışan kayıtları, randevu takvimi, seans notları, uygulanan psikolojik testler ve gelir-gider takibi tek bir yerde toplanır.</p>
+        <p class="lede">Uygulama sunucusuz bir mimariyle tasarlanmıştır; tüm kayıtlar yalnızca kullanıcının cihazında ve şifreli olarak saklanır.</p>
         </div>
-        <p class="hero-note">PsyAgenda yayıma hazırlanma aşamasındadır. Uygulama mağazalarda yayımlandıkça bu sayfada yer alan indirme bağlantıları aktive edilecektir. Uygulama iPhone, iPad, Mac, Android ve Windows&rsquo;ta tamamen aynı arayüz ile kullanılacak olup; dağıtımı yalnızca Apple App Store, Google Play ve Microsoft Store üzerinden yapılacaktır.</p>
-    </div>
+        <div class="notice pending">
+            <span class="dot"></span>
+            <p><strong>Yayına hazırlanıyor</strong>; PsyAgenda yayıma hazırlanma aşamasındadır. Uygulama mağazalarda yayımlandıkça bu sayfada yer alan indirme bağlantıları aktive edilecektir. Uygulama iPhone, iPad, Mac, Android ve Windows&rsquo;ta tamamen aynı arayüz ile kullanılacak olup; dağıtımı yalnızca Apple App Store, Google Play ve Microsoft Store üzerinden yapılacaktır.</p>
+        </div>
+        <div class="stores">
+                <span class="store" aria-disabled="true" title="Henüz yayımlanmadı"><small>iPhone ve iPad</small><strong>App Store&rsquo;dan İndirin</strong></span>
+                <span class="store" aria-disabled="true" title="Henüz yayımlanmadı"><small>Mac</small><strong>Mac App Store&rsquo;dan İndirin</strong></span>
+                <span class="store" aria-disabled="true" title="Henüz yayımlanmadı"><small>Android</small><strong>Google Play&rsquo;den İndirin</strong></span>
+                <span class="store" aria-disabled="true" title="Henüz yayımlanmadı"><small>Windows</small><strong>Microsoft Store&rsquo;dan İndirin</strong></span>
+        </div>
+    </section>
 
-    <h2>Özellikler</h2>
-    <div class="feature-grid">
-        <div class="feature-card">
-            <h3>Sunucusuz mimari</h3>
-            <p>Uygulamanın merkezi bir sunucusu yoktur; kurulduğunda varsayılan olarak yalnızca kullanıcının cihazında, tamamen yerel çalışır. Kullanıma başlamak için hesap oluşturma veya kayıt adımına gerek yoktur; ilk açılışta yalnızca dil seçimi, uygulama parolası ve parola unutulduğunda kullanılacak bir güvenlik sorusu belirlenir. Uygulamaya girilen tüm veriler yalnızca kullanıcının cihazında, şifreli bir veritabanında saklanır; hiçbir kayıt bir sunucuya gönderilmez. Kullanıcı haricinde, geliştirici dahil başka hiç kimse bu veritabanına erişemez. Toplu bir sızıntıya konu olabilecek merkezi bir veri havuzu bulunmadığı gibi, herhangi bir hizmet kesintisi de kullanıcının kendi kayıtlarına erişimini engellemez. Günlük kullanım internet bağlantısı gerektirmez; kayıt tutma, arama ve raporlama çevrimdışı çalışır. Uygulamada reklam, analitik ve kullanıcı izleme bulunmaz. Kullanıcı dilediği anda uygulamaya girdiği tüm verileri tamamen ve kalıcı olarak silebilir.</p>
+    <section class="wrap section" id="ozellikler">
+        <div class="section-head rise">
+            <h2>Uygulamanın temel özellikleri</h2>
         </div>
-        <div class="feature-card">
-            <h3>Her aşamada şifreli</h3>
-            <p>Veriler yalnızca beklerken değil, hareket ederken de şifrelidir. Danışan kayıtları, seans notları ve finansal veriler cihazda AES-256 ile şifreli bir veritabanında saklanır; seans ve test görselleri de veritabanının dışında, aynı güçte şifrelenmiş ayrı dosyalar olarak durur. Anahtar işletim sisteminin güvenli anahtar deposunda tutulur ve uygulama parolasıyla korunur. Uygulama parola ve biyometrik doğrulama ile kilitlenir; belirlenen hareketsizlik süresi dolduğunda otomatik kilit devreye girer. Senkronizasyon açıldığında veri cihazdan çıkmadan önce kullanıcının belirlediği ayrı bir parolayla şifrelenir; Drive yalnızca şifreli bloğu görür, karşı cihaz onu kendi üzerinde çözer. Yedek dosyaları zorunlu olarak şifrelenir. Kayıt, senkronizasyon ve yedekleme yollarının hiçbirinde verinin şifresiz durduğu bir an yoktur.</p>
+        <div class="feature-grid">
+            <div class="feature-card rise">
+                <p><strong class="rt">Sunucusuz mimari:</strong> Uygulamanın merkezi bir sunucusu yoktur; kurulduğunda varsayılan olarak yalnızca kullanıcının cihazında, tamamen yerel çalışır.</p>
+                <div class="acc-body"><div><p>Kullanıma başlamak için hesap oluşturma veya kayıt adımına gerek yoktur; ilk açılışta yalnızca dil seçimi, uygulama parolası ve parola unutulduğunda kullanılacak bir güvenlik sorusu belirlenir. Uygulamaya girilen tüm veriler yalnızca kullanıcının cihazında, şifreli bir veritabanında saklanır; hiçbir kayıt bir sunucuya gönderilmez. Kullanıcı haricinde, geliştirici dahil başka hiç kimse bu veritabanına erişemez. Toplu bir sızıntıya konu olabilecek merkezi bir veri havuzu bulunmadığı gibi, herhangi bir hizmet kesintisi de kullanıcının kendi kayıtlarına erişimini engellemez. Günlük kullanım internet bağlantısı gerektirmez; kayıt tutma, arama ve raporlama çevrimdışı çalışır. Uygulamada reklam, analitik ve kullanıcı izleme bulunmaz. Kullanıcı dilediği anda uygulamaya girdiği tüm verileri tamamen ve kalıcı olarak silebilir.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Her aşamada şifreli:</strong> Veriler yalnızca beklerken değil, hareket ederken de şifrelidir.</p>
+                <div class="acc-body"><div><p>Danışan kayıtları, seans notları ve finansal veriler cihazda AES-256 ile şifreli bir veritabanında saklanır; seans ve test görselleri de veritabanının dışında, aynı güçte şifrelenmiş ayrı dosyalar olarak durur. Anahtar işletim sisteminin güvenli anahtar deposunda tutulur ve uygulama parolasıyla korunur. Uygulama parola ve biyometrik doğrulama ile kilitlenir; belirlenen hareketsizlik süresi dolduğunda otomatik kilit devreye girer. Senkronizasyon açıldığında veri cihazdan çıkmadan önce kullanıcının belirlediği ayrı bir parolayla şifrelenir; Drive yalnızca şifreli bloğu görür, karşı cihaz onu kendi üzerinde çözer. Yedek dosyaları zorunlu olarak şifrelenir. Kayıt, senkronizasyon ve yedekleme yollarının hiçbirinde verinin şifresiz durduğu bir an yoktur.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">İsteğe bağlı senkronizasyon:</strong> Uygulama birden fazla cihaza kurulabilir; istenirse bu cihazlar arasında senkronizasyon açılabilir, özellik varsayılan olarak kapalıdır. iPhone&rsquo;da oluşturulan bir randevunun seans notları, iPad veya Android tablet üzerinden yazılabilir.</p>
+                <div class="acc-body"><div><p>Senkronizasyon aracı bir sunucu olmadan, kullanıcının kendi Google Drive hesabının uygulamaya özel alanı üzerinden yürütülür; bu alan Drive arayüzünde görünmez. Google Drive yalnızca şifreli veriyi barındırır, içeriğe erişemez. Farklı cihazlarda yapılan değişiklikler kayıt bazında birleştirilir, biri diğerinin üzerine yazmaz. Drive&rsquo;a kaydedilen tüm veriler dilediği anda kalıcı olarak silinebilir.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Ana ekran ve günün akışı:</strong> Uygulama açıldığında günün tamamı tek ekranda görünür.</p>
+                <div class="acc-body"><div><p>O güne ait seanslar saatleriyle birlikte sırayla listelenir ve her seansın notu kendi satırında yer alır; meşgul olarak işaretlenen saatler de aynı akışta görünür. Biten seanslar tek dokunuşla gizlenerek kalan randevular öne çıkarılabilir. Bir danışanın vadesi geçmiş ödemesi varsa uyarısı tutarıyla birlikte aynı listede belirir, bütçe ekranını açmaya gerek kalmaz. Takvimi açmadan başka bir güne bakılabilir, tek dokunuşla bugüne dönülebilir. Takvim, danışanlar, bütçe ve test modülüne de bu ekrandan geçilir; üst bölümde işletme adı ile senkronizasyon durumu ve ayarlar yer alır.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Takvim ve randevular:</strong> Oldukça esnek ve dinamik biçimde kullanılabilen, ihtiyaca göre kişiselleştirilebilen bir takvim yönetimi sunar.</p>
+                <div class="acc-body"><div><p>Takvimde 1, 3, 5 ve 7 günlük görünümlerin yanı sıra aylık görünüm bulunur. Zaman ızgarası 15, 30 veya 60 dakikaya ayarlanabilir; çalışma saatleri ve mola aralığı kullanıcının kendi düzenine göre belirlenebilir. Bir randevu kaydına danışan, süre, seans ücreti, tahsilat durumu, tekrar düzeni, seans notları ve görsel ekleri girilebilir. Seansların yanı sıra istenen saat veya gün &ldquo;meşgul&rdquo; olarak işaretlenebilir. Tekrarlayan seanslar seri hâlinde oluşturulabilir, randevular sürükle bırak ile taşınabilir; çakışan saate kayıt açılmaz.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Bildirimler ve hatırlatmalar:</strong> Bildirimler iki ayrı amaca hizmet eder: terapistin kendi hatırlatması ve danışana gönderilecek bilgilendirme/hatırlatma mesajı.</p>
+                <div class="acc-body"><div><p>Seans öncesinde telefona bildirim gelir, bildirimin ne kadar önce geleceği ayarlanabilir. Susturulana kadar çalan alarmlı hatırlatmalar açılabilir; bunların tüm seanslar için mi yoksa yalnızca seçilen seanslar için mi geçerli olacağı belirlenebilir. Kilit ekranındaki bildirimde danışan adının gizlenmesi tercih edilebilir. Danışana gönderilecek bilgilendirme ve hatırlatma mesajlarının şablonları özelleştirilebilir; uygulama mesajı doğrudan göndermez, cihazdaki WhatsApp, SMS veya e-posta uygulamasını hazır metinle açar ve gönderim kullanıcının onayıyla tamamlanır. Bildirim ve alarmlar telefon ile tabletlerde çalışır.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Danışan yönetimi:</strong> Her danışan için tüm bilgilerin tek bir kartta toplandığı, geçmişe dönük izlenebilen bir kayıt yapısı sunar.</p>
+                <div class="acc-body"><div><p>Karta iletişim ve demografik bilgilerin yanı sıra eğitim ve meslek bilgileri, danışana özel seans ücreti ve notlar girilebilir. Danışan sayısında sınır yoktur; kayıtlar aktif ve pasif olarak ayrılabilir, listede ada göre arama yapılabilir. Seans geçmişi ile uygulanan testler aynı akışta listelenir; geçmiş içinde arama yapılabilir, tamamı okuma modunda kesintisiz incelenebilir. Vadesi geçmiş seans ödemeleri kartta borç durumu olarak görünür. PsyAgenda'ya geçiş esnasında danışan listesi Excel şablonuyla tek seferde içe aktarılabilir; ya da tek tek eklerken telefon rehberinden seçim yapılabilir. Danışan kartı Word veya PDF olarak dışa aktarılabilir.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Seans notları ve ekler:</strong> Her randevuda üç ayrı not alanı bulunur: seans öncesinde hazırlanan notlar, seans sırasında veya sonrasında yazılanlar ve bir sonraki seansta ele alınacak konular.</p>
+                <div class="acc-body"><div><p>Her alan tam ekran okuma modunda görüntülenebilir. Seansa ait görseller kayda eklenebilir, doğrudan cihazın kamerasıyla çekim yapılabilir. El yazısıyla tutulmuş bir notun fotoğrafı, isteğe bağlı yapay zeka desteğiyle ve seçilen yazı stiline göre dijital metne dönüştürülebilir. Seans notlarından hareketle yapay zeka analizi alınabilir, bir sonraki seansa yönelik öneri istenebilir. Uygulama beklenmedik biçimde kapanırsa yarım kalan not geri yüklenir.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Psikolojik test modülleri:</strong> Yaygın projektif testleri kapsayan, kapsam dışında kalanlar için manuel kayda imkân veren bir test bölümü sunar.</p>
+                <div class="acc-body"><div><p>Rorschach testi on kart üzerinden uygulanabilir, her karta verilen tepki ayrı ayrı kaydedilir. Projektif çizim testlerinde (İnsan Çiz, Ev-Ağaç-İnsan, Hareketli Aile, Ağaç, Hayvan, Okul) çizimin fotoğrafı kayda eklenebilir. Uygulanan her test danışan tarihçesinde kronolojik olarak yerini alır. Terapist her test için kendi değerlendirmesini yazabilir, ayrıca yapay zeka değerlendirmesi alabilir; isteğe bağlı olarak kendi görüşleriyle yapay zeka içgörülerini harmanlayan tek bir rapor oluşturabilir. Tamamlanan test Word veya PDF olarak dışa aktarılabilir.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Bütçe ve gelir takibi:</strong> Her seans için gelir kaydı otomatik oluşur; geriye yalnızca tahsilatı işaretlemek kalır, vadesi geçen ödemeler içinse danışana tek dokunuşla ödeme hatırlatma mesajı hazırlanabilir.</p>
+                <div class="acc-body"><div><p>Seanslar brüt ücret, indirim oranı ve tutarı ile net ücretle listelenir; bekleyen, vadesi geçen ve vadesi gelmemiş tutarlar ayrı görüntülenir. Giderler kategori bazında kaydedilir; kira, faturalar, süpervizyon gibi hazır kategoriler vardır, yenileri eklenebilir. Kayıtlar danışan, kategori, tarih ve tahsilata göre filtrelenebilir; sık kullanılan filtreler kaydedilebilir. Analiz bölümünde toplam gelir, gider ve net kâr ile on iki aylık gelir-gider ve seans sayısı grafikleri yer alır; tümü ya da filtrelenmiş liste Excel olarak dışa aktarılabilir.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Yedekleme ve dışa aktarma:</strong> Senkronizasyon kullanılmasa dahi tüm veriler, seans görselleri dahil, şifreli tek bir dosyaya yedeklenebilir; yedekleme sırasında AES-256 ile şifreleme zorunludur.</p>
+                <div class="acc-body"><div><p>Bu dosyayla veriler çevrimdışı olarak yeni bir cihaza taşınabilir; yedek, hangi platformda alınmış olursa olsun kullanıcının diğer platformlardan indirdiği PsyAgenda uygulamasına geri yüklenebilir. Parola yalnızca kullanıcıda olduğu için unutulması hâlinde o yedeğin içeriğine erişilemez. Danışan kartları, seans geçmişi, test raporları ve finansal dökümler ayrıca Word, PDF veya Excel olarak dışa aktarılabilir; dışa aktarım sırasında dosyanın parolayla şifrelenmesi tercih edilebilir.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">İsteğe bağlı yapay zeka:</strong> Yapay zeka özellikleri varsayılan olarak kapalıdır ve yalnızca kullanıcının kendi Google Gemini anahtarıyla çalışır; anahtar cihazda şifreli saklanır.</p>
+                <div class="acc-body"><div><p>Açıldığında el yazısıyla tutulmuş notların fotoğrafı dijital metne çevrilebilir; seans notları, Rorschach yanıtları veya çizim testlerine istinaden içgörü alınabilir, bir sonraki seans için öneri istenebilir ve yazılan metin iyileştirilebilir. Her değerlendirmede kullanılacak model, analiz yöntemi ve ayrıntı düzeyi (özet, orta, detaylı) kullanıcı tarafından seçilebilir. İşlem doğrudan kullanıcının cihazı ile Google arasında gerçekleştiği için geliştirici hiçbir aşamasını göremez. Çağrılarda yalnızca danışanın yaşı, cinsiyeti ve ilgili içerik gönderilir; ad, telefon ve e-posta adresi hiçbir koşulda gönderilmez. Yapay zeka tanı koymaz; nihai değerlendirme ve sorumluluk her zaman terapiste aittir.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Devamını göster" data-less="Daha az göster">Devamını göster<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
         </div>
-        <div class="feature-card">
-            <h3>İsteğe bağlı senkronizasyon</h3>
-            <p>Uygulama birden fazla cihaza kurulabilir; istenirse bu cihazlar arasında senkronizasyon açılabilir, özellik varsayılan olarak kapalıdır. iPhone&rsquo;da oluşturulan bir randevunun seans notları, iPad veya Android tablet üzerinden yazılabilir. Senkronizasyon aracı bir sunucu olmadan, kullanıcının kendi Google Drive hesabının uygulamaya özel alanı üzerinden yürütülür; bu alan Drive arayüzünde görünmez. Google Drive yalnızca şifreli veriyi barındırır, içeriğe erişemez. Farklı cihazlarda yapılan değişiklikler kayıt bazında birleştirilir, biri diğerinin üzerine yazmaz. Drive&rsquo;a kaydedilen tüm veriler dilediği anda kalıcı olarak silinebilir.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Ana ekran ve günün akışı</h3>
-            <p>Uygulama açıldığında günün tamamı tek ekranda görünür. O güne ait seanslar saatleriyle birlikte sırayla listelenir ve her seansın notu kendi satırında yer alır; meşgul olarak işaretlenen saatler de aynı akışta görünür. Biten seanslar tek dokunuşla gizlenerek kalan randevular öne çıkarılabilir. Bir danışanın vadesi geçmiş ödemesi varsa uyarısı tutarıyla birlikte aynı listede belirir, bütçe ekranını açmaya gerek kalmaz. Takvimi açmadan başka bir güne bakılabilir, tek dokunuşla bugüne dönülebilir. Takvim, danışanlar, bütçe ve test modülüne de bu ekrandan geçilir; üst bölümde işletme adı ile senkronizasyon durumu ve ayarlar yer alır.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Takvim ve randevular</h3>
-            <p>Oldukça esnek ve dinamik biçimde kullanılabilen, ihtiyaca göre kişiselleştirilebilen bir takvim yönetimi sunar. Takvimde 1, 3, 5 ve 7 günlük görünümlerin yanı sıra aylık görünüm bulunur. Zaman ızgarası 15, 30 veya 60 dakikaya ayarlanabilir; çalışma saatleri ve mola aralığı kullanıcının kendi düzenine göre belirlenebilir. Bir randevu kaydına danışan, süre, seans ücreti, tahsilat durumu, tekrar düzeni, seans notları ve görsel ekleri girilebilir. Seansların yanı sıra istenen saat veya gün &ldquo;meşgul&rdquo; olarak işaretlenebilir. Tekrarlayan seanslar seri hâlinde oluşturulabilir, randevular sürükle bırak ile taşınabilir; çakışan saate kayıt açılmaz.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Bildirimler ve hatırlatmalar</h3>
-            <p>Bildirimler iki ayrı amaca hizmet eder: terapistin kendi hatırlatması ve danışana gönderilecek bilgilendirme/hatırlatma mesajı. Seans öncesinde telefona bildirim gelir, bildirimin ne kadar önce geleceği ayarlanabilir. Susturulana kadar çalan alarmlı hatırlatmalar açılabilir; bunların tüm seanslar için mi yoksa yalnızca seçilen seanslar için mi geçerli olacağı belirlenebilir. Kilit ekranındaki bildirimde danışan adının gizlenmesi tercih edilebilir. Danışana gönderilecek bilgilendirme ve hatırlatma mesajlarının şablonları özelleştirilebilir; uygulama mesajı doğrudan göndermez, cihazdaki WhatsApp, SMS veya e-posta uygulamasını hazır metinle açar ve gönderim kullanıcının onayıyla tamamlanır. Bildirim ve alarmlar telefon ile tabletlerde çalışır.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Danışan yönetimi</h3>
-            <p>Her danışan için tüm bilgilerin tek bir kartta toplandığı, geçmişe dönük izlenebilen bir kayıt yapısı sunar. Karta iletişim ve demografik bilgilerin yanı sıra eğitim ve meslek bilgileri, danışana özel seans ücreti ve notlar girilebilir. Danışan sayısında sınır yoktur; kayıtlar aktif ve pasif olarak ayrılabilir, listede ada göre arama yapılabilir. Seans geçmişi ile uygulanan testler aynı akışta listelenir; geçmiş içinde arama yapılabilir, tamamı okuma modunda kesintisiz incelenebilir. Vadesi geçmiş seans ödemeleri kartta borç durumu olarak görünür. PsyAgenda'ya geçiş esnasında danışan listesi Excel şablonuyla tek seferde içe aktarılabilir; ya da tek tek eklerken telefon rehberinden seçim yapılabilir. Danışan kartı Word veya PDF olarak dışa aktarılabilir.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Seans notları ve ekler</h3>
-            <p>Her randevuda üç ayrı not alanı bulunur: seans öncesinde hazırlanan notlar, seans sırasında veya sonrasında yazılanlar ve bir sonraki seansta ele alınacak konular. Her alan tam ekran okuma modunda görüntülenebilir. Seansa ait görseller kayda eklenebilir, doğrudan cihazın kamerasıyla çekim yapılabilir. El yazısıyla tutulmuş bir notun fotoğrafı, isteğe bağlı yapay zeka desteğiyle ve seçilen yazı stiline göre dijital metne dönüştürülebilir. Seans notlarından hareketle yapay zeka analizi alınabilir, bir sonraki seansa yönelik öneri istenebilir. Uygulama beklenmedik biçimde kapanırsa yarım kalan not geri yüklenir.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Psikolojik test modülleri</h3>
-            <p>Yaygın projektif testleri kapsayan, kapsam dışında kalanlar için manuel kayda imkân veren bir test bölümü sunar. Rorschach testi on kart üzerinden uygulanabilir, her karta verilen tepki ayrı ayrı kaydedilir. Projektif çizim testlerinde (İnsan Çiz, Ev-Ağaç-İnsan, Hareketli Aile, Ağaç, Hayvan, Okul) çizimin fotoğrafı kayda eklenebilir. Uygulanan her test danışan tarihçesinde kronolojik olarak yerini alır. Terapist her test için kendi değerlendirmesini yazabilir, ayrıca yapay zeka değerlendirmesi alabilir; isteğe bağlı olarak kendi görüşleriyle yapay zeka içgörülerini harmanlayan tek bir rapor oluşturabilir. Tamamlanan test Word veya PDF olarak dışa aktarılabilir.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Bütçe ve gelir takibi</h3>
-            <p>Her seans için gelir kaydı otomatik oluşur; geriye yalnızca tahsilatı işaretlemek kalır, vadesi geçen ödemeler içinse danışana tek dokunuşla ödeme hatırlatma mesajı hazırlanabilir. Seanslar brüt ücret, indirim oranı ve tutarı ile net ücretle listelenir; bekleyen, vadesi geçen ve vadesi gelmemiş tutarlar ayrı görüntülenir. Giderler kategori bazında kaydedilir; kira, faturalar, süpervizyon gibi hazır kategoriler vardır, yenileri eklenebilir. Kayıtlar danışan, kategori, tarih ve tahsilata göre filtrelenebilir; sık kullanılan filtreler kaydedilebilir. Analiz bölümünde toplam gelir, gider ve net kâr ile on iki aylık gelir-gider ve seans sayısı grafikleri yer alır; tümü ya da filtrelenmiş liste Excel olarak dışa aktarılabilir.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Yedekleme ve dışa aktarma</h3>
-            <p>Senkronizasyon kullanılmasa dahi tüm veriler, seans görselleri dahil, şifreli tek bir dosyaya yedeklenebilir; yedekleme sırasında AES-256 ile şifreleme zorunludur. Bu dosyayla veriler çevrimdışı olarak yeni bir cihaza taşınabilir; yedek, hangi platformda alınmış olursa olsun kullanıcının diğer platformlardan indirdiği PsyAgenda uygulamasına geri yüklenebilir. Parola yalnızca kullanıcıda olduğu için unutulması hâlinde o yedeğin içeriğine erişilemez. Danışan kartları, seans geçmişi, test raporları ve finansal dökümler ayrıca Word, PDF veya Excel olarak dışa aktarılabilir; dışa aktarım sırasında dosyanın parolayla şifrelenmesi tercih edilebilir.</p>
-        </div>
-        <div class="feature-card">
-            <h3>İsteğe bağlı yapay zeka</h3>
-            <p>Yapay zeka özellikleri varsayılan olarak kapalıdır ve yalnızca kullanıcının kendi Google Gemini anahtarıyla çalışır; anahtar cihazda şifreli saklanır. Açıldığında el yazısıyla tutulmuş notların fotoğrafı dijital metne çevrilebilir; seans notları, Rorschach yanıtları veya çizim testlerine istinaden içgörü alınabilir, bir sonraki seans için öneri istenebilir ve yazılan metin iyileştirilebilir. Her değerlendirmede kullanılacak model, analiz yöntemi ve ayrıntı düzeyi (özet, orta, detaylı) kullanıcı tarafından seçilebilir. İşlem doğrudan kullanıcının cihazı ile Google arasında gerçekleştiği için geliştirici hiçbir aşamasını göremez. Çağrılarda yalnızca danışanın yaşı, cinsiyeti ve ilgili içerik gönderilir; ad, telefon ve e-posta adresi hiçbir koşulda gönderilmez. Yapay zeka tanı koymaz; nihai değerlendirme ve sorumluluk her zaman terapiste aittir.</p>
-        </div>
-    </div>
+    </section>
 
-    <h2>Lisans ve deneme süresi</h2>
-    <p>Uygulama 30 gün boyunca tüm özellikleriyle ücretsiz kullanılabilir. Deneme süresi dolduğunda kayıtlar silinmez; uygulama salt okunur duruma geçer ve mevcut veriler görüntülenmeye devam eder. Aylık ve yıllık abonelik seçenekleri sunulur. Satın alma yalnızca uygulama içindeki Lisans sekmesinden, ilgili platformun resmi mağazası üzerinden yapılır; bunun dışında bir satın alma kanalı yoktur.</p>
-
-    <h2>İletişim</h2>
-    <p>PsyAgenda, bağımsız bir geliştirici olan <strong>Mustafa Can</strong> tarafından geliştirilmektedir.</p>
-    <p>Sorularınız ve yayın duyurusundan haberdar olmak için: <a href="mailto:info@psyagenda.app">info@psyagenda.app</a></p>
+    <section class="wrap section closing rise">
+        <div class="closing-band">
+        <div class="closing-col">
+            <p class="eyebrow">Lisans ve deneme süresi</p>
+            <p>Uygulama 30 gün boyunca tüm özellikleriyle ücretsiz kullanılabilir. Deneme süresi dolduğunda kayıtlar silinmez; uygulama salt okunur duruma geçer ve mevcut veriler görüntülenmeye devam eder. Aylık ve yıllık abonelik seçenekleri sunulur. Satın alma yalnızca uygulama içindeki Lisans sekmesinden, ilgili platformun resmi mağazası üzerinden yapılır; bunun dışında bir satın alma kanalı yoktur.</p>
+        </div>
+        <div class="closing-col">
+            <p class="eyebrow">İletişim</p>
+            <p>PsyAgenda, bağımsız bir geliştirici olan <strong>Mustafa Can</strong> tarafından geliştirilmektedir.</p>
+            <p>Sorularınız ve yayın duyurusundan haberdar olmak için:</p>
+            <a class="mail" href="mailto:info@psyagenda.app"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>info@psyagenda.app</a>
+        </div>
+        </div>
+    </section>
 </main>
 
-<!-- Footer -->
 <footer class="site-footer">
-    <p>&copy; 2026 PsyAgenda. Tüm hakları saklıdır.</p>
-    <p>
-        <a href="privacy-tr.html">Gizlilik Politikası</a> &middot;
-        <a href="terms-tr.html">Kullanım Koşulları</a>
-    </p>
+    <div class="wrap">
+        <span>&copy; 2026 PsyAgenda. Tüm hakları saklıdır.</span>
+        <nav>
+            <a href="privacy-tr.html">Gizlilik Politikası</a>
+            <a href="terms-tr.html">Kullanım Koşulları</a>
+            <a href="faq-tr.html">SSS</a>
+        </nav>
+    </div>
 </footer>
 
+<script>
+(function () {
+    /* Dil menüsü: aramalı açılır liste. Diller HTML'deki listeden okunur; JS dil bilgisi taşımaz. */
+    var menu = document.getElementById('lang-menu'), btn = document.getElementById('lang-btn');
+    if (!menu || !btn) return;
+    var input = document.getElementById('lang-search'), empty = document.getElementById('lang-empty');
+    var items = Array.prototype.slice.call(document.getElementById('lang-list').children);
+    var norm = function (s) { return s.toLowerCase().replace(/ı/g, 'i').normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
+    var visible = function () { return items.filter(function (li) { return !li.hidden; }).map(function (li) { return li.firstElementChild; }); };
+    var filter = function () {
+        var q = norm(input.value.trim()), n = 0;
+        items.forEach(function (li) {
+            var a = li.firstElementChild, hit = !q || norm(a.textContent).indexOf(q) !== -1 || a.getAttribute('lang').indexOf(q) === 0;
+            li.hidden = !hit; if (hit) n++;
+        });
+        empty.hidden = n > 0;
+    };
+    var setOpen = function (open) {
+        menu.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { input.value = ''; filter(); setTimeout(function () { input.focus(); }, 0); }
+    };
+    btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+    input.addEventListener('input', filter);
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) setOpen(false); });
+    menu.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { setOpen(false); btn.focus(); return; }
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            var vis = visible(); if (!vis.length) return;
+            var i = vis.indexOf(document.activeElement), next = e.key === 'ArrowDown' ? (i + 1) % vis.length : (i <= 0 ? vis.length - 1 : i - 1);
+            vis[next].focus(); e.preventDefault();
+        } else if (e.key === 'Enter' && e.target === input) { var v = visible(); if (v.length) v[0].click(); }
+    });
+})();
+(function () {
+    /* Özellik kartları: ilk cümle görünür, gerisi tıklayınca açılır. JS yoksa hepsi açık kalır. */
+    var grid = document.querySelector('.feature-grid');
+    if (!grid) return;
+    grid.classList.add('js');
+    Array.prototype.forEach.call(grid.querySelectorAll('.feature-card'), function (card) {
+        var btn = card.querySelector('.acc-btn');
+        if (!btn) return;
+        var set = function (open) {
+            card.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.firstChild.nodeValue = open ? btn.dataset.less : btn.dataset.more;
+        };
+        card.addEventListener('click', function (e) {
+            if (e.target.closest('a')) return;
+            if (window.getSelection && String(window.getSelection()).length) return; /* metin seçerken açma */
+            set(!card.classList.contains('open'));
+        });
+    });
+})();
+(function () {
+    /* Dar ekranda gezinme şeridi yana kayar: aktif sekmeyi görünür alana getir, sağda devam varsa kenarı soldur. */
+    var nav = document.querySelector('.mainnav');
+    if (nav) {
+        var more = function () { nav.classList.toggle('more', nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 2); };
+        var act = nav.querySelector('a.active');
+        var reveal = function () { if (act && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, act.offsetLeft - 16); more(); };
+        nav.addEventListener('scroll', more, { passive: true }); window.addEventListener('resize', more); reveal();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(reveal); /* yazı tipi gelince genişlikler değişir */
+    }
+    var bar = document.getElementById('topbar');
+    if (bar) {
+        var onScroll = function () { bar.classList.toggle('stuck', window.scrollY > 8); };
+        onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    }
+    var rise = document.querySelectorAll('.rise');
+    if ('IntersectionObserver' in window && rise.length) {
+        var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        rise.forEach(function (el) { io.observe(el); });
+        /* Emniyet: gözlemci ne olursa olsun içerik 1.2 sn sonra görünür olur. */
+        setTimeout(function () { rise.forEach(function (el) { el.classList.add('in'); }); }, 1200);
+    } else { rise.forEach(function (el) { el.classList.add('in'); }); }
+
+    /* Bölüm listesi sayfadaki başlıklardan üretilir — içerik iki yere yazılmaz. */
+    var doc = document.querySelector('.doc'), list = document.getElementById('toc-list');
+    if (!doc || !list) return;
+    var sel = doc.dataset.toc || 'h2';
+    var heads = doc.querySelectorAll(sel);
+    if (heads.length < 3) { ['.toc-title', '.toc-list'].forEach(function (c) { var t = document.querySelector(c); if (t) t.hidden = true; }); return; }
+    var links = [];
+    Array.prototype.forEach.call(heads, function (h, i) {
+        var target = h.tagName === 'SUMMARY' ? h.parentNode : h;
+        if (!target.id) target.id = 'b' + (i + 1);
+        var a = document.createElement('a'); a.href = '#' + target.id; a.textContent = h.textContent.trim();
+        if (h.tagName === 'SUMMARY') a.addEventListener('click', function () { h.parentNode.open = true; });
+        list.appendChild(a); links.push(a);
+    });
+    var tick = false;
+    var spy = function () {
+        tick = false; var best = 0;
+        for (var i = 0; i < heads.length; i++) { if (heads[i].closest('[hidden]')) continue; if (heads[i].getBoundingClientRect().top <= 120) best = i; }
+        links.forEach(function (a, i) { a.classList.toggle('current', i === best); });
+    };
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+    spy();
+    /* Arama filtreledikçe bölüm listesi de daralır. */
+    document.addEventListener('docsearch', function () {
+        links.forEach(function (a, i) { var target = heads[i].tagName === 'SUMMARY' ? heads[i].parentNode : heads[i]; a.hidden = !!target.closest('[hidden]'); });
+        spy();
+    });
+})();
+(function () {
+    /* Sayfa içi arama — uygulamadaki "Bu sayfada ara" ile aynı davranış: eşleşen bölümler açılır ve
+       gösterilir, eşleşmeyenler gizlenir, kelimeler işaretlenir. Türkçe harflere ve aksana duyarsız. */
+    var input = document.getElementById('doc-search'), art = document.querySelector('article.doc');
+    if (!input || !art) return;
+    var clearBtn = document.getElementById('doc-search-clear'), status = document.getElementById('doc-search-status');
+    var fold = function (s) {
+        var out = '';
+        for (var i = 0; i < s.length; i++) {
+            var c = s[i];
+            if (c === 'ı' || c === 'İ') { out += 'i'; continue; }
+            var b = c.normalize('NFD')[0] || c, l = b.toLowerCase();
+            out += l.length === 1 ? l : b;
+        }
+        return out;
+    };
+    /* Birimler: h2 bir grup açar; her <details> kendi başına birim; h2 altındaki düz metin tek birim. */
+    var groups = [], cur = null;
+    Array.prototype.forEach.call(art.children, function (el) {
+        if (el.tagName === 'H2') { cur = { head: el, items: [] }; groups.push(cur); return; }
+        if (!cur) { cur = { head: null, items: [] }; groups.push(cur); }
+        if (el.tagName === 'DETAILS') { cur.items.push({ nodes: [el], det: el }); return; }
+        var last = cur.items[cur.items.length - 1];
+        if (!last || last.det) { last = { nodes: [], det: null }; cur.items.push(last); }
+        last.nodes.push(el);
+    });
+    var saved = null; /* arama başlamadan önceki açık/kapalı durumu */
+    var textOf = function (nodes) { return nodes.map(function (n) { return n.textContent; }).join(' '); };
+    var unmark = function () {
+        Array.prototype.forEach.call(art.querySelectorAll('mark.hit'), function (m) { m.replaceWith(m.textContent); });
+        art.normalize();
+    };
+    var mark = function (root, q) {
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), nodes = [], n = 0;
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach(function (t) {
+            var v = t.nodeValue, f = fold(v), i = f.indexOf(q);
+            if (i < 0) return;
+            var frag = document.createDocumentFragment(), last = 0;
+            while (i >= 0) {
+                if (i > last) frag.appendChild(document.createTextNode(v.slice(last, i)));
+                var m = document.createElement('mark'); m.className = 'hit'; m.textContent = v.slice(i, i + q.length); frag.appendChild(m);
+                last = i + q.length; n++; i = f.indexOf(q, last);
+            }
+            if (last < v.length) frag.appendChild(document.createTextNode(v.slice(last)));
+            t.parentNode.replaceChild(frag, t);
+        });
+        return n;
+    };
+    var setHidden = function (nodes, h) { nodes.forEach(function (n) { n.hidden = h; }); };
+    var reset = function () {
+        unmark();
+        groups.forEach(function (g) { if (g.head) g.head.hidden = false; g.items.forEach(function (it) { setHidden(it.nodes, false); }); });
+        if (saved) { saved.forEach(function (o, d) { d.open = o; }); saved = null; }
+        Array.prototype.forEach.call(art.querySelectorAll('h2.first-visible'), function (h) { h.classList.remove('first-visible'); });
+        status.textContent = ''; clearBtn.hidden = true;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var run = function () {
+        var q = fold(input.value.trim());
+        clearBtn.hidden = !input.value;
+        if (q.length < 2) { if (saved) reset(); else { status.textContent = ''; } return; }
+        if (!saved) { saved = new Map(); Array.prototype.forEach.call(art.querySelectorAll('details'), function (d) { saved.set(d, d.open); }); }
+        unmark();
+        var hits = 0, sections = 0;
+        groups.forEach(function (g) {
+            var whole = g.head && g.items.length && !g.items[0].det; /* gizlilik/koşullar: başlık + metin tek birim */
+            var any = false;
+            if (whole) {
+                var all = [g.head].concat(g.items[0].nodes);
+                any = fold(textOf(all)).indexOf(q) !== -1;
+                g.head.hidden = !any; setHidden(g.items[0].nodes, !any);
+                if (any) { sections++; all.forEach(function (n) { hits += mark(n, q); }); }
+            } else {
+                g.items.forEach(function (it) {
+                    var ok = fold(textOf(it.nodes)).indexOf(q) !== -1;
+                    setHidden(it.nodes, !ok);
+                    if (ok) { any = true; sections++; if (it.det) it.det.open = true; it.nodes.forEach(function (n) { hits += mark(n, q); }); }
+                });
+                if (g.head) g.head.hidden = !any;
+            }
+        });
+        var firstSeen = false;
+        Array.prototype.forEach.call(art.querySelectorAll(':scope > h2'), function (h) { var f = !firstSeen && !h.hidden; h.classList.toggle('first-visible', f); if (f) firstSeen = true; });
+        status.textContent = hits ? status.dataset.count.replace('{n}', hits).replace('{m}', sections).replace('{es}', hits === 1 ? '' : 'es').replace('{s}', sections === 1 ? '' : 's') : status.dataset.none;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var timer = null;
+    input.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(run, 220); });
+    input.addEventListener('keydown', function (e) { if (e.key === 'Escape') { input.value = ''; reset(); } });
+    clearBtn.addEventListener('click', function () { input.value = ''; reset(); input.focus(); });
+})();
+</script>
 </body>
 </html>
