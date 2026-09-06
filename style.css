@@ -262,7 +262,8 @@ a.store:hover { border-color: var(--accent); background: var(--surface-hi); tran
 
 .doc-layout { display: grid; grid-template-columns: 244px minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: start; padding-bottom: clamp(56px, 8vw, 96px); }
 .doc > details, .doc > h2 { scroll-margin-top: 96px; } /* sabit üst barın altına girmesin */
-.toc { position: sticky; top: 92px; max-height: calc(100vh - 130px); overflow-y: auto; }
+.toc { position: sticky; top: 92px; max-height: calc(100vh - 130px); overflow-y: auto; scrollbar-width: none; }
+.toc::-webkit-scrollbar { display: none; } /* kısa pencerede liste kaydırılabilir kalır ama çubuk çizilmez (İngilizce başlıklar uzun → beyaz sistem çubuğu çıkıyordu) */
 /* Sayfa içi arama */
 .doc-search { margin-bottom: 20px; }
 .search-box {
@@ -419,7 +420,8 @@ mark.hit { background: #fde047; color: #1e293b; padding: 0 2px; border-radius: 2
   .stores { grid-template-columns: minmax(0, 1fr); }
   .doc-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .toc { position: static; max-height: none; border: 1px solid var(--border-soft); border-radius: var(--r); padding: 16px; background: var(--surface); }
-  .toc-list { max-height: 168px; overflow-y: auto; }
+  .toc-list { max-height: 168px; overflow-y: auto; scrollbar-width: none; }
+  .toc-list::-webkit-scrollbar { display: none; }
   .doc p, .doc li { font-size: 15.5px; }
   .notice { margin-top: 0; }
 }
