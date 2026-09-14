@@ -8,29 +8,71 @@ Kullanım: python3 _tools/build-site.py [_preview | .]
 """
 import io, os, re, sys
 
+NBSP = '\u00a0'   # FR tipografisi: iki nokta öncesi kesilmez boşluk (uygulama sözlüğüyle aynı)
+
 SRC = os.path.expanduser('~/Desktop/psyagenda.github.io')
 OUT = os.path.join(SRC, sys.argv[1] if len(sys.argv) > 1 else '_preview')
 HOME_SRC = os.path.join(SRC, '_src')   # anasayfa kaynakları (elle yazılan)
 
-NAV = {'tr': [('index.html','Ana Sayfa'),('guide-tr.html','Kullanım Rehberi'),('faq-tr.html','SSS'),
-              ('terms-tr.html','Kullanım Koşulları'),('privacy-tr.html','Gizlilik Politikası')],
-       'en': [('index-en.html','Home'),('guide-en.html','User Guide'),('faq-en.html','FAQ'),
-              ('terms-en.html','Terms of Use'),('privacy-en.html','Privacy Policy')]}
-FOOT = {'tr': ('Tüm hakları saklıdır.', [('privacy-tr.html','Gizlilik Politikası'),('terms-tr.html','Kullanım Koşulları'),('faq-tr.html','SSS')]),
-        'en': ('All rights reserved.', [('privacy-en.html','Privacy Policy'),('terms-en.html','Terms of Use'),('faq-en.html','FAQ')])}
+# --- Sayfalar ve diller ------------------------------------------------------
+# Dosya adı kuralı: anasayfa TR'de index.html (tarihsel), diğer dillerde index-<dil>.html;
+# belge sayfaları her dilde <slug>-<dil>.html. Tek yerden türetilir ki dil eklemek
+# NAV/FOOT/hreflang/dil-menüsünü elle güncellemeyi gerektirmesin.
+PAGES = ['home', 'guide', 'faq', 'terms', 'privacy']
+
+def pfile(slug, lang):
+    if slug == 'home':
+        return 'index.html' if lang == 'tr' else 'index-%s.html' % lang
+    return '%s-%s.html' % (slug, lang)
+
+# Sayfa adları uygulamanın kendi sözlüğünden alındı (settings.about.*Title, mainNav.home)
+# — site ile uygulama ayrışmasın diye. SSS gezinmede kısaltılır.
+PAGE_LABEL = {
+    'home':    {'tr':'Ana Sayfa','en':'Home','es':'Inicio','de':'Start','fr':'Accueil','pt':'Início','it':'Home'},
+    'guide':   {'tr':'Kullanım Rehberi','en':'User Guide','es':'Guía de uso','de':'Benutzerhandbuch',
+                'fr':"Guide d'utilisation",'pt':'Guia de uso','it':"Guida all'uso"},
+    'faq':     {'tr':'SSS','en':'FAQ','es':'FAQ','de':'FAQ','fr':'FAQ','pt':'FAQ','it':'FAQ'},
+    'terms':   {'tr':'Kullanım Koşulları','en':'Terms of Use','es':'Términos de uso','de':'Nutzungsbedingungen',
+                'fr':"Conditions d'utilisation",'pt':'Termos de uso','it':"Condizioni d'uso"},
+    'privacy': {'tr':'Gizlilik Politikası','en':'Privacy Policy','es':'Política de privacidad',
+                'de':'Datenschutzerklärung','fr':'Politique de confidentialité',
+                'pt':'Política de Privacidade','it':'Informativa sulla privacy'},
+}
+RIGHTS = {'tr':'Tüm hakları saklıdır.','en':'All rights reserved.','es':'Todos los derechos reservados.',
+          'de':'Alle Rechte vorbehalten.','fr':'Tous droits réservés.','pt':'Todos os direitos reservados.',
+          'it':'Tutti i diritti riservati.'}
+
+NAV = {l: [(pfile(s, l), PAGE_LABEL[s][l]) for s in PAGES] for l in PAGE_LABEL['home']}
+FOOT = {l: (RIGHTS[l], [(pfile(s, l), PAGE_LABEL[s][l]) for s in ('privacy', 'terms', 'faq')])
+        for l in PAGE_LABEL['home']}
 # Mağaza düğmeleri. href None iken pasif (aria-disabled) üretilir; mağaza yayımlanınca bağlantıyı yaz, düğme kendiliğinden aktifleşir.
+# Rozet metinleri mağazaların kendi yerelleştirilmiş kalıpları; cihaz adları markadır, çevrilmez.
 STORES = [
-    dict(href=None, tr=('iPhone ve iPad', 'App Store&rsquo;dan İndirin'),        en=('iPhone and iPad', 'Download on the App Store')),
-    dict(href=None, tr=('Mac',            'Mac App Store&rsquo;dan İndirin'),    en=('Mac',             'Download on the Mac App Store')),
-    dict(href=None, tr=('Android',        'Google Play&rsquo;den İndirin'),         en=('Android',         'Download on Google Play')),
-    dict(href=None, tr=('Windows',        'Microsoft Store&rsquo;dan İndirin'),   en=('Windows',         'Download on Microsoft Store')),
+    dict(href=None, dev={'tr':'iPhone ve iPad','en':'iPhone and iPad','es':'iPhone y iPad','de':'iPhone und iPad',
+                         'fr':'iPhone et iPad','pt':'iPhone e iPad','it':'iPhone e iPad'},
+         label={'tr':'App Store&rsquo;dan İndirin','en':'Download on the App Store','es':'Consíguelo en el App Store',
+                'de':'Laden im App Store','fr':'Télécharger dans l&rsquo;App Store','pt':'Baixar na App Store',
+                'it':'Scarica su App Store'}),
+    dict(href=None, dev={l:'Mac' for l in ('tr','en','es','de','fr','pt','it')},
+         label={'tr':'Mac App Store&rsquo;dan İndirin','en':'Download on the Mac App Store','es':'Consíguelo en el Mac App Store',
+                'de':'Laden im Mac App Store','fr':'Télécharger dans le Mac App Store','pt':'Baixar na Mac App Store',
+                'it':'Scarica su Mac App Store'}),
+    dict(href=None, dev={l:'Android' for l in ('tr','en','es','de','fr','pt','it')},
+         label={'tr':'Google Play&rsquo;den İndirin','en':'Download on Google Play','es':'Disponible en Google Play',
+                'de':'Jetzt bei Google Play','fr':'Disponible sur Google Play','pt':'Disponível no Google Play',
+                'it':'Disponibile su Google Play'}),
+    dict(href=None, dev={l:'Windows' for l in ('tr','en','es','de','fr','pt','it')},
+         label={'tr':'Microsoft Store&rsquo;dan İndirin','en':'Download on Microsoft Store','es':'Descárgalo en Microsoft Store',
+                'de':'Herunterladen im Microsoft Store','fr':'Télécharger sur le Microsoft Store',
+                'pt':'Baixar na Microsoft Store','it':'Scarica da Microsoft Store'}),
 ]
-STORE_PENDING = {'tr': 'Henüz yayımlanmadı', 'en': 'Not yet available'}
+STORE_PENDING = {'tr':'Henüz yayımlanmadı','en':'Not yet available','es':'Aún no disponible','de':'Noch nicht verfügbar',
+                 'fr':'Pas encore disponible','pt':'Ainda não disponível','it':'Non ancora disponibile'}
 
 def stores(lang):
     out = []
     for st in STORES:
-        dev, label = st[lang]
+        dev, label = st['dev'][lang], st['label'][lang]
         inner = '<small>%s</small><strong>%s</strong>' % (dev, label)
         if st['href']:
             out.append('                <a class="store" href="%s" target="_blank" rel="noopener">%s</a>' % (st['href'], inner))
@@ -39,30 +81,83 @@ def stores(lang):
     return '\n'.join(out)
 
 NOTICE_STATUS = 'pending'   # tüm mağazalarda yayımlanınca 'live' yap → nokta yeşile döner
-TOC_TITLE = {'tr':'Bu sayfada','en':'On this page'}
-DOC_SEARCH = {'tr': dict(ph='Bu sayfada ara...', clear='Temizle', none='Sonuç bulunamadı.', count='{n} eşleşme · {m} bölüm'),
-              'en': dict(ph='Search this page...', clear='Clear', none='No results found.', count='{n} match{es} · {m} section{s}')}
+TOC_TITLE = {'tr':'Bu sayfada','en':'On this page','es':'En esta página','de':'Auf dieser Seite',
+             'fr':'Sur cette page','pt':'Nesta página','it':'In questa pagina'}
+# ph/clear/none uygulamanın kendi sözlüğünden (settings.about.search*). `count` sayaç canlı ve n=1
+# olabildiği için İngilizce dışında SAYI SONA alındı (sözlük §4.x çoğul kuralı); {es}/{s} ekleri
+# yalnız İngilizcede anlamlı, JS onları diğer dillerde hiç görmez.
+DOC_SEARCH = {
+ 'tr': dict(ph='Bu sayfada ara...',            clear='Temizle',  none='Sonuç bulunamadı.',           count='{n} eşleşme · {m} bölüm'),
+ 'en': dict(ph='Search this page...',          clear='Clear',    none='No results found.',           count='{n} match{es} · {m} section{s}'),
+ 'es': dict(ph='Buscar en esta página...',     clear='Borrar',   none='No se encontraron resultados.', count='Coincidencias: {n} · Secciones: {m}'),
+ 'de': dict(ph='Auf dieser Seite suchen...',   clear='Leeren',   none='Keine Ergebnisse gefunden.',  count='Treffer: {n} · Abschnitte: {m}'),
+ 'fr': dict(ph='Rechercher dans cette page...', clear='Effacer', none='Aucun résultat.',             count='Résultats%s: {n} · Sections%s: {m}' % (NBSP, NBSP)),
+ 'pt': dict(ph='Buscar nesta página...',       clear='Limpar',   none='Nenhum resultado encontrado.', count='Correspondências: {n} · Seções: {m}'),
+ 'it': dict(ph='Cerca in questa pagina...',    clear='Cancella', none='Nessun risultato.',           count='Corrispondenze: {n} · Sezioni: {m}'),
+}
 ICON_X = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>'
-HOME = {'tr': dict(file='index.html', alt='index-en.html', h1a='Akıllı terapist ajandası.', h1b='Hayatını kolaylaştırır.',
-                   feat='Uygulamanın temel özellikleri', more='Devamını göster', less='Daha az göster',
-                   notice='Yayına hazırlanıyor'),
-        'en': dict(file='index-en.html', alt='index.html', h1a='Smart therapist agenda.', h1b='Ease your life.',
-                   feat='Core features of the application', more='Show more', less='Show less',
-                   notice='Preparing for release')}
+# h1a/h1b = sloganın iki yarısı; uygulamanın desktopMenu.aboutDetail dizesiyle BİREBİR aynı
+# (site ile uygulama aynı sloganı söylesin). `file`/`alt` artık pfile()'dan türetiliyor.
+HOME = {
+ 'tr': dict(h1a='Akıllı terapist ajandası.', h1b='Hayatını kolaylaştırır.',
+            feat='Uygulamanın temel özellikleri', more='Devamını göster', less='Daha az göster', notice='Yayına hazırlanıyor'),
+ 'en': dict(h1a='Smart therapist agenda.', h1b='Ease your life.',
+            feat='Core features of the application', more='Show more', less='Show less', notice='Preparing for release'),
+ 'es': dict(h1a='Agenda inteligente para terapeutas.', h1b='Le facilita la vida.',
+            feat='Funciones principales de la aplicación', more='Mostrar más', less='Mostrar menos', notice='En preparación para su lanzamiento'),
+ 'de': dict(h1a='Der smarte Terminplaner für Ihre Praxis.', h1b='Macht Ihnen das Leben leichter.',
+            feat='Kernfunktionen der Anwendung', more='Mehr anzeigen', less='Weniger anzeigen', notice='Veröffentlichung in Vorbereitung'),
+ 'fr': dict(h1a="L'agenda intelligent des thérapeutes.", h1b='Il vous simplifie la vie.',
+            feat="Fonctionnalités principales de l'application", more='Afficher plus', less='Afficher moins', notice='Lancement en préparation'),
+ 'pt': dict(h1a='A agenda inteligente do terapeuta.', h1b='Facilita sua vida.',
+            feat='Principais recursos do aplicativo', more='Mostrar mais', less='Mostrar menos', notice='Preparando o lançamento'),
+ 'it': dict(h1a="L'agenda intelligente del terapeuta.", h1b='Le semplifica la vita.',
+            feat="Funzioni principali dell'applicazione", more='Mostra altro', less='Mostra meno', notice='In preparazione per il lancio'),
+}
 
-def head_of(src): return re.search(r'<head>.*?</head>', src, re.S).group(0)
+BASE_URL = 'https://www.psyagenda.app/'
 
-LANGS = [('tr', 'Türkçe'), ('en', 'English')]   # yeni dil: buraya satır + NAV/FOOT/HOME/TOC_* tablolarına karşılığı
-LANG_UI = {'tr': dict(label='Dil', search='Dil ara', empty='Sonuç yok', aria='Dil seçimi'),
-           'en': dict(label='Language', search='Search languages', empty='No results', aria='Language selection')}
+def head_of(src, slug=None):
+    """head'i alır; slug verilmişse hreflang bloğunu TÜM dillerle YENİDEN YAZAR.
+
+    Eskiden hreflang satırları elle yazılan kaynak dosyalarda duruyordu ve iki dil vardı.
+    Yedi dilde elle senkron tutmak sürdürülemez (bir dil eklenince 28 dosya düzenlenir);
+    tek kaynak burası olsun."""
+    head = re.search(r'<head>.*?</head>', src, re.S).group(0)
+    if slug is None: return head
+    links = [(BASE_URL + pfile(slug, c) if not (slug == 'home' and c == 'tr') else BASE_URL, c)
+             for c, _ in LANGS]
+    block = '\n'.join('    <link rel="alternate" hreflang="%s" href="%s">' % (c, u) for u, c in links)
+    if slug == 'home':
+        block += '\n    <link rel="alternate" hreflang="x-default" href="%s">' % BASE_URL
+    # Mevcut alternate satırlarını (x-default dahil) tek blokla değiştir.
+    head = re.sub(r'(?:[ \t]*<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n?)+',
+                  block + '\n', head, count=1)
+    return head
+
+# Dil listesi: adlar dilin KENDİ adıyla (uygulamadaki LANGUAGES.nativeName ile aynı).
+# Yeni dil eklerken: buraya satır + PAGE_LABEL/RIGHTS/HOME/TOC_TITLE/DOC_SEARCH/LANG_UI/STORES
+# tablolarına karşılık + _src/index-<dil>.html + belge iskeletleri.
+LANGS = [('tr','Türkçe'), ('en','English'), ('es','Español'), ('de','Deutsch'),
+         ('fr','Français'), ('pt','Português'), ('it','Italiano')]
+LANG_UI = {
+ 'tr': dict(label='Dil',      search='Dil ara',              empty='Sonuç yok',        aria='Dil seçimi'),
+ 'en': dict(label='Language', search='Search languages',     empty='No results',       aria='Language selection'),
+ 'es': dict(label='Idioma',   search='Buscar idioma',        empty='Sin resultados',   aria='Selección de idioma'),
+ 'de': dict(label='Sprache',  search='Sprache suchen',       empty='Keine Ergebnisse', aria='Sprachauswahl'),
+ 'fr': dict(label='Langue',   search='Rechercher une langue', empty='Aucun résultat',  aria='Sélection de la langue'),
+ 'pt': dict(label='Idioma',   search='Buscar idioma',        empty='Nenhum resultado', aria='Seleção de idioma'),
+ 'it': dict(label='Lingua',   search='Cerca lingua',         empty='Nessun risultato', aria='Selezione della lingua'),
+}
 ICON_GLOBE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.7 3.9 5.8 3.9 9.2s-1.3 6.5-3.9 9.2c-2.6-2.7-3.9-5.8-3.9-9.2s1.3-6.5 3.9-9.2z"/></svg>'
 ICON_CHEV = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>'
 ICON_MAIL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>'
 ICON_SEARCH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg>'
 
-def topbar(lang, active, alt):
+def topbar(lang, slug):
+    active = pfile(slug, lang)
     items = '\n'.join('                <a href="%s"%s>%s</a>' % (h, ' class="active"' if h == active else '', t) for h, t in NAV[lang])
-    files = {lang: active, ('en' if lang == 'tr' else 'tr'): alt}
+    files = {c: pfile(slug, c) for c, _ in LANGS}   # her dilin AYNI sayfası — eskiden yalnız 2 dil vardı
     U = LANG_UI[lang]
     opts = '\n'.join('                        <li><a href="%s" lang="%s" hreflang="%s"%s>%s</a></li>'
                      % (files[c], c, c, ' class="current" aria-current="true"' if c == lang else '', name) for c, name in LANGS)
@@ -299,7 +394,8 @@ JS = """<script>
 })();
 </script>"""
 
-def build_doc(fname, lang, alt, toc_sel):
+def build_doc(slug, lang, toc_sel):
+    fname = pfile(slug, lang)
     src = io.open(os.path.join(SRC, fname), encoding='utf-8').read()
     h1 = re.search(r'<main>.*?<h1>(.*?)</h1>', src, re.S).group(1).strip()
     m = re.search(r'<p class="subtitle">(.*?)</p>', src, re.S)
@@ -337,7 +433,7 @@ def build_doc(fname, lang, alt, toc_sel):
 %s
 </body>
 </html>
-""" % (lang, head_of(src), topbar(lang, fname, alt), h1, sub,
+""" % (lang, head_of(src, slug), topbar(lang, slug), h1, sub,
        ICON_SEARCH, DOC_SEARCH[lang]['ph'], DOC_SEARCH[lang]['ph'], DOC_SEARCH[lang]['clear'], ICON_X, DOC_SEARCH[lang]['none'], DOC_SEARCH[lang]['count'],
        TOC_TITLE[lang], toc_sel, gen, footer(lang), JS)
     io.open(os.path.join(OUT, fname), 'w', encoding='utf-8').write(out)
@@ -350,7 +446,8 @@ def split_lede(t):
 
 def build_home(lang):
     C = HOME[lang]
-    src = io.open(os.path.join(HOME_SRC, C['file']), encoding='utf-8').read()
+    fname = pfile('home', lang)
+    src = io.open(os.path.join(HOME_SRC, fname), encoding='utf-8').read()
     desc = re.findall(r'<p class="desc">(.*?)</p>', src, re.S)[0].strip()
     note = re.findall(r'<p class="hero-note">(.*?)</p>', src, re.S)[0].strip()
     cards = re.findall(r'<h3>(.*?)</h3>\s*<p>(.*?)</p>', src, re.S)
@@ -430,16 +527,58 @@ def build_home(lang):
 %s
 </body>
 </html>
-""" % (lang, head_of(src), topbar(lang, C['file'], C['alt']), C['h1a'], C['h1b'],
+""" % (lang, head_of(src, 'home'), topbar(lang, 'home'), C['h1a'], C['h1b'],
        '\n'.join('        <p class="lede">%s</p>' % p for p in paras),
        NOTICE_STATUS, C['notice'], note, stores(lang), C['feat'], '\n'.join(card_html),
        '\n'.join(closing), footer(lang), JS)
-    io.open(os.path.join(OUT, C['file']), 'w', encoding='utf-8').write(out)
+    io.open(os.path.join(OUT, fname), 'w', encoding='utf-8').write(out)
     return len(cards)
 
+SITEMAP_META = {'home': ('monthly', '1.0'), 'guide': ('monthly', '0.8'), 'faq': ('monthly', '0.8'),
+                'terms': ('yearly', '0.5'), 'privacy': ('yearly', '0.5')}
+
+def build_sitemap(lastmod):
+    """sitemap.xml'i PAGES × LANGS'tan üretir — elle tutulan 10 satırlık liste 7 dilde 35 olur
+    ve elle senkron kalmaz. Her URL kendi hreflang alternatiflerini taşır."""
+    urls = []
+    for slug in PAGES:
+        freq, prio = SITEMAP_META[slug]
+        alts = '\n'.join('        <xhtml:link rel="alternate" hreflang="%s" href="%s"/>'
+                          % (c, BASE_URL + (pfile(slug, c) if not (slug == 'home' and c == 'tr') else ''))
+                          for c, _ in LANGS)
+        for lang, _ in LANGS:
+            loc = BASE_URL + (pfile(slug, lang) if not (slug == 'home' and lang == 'tr') else '')
+            urls.append("""    <url>
+        <loc>%s</loc>
+        <lastmod>%s</lastmod>
+        <changefreq>%s</changefreq>
+        <priority>%s</priority>
+%s
+    </url>""" % (loc, lastmod, freq, prio, alts))
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+           '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + '\n'.join(urls) + '\n</urlset>\n')
+    io.open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf-8').write(xml)
+    return len(urls)
+
+TOC_SEL = {'privacy': 'h2', 'terms': 'h2', 'faq': 'h2.faq-group', 'guide': '.guide-section > summary'}
+
 os.makedirs(OUT, exist_ok=True)
-for tr, en, sel in [('privacy-tr.html','privacy-en.html','h2'), ('terms-tr.html','terms-en.html','h2'),
-                    ('faq-tr.html','faq-en.html','h2.faq-group'), ('guide-tr.html','guide-en.html','.guide-section > summary')]:
-    build_doc(tr, 'tr', en, sel); build_doc(en, 'en', tr, sel)
-n1 = build_home('tr'); n2 = build_home('en')
-print('üretildi → %s (anasayfa kart: %d/%d)' % (OUT, n1, n2))
+built, missing = [], []
+for lang, _ in LANGS:
+    for slug in ('privacy', 'terms', 'faq', 'guide'):
+        # Kaynak yoksa ATLA: dil eklerken iskeletler kademeli açılıyor, tek eksik dosya
+        # bütün üretimi durdurmasın.
+        if not os.path.exists(os.path.join(SRC, pfile(slug, lang))):
+            missing.append(pfile(slug, lang)); continue
+        build_doc(slug, lang, TOC_SEL[slug]); built.append(pfile(slug, lang))
+    if os.path.exists(os.path.join(HOME_SRC, pfile('home', lang))):
+        n = build_home(lang); built.append('%s (kart: %d)' % (pfile('home', lang), n))
+    else:
+        missing.append('_src/' + pfile('home', lang))
+n_url = build_sitemap(os.environ.get('SITEMAP_DATE', '2026-09-14'))
+print('üretildi → %s  (%d sayfa, sitemap %d URL)' % (OUT, len(built), n_url))
+for b in built: print('   ✓', b)
+if missing:
+    print('EKSİK KAYNAK (%d) — iskelet açılmamış:' % len(missing))
+    for m in missing: print('   ·', m)

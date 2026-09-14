@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benutzerhandbuch – PsyAgenda</title>
+    <meta name="description" content="PsyAgenda-Benutzerhandbuch: Klientenverwaltung, Termine anlegen, Kalender, Tests, KI-Funktionen, Synchronisierung und mehr.">
+    <link rel="canonical" href="https://www.psyagenda.app/guide-de.html">
+    <link rel="alternate" hreflang="tr" href="https://www.psyagenda.app/guide-tr.html">
+    <link rel="alternate" hreflang="en" href="https://www.psyagenda.app/guide-en.html">
+    <link rel="alternate" hreflang="es" href="https://www.psyagenda.app/guide-es.html">
+    <link rel="alternate" hreflang="de" href="https://www.psyagenda.app/guide-de.html">
+    <link rel="alternate" hreflang="fr" href="https://www.psyagenda.app/guide-fr.html">
+    <link rel="alternate" hreflang="pt" href="https://www.psyagenda.app/guide-pt.html">
+    <link rel="alternate" hreflang="it" href="https://www.psyagenda.app/guide-it.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PsyAgenda">
+    <meta property="og:title" content="Benutzerhandbuch – PsyAgenda">
+    <meta property="og:description" content="PsyAgenda-Benutzerhandbuch: Klientenverwaltung, Termine anlegen, Kalender, Tests, KI-Funktionen, Synchronisierung und mehr.">
+    <meta property="og:url" content="https://www.psyagenda.app/guide-de.html">
+    <meta property="og:image" content="https://www.psyagenda.app/app-icon.png">
+    <meta property="og:locale" content="de_DE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Benutzerhandbuch – PsyAgenda">
+    <meta name="twitter:description" content="PsyAgenda-Benutzerhandbuch: Klientenverwaltung, Termine anlegen, Kalender, Tests, KI-Funktionen, Synchronisierung und mehr.">
+    <link rel="icon" href="app-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="index-de.html"><img src="app-icon.png" alt=""><span>PsyAgenda</span></a>
+        <div class="nav-right">
+            <nav class="mainnav">
+                <a href="index-de.html">Start</a>
+                <a href="guide-de.html" class="active">Benutzerhandbuch</a>
+                <a href="faq-de.html">FAQ</a>
+                <a href="terms-de.html">Nutzungsbedingungen</a>
+                <a href="privacy-de.html">Datenschutzerklärung</a>
+            </nav>
+            <div class="lang-menu" id="lang-menu">
+                <button type="button" class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-panel" aria-label="Sprachauswahl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.7 3.9 5.8 3.9 9.2s-1.3 6.5-3.9 9.2c-2.6-2.7-3.9-5.8-3.9-9.2s1.3-6.5 3.9-9.2z"/></svg><span>Sprache</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                <div class="lang-panel" id="lang-panel">
+                    <label class="lang-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="lang-search" placeholder="Sprache suchen" autocomplete="off" spellcheck="false" aria-label="Sprache suchen"></label>
+                    <ul class="lang-list" id="lang-list">
+                        <li><a href="guide-tr.html" lang="tr" hreflang="tr">Türkçe</a></li>
+                        <li><a href="guide-en.html" lang="en" hreflang="en">English</a></li>
+                        <li><a href="guide-es.html" lang="es" hreflang="es">Español</a></li>
+                        <li><a href="guide-de.html" lang="de" hreflang="de" class="current" aria-current="true">Deutsch</a></li>
+                        <li><a href="guide-fr.html" lang="fr" hreflang="fr">Français</a></li>
+                        <li><a href="guide-pt.html" lang="pt" hreflang="pt">Português</a></li>
+                        <li><a href="guide-it.html" lang="it" hreflang="it">Italiano</a></li>
+                    </ul>
+                    <p class="lang-empty" id="lang-empty" hidden>Keine Ergebnisse</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="topbar-spacer" aria-hidden="true"></div>
+
+<main>
+    <div class="wrap page-head">
+        <h1>Benutzerhandbuch</h1>
+        <p class="subtitle">Ein umfassendes Handbuch, das alle Funktionen von PsyAgenda Schritt für Schritt erklärt. Öffnen Sie einen Abschnitt, um die ausführlichen Anleitungen zu sehen.</p>
+    </div>
+    <div class="wrap doc-layout">
+        <aside class="toc">
+            <div class="doc-search">
+                <label class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="doc-search" placeholder="Auf dieser Seite suchen..." autocomplete="off" spellcheck="false" aria-label="Auf dieser Seite suchen..."><button type="button" class="search-clear" id="doc-search-clear" aria-label="Leeren" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></label>
+                <p class="search-status" id="doc-search-status" aria-live="polite" data-none="Keine Ergebnisse gefunden." data-count="Treffer: {n} · Abschnitte: {m}"></p>
+            </div>
+            <div class="toc-title">Auf dieser Seite</div>
+            <div class="toc-list" id="toc-list"></div>
+        </aside>
+        <article class="doc" data-toc=".guide-section > summary">
+<!-- GENERATED:GUIDE-START -->
+    <!-- 1. Erste Schritte -->
+    <details class="guide-section">
+        <summary>Erste Schritte</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Hier finden Sie die grundlegenden Einstellungen, die Sie bei der ersten Nutzung von PsyAgenda vornehmen sollten.</p>
+
+            <h4>Die Startseite kennenlernen</h4>
+            <ol>
+                <li>Beim Öffnen der App erscheint die <strong>Startseite</strong>.</li>
+                <li>Oben sehen Sie den Namen Ihrer Praxis und die Schaltfläche <strong>Einstellungen</strong> (Zahnrad). Die Schaltfläche <strong>Synchronisieren</strong> erscheint links vom Zahnrad erst, nachdem Sie die Google-Drive-Synchronisierung eingerichtet haben.</li>
+                <li>In der Mitte befinden sich vier große Navigationsschaltflächen: <strong>Kalender</strong>, <strong>Klienten</strong>, <strong>Budget</strong> und <strong>Testmodul</strong>.</li>
+                <li>Der Bereich <strong>Notizen für heute</strong> listet die Sitzungen des gewählten Tages. Über die Schaltfläche <strong>Datum</strong> in der Kopfzeile sehen Sie sich einen anderen Tag an, mit <strong>Zu heute</strong> kehren Sie zurück. Beendete Sitzungen blenden Sie mit dem Augensymbol rechts aus.</li>
+            </ol>
+
+            <h4>Sprache ändern</h4>
+            <ol>
+                <li>Tippen Sie auf der Startseite oben rechts auf <strong>Einstellungen</strong> (Zahnrad).</li>
+                <li>Wechseln Sie zum Reiter <strong>Sprache</strong> und öffnen Sie die Liste <strong>App-Sprache</strong>.</li>
+                <li>Wählen Sie die gewünschte Sprache aus der Liste und bestätigen Sie. Die App wechselt sofort.</li>
+            </ol>
+
+            <h4>Währung festlegen</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>Einstellungen > Personalisierung</strong>.</li>
+                <li>Tippen Sie auf das Feld <strong>Währung</strong>.</li>
+                <li>Wählen Sie die gewünschte Währung aus der Liste. Tippen Sie im erscheinenden Hinweis auf <strong>Ja, verstanden und fortfahren</strong>. Alle Honorar- und Budgetfelder werden in dieser Währung angezeigt; die Beträge bestehender Einträge werden nicht umgerechnet, nur das Symbol ändert sich.</li>
+            </ol>
+
+            <h4>Standardhonorar pro Sitzung festlegen</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>Einstellungen > Personalisierung</strong>.</li>
+                <li>Tippen Sie auf das Feld <strong>Standardhonorar pro Sitzung</strong>.</li>
+                <li>Geben Sie Ihr Standard-Sitzungshonorar ein und verlassen Sie das Feld; die Einstellung wird automatisch gespeichert (Sie sehen die Meldung "Gespeichert!"). Dieses Honorar wird beim Anlegen eines neuen Termins automatisch eingetragen.</li>
+            </ol>
+
+            <h4>Praxisnamen festlegen</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>Einstellungen > Personalisierung</strong>.</li>
+                <li>Geben Sie im Feld <strong>Name Ihrer Praxis</strong> den Namen Ihrer Praxis oder Ihres Büros ein.</li>
+                <li>Der eingegebene Name erscheint als Überschrift auf der Startseite.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 2. Klientenverwaltung -->
+    <details class="guide-section">
+        <summary>Klientenverwaltung</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Sie können Klientinnen und Klienten anlegen, ihre Daten bearbeiten, Details ansehen und Berichte herunterladen.</p>
+
+            <h4>Neuen Klienten anlegen</h4>
+            <ol>
+                <li>Wechseln Sie über die obere Navigationsleiste oder die Startseite zur Ansicht <strong>Klienten</strong>.</li>
+                <li>Tippen Sie oben auf <strong>Neue Klientenkarte</strong>. Auf Telefonen und Tablets erscheint ein Dialog: Mit <strong>Manuell anlegen</strong> öffnen Sie ein leeres Formular; mit <strong>Aus Kontakten hinzufügen</strong> werden Vorname, Nachname, Telefon und E-Mail des gewählten Kontakts automatisch ins Formular übernommen.</li>
+                <li>Füllen Sie die Felder <strong>Vorname</strong> und <strong>Nachname</strong> aus (Pflicht).</li>
+                <li>Optional können Sie Telefon, E-Mail, Geburtsdatum, Geschlecht, Familienstand, Beruf, Bildungsstand und private Notizen eintragen. Auf Telefonen und Tablets übernehmen Sie die Nummer mit der Schaltfläche <strong>Kontakte</strong> neben dem Telefonfeld direkt aus Ihrem Adressbuch; diese Schaltfläche steht auch beim Bearbeiten eines bestehenden Klienten zur Verfügung.</li>
+                <li>Im Feld <strong>Netto-Sitzungshonorar</strong> können Sie ein individuelles Honorar für diesen Klienten eintragen. Bleibt es leer, gilt das Standardhonorar.</li>
+                <li>Tippen Sie auf <strong>Speichern</strong>, um den Klienten anzulegen.</li>
+            </ol>
+
+            <h4>Klientenliste aus Excel importieren</h4>
+            <ol>
+                <li>Tippen Sie in der Ansicht <strong>Klienten</strong> auf die Schaltfläche <strong>Importieren</strong> neben <strong>Neue Klientenkarte</strong>.</li>
+                <li>Tippen Sie im geöffneten Fenster auf <strong>Vorlage herunterladen</strong>. Eine leere Excel-Datei (.xlsx) mit den Spalten Vorname, Nachname, Telefon, E-Mail und Sitzungshonorar wird auf Ihrem Gerät gespeichert. Auf dem zweiten Blatt finden Sie Hinweise zum Ausfüllen.</li>
+                <li>Öffnen Sie die Vorlage in Excel oder einem ähnlichen Programm und überschreiben Sie die Beispielzeile mit Ihren Klientinnen und Klienten. <strong>Löschen Sie die Kopfzeile nicht.</strong> Nur das Feld <strong>Vorname</strong> ist Pflicht; Nachname, Telefon, E-Mail und Honorar dürfen leer bleiben. Pro Durchgang werden bis zu 500 Zeilen importiert.</li>
+                <li>Speichern Sie die Datei, kehren Sie zur App zurück und laden Sie sie im selben Fenster mit <strong>Datei auswählen</strong> hoch.</li>
+                <li>Bevor Einträge angelegt werden, sehen Sie eine <strong>Vorschau</strong>: wie viele Klientinnen und Klienten hinzugefügt werden, welche Zeilen übersprungen werden, weil sie bereits in Ihrer Liste stehen, und welche Zeilen nicht importiert werden können, jeweils mit Zeilennummer. Bestehende Einträge werden nie überschrieben. Kann eine Telefonnummer oder E-Mail nicht gelesen werden, wird der Klient trotzdem angelegt und nur dieses Feld bleibt leer.</li>
+                <li>Bestätigen Sie mit <strong>Klienten hinzufügen</strong>. Nach Abschluss des Imports können Sie mit <strong>Diesen Import rückgängig machen</strong> alle hinzugefügten Einträge wieder entfernen, solange das Fenster geöffnet bleibt. Nach dem Schließen des Fensters ist das nicht mehr möglich.</li>
+            </ol>
+
+            <h4>Klientendaten bearbeiten</h4>
+            <ol>
+                <li>Tippen Sie in der Ansicht <strong>Klienten</strong> auf den Namen des Klienten, den Sie bearbeiten möchten.</li>
+                <li>Tippen Sie in der geöffneten Detailansicht in der oberen Schaltflächengruppe auf <strong>Bearbeiten</strong>.</li>
+                <li>Aktualisieren Sie die gewünschten Felder.</li>
+                <li>Tippen Sie auf <strong>Aktualisieren</strong>, um Ihre Änderungen zu speichern.</li>
+            </ol>
+
+            <h4>Klientendetails ansehen</h4>
+            <ol>
+                <li>Tippen Sie in der Ansicht <strong>Klienten</strong> auf den Namen des Klienten.</li>
+                <li>Die Detailansicht zeigt alle Klientendaten, den Sitzungsverlauf, Testeinträge und Finanzangaben.</li>
+                <li>Im Sitzungsverlauf werden Datum und Uhrzeit jedes Eintrags aufgeführt. Tippen Sie auf eine Zeile, um Notizen vor der Sitzung, Sitzungsnotizen, KI-Beobachtungen, Notizen zur nächsten Sitzung und angehängte Bilder auszuklappen. Um die Sitzung selbst zu öffnen, tippen Sie in dieser Zeile auf <strong>Bearbeiten</strong>.</li>
+                <li>Über die Suchleiste durchsuchen Sie den Sitzungsverlauf nach Stichwörtern.</li>
+            </ol>
+
+            <h4>Klienten aktivieren oder deaktivieren</h4>
+            <ol>
+                <li>Öffnen Sie die Klientendetailansicht.</li>
+                <li>Tippen Sie oben auf <strong>Deaktivieren</strong>. Ist der Klient bereits inaktiv, heißt diese Schaltfläche <strong>Aktivieren</strong>.</li>
+                <li>Der Filter über der Klientenliste steht standardmäßig auf <strong>Aktiv</strong>, daher erscheinen inaktive Klientinnen und Klienten nicht in der Liste. Um sie zu sehen, tippen Sie im Filter auf <strong>Inaktiv</strong> oder <strong>Alle</strong>.</li>
+            </ol>
+
+            <h4>Klientenkarte herunterladen</h4>
+            <ol>
+                <li>Öffnen Sie die Klientendetailansicht.</li>
+                <li>Tippen Sie auf die Schaltfläche <strong>Bericht herunterladen</strong> (Download-Symbol).</li>
+                <li>Wählen Sie im Dialog das Berichtsformat (<strong>Word</strong> ist voreingestellt; <strong>PDF</strong> ist ebenfalls möglich) und tippen Sie auf <strong>Herunterladen</strong>.</li>
+                <li>Sobald der Bericht fertig ist, öffnet sich ein Sicherheitsdialog: Mit <strong>🔒 Verschlüsseln</strong> laden Sie ein ZIP herunter, das mit einem von Ihnen festgelegten Passwort geschützt ist; wählen Sie <strong>Ohne Verschlüsselung herunterladen</strong>, wird die Datei nach Bestätigung des Hinweises unverändert gespeichert. Der Bericht enthält die Klientendaten, den Sitzungsverlauf, Testergebnisse und KI-Auswertungen.</li>
+            </ol>
+
+            <h4>Klienten löschen</h4>
+            <ol>
+                <li>Öffnen Sie die Klientendetailansicht.</li>
+                <li>Tippen Sie in der oberen Schaltflächengruppe auf die rote Schaltfläche <strong>Löschen</strong>.</li>
+                <li>Der Bestätigungsdialog nennt, was gelöscht wird: die Klientenkarte, alle Termine dieses Klienten und seine Testeinträge. Bereits bezahlte Sitzungshonorare werden mit diesen Terminen entfernt, sodass sich Ihr Budgetverlauf und Ihre Einnahmenberichte ändern; Praxisausgaben, die keinem Klienten zugeordnet sind, sind nicht betroffen.</li>
+                <li>Da das Löschen nicht rückgängig gemacht werden kann, empfiehlt sich <strong>Deaktivieren statt Löschen</strong>, wenn Sie die Arbeit mit dem Klienten lediglich beendet haben und den Eintrag ausblenden möchten: Terminverlauf, Testeinträge und Budgetdaten bleiben vollständig erhalten, der Klient wird nur aus Ihren Listen ausgeblendet und kann jederzeit wieder aktiviert werden. Deshalb bietet der Bestätigungsdialog eines aktiven Klienten drei Schaltflächen: <strong>Abbrechen</strong>, <strong>Deaktivieren</strong> und <strong>Ja, löschen</strong>. Ist der Klient bereits inaktiv, fehlt die Schaltfläche <strong>Deaktivieren</strong>; es bleiben nur <strong>Abbrechen</strong> und <strong>Ja, löschen</strong>.</li>
+                <li>Tippen Sie auf <strong>Ja, löschen</strong>, um das Löschen zu bestätigen. Dieser Vorgang kann nicht rückgängig gemacht werden; der einzige Weg zurück ist das Wiederherstellen eines vor der Löschung erstellten Backups.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 3. Termine und Sitzungen -->
+    <details class="guide-section">
+        <summary>Termine und Sitzungen</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Erfahren Sie, wie Sie Termine anlegen, bearbeiten und verwalten, wiederkehrende Sitzungen planen und Sitzungsnotizen schreiben.</p>
+
+            <h4>Neuen Termin anlegen</h4>
+            <ol>
+                <li>Wechseln Sie zur Ansicht <strong>Kalender</strong>.</li>
+                <li>Tippen Sie auf den Tag und die Uhrzeit, für die Sie einen Termin anlegen möchten. Das Terminfenster öffnet sich.</li>
+                <li>Wählen Sie Ihren Klienten aus der Auswahlliste <strong>Klient</strong>. Über das Suchfeld der Liste filtern Sie die Einträge, indem Sie einen Namen eingeben.</li>
+                <li>Das Feld <strong>Dauer (Minuten)</strong> ist mit der Standarddauer aus den Einstellungen vorbelegt. Zum Ändern wählen Sie aus der Liste: 15, 30, 45, 60, 75, 90, 120, 150 oder 180 Minuten.</li>
+                <li>Bei Bedarf halten Sie im Feld <strong>Notizen vor der Sitzung</strong> fest, woran Sie vor der Sitzung denken müssen; diese Notiz erscheint zusammen mit dem Termin im Bereich Notizen für heute auf der Startseite.</li>
+                <li>Tippen Sie auf <strong>Speichern</strong> oder <strong>Speichern und schließen</strong>.</li>
+            </ol>
+
+            <h4>Klienten schnell anlegen</h4>
+            <ol>
+                <li>Auf diesem Weg legen Sie für eine noch nicht erfasste Person in einem Schritt sowohl die Klientenkarte als auch den Termin an. Geben Sie im Terminfenster Vor- und Nachnamen des Klienten in das Feld <strong>Neuer Klient</strong> ein, statt ihn aus der Liste auszuwählen.</li>
+                <li>Sobald Sie zu tippen beginnen, öffnet sich das Honorarfeld. Lassen Sie es leer, gilt für den Termin Ihr Standardhonorar; Sie können auch einen Betrag speziell für diesen Termin eingeben.</li>
+                <li>Speichern Sie den Termin. Die Klientenkarte wird im Hintergrund angelegt – das letzte Wort Ihrer Eingabe wird zum Nachnamen, der Rest zum Vornamen – und der Termin wird mit dieser Karte verknüpft.</li>
+                <li>Gibt es bereits einen erfassten Klienten mit demselben Namen, erscheint ein Hinweis; handelt es sich um eine andere Person, können Sie bestätigen, um den neuen Eintrag anzulegen.</li>
+                <li>Die entstandene Karte ist eine gewöhnliche Klientenkarte; Felder wie Telefon, E-Mail und Geburtsdatum können Sie später in der Ansicht Klienten ergänzen. Das eigene Sitzungshonorar der Karte bleibt leer, sodass auch für künftige Termine Ihr Standardhonorar gilt.</li>
+            </ol>
+
+            <h4>Termin bearbeiten</h4>
+            <ol>
+                <li>Tippen Sie im Kalender oder auf der Startseite auf den Termin, den Sie bearbeiten möchten.</li>
+                <li>Ändern Sie im geöffneten Fenster die gewünschten Felder (Dauer, Notizen, Honorar, Zahlung usw.). Um Tag oder Uhrzeit des Termins zu ändern, schließen Sie das Fenster und ziehen Sie den Termin im Kalender an die neue Stelle. Lässt sich der Termin nicht verschieben, ist möglicherweise die Verschiebesperre aktiv; prüfen Sie die Schloss-Schaltfläche in der Mitte der Ansichtsauswahl.</li>
+                <li>Tippen Sie auf <strong>Speichern</strong>. Ist der Termin Teil einer Serie, werden Sie gefragt, für welchen Umfang die Änderung gelten soll.</li>
+            </ol>
+
+            <h4>Wiederkehrenden Termin anlegen</h4>
+            <ol>
+                <li>Aktivieren Sie beim Anlegen eines neuen Termins das Kästchen <strong>Wiederholen</strong>.</li>
+                <li>Wählen Sie in der Auswahlliste neben <strong>Wiederholen</strong> das Intervall: <strong>Jede Woche</strong>, <strong>Alle 2 Wochen</strong>, <strong>Alle 3 Wochen</strong> oder <strong>Jeden Monat</strong>.</li>
+                <li>Geben Sie im Feld <strong>Mal</strong> ein, wie viele Sitzungen angelegt werden sollen (1 bis 52).</li>
+                <li>Tippen Sie auf <strong>Speichern</strong>. Die Termine werden automatisch im gewählten Intervall angelegt.</li>
+                <li>Die letzte Sitzung der Serie wird im Kalender <strong>violett</strong> dargestellt, und rechts unten in ihrem Feld erscheint eine <strong>Zielflagge (🏁)</strong>; so sehen Sie auf einen Blick, wo die Serie endet. In der Monatsansicht gibt es keine Flagge, dort wird das Feld mit der Sitzungsanzahl dieses Tages violett.</li>
+                <li>Wenn Sie einen beliebigen Termin der Serie öffnen, erscheint oben im Fenster ein Serieninfo-Bereich (beim letzten Termin als orangefarbener Hinweis). Stellen Sie dort das Intervall und das Feld <strong>Mal</strong> ein und tippen Sie auf <strong>Verlängern</strong>, um der Serie weitere Sitzungen hinzuzufügen. Beim Verlängern wandern die violette Farbe und die Flagge automatisch zur neuen letzten Sitzung.</li>
+            </ol>
+
+            <h4>Sitzungsnotizen schreiben</h4>
+            <ol>
+                <li>Im Terminfenster gibt es drei verschiedene Notizfelder:</li>
+                <li><strong>Notizen vor der Sitzung</strong> (orange): Was Sie vor der Sitzung im Kopf haben oder prüfen möchten. Diese Notiz, die Sie beim Anlegen des Termins schreiben, erscheint auf der Startseite im Bereich <strong>Notizen für heute</strong> unter dem Termin; so haben Sie zu Tagesbeginn vor Augen, worauf Sie in welcher Sitzung achten sollten.</li>
+                <li><strong>Sitzungsnotizen</strong> (grün): Die eigentliche Dokumentation der Sitzung. Alle Notizen und Beobachtungen, die Sie während oder nach der Sitzung festhalten – alles, was in dieser Sitzung besprochen wurde und wichtig ist – stehen hier. Wenn Sie optional die KI-Sitzungsanalyse starten, liest auch die Analyse den Text aus diesem Feld.</li>
+                <li><strong>Notizen für die nächste Sitzung</strong> (violett): Themen, die Sie auf Grundlage Ihrer Beobachtungen in der nächsten Sitzung aufgreifen möchten. Sie können sie selbst schreiben oder optional Vorschläge von der KI anfordern; der Vorschlag wird bei bereits gefülltem Feld an Ihren Text angehängt und überschreibt ihn nicht. Wenn Sie für denselben Klienten einen neuen Termin anlegen und den Klienten auswählen, werden diese Notizen der vorherigen Sitzung automatisch in das Feld <strong>Notizen vor der Sitzung</strong> des neuen Termins übernommen (bei gefülltem Feld angehängt), und eine Meldung wird angezeigt.</li>
+                <li>Statt die <strong>Sitzungsnotizen</strong> zu tippen: Wenn Sie während der Sitzung auf Papier notiert haben, können Sie die Notiz fotografieren und dem Termin anhängen. Tippen Sie auf dem hinzugefügten Bild auf die Schaltfläche <strong>Handschrift digitalisieren</strong>, und die KI wandelt die Schrift in Text um; nach dem Bestätigungsdialog wählen Sie das Notizformat (Freitext, SOAP oder DAP). Der erkannte Text wird an das Ende dieses Feldes angehängt und überschreibt Ihren bereits vorhandenen Text nicht.</li>
+                <li>Mit der Schaltfläche <strong>Lesemodus</strong> neben jedem Notizfeld lesen Sie die Notizen im Vollbild.</li>
+            </ol>
+
+            <h4>Zeit blockieren (als nicht verfügbar markieren)</h4>
+            <ol>
+                <li>Aktivieren Sie im Terminfenster das Kästchen <strong>Diese Zeit blockieren</strong>.</li>
+                <li>Dieser Modus deaktiviert alle Felder für Klient, Honorar, Notizen, Anhänge und Dauer. Wählen Sie die Dauer daher, <strong>bevor Sie das Kästchen aktivieren</strong>; die Blockierung wird mit dieser Dauer angelegt.</li>
+                <li>Tippen Sie auf <strong>Speichern</strong>. Der Zeitraum wird im Kalender als "Nicht verfügbar" markiert.</li>
+                <li>Auch blockierte Zeiten können als wiederkehrend eingerichtet werden.</li>
+            </ol>
+
+            <h4>Termin löschen</h4>
+            <ol>
+                <li>Tippen Sie auf den Termin, den Sie löschen möchten, um das Fenster zu öffnen.</li>
+                <li>Tippen Sie unten links auf die rote Schaltfläche <strong>Sitzung löschen</strong>.</li>
+                <li>Bei einem einzelnen Termin tippen Sie im Bestätigungsdialog auf <strong>Ja, löschen</strong> (bei blockierten Zeiten heißt die Schaltfläche <strong>Ja, freigeben</strong>). Bei einem wiederkehrenden Termin öffnet sich anstelle dieses Schritts direkt der Dialog zur Auswahl des Umfangs.</li>
+                <li>Bei einem wiederkehrenden Termin wählen Sie den Umfang der Löschung: <strong>Nur diese Sitzung löschen</strong> oder <strong>Diese und alle folgenden Sitzungen löschen</strong>.</li>
+            </ol>
+
+            <h4>Zahlungen verfolgen</h4>
+            <ol>
+                <li>Wenn Sie einen gespeicherten Termin öffnen, befindet sich rechts neben der Überschrift <strong>Sitzungsnotizen</strong> das Kästchen <strong>Bezahlt</strong>. Beim Anlegen eines neuen Termins ist es noch nicht sichtbar; es erscheint, sobald der Termin gespeichert ist.</li>
+                <li>Aktivieren Sie dieses Kästchen, wenn der Klient bezahlt hat.</li>
+                <li>Sammeln sich unbezahlte Sitzungen an, wird im Terminfenster des Klienten ein <strong>Hinweis auf den offenen Betrag</strong> angezeigt.</li>
+                <li>Sie müssen Zahlungen nicht einzeln über die Termine erfassen: Im Reiter <strong>Budget > Einnahmen</strong> stehen alle Sitzungen in einer Liste, und das Kästchen <strong>Bezahlt</strong> lässt sich direkt in dieser Liste aktivieren.</li>
+                <li>Über den Klientenfilter oberhalb der Liste sehen Sie die Zahlungshistorie eines einzelnen Klienten. Mit den Kästchen <strong>Nur Unbezahlte anzeigen</strong> und <strong>Nur Bezahlte anzeigen</strong> grenzen Sie die Liste ein, mit dem Datumsfilter wählen Sie den Zeitraum.</li>
+                <li>Bezahlte Sitzungen erscheinen in der Liste abgeblendet; Sitzungen, deren Datum verstrichen ist und die noch unbezahlt sind, werden <strong>rot</strong> markiert, sodass verspätete Zahlungen auf den ersten Blick erkennbar sind.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 4. Den Kalender verwenden -->
+    <details class="guide-section">
+        <summary>Den Kalender verwenden</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Im Kalender verwalten Sie Ihre Termine visuell.</p>
+
+            <h4>Monatsansicht</h4>
+            <ol>
+                <li>Wechseln Sie zur Ansicht <strong>Kalender</strong>. Standardmäßig öffnet sich die dynamische (Tages-)Ansicht; für die Monatsansicht tippen Sie rechts in der Ansichtszeile auf <strong>Monat</strong>.</li>
+                <li>In jedem Tagesfeld wird die Anzahl der Sitzungen des Tages in einem einzigen Kästchen zusammengefasst (z. B. <strong>Sitzungen: 3</strong>). Als nicht verfügbar markierte oder freie Tage werden mit einem roten Kästchen <strong>Nicht verfügbar</strong> angezeigt.</li>
+                <li>Tippen Sie auf einen Tag, um die detaillierte Terminliste dieses Tages zu sehen.</li>
+                <li>Mit den einfachen Pfeilschaltflächen oben wechseln Sie zwischen Monaten, mit den doppelten Pfeilen zwischen Jahren. Mit <strong>Heute</strong> kehren Sie zum heutigen Tag zurück.</li>
+            </ol>
+
+            <h4>Dynamische Ansicht (1 / 3 / 5 / 7 Tage)</h4>
+            <ol>
+                <li>Tippen Sie im Kalender in der unteren Zeile der oberen Werkzeugleiste links auf die Schaltfläche <strong>3 Tage</strong> (je nach Gerät 1/3/5/7 Tage). Die Schaltfläche <strong>Monat</strong> rechts führt zur Monatsansicht zurück.</li>
+                <li>In der dynamischen Ansicht stehen die Tage als Spalten nebeneinander, die Stunden zeilenweise. Der Standardzeitraum ist <strong>08:00-21:00</strong>; Sie ändern ihn unter <strong>Einstellungen > Personalisierung > Arbeitszeiten festlegen</strong>.</li>
+                <li>Um die Anzahl der Tage zu ändern, tippen Sie auf den Abwärtspfeil rechts neben der Tagesschaltfläche (sie zeigt die aktuell dargestellte Anzahl, etwa <strong>3 Tage</strong> oder <strong>5 Tage</strong>) und wählen Sie aus der Liste. Die Optionen hängen vom Gerät ab: auf dem Telefon <strong>1 / 3</strong>, auf dem Tablet <strong>1 / 3 / 5</strong>, auf dem Desktop <strong>1 / 3 / 5 / 7</strong> Tage.</li>
+                <li>Tippen Sie auf einen Zeitraum, um für diese Zeit einen neuen Termin anzulegen.</li>
+                <li>Mit der Schaltfläche <strong>30 Min.</strong> oben links stellen Sie das Zeitraster auf <strong>15 / 30 / 60 Minuten</strong> um.</li>
+            </ol>
+
+            <h4>Im Kalender navigieren</h4>
+            <ol>
+                <li>Mit den einfachen Pfeilschaltflächen links und rechts von <strong>Heute</strong> gehen Sie vor und zurück: in der Tagesansicht um einen Tag, in der Monatsansicht um einen Monat.</li>
+                <li>Die äußeren Doppelpfeile (<strong>Schnell zurück</strong> / <strong>Schnell vor</strong>) springen in größeren Schritten: in der Tagesansicht um so viele Tage, wie gerade angezeigt werden, in der Monatsansicht um ein Jahr.</li>
+                <li>Tippen Sie auf <strong>Heute</strong>, um zum heutigen Tag zurückzukehren.</li>
+                <li>Im Kalender können Sie Termine per Drag-and-drop auf andere Zeiten verschieben. Wenn Sie versehentliches Verschieben vermeiden möchten, können Sie das abschalten; siehe unten <strong>Versehentliches Verschieben verhindern</strong>.</li>
+                <li>Auf Touch-Geräten können Sie auch durch <strong>Wischen nach rechts/links</strong> mit dem Finger vor und zurück navigieren.</li>
+            </ol>
+
+            <h4>Versehentliches Verschieben verhindern (Verschiebesperre)</h4>
+            <ol>
+                <li>In der Mitte der Ansichtsauswahl, zwischen den Schaltflächen <strong>7 Tage</strong> und <strong>Monat</strong>, befindet sich eine Schloss-Schaltfläche. Beim Öffnen der App ist dieses Schloss offen, das Verschieben also aktiv.</li>
+                <li>Wenn Sie auf die Schaltfläche tippen, wird die Sperre aktiv: Die Schaltfläche färbt sich bernsteinfarben, das Symbol wird zu einem geschlossenen Schloss, und die Meldung "Drag-and-drop deaktiviert" erscheint. Termine lassen sich jetzt nicht mehr verschieben.</li>
+                <li>Bei aktiver Sperre navigieren Sie im Kalender wie gewohnt weiter: Wischen nach rechts/links und Scrollen nach oben/unten sind nicht betroffen. Nur das Ziehen von Terminen und von <strong>Nicht verfügbar</strong>-Blöcken ist gesperrt.</li>
+                <li>Um das Verschieben wieder zu erlauben, tippen Sie erneut auf dieselbe Schaltfläche; sie nimmt wieder ihre normale Farbe an, und Sie können Termine erneut verschieben.</li>
+                <li>Diese Einstellung gilt nur für das verwendete Gerät; sie bleibt dort bestehen, bis Sie sie abschalten, und wird nicht auf Ihre anderen Geräte übertragen. Wenn sich ein Termin nicht verschieben lässt, prüfen Sie zuerst, ob diese Schaltfläche bernsteinfarben ist.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 5. Fotos und Anhänge -->
+    <details class="guide-section">
+        <summary>Fotos und Anhänge</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Sie können Fotos zu Sitzungen hinzufügen, sie mit der Kamera aufnehmen und die Handschrifterkennung nutzen.</p>
+
+            <h4>Foto zu einer Sitzung hinzufügen</h4>
+            <ol>
+                <li>Öffnen Sie das Terminfenster.</li>
+                <li>Tippen Sie unter dem Feld <strong>Sitzungsnotizen</strong> in der Zeile <strong>Anhänge</strong> auf <strong>Datei hochladen</strong>.</li>
+                <li>Wählen Sie eine Bilddatei von Ihrem Gerät. Das gewählte Bild erscheint als Vorschaubild im Bereich der Sitzungsbilder.</li>
+                <li>Tippen Sie auf das Vorschaubild, um es in der Vollbildansicht zu öffnen.</li>
+                <li>Zum Löschen tippen Sie auf die rote Schaltfläche <strong>✕</strong> oben rechts am Vorschaubild.</li>
+            </ol>
+
+            <h4>Foto mit der Kamera aufnehmen (Telefon und Tablet)</h4>
+            <ol>
+                <li>Tippen Sie im Terminfenster in der Zeile <strong>Anhänge</strong> auf <strong>Datei hochladen</strong>.</li>
+                <li>Auf Telefon und Tablet können Sie im daraufhin angezeigten Auswahlmenü mit der Option <strong>Kamera</strong> sofort ein Foto aufnehmen. Fragt das Gerät beim ersten Mal nach der Kameraberechtigung, erlauben Sie den Zugriff.</li>
+                <li>Das aufgenommene Foto wird dem Termin direkt als Anhang hinzugefügt, genau wie ein aus der Galerie gewähltes Bild.</li>
+                <li>Auf dem Desktop (Windows und macOS) bietet dieses Menü nur die Dateiauswahl; die Sofortaufnahme mit der Kamera gibt es nur auf Telefon und Tablet.</li>
+            </ol>
+
+            <h4>Handschrifterkennung</h4>
+            <ol>
+                <li>Nachdem Sie ein Sitzungsbild hinzugefügt haben, tippen Sie auf das blaue runde <strong>Sternsymbol</strong> unten links am Vorschaubild. Das Symbol hat keine Beschriftung; auf dem Desktop erscheint der Hinweis <strong>Handschrift digitalisieren</strong>, wenn Sie mit dem Mauszeiger darauf zeigen.</li>
+                <li>Tippen Sie im geöffneten Fenster <strong>KI-Analyse bestätigen</strong> auf <strong>Akzeptieren und fortfahren</strong>. Wählen Sie anschließend im Fenster <strong>Format der handschriftlichen Notizen</strong> das <strong>Notizformat</strong> (Freitext, SOAP oder DAP) sowie das zu verwendende KI-Modell aus und bestätigen Sie.</li>
+                <li>Die KI wandelt die Handschrift im Bild in Text um und hängt ihn an das Ende des Feldes <strong>Sitzungsnotizen</strong> an. Bereits vorhandener Text im Feld wird nicht gelöscht.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 6. Budget und Finanzverwaltung -->
+    <details class="guide-section">
+        <summary>Budget und Finanzverwaltung</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">In diesem Abschnitt lernen Sie die Einnahmen-/Ausgabenverfolgung, die Finanzanalyse und den Export kennen.</p>
+
+            <h4>Einnahmen verfolgen</h4>
+            <ol>
+                <li>Wechseln Sie zur Ansicht <strong>Budget</strong>. Standardmäßig öffnet sich der Reiter <strong>Einnahmen</strong>.</li>
+                <li>Alle Ihre Sitzungen werden mit Datum, Klientenname, Honorar und Zahlungsstatus aufgelistet.</li>
+                <li>Mit dem Datumsfilter oben filtern Sie nach einem bestimmten Monat oder Jahr.</li>
+                <li>Mit dem Klientenfilter sehen Sie die Zahlungen eines bestimmten Klienten.</li>
+                <li>Unter der Tabelle werden die Gesamteinnahmen sowie die Summen für bezahlt/unbezahlt angezeigt.</li>
+            </ol>
+
+            <h4>Zahlungserinnerung senden</h4>
+            <ol>
+                <li>Für einen Klienten mit überfälliger Zahlung können Sie mit einem Fingertipp eine Erinnerungsnachricht vorbereiten. Tippen Sie im Reiter <strong>Einnahmen</strong> in den roten Zeilen auf das rote <strong>Nachrichtensymbol</strong> neben dem Datum. Dasselbe Symbol finden Sie an zwei weiteren Stellen: neben dem Hinweis auf den offenen Betrag im Terminfenster und neben der Zeile mit dem offenen Betrag in der Klientenkarte.</li>
+                <li>In der Nachricht werden die Anzahl der überfälligen Sitzungen des Klienten und der Gesamtbetrag automatisch eingesetzt. Er entspricht dem offenen Betrag, den Sie auf dem Bildschirm sehen, und die Nachricht umfasst immer den gesamten offenen Betrag des Klienten – nicht nur eine einzelne Sitzung.</li>
+                <li>In der geöffneten Vorschau sehen Sie den Text vor dem Senden und können ihn beliebig bearbeiten. Tippen Sie dann auf <strong>Per WhatsApp senden</strong>, <strong>Per SMS senden</strong> oder <strong>Per E-Mail senden</strong>. PsyAgenda sendet die Nachricht nicht selbst, sondern öffnet die gewählte App mit dem fertig eingesetzten Text. Die Nachricht erreicht den Klienten erst, wenn Sie in dieser App auf Senden tippen.</li>
+                <li>Die Nachrichtenvorlage bearbeiten Sie unter <strong>Einstellungen > Benachrichtigungen</strong>: Öffnen Sie den Abschnitt <strong>Nachrichtenvorlagen</strong> und passen Sie das Feld <strong>Nachricht zur Zahlungserinnerung</strong> an; bei Bedarf können Sie Zahlungsangaben wie Ihre IBAN in die Vorlage aufnehmen. Um zu den Vorlagen zu gelangen, muss der Schalter <strong>Nachrichten an Klienten</strong> nicht aktiviert sein.</li>
+            </ol>
+
+            <h4>Ausgaben hinzufügen und verwalten</h4>
+            <ol>
+                <li>Wechseln Sie zum Reiter <strong>Budget > Ausgaben</strong>.</li>
+                <li>Tippen Sie auf <strong>Neue Ausgabe hinzufügen</strong>.</li>
+                <li>Geben Sie im Formular Datum, Beschreibung, Kategorie und Betrag ein.</li>
+                <li>Tippen Sie auf <strong>Speichern</strong>. Die Ausgabe wird der Liste hinzugefügt.</li>
+                <li>Um eine Ausgabe zu bearbeiten, tippen Sie am Zeilenende in der Spalte <strong>Aktionen</strong> auf das blaue <strong>Stiftsymbol</strong>, zum Löschen auf das rote <strong>Papierkorbsymbol</strong>.</li>
+            </ol>
+
+            <h4>Ausgabenkategorien verwalten</h4>
+            <ol>
+                <li>Tippen Sie im Reiter <strong>Budget > Ausgaben</strong> auf <strong>Kategorie hinzufügen</strong> (auf dem Telefon <strong>Kategorien</strong>). Das Fenster <strong>Ausgabenkategorien verwalten</strong> öffnet sich.</li>
+                <li>Um eine neue Kategorie anzulegen, geben Sie oben den Namen der Kategorie ein und tippen Sie auf <strong>Hinzufügen</strong>.</li>
+                <li>Mit dem Schalter <strong>Aktiv</strong>/<strong>Inaktiv</strong> neben dem Kategorienamen blenden Sie eine Kategorie aus den Listen aus; inaktive Kategorien erscheinen weder im Formular für neue Ausgaben noch in den Filtern, alte Einträge bleiben erhalten. Zum Löschen tippen Sie auf das Papierkorbsymbol – gibt es in dieser Kategorie noch Ausgaben, wird das Löschen verhindert; ändern Sie zuerst die Kategorie dieser Ausgaben.</li>
+            </ol>
+
+            <h4>Finanzanalyse-Diagramme</h4>
+            <ol>
+                <li>Wechseln Sie zum Reiter <strong>Budget > Analyse</strong>.</li>
+                <li>Oben werden die Karten <strong>Einnahmen gesamt</strong>, <strong>Ausgaben gesamt</strong> und <strong>Nettogewinn</strong> angezeigt. Diese Beträge beziehen sich auf den Zeitraum, den Sie mit dem <strong>Datumsfilter</strong> oben rechts wählen, und in die Einnahmen fließen nur Sitzungen ein, bei denen das Kästchen <strong>Bezahlt</strong> aktiviert ist.</li>
+                <li>Das Diagramm zum Einnahmen-/Ausgabentrend der letzten 12 Monate und das Diagramm zur Sitzungsanzahl werden automatisch geladen.</li>
+                <li>In den Karten der Monatsübersicht sehen Sie für jeden Monat Einnahmen, Ausgaben, Nettosaldo und Sitzungsdetails.</li>
+            </ol>
+
+            <h4>Nach Excel exportieren</h4>
+            <ol>
+                <li>Tippen Sie in der Ansicht <strong>Budget</strong> oben rechts, links neben der roten Schließen-Schaltfläche (✕), auf die Schaltfläche mit dem <strong>grünen Pfeil nach unten</strong> (Excel-Export).</li>
+                <li>Es gibt zwei Optionen: <strong>Gefilterte Daten exportieren</strong> oder <strong>Alle Daten exportieren</strong>.</li>
+                <li><strong>Alle Daten exportieren</strong> erzeugt eine Excel-Datei (.xlsx) mit allen Blättern für Einnahmen, Ausgaben und Analyse. <strong>Gefilterte Daten exportieren</strong> exportiert die aktuell gefilterten Zeilen des geöffneten Reiters; wenn Sie sowohl Einnahmen als auch Ausgaben gefiltert benötigen, exportieren Sie jeden Reiter einzeln.</li>
+                <li>Vor dem Speichern werden Sie gefragt, ob Sie die Datei mit einem Passwort schützen möchten. Legen Sie ein Passwort fest, wird die Datei als verschlüsseltes ZIP gespeichert; möchten Sie ohne Passwort speichern, bestätigen Sie den Hinweis, und die Datei wird direkt heruntergeladen.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 7. Psychologische Tests -->
+    <details class="guide-section">
+        <summary>Psychologische Tests</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Mit den Modulen Rorschach, projektiver Zeichentest und manueller Test führen Sie Tests digital durch und erstellen Berichte.</p>
+
+            <h4>Rorschach-Test durchführen</h4>
+            <ol>
+                <li>Wechseln Sie zur Ansicht <strong>Testmodul</strong> und wählen Sie im Reiter <strong>Neuen Test starten</strong> den <strong>Rorschach-Test</strong>.</li>
+                <li>Geben Sie im Einrichtungsfenster Alter und Geschlecht des Klienten ein und tippen Sie auf <strong>Test starten</strong>.</li>
+                <li>Navigieren Sie im Satz aus 10 Tafeln mit <strong>Vorherige Tafel</strong> und <strong>Nächste Tafel</strong>; auf Mobilgeräten können Sie auch über das Tafelbild nach rechts/links wischen. Der Zähler oben rechts (z. B. 3 / 10) zeigt, bei welcher Tafel Sie sind.</li>
+                <li>Tragen Sie für jede Tafel die Antwort des Klienten in das Feld <strong>Antworten des Klienten</strong> ein.</li>
+                <li>Mit <strong>Auswertung abrufen</strong> lassen Sie die KI diese Tafel auswerten.</li>
+                <li>Tragen Sie im Feld <strong>Auswertung des Therapeuten</strong> Ihre eigenen klinischen Beobachtungen ein.</li>
+                <li>Nachdem Sie alle Tafeln bearbeitet haben, wechseln Sie zum Reiter <strong>Berichte</strong>, um die Abschlussberichte zu erstellen.</li>
+                <li>Zum Beenden des Tests tippen Sie unten auf <strong>Test abschließen</strong>; wählen Sie im Fenster <strong>Testergebnis speichern</strong> den Klienten, bei dem der Test gespeichert wird. Um den Test zu unterbrechen und später fortzusetzen, verwenden Sie <strong>Test speichern</strong>.</li>
+            </ol>
+
+            <h4>Zeichentest durchführen</h4>
+            <ol>
+                <li>Wählen Sie <strong>Testmodul > Neuen Test starten > Projektiver Zeichentest</strong>.</li>
+                <li>Geben Sie im Einrichtungsfenster die Testart (Haus-Baum-Mensch, Kinetische Familienzeichnung usw.), das Alter und das Geschlecht an.</li>
+                <li>Laden Sie in der Testansicht das Zeichnungsbild hoch oder nehmen Sie es mit der Kamera auf.</li>
+                <li>Mit <strong>Auswertung abrufen</strong> lassen Sie die Zeichnung analysieren.</li>
+                <li>Tragen Sie im Feld <strong>Auswertung des Therapeuten</strong> Ihre eigenen Interpretationen ein; bei Bedarf lassen Sie den Text mit der nebenstehenden Schaltfläche <strong>Text verbessern</strong> sprachlich überarbeiten.</li>
+                <li>Mit der Schaltfläche <strong>Berichte zusammenführen</strong> neben dem Feld <strong>Hybridbericht</strong> fassen Sie KI- und Therapeutenauswertung in einem Bericht zusammen. Dafür müssen beide Felder gefüllt sein.</li>
+            </ol>
+
+            <h4>Manuelle Testeingabe</h4>
+            <ol>
+                <li>Wählen Sie <strong>Testmodul > Neuen Test starten > Manuelle Testeingabe</strong>.</li>
+                <li>Geben Sie im Einrichtungsfenster Testname, Alter und Geschlecht ein.</li>
+                <li>Tragen Sie im Freitextfeld die Testdaten und Ihre Befunde ein.</li>
+                <li>Bei Bedarf fügen Sie im Bereich <strong>Anhänge</strong> mit <strong>Datei hochladen</strong> Bilder hinzu (nur Bilddateien werden unterstützt).</li>
+                <li>Tippen Sie auf <strong>Speichern</strong>, um den Test zu speichern.</li>
+            </ol>
+
+            <h4>Testbericht erstellen und herunterladen</h4>
+            <ol>
+                <li>Beim Rorschach werden die Berichte im Reiter <strong>Berichte</strong> erstellt; bei Zeichentests und manuellen Tests befinden sich die Berichtsfelder direkt in der Testansicht. Der Berichtsdownload ist bei allen drei Tests möglich.</li>
+                <li>Wählen Sie die gewünschte Berichtsart: <strong>KI-Bericht</strong>, <strong>Bericht des Therapeuten</strong> oder <strong>Hybridbericht</strong>.</li>
+                <li>Tippen Sie auf <strong>Bericht herunterladen</strong>.</li>
+                <li>Wählen Sie im geöffneten Fenster die Berichtsabschnitte, die enthalten sein sollen, und legen Sie das Format fest (<strong>Word</strong> oder <strong>PDF</strong>).</li>
+                <li>Anschließend öffnet sich das Fenster <strong>Export – Sicherheit</strong>. Mit <strong>🔒 Verschlüsseln</strong> laden Sie eine ZIP-Datei herunter, die mit dem von Ihnen festgelegten Passwort geschützt ist; zum Öffnen wird dieses Passwort benötigt, und das ZIP lässt sich mit den Bordmitteln von Windows und macOS ohne Zusatzprogramm öffnen. Bei <strong>Ohne Verschlüsselung herunterladen</strong> erscheint ein Hinweis; bestätigen Sie ihn, wird die Datei ungeschützt gespeichert.</li>
+                <li>Der Bericht wird auf Ihr Gerät heruntergeladen.</li>
+            </ol>
+
+            <h4>Durchgeführte Tests ansehen</h4>
+            <ol>
+                <li>Wechseln Sie in der Ansicht <strong>Testmodul</strong> zum Reiter <strong>Durchgeführte Tests</strong>.</li>
+                <li>Alle Tests werden nach Datum, Klientenname und Testart aufgelistet.</li>
+                <li>Tippen Sie auf einen Test, um seine Details anzusehen, ihn zu bearbeiten oder den Bericht herunterzuladen.</li>
+                <li>Um einen Test zu löschen, tippen Sie in der Detailansicht auf <strong>Löschen</strong>.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 8. KI-Funktionen -->
+    <details class="guide-section">
+        <summary>KI-Funktionen</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Über die Google-Gemini-API-Integration kann PsyAgenda Ihre Sitzungsnotizen analysieren, Tests auswerten und Klientenberichte erstellen. Für diese Funktionen ist ein API-Schlüssel erforderlich.</p>
+
+            <h4>API-Schlüssel einrichten</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>Einstellungen > API-Verwaltung</strong>.</li>
+                <li>Fügen Sie Ihren Google-Gemini-API-Schlüssel in das Feld <strong>API-Schlüssel</strong> ein.</li>
+                <li>Tippen Sie auf <strong>Speichern</strong>. Der Schlüssel wird vor dem Speichern bei Google geprüft: Ist er gültig, wird er verschlüsselt gespeichert und die Statuszeile oben wird grün. Ist er ungültig, wird er nicht gespeichert, ein Hinweis erscheint, und er bleibt im Feld, damit Sie ihn korrigieren können. Ohne Internetverbindung wird der Schlüssel gespeichert, aber als nicht geprüft gekennzeichnet.</li>
+                <li>Tippen Sie auf das <strong>Infosymbol</strong> im Feld, um ausführliche Informationen zum Bezug eines API-Schlüssels zu erhalten.</li>
+            </ol>
+
+            <h4>Analyse der Sitzungsnotizen</h4>
+            <ol>
+                <li>Schreiben Sie im Terminfenster Ihre Notizen in das Feld <strong>Sitzungsnotizen</strong>.</li>
+                <li>Tippen Sie neben dem Notizfeld auf die blaue Schaltfläche <strong>KI-Auswertung</strong>.</li>
+                <li>Tippen Sie zuerst im Fenster <strong>KI-Analyse bestätigen</strong> auf <strong>Akzeptieren und fortfahren</strong>. Wählen Sie dann im Fenster <strong>Einstellungen der KI-Analyse</strong> <strong>Alter und Geschlecht</strong> (Pflicht), Ansatz, Detailgrad und Modell und tippen Sie auf <strong>Auswerten</strong>.</li>
+                <li>Nach Abschluss der Analyse erscheint das Ergebnis im Feld <strong>KI-Beobachtungen</strong>. Damit es erhalten bleibt, speichern Sie den Termin mit <strong>Speichern</strong>.</li>
+                <li>Mit der Schaltfläche <strong>KI-Auswertung</strong> neben der Überschrift <strong>Notizen für die nächste Sitzung</strong> erhalten Sie Vorschläge auf Grundlage der aktuellen Sitzungsnotizen und KI-Beobachtungen; die Vorschläge werden in das Feld <strong>Notizen für die nächste Sitzung</strong> geschrieben.</li>
+            </ol>
+
+            <h4>KI-Gesamtanalyse des Klienten</h4>
+            <ol>
+                <li>Öffnen Sie die Klientendetailansicht.</li>
+                <li>Tippen Sie über der Liste des Sitzungsverlaufs auf <strong>Gesamtanalyse des Klienten</strong>.</li>
+                <li>Tippen Sie zuerst im Fenster <strong>KI-Analyse bestätigen</strong> auf <strong>Akzeptieren und fortfahren</strong>. Wählen Sie dann im Fenster <strong>Einstellungen der KI-Analyse</strong> Alter und Geschlecht (Pflicht), Ansatz, Detailgrad und Modell und tippen Sie auf <strong>Auswerten</strong>.</li>
+                <li>Die KI analysiert alle Sitzungsnotizen und Testergebnisse des Klienten und erstellt einen umfassenden Auswertungsbericht.</li>
+                <li>Den erstellten Bericht können Sie speichern, neu erstellen oder im Lesemodus anzeigen.</li>
+            </ol>
+
+            <h4>KI-Auswertung von Tests</h4>
+            <ol>
+                <li>Tippen Sie in der Rorschach- oder Zeichentestansicht für jede Tafel/Seite auf <strong>Auswertung abrufen</strong>.</li>
+                <li>Wählen Sie im geöffneten Fenster den Detailgrad und das <strong>Modell</strong>. Beim Rorschach legen Sie zusätzlich die <strong>Analysemethode</strong> (Exner CS usw.) fest; beim Zeichentest gibt es diese Option nicht.</li>
+                <li>Die KI analysiert die Antwort oder Zeichnung des Klienten und trägt das Ergebnis in das entsprechende Feld ein.</li>
+                <li>Mit der Schaltfläche <strong>Text verbessern</strong> neben einem gefüllten Therapeutennotiz-/Berichtsfeld lassen Sie Ihren Text von der KI korrigieren und sprachlich ausarbeiten.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 9. Backup und Wiederherstellung -->
+    <details class="guide-section">
+        <summary>Backup und Wiederherstellung</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Sie können Ihre Daten als verschlüsselte Backup-Datei aufbewahren und jederzeit wiederherstellen.</p>
+
+            <h4>Backup erstellen</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>Einstellungen > Backup</strong>.</li>
+                <li>Tippen Sie auf <strong>Daten sichern</strong>.</li>
+                <li>Legen Sie im Fenster <strong>Backup verschlüsseln</strong> ein Passwort fest, wiederholen Sie es im Feld darunter und tippen Sie auf <strong>Sichern und verschlüsseln</strong>.</li>
+                <li><strong>Notieren Sie dieses Passwort an einem sicheren Ort.</strong> Die Backup-Datei wird vollständig mit diesem Passwort verschlüsselt; wenn Sie es vergessen, können Sie auf die Daten in diesem Backup nie wieder zugreifen.</li>
+                <li>Während das Backup erstellt wird, erscheint ein Fortschrittsfenster. Schließen Sie die App in dieser Zeit nicht.</li>
+                <li>Wo das Backup gespeichert wird, hängt von Ihrem Gerät ab:<br><strong>Windows / macOS:</strong> Ein Speicherdialog öffnet sich; wählen Sie den Ordner und klicken Sie auf <strong>Speichern</strong>. Brechen Sie diesen Dialog ab, wird kein Backup erstellt.<br><strong>Android:</strong> Das Backup wird direkt im Ordner <strong>Downloads</strong> Ihres Geräts gespeichert.<br><strong>iPhone / iPad:</strong> Das Backup wird zunächst im eigenen Ordner der App gespeichert; direkt danach öffnet sich das Teilen-Menü, über das Sie die Datei an einem Ort Ihrer Wahl (iCloud Drive, Gerätespeicher usw.) sichern oder beliebig weitergeben können.</li>
+                <li><strong>Überspringen Sie diesen letzten Schritt auf iPhone / iPad nicht:</strong> Senden Sie über das Teilen-Menü eine Kopie des Backups aus der App hinaus – <strong>In Dateien sichern</strong>, AirDrop, WhatsApp, Mail oder iCloud Drive. Schließen Sie dieses Menü, bleibt das Backup nur innerhalb der App; beim Löschen der App wird auch das Backup gelöscht.</li>
+            </ol>
+
+            <h4>Aus Backup wiederherstellen</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>Einstellungen > Backup</strong>.</li>
+                <li>Tippen Sie auf <strong>Aus Backup wiederherstellen</strong>.</li>
+                <li>Wählen Sie auf Ihrem Gerät die zuvor erstellte <strong>.thnbak</strong>-Datei.</li>
+                <li>Geben Sie das Passwort ein, das Sie beim Erstellen des Backups festgelegt haben.</li>
+                <li>Ein Fortschrittsbalken wird angezeigt. Nach Abschluss sind Ihre Daten wiederhergestellt. Ihre Synchronisierungseinstellungen bleiben erhalten.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 10. Google-Drive-Synchronisierung -->
+    <details class="guide-section">
+        <summary>Google-Drive-Synchronisierung</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Sie können Ihre Daten über Google Drive verschlüsselt zwischen mehreren Geräten synchronisieren.</p>
+
+            <h4>Google-Konto verbinden</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>Einstellungen > Synchronisierung</strong>.</li>
+                <li>Tippen Sie auf <strong>Mit Google verbinden</strong>.</li>
+                <li>Melden Sie sich mit Ihrem Google-Konto an und erteilen Sie die erforderlichen Berechtigungen.</li>
+                <li>Nach erfolgreicher Verbindung wird die E-Mail-Adresse Ihres Kontos angezeigt.</li>
+            </ol>
+
+            <h4>Synchronisierungspasswort festlegen</h4>
+            <ol>
+                <li>Welche Ansicht nach dem Verbinden Ihres Google-Kontos erscheint, hängt davon ab, ob in diesem Konto bereits synchronisierte Daten vorhanden sind: Auf <strong>Ihrem ersten Gerät</strong> erscheint die Ansicht zum Festlegen des Passworts, auf <strong>Ihrem zweiten und jedem weiteren Gerät</strong> das Feld "Ihr bestehendes Passwort..." mit der Schaltfläche <strong>Verbinden</strong>. Geben Sie auf dem zweiten Gerät dasselbe Passwort wie auf dem anderen Gerät ein und tippen Sie auf <strong>Verbinden</strong>; wenn Sie sich nicht an das Passwort erinnern, beantworten Sie über den Link <strong>Passwort vergessen</strong> Ihre Sicherheitsfrage.</li>
+                <li>Geben Sie Ihr Synchronisierungspasswort ein und wiederholen Sie es im Feld darunter. Es gibt keine Mindestlänge, aber da alle Ihre Daten mit diesem Passwort verschlüsselt werden, empfehlen wir ein schwer zu erratendes Passwort mit mindestens 8 Zeichen.</li>
+                <li>Füllen Sie unten den Bereich <strong>Frage zur Passwortwiederherstellung</strong> aus: eine Sicherheitsfrage, die Antwort und die Wiederholung der Antwort. Diese Felder sind Pflicht – bleiben sie leer, startet die Synchronisierung nicht. Tippen Sie dann auf <strong>Synchronisierung starten</strong>; die erste Synchronisierung beginnt automatisch.</li>
+                <li><strong>Wichtig:</strong> Vergessen Sie dieses Passwort nicht. Alle Ihre Daten werden damit verschlüsselt. Geht das Passwort verloren, sind die Daten nicht mehr zugänglich.</li>
+            </ol>
+
+            <h4>Synchronisierungspasswort ändern</h4>
+            <ol>
+                <li>Tippen Sie unter <strong>Einstellungen > Synchronisierung</strong> auf <strong>Passwort ändern</strong>.</li>
+                <li>Geben Sie im Feld <strong>Aktuelles Passwort</strong> Ihr derzeitiges Synchronisierungspasswort ein. Wenn Sie es nicht mehr wissen, tippen Sie auf den Link <strong>Passwort vergessen</strong> und beantworten Sie Ihre Sicherheitsfrage.</li>
+                <li>Geben Sie das neue Passwort ein und bestätigen Sie es durch Wiederholung.</li>
+                <li>Tippen Sie auf <strong>Speichern</strong>; Ihre Daten werden mit dem neuen Passwort neu verschlüsselt und auf Drive hochgeladen.</li>
+                <li><strong>Wichtig:</strong> Auf allen anderen Geräten müssen Sie ebenfalls das neue Passwort eingeben.</li>
+            </ol>
+
+            <h4>Manuelle Synchronisierung</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>Einstellungen > Synchronisierung</strong>.</li>
+                <li>Tippen Sie auf <strong>Synchronisieren</strong>.</li>
+                <li>Ein Fortschrittsbalken wird angezeigt. Nach Abschluss der Synchronisierung wird der Zeitpunkt der letzten Synchronisierung aktualisiert.</li>
+                <li>Bei Problemen können Sie <strong>Upload erzwingen</strong> oder <strong>Download erzwingen</strong> verwenden. <strong>Achtung:</strong> Upload erzwingen ersetzt alle Daten auf Drive durch die Daten dieses Geräts; Download erzwingen ersetzt alle Daten auf diesem Gerät durch die Daten auf Drive. Lesen und bestätigen Sie in beiden Fällen den Bestätigungsdialog; wenn Sie nicht sicher sind, auf welcher Seite die aktuellen Daten liegen, verwenden Sie diese Schaltflächen nicht.</li>
+            </ol>
+
+            <h4>Verbundene Geräte ansehen</h4>
+            <ol>
+                <li>Unter <strong>Einstellungen > Synchronisierung</strong> wird die Liste <strong>Verbundene Geräte</strong> angezeigt.</li>
+                <li>Für jedes Gerät werden Name (z. B. iPhone, iPad, Android-Modellname oder Computername), Typsymbol und Zeitpunkt der letzten Aktivität angezeigt.</li>
+                <li>Ihr aktuelles Gerät ist mit einem Hinweis gekennzeichnet.</li>
+            </ol>
+
+            <h4>Synchronisierung beenden</h4>
+            <ol>
+                <li>Tippen Sie unter <strong>Einstellungen > Synchronisierung</strong> auf <strong>Verbindung trennen</strong>.</li>
+                <li>Tippen Sie im Bestätigungsdialog erneut auf <strong>Verbindung trennen</strong>.</li>
+                <li>Die Synchronisierung wird beendet. Die Daten auf dem Gerät bleiben erhalten, werden aber nicht mehr mit anderen Geräten abgeglichen.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 11. Sicherheitseinstellungen -->
+    <details class="guide-section">
+        <summary>Sicherheitseinstellungen</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Mit App-Sperre und Passworteinstellungen schützen Sie Ihre Daten vor unbefugtem Zugriff. Alle Einstellungen in diesem Bereich gelten <strong>nur für das jeweilige Gerät</strong>: Ihr Passwort, Ihre Sicherheitsfrage, die Dauer der automatischen Sperre und die biometrische Anmeldung werden nicht per Synchronisierung auf andere Geräte übertragen. Sie legen auf jedem Gerät ein eigenes Passwort fest, und eine Änderung auf einem Gerät wirkt sich nicht auf die anderen aus.</p>
+
+            <h4>App-Sperre einrichten</h4>
+            <ol>
+                <li><strong>Bei der Ersteinrichtung der App</strong> erscheint die Ansicht zum Festlegen des Passworts automatisch; dieser Schritt kann nicht übersprungen werden.</li>
+                <li>Die App-Sperre wird nicht über eine eigene Option eingeschaltet – die Passworteinrichtung erfolgt beim ersten Start verpflichtend. <strong>Einstellungen > Sicherheit</strong> enthält nur die Einstellungen der bestehenden Sperre.</li>
+                <li>Die Einrichtung hat zwei Schritte. Geben Sie im ersten Schritt Ihr Passwort ein, wiederholen Sie es im Feld darunter und tippen Sie auf <strong>Weiter</strong>.</li>
+                <li>Geben Sie im zweiten Schritt eine <strong>Sicherheitsfrage</strong>, die Antwort und die Wiederholung der Antwort ein und tippen Sie auf <strong>Einrichtung abschließen</strong>. Diese drei Felder sind Pflicht und dürfen nicht leer bleiben – wenn Sie Ihr Passwort vergessen, ist diese Frage der einzige Weg zur Wiederherstellung.</li>
+                <li>Wählen Sie unter <strong>Automatische Sperre</strong> die <strong>Inaktivitätsdauer</strong>, nach der sich die App ohne Aktion sperrt: Nie, 30 Sekunden, 1, 5, 15, 30 Minuten oder 1 Stunde.</li>
+                <li>Wenn das Passwort jedes Mal abgefragt werden soll, wenn Sie die App in den Hintergrund legen und wieder öffnen, aktivieren Sie <strong>Beim Zurückkehren sperren</strong> (standardmäßig deaktiviert).</li>
+                <li>Unterstützt Ihr Gerät es, können Sie die <strong>Biometrische Anmeldung</strong> aktivieren und die Sperre dann schnell per Fingerabdruck / Gesicht / Geräte-PIN öffnen; dabei wird Ihr aktuelles Passwort abgefragt.</li>
+            </ol>
+
+            <h4>App-Sperre deaktivieren</h4>
+            <ol>
+                <li>Aktivieren Sie unter <strong>Einstellungen > Sicherheit</strong> die Option <strong>Diesem Gerät vertrauen</strong>.</li>
+                <li>Bestätigen Sie den Hinweis und geben Sie Ihr aktuelles Passwort ein.</li>
+                <li>Auf diesem Gerät wird beim Start und nach Inaktivität kein Passwort mehr abgefragt. Das Sicherheitsniveau sinkt; verwenden Sie diese Option nur auf Geräten, die ausschließlich Ihnen gehören und auf die niemand sonst Zugriff hat.</li>
+            </ol>
+
+            <h4>Passwort ändern</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>Einstellungen > Sicherheit</strong>.</li>
+                <li>Tippen Sie auf <strong>Passwort ändern</strong>.</li>
+                <li>Geben Sie zuerst Ihr aktuelles und dann Ihr neues Passwort ein und bestätigen Sie es.</li>
+            </ol>
+
+            <h4>Passwort vergessen</h4>
+            <ol>
+                <li>Tippen Sie im Sperrbildschirm der App auf den Link <strong>Passwort vergessen?</strong></li>
+                <li>Ihre Sicherheitsfrage wird angezeigt. Geben Sie die richtige Antwort ein.</li>
+                <li>Ist die Prüfung erfolgreich, werden Sie aufgefordert, ein neues Passwort festzulegen. Haben Sie die Wiederherstellung im Sperrbildschirm <strong>beim Start</strong> der App durchgeführt, öffnet sich direkt danach die Einrichtung, und Sie müssen neben dem neuen Passwort auch <strong>eine neue Sicherheitsfrage mit Antwort</strong> festlegen. Haben Sie die Wiederherstellung im Sperrbildschirm nach Inaktivität bei geöffneter App durchgeführt, wird nur ein neues Passwort verlangt; Ihre Sicherheitsfrage bleibt unverändert.</li>
+                <li><strong>Wenn Sie sowohl Ihr Passwort als auch die Antwort auf Ihre Sicherheitsfrage vergessen</strong> (und auf diesem Gerät die biometrische Anmeldung nicht aktiv ist), gibt es keinen Weg mehr zu Ihren Daten. Das ist kein Mangel, sondern folgt aus der Sicherheitsarchitektur der App: Ihre Datenbank ist mit einem Schlüssel verschlüsselt, der sich nur mit Ihrem Passwort oder Ihrer Sicherheitsantwort öffnen lässt – weder wir noch irgendjemand sonst besitzt ein Hauptpasswort, eine Hintertür oder eine Wiederherstellungskopie.</li>
+                <li>In diesem Fall bleibt nur eine Möglichkeit: der Schritt <strong>Daten löschen und neu beginnen</strong> im Sperrbildschirm (damit er nicht versehentlich ausgelöst wird, müssen Sie einen Bestätigungssatz eintippen). Liegen Ihre Daten in der Google-Drive-Synchronisierung oder in einer Backup-Datei, kommen sie von dort zurück; <strong>gibt es weder das eine noch das andere, sind die Daten dauerhaft verloren.</strong> Deshalb empfehlen wir, die Synchronisierung aktiv zu halten oder regelmäßig Backups zu erstellen.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 12. Benachrichtigungen und Erinnerungen -->
+    <details class="guide-section">
+        <summary>Benachrichtigungen und Erinnerungen</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">In diesem Bereich verwalten Sie Sitzungserinnerungen, Erinnerungen mit Alarm und die Nachrichten an Ihre Klientinnen und Klienten.</p>
+
+            <h4>Sitzungserinnerungen (Mobilgeräte)</h4>
+            <ol>
+                <li>Aktivieren Sie unter <strong>Einstellungen &gt; Benachrichtigungen</strong> die <strong>Sitzungserinnerungen</strong>. Fragt das Gerät nach der Benachrichtigungsberechtigung, erteilen Sie sie; ohne Berechtigung bleibt der Schalter aus.</li>
+                <li>Mit <strong>Zeitpunkt der Benachrichtigung</strong> legen Sie fest, wie lange vor der Sitzung die Benachrichtigung kommt: <strong>5, 10, 15, 30 Minuten</strong> oder <strong>1, 2, 4, 8, 24 Stunden</strong> vorher (Standard: 15 Minuten).</li>
+                <li>Bei aktivem Schalter kommt die Benachrichtigung automatisch für <strong>alle künftigen Sitzungen</strong>; Sie müssen keine Sitzungen auswählen. Es werden nur Termine vom Typ Sitzung berücksichtigt. Die Benachrichtigung ist eine einmalige Standardbenachrichtigung des Geräts; wenn Sie einen Ton möchten, der läuft, bis Sie ihn stoppen, verwenden Sie <strong>Erinnerungen mit Alarm</strong>.</li>
+                <li>Zum Schutz der Privatsphäre ist der Klientenname im Titel der Benachrichtigung standardmäßig <strong>nicht sichtbar</strong>; wenn Sie den Namen sehen möchten, deaktivieren Sie <strong>Klientennamen in Benachrichtigungen ausblenden</strong>. Diese Einstellungen gibt es nur auf Android und iOS.</li>
+            </ol>
+
+            <h4>Alarmeinstellungen (Mobilgeräte)</h4>
+            <ol>
+                <li>Schalten Sie zuerst unter <strong>Einstellungen &gt; Benachrichtigungen</strong> die <strong>Erinnerungen mit Alarm</strong> ein und stellen Sie das <strong>Alarmverhalten</strong> auf <strong>Nur ausgewählte Sitzungen</strong>; aktivieren Sie anschließend im Terminfenster das Kästchen <strong>Eigenen Alarm für diese Sitzung einrichten</strong>.</li>
+                <li>Wählen Sie, wie lange vor der Sitzung der Alarm ertönen soll: <strong>5, 10, 15, 30 Minuten</strong> oder <strong>1, 2, 4, 8, 24 Stunden</strong> vorher.</li>
+                <li>Bei Sitzungen mit eingerichtetem Alarm erscheint <strong>auf der Startseite</strong> neben der Sitzungskarte ein Glockensymbol.</li>
+                <li>Die <strong>Standard-Alarmzeit</strong> unter <strong>Einstellungen > Benachrichtigungen</strong> legt die Vorlaufzeit fest, die verwendet wird, wenn Sie für eine Sitzung keine eigene Auswahl treffen; steht das <strong>Alarmverhalten</strong> auf <strong>Alle Sitzungen</strong>, ertönt der Alarm für alle Sitzungen mit dieser Vorlaufzeit.</li>
+            </ol>
+
+            <h4>Nachrichten an Klienten</h4>
+            <ol>
+                <li>Wann sich das Benachrichtigungsfenster öffnet, bestimmt der Schalter <strong>Nachrichten an Klienten</strong> unter <strong>Einstellungen > Benachrichtigungen</strong>. <strong>Ist er aktiv:</strong> Wenn Sie einen Termin mit einem Klienten anlegen, Datum oder Uhrzeit ändern, einen Einzeltermin in eine Serie umwandeln, eine Serie verlängern oder einen Termin löschen, öffnet sich das Fenster von selbst – Sie müssen kein Kästchen aktivieren. <strong>Ist er aus:</strong> Es öffnet sich kein Fenster.</li>
+                <li>Auch bei ausgeschaltetem Schalter können Sie eine Nachricht senden: Aktivieren Sie im Terminfenster das Kästchen <strong>Klienten benachrichtigen</strong> und speichern Sie. Dieses Kästchen übersteuert den Schalter, Sie lösen die Nachricht also manuell für einen einzelnen Termin aus. (Bei aktivem Schalter erscheint das Fenster ohnehin, das Kästchen müssen Sie dann nicht aktivieren.)</li>
+                <li>Ob der Schalter aktiv ist oder nicht: <strong>Die Nachricht wird nie von selbst gesendet.</strong> Automatisch ist nur das Öffnen des Fensters; die Entscheidung zum Senden liegt immer bei Ihnen.</li>
+                <li>Im Fenster <strong>Klienten benachrichtigen</strong> können Sie die Nachricht in der Vorschau bearbeiten und dann <strong>Per WhatsApp senden</strong>, <strong>Per SMS senden</strong> oder <strong>Per E-Mail senden</strong> wählen; die Nachricht öffnet sich fertig in der jeweiligen App, und Sie tippen selbst auf Senden. Ist für den Klienten keine Telefonnummer oder E-Mail hinterlegt, fragt die App sie in diesem Moment ab. Wenn Sie nicht senden möchten, tippen Sie auf <strong>Nicht senden</strong>.</li>
+                <li>Wenn Sie einen Termin öffnen, für den bereits eine Nachricht gesendet wurde und der heute oder später stattfindet, erscheint die Schaltfläche <strong>Erinnerung senden</strong>. <strong>Erinnerungen werden nie von selbst ausgelöst</strong> – auch nicht bei aktivierten automatischen Nachrichten. Wenn der Klient eine zusätzliche Erinnerung erhalten soll, müssen Sie auf diese Schaltfläche tippen.</li>
+                <li>Bei einem wiederkehrenden Termin wählen Sie den Umfang der Benachrichtigung: <strong>Nur für diese Sitzung</strong> oder <strong>Für die gesamte Serie / das Programm</strong>.</li>
+            </ol>
+        </div>
+    </details>
+<!-- GENERATED:GUIDE-END -->
+        </article>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <span>&copy; 2026 PsyAgenda. Alle Rechte vorbehalten.</span>
+        <nav>
+            <a href="privacy-de.html">Datenschutzerklärung</a>
+            <a href="terms-de.html">Nutzungsbedingungen</a>
+            <a href="faq-de.html">FAQ</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+(function () {
+    /* Dil menüsü: aramalı açılır liste. Diller HTML'deki listeden okunur; JS dil bilgisi taşımaz. */
+    var menu = document.getElementById('lang-menu'), btn = document.getElementById('lang-btn');
+    if (!menu || !btn) return;
+    var input = document.getElementById('lang-search'), empty = document.getElementById('lang-empty');
+    var items = Array.prototype.slice.call(document.getElementById('lang-list').children);
+    var norm = function (s) { return s.toLowerCase().replace(/ı/g, 'i').normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
+    var visible = function () { return items.filter(function (li) { return !li.hidden; }).map(function (li) { return li.firstElementChild; }); };
+    var filter = function () {
+        var q = norm(input.value.trim()), n = 0;
+        items.forEach(function (li) {
+            var a = li.firstElementChild, hit = !q || norm(a.textContent).indexOf(q) !== -1 || a.getAttribute('lang').indexOf(q) === 0;
+            li.hidden = !hit; if (hit) n++;
+        });
+        empty.hidden = n > 0;
+    };
+    var setOpen = function (open) {
+        menu.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { input.value = ''; filter(); setTimeout(function () { input.focus(); }, 0); }
+    };
+    btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+    input.addEventListener('input', filter);
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) setOpen(false); });
+    menu.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { setOpen(false); btn.focus(); return; }
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            var vis = visible(); if (!vis.length) return;
+            var i = vis.indexOf(document.activeElement), next = e.key === 'ArrowDown' ? (i + 1) % vis.length : (i <= 0 ? vis.length - 1 : i - 1);
+            vis[next].focus(); e.preventDefault();
+        } else if (e.key === 'Enter' && e.target === input) { var v = visible(); if (v.length) v[0].click(); }
+    });
+})();
+(function () {
+    /* Özellik kartları: ilk cümle görünür, gerisi tıklayınca açılır. JS yoksa hepsi açık kalır. */
+    var grid = document.querySelector('.feature-grid');
+    if (!grid) return;
+    grid.classList.add('js');
+    Array.prototype.forEach.call(grid.querySelectorAll('.feature-card'), function (card) {
+        var btn = card.querySelector('.acc-btn');
+        if (!btn) return;
+        var set = function (open) {
+            card.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.firstChild.nodeValue = open ? btn.dataset.less : btn.dataset.more;
+        };
+        card.addEventListener('click', function (e) {
+            if (e.target.closest('a')) return;
+            if (window.getSelection && String(window.getSelection()).length) return; /* metin seçerken açma */
+            set(!card.classList.contains('open'));
+        });
+    });
+})();
+(function () {
+    /* Dar ekranda gezinme şeridi yana kayar: aktif sekmeyi görünür alana getir, sağda devam varsa kenarı soldur. */
+    var nav = document.querySelector('.mainnav');
+    if (nav) {
+        var more = function () { nav.classList.toggle('more', nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 2); };
+        var act = nav.querySelector('a.active');
+        var reveal = function () { if (act && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, act.offsetLeft - 16); more(); };
+        nav.addEventListener('scroll', more, { passive: true }); window.addEventListener('resize', more); reveal();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(reveal); /* yazı tipi gelince genişlikler değişir */
+    }
+    var bar = document.getElementById('topbar');
+    if (bar) {
+        var onScroll = function () { bar.classList.toggle('stuck', window.scrollY > 8); };
+        onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    }
+    var rise = document.querySelectorAll('.rise');
+    if ('IntersectionObserver' in window && rise.length) {
+        var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        rise.forEach(function (el) { io.observe(el); });
+        /* Emniyet: gözlemci ne olursa olsun içerik 1.2 sn sonra görünür olur. */
+        setTimeout(function () { rise.forEach(function (el) { el.classList.add('in'); }); }, 1200);
+    } else { rise.forEach(function (el) { el.classList.add('in'); }); }
+
+    /* Bölüm listesi sayfadaki başlıklardan üretilir — içerik iki yere yazılmaz. */
+    var doc = document.querySelector('.doc'), list = document.getElementById('toc-list');
+    if (!doc || !list) return;
+    var sel = doc.dataset.toc || 'h2';
+    var heads = doc.querySelectorAll(sel);
+    if (heads.length < 3) { ['.toc-title', '.toc-list'].forEach(function (c) { var t = document.querySelector(c); if (t) t.hidden = true; }); return; }
+    var links = [];
+    Array.prototype.forEach.call(heads, function (h, i) {
+        var target = h.tagName === 'SUMMARY' ? h.parentNode : h;
+        if (!target.id) target.id = 'b' + (i + 1);
+        var a = document.createElement('a'); a.href = '#' + target.id; a.textContent = h.textContent.trim();
+        if (h.tagName === 'SUMMARY') a.addEventListener('click', function () { h.parentNode.open = true; });
+        list.appendChild(a); links.push(a);
+    });
+    var tick = false;
+    var spy = function () {
+        tick = false; var best = 0;
+        for (var i = 0; i < heads.length; i++) { if (heads[i].closest('[hidden]')) continue; if (heads[i].getBoundingClientRect().top <= 120) best = i; }
+        links.forEach(function (a, i) { a.classList.toggle('current', i === best); });
+    };
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+    spy();
+    /* Arama filtreledikçe bölüm listesi de daralır. */
+    document.addEventListener('docsearch', function () {
+        links.forEach(function (a, i) { var target = heads[i].tagName === 'SUMMARY' ? heads[i].parentNode : heads[i]; a.hidden = !!target.closest('[hidden]'); });
+        spy();
+    });
+})();
+(function () {
+    /* Sayfa içi arama — uygulamadaki "Bu sayfada ara" ile aynı davranış: eşleşen bölümler açılır ve
+       gösterilir, eşleşmeyenler gizlenir, kelimeler işaretlenir. Türkçe harflere ve aksana duyarsız. */
+    var input = document.getElementById('doc-search'), art = document.querySelector('article.doc');
+    if (!input || !art) return;
+    var clearBtn = document.getElementById('doc-search-clear'), status = document.getElementById('doc-search-status');
+    var fold = function (s) {
+        var out = '';
+        for (var i = 0; i < s.length; i++) {
+            var c = s[i];
+            if (c === 'ı' || c === 'İ') { out += 'i'; continue; }
+            var b = c.normalize('NFD')[0] || c, l = b.toLowerCase();
+            out += l.length === 1 ? l : b;
+        }
+        return out;
+    };
+    /* Birimler: h2 bir grup açar; her <details> kendi başına birim; h2 altındaki düz metin tek birim. */
+    var groups = [], cur = null;
+    Array.prototype.forEach.call(art.children, function (el) {
+        if (el.tagName === 'H2') { cur = { head: el, items: [] }; groups.push(cur); return; }
+        if (!cur) { cur = { head: null, items: [] }; groups.push(cur); }
+        if (el.tagName === 'DETAILS') { cur.items.push({ nodes: [el], det: el }); return; }
+        var last = cur.items[cur.items.length - 1];
+        if (!last || last.det) { last = { nodes: [], det: null }; cur.items.push(last); }
+        last.nodes.push(el);
+    });
+    var saved = null; /* arama başlamadan önceki açık/kapalı durumu */
+    var textOf = function (nodes) { return nodes.map(function (n) { return n.textContent; }).join(' '); };
+    var unmark = function () {
+        Array.prototype.forEach.call(art.querySelectorAll('mark.hit'), function (m) { m.replaceWith(m.textContent); });
+        art.normalize();
+    };
+    var mark = function (root, q) {
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), nodes = [], n = 0;
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach(function (t) {
+            var v = t.nodeValue, f = fold(v), i = f.indexOf(q);
+            if (i < 0) return;
+            var frag = document.createDocumentFragment(), last = 0;
+            while (i >= 0) {
+                if (i > last) frag.appendChild(document.createTextNode(v.slice(last, i)));
+                var m = document.createElement('mark'); m.className = 'hit'; m.textContent = v.slice(i, i + q.length); frag.appendChild(m);
+                last = i + q.length; n++; i = f.indexOf(q, last);
+            }
+            if (last < v.length) frag.appendChild(document.createTextNode(v.slice(last)));
+            t.parentNode.replaceChild(frag, t);
+        });
+        return n;
+    };
+    var setHidden = function (nodes, h) { nodes.forEach(function (n) { n.hidden = h; }); };
+    var reset = function () {
+        unmark();
+        groups.forEach(function (g) { if (g.head) g.head.hidden = false; g.items.forEach(function (it) { setHidden(it.nodes, false); }); });
+        if (saved) { saved.forEach(function (o, d) { d.open = o; }); saved = null; }
+        Array.prototype.forEach.call(art.querySelectorAll('h2.first-visible'), function (h) { h.classList.remove('first-visible'); });
+        status.textContent = ''; clearBtn.hidden = true;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var run = function () {
+        var q = fold(input.value.trim());
+        clearBtn.hidden = !input.value;
+        if (q.length < 2) { if (saved) reset(); else { status.textContent = ''; } return; }
+        if (!saved) { saved = new Map(); Array.prototype.forEach.call(art.querySelectorAll('details'), function (d) { saved.set(d, d.open); }); }
+        unmark();
+        var hits = 0, sections = 0;
+        groups.forEach(function (g) {
+            var whole = g.head && g.items.length && !g.items[0].det; /* gizlilik/koşullar: başlık + metin tek birim */
+            var any = false;
+            if (whole) {
+                var all = [g.head].concat(g.items[0].nodes);
+                any = fold(textOf(all)).indexOf(q) !== -1;
+                g.head.hidden = !any; setHidden(g.items[0].nodes, !any);
+                if (any) { sections++; all.forEach(function (n) { hits += mark(n, q); }); }
+            } else {
+                g.items.forEach(function (it) {
+                    var ok = fold(textOf(it.nodes)).indexOf(q) !== -1;
+                    setHidden(it.nodes, !ok);
+                    if (ok) { any = true; sections++; if (it.det) it.det.open = true; it.nodes.forEach(function (n) { hits += mark(n, q); }); }
+                });
+                if (g.head) g.head.hidden = !any;
+            }
+        });
+        var firstSeen = false;
+        Array.prototype.forEach.call(art.querySelectorAll(':scope > h2'), function (h) { var f = !firstSeen && !h.hidden; h.classList.toggle('first-visible', f); if (f) firstSeen = true; });
+        status.textContent = hits ? status.dataset.count.replace('{n}', hits).replace('{m}', sections).replace('{es}', hits === 1 ? '' : 'es').replace('{s}', sections === 1 ? '' : 's') : status.dataset.none;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var timer = null;
+    input.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(run, 220); });
+    input.addEventListener('keydown', function (e) { if (e.key === 'Escape') { input.value = ''; reset(); } });
+    clearBtn.addEventListener('click', function () { input.value = ''; reset(); input.focus(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de uso — PsyAgenda</title>
+    <meta name="description" content="Guia de uso do PsyAgenda: gerenciamento de clientes, criação de agendamentos, calendário, testes, inteligência artificial, sincronização e muito mais.">
+    <link rel="canonical" href="https://www.psyagenda.app/guide-pt.html">
+    <link rel="alternate" hreflang="tr" href="https://www.psyagenda.app/guide-tr.html">
+    <link rel="alternate" hreflang="en" href="https://www.psyagenda.app/guide-en.html">
+    <link rel="alternate" hreflang="es" href="https://www.psyagenda.app/guide-es.html">
+    <link rel="alternate" hreflang="de" href="https://www.psyagenda.app/guide-de.html">
+    <link rel="alternate" hreflang="fr" href="https://www.psyagenda.app/guide-fr.html">
+    <link rel="alternate" hreflang="pt" href="https://www.psyagenda.app/guide-pt.html">
+    <link rel="alternate" hreflang="it" href="https://www.psyagenda.app/guide-it.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PsyAgenda">
+    <meta property="og:title" content="Guia de uso — PsyAgenda">
+    <meta property="og:description" content="Guia de uso do PsyAgenda: gerenciamento de clientes, criação de agendamentos, calendário, testes, inteligência artificial, sincronização e muito mais.">
+    <meta property="og:url" content="https://www.psyagenda.app/guide-pt.html">
+    <meta property="og:image" content="https://www.psyagenda.app/app-icon.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Guia de uso — PsyAgenda">
+    <meta name="twitter:description" content="Guia de uso do PsyAgenda: gerenciamento de clientes, criação de agendamentos, calendário, testes, inteligência artificial, sincronização e muito mais.">
+    <link rel="icon" href="app-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="index-pt.html"><img src="app-icon.png" alt=""><span>PsyAgenda</span></a>
+        <div class="nav-right">
+            <nav class="mainnav">
+                <a href="index-pt.html">Início</a>
+                <a href="guide-pt.html" class="active">Guia de uso</a>
+                <a href="faq-pt.html">FAQ</a>
+                <a href="terms-pt.html">Termos de uso</a>
+                <a href="privacy-pt.html">Política de Privacidade</a>
+            </nav>
+            <div class="lang-menu" id="lang-menu">
+                <button type="button" class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-panel" aria-label="Seleção de idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.7 3.9 5.8 3.9 9.2s-1.3 6.5-3.9 9.2c-2.6-2.7-3.9-5.8-3.9-9.2s1.3-6.5 3.9-9.2z"/></svg><span>Idioma</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                <div class="lang-panel" id="lang-panel">
+                    <label class="lang-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="lang-search" placeholder="Buscar idioma" autocomplete="off" spellcheck="false" aria-label="Buscar idioma"></label>
+                    <ul class="lang-list" id="lang-list">
+                        <li><a href="guide-tr.html" lang="tr" hreflang="tr">Türkçe</a></li>
+                        <li><a href="guide-en.html" lang="en" hreflang="en">English</a></li>
+                        <li><a href="guide-es.html" lang="es" hreflang="es">Español</a></li>
+                        <li><a href="guide-de.html" lang="de" hreflang="de">Deutsch</a></li>
+                        <li><a href="guide-fr.html" lang="fr" hreflang="fr">Français</a></li>
+                        <li><a href="guide-pt.html" lang="pt" hreflang="pt" class="current" aria-current="true">Português</a></li>
+                        <li><a href="guide-it.html" lang="it" hreflang="it">Italiano</a></li>
+                    </ul>
+                    <p class="lang-empty" id="lang-empty" hidden>Nenhum resultado</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="topbar-spacer" aria-hidden="true"></div>
+
+<main>
+    <div class="wrap page-head">
+        <h1>Guia de uso</h1>
+        <p class="subtitle">Guia completo que explica passo a passo todos os recursos do PsyAgenda. Abra cada seção para ver as instruções detalhadas.</p>
+    </div>
+    <div class="wrap doc-layout">
+        <aside class="toc">
+            <div class="doc-search">
+                <label class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="doc-search" placeholder="Buscar nesta página..." autocomplete="off" spellcheck="false" aria-label="Buscar nesta página..."><button type="button" class="search-clear" id="doc-search-clear" aria-label="Limpar" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></label>
+                <p class="search-status" id="doc-search-status" aria-live="polite" data-none="Nenhum resultado encontrado." data-count="Correspondências: {n} · Seções: {m}"></p>
+            </div>
+            <div class="toc-title">Nesta página</div>
+            <div class="toc-list" id="toc-list"></div>
+        </aside>
+        <article class="doc" data-toc=".guide-section > summary">
+<!-- GENERATED:GUIDE-START -->
+    <!-- 1. Primeiros passos -->
+    <details class="guide-section">
+        <summary>Primeiros passos</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Nesta seção você encontra as configurações básicas que precisa fazer ao usar o PsyAgenda pela primeira vez.</p>
+
+            <h4>Conhecer a tela inicial</h4>
+            <ol>
+                <li>Ao abrir o aplicativo, a tela <strong>Início</strong> aparece.</li>
+                <li>Na parte superior ficam o nome do seu consultório e o botão <strong>Configurações</strong> (engrenagem). O botão de <strong>Sincronização</strong> só aparece à esquerda da engrenagem depois que você configura a sincronização com o Google Drive.</li>
+                <li>No centro há quatro botões grandes de navegação: <strong>Calendário</strong>, <strong>Clientes</strong>, <strong>Orçamento</strong> e <strong>Módulo de testes</strong>.</li>
+                <li>Na seção <strong>Notas do dia</strong> são listadas as sessões do dia selecionado. Com o botão de <strong>data</strong> do título você pode consultar outro dia e voltar com <strong>Ir para hoje</strong>. As sessões encerradas podem ser ocultadas com o ícone de olho à direita.</li>
+            </ol>
+
+            <h4>Mudar o idioma</h4>
+            <ol>
+                <li>Na tela inicial, toque no ícone de <strong>Configurações</strong> (engrenagem), no canto superior direito.</li>
+                <li>Vá para a aba <strong>Idioma</strong> e abra a lista <strong>Idioma do aplicativo</strong>.</li>
+                <li>Selecione o idioma desejado na lista e confirme. O aplicativo muda imediatamente para o idioma escolhido.</li>
+            </ol>
+
+            <h4>Definir a moeda</h4>
+            <ol>
+                <li>Vá para <strong>Configurações > Personalização</strong>.</li>
+                <li>Toque no campo <strong>Moeda</strong>.</li>
+                <li>Selecione na lista a moeda que deseja usar. No aviso que aparece, toque em <strong>Sim, entendi e quero continuar</strong>. Todos os campos de honorários e orçamento são exibidos nessa moeda; os valores dos registros existentes não são convertidos, apenas o símbolo muda.</li>
+            </ol>
+
+            <h4>Definir os honorários padrão por sessão</h4>
+            <ol>
+                <li>Vá para <strong>Configurações > Personalização</strong>.</li>
+                <li>Toque no campo <strong>Honorários padrão por sessão</strong>.</li>
+                <li>Digite os seus honorários padrão por sessão e saia do campo; a configuração é salva automaticamente (você verá a notificação "Salvo!"). Esses honorários são preenchidos automaticamente ao criar um novo agendamento.</li>
+            </ol>
+
+            <h4>Definir o nome do consultório</h4>
+            <ol>
+                <li>Vá para <strong>Configurações > Personalização</strong>.</li>
+                <li>Digite o nome da sua clínica ou do seu consultório no campo <strong>Nome do consultório</strong>.</li>
+                <li>O nome digitado aparecerá como título na parte superior da tela inicial.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 2. Gerenciamento de clientes -->
+    <details class="guide-section">
+        <summary>Gerenciamento de clientes</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Você pode adicionar e editar seus clientes, ver os detalhes deles e baixar os relatórios.</p>
+
+            <h4>Adicionar um novo cliente</h4>
+            <ol>
+                <li>Vá para a tela <strong>Clientes</strong> pela barra de navegação superior ou pela tela inicial.</li>
+                <li>Toque no botão <strong>Nova ficha de cliente</strong>, na parte superior. Na janela que aparece em celulares e tablets, <strong>Criar manualmente</strong> abre um formulário em branco; se escolher <strong>Adicionar dos contatos</strong>, o nome, o sobrenome, o telefone e o e-mail do contato selecionado são preenchidos automaticamente no formulário.</li>
+                <li>No formulário, preencha os campos <strong>Nome</strong> e <strong>Sobrenome</strong> (obrigatórios).</li>
+                <li>Se quiser, preencha os campos de telefone, e-mail, data de nascimento, gênero, estado civil, profissão, escolaridade e notas privadas. Em celulares e tablets, o botão <strong>contatos</strong> ao lado do campo de telefone permite selecionar o número diretamente da sua agenda de contatos; esse botão também está disponível ao editar um cliente existente.</li>
+                <li>No campo <strong>Honorários líquidos por sessão</strong> você pode informar um valor específico para este cliente. Se deixar vazio, são usados os honorários padrão.</li>
+                <li>Toque no botão <strong>Salvar</strong> para criar o cliente.</li>
+            </ol>
+
+            <h4>Importar a lista de clientes do Excel</h4>
+            <ol>
+                <li>Na tela <strong>Clientes</strong>, toque no botão <strong>Importar</strong>, ao lado do botão <strong>Nova ficha de cliente</strong>.</li>
+                <li>Na janela que abre, toque em <strong>Baixar modelo</strong>. Um arquivo do Excel em branco (.xlsx) com as colunas Nome, Sobrenome, Telefone, E-mail e Honorários por sessão é salvo no seu dispositivo. A segunda planilha do arquivo traz as instruções de preenchimento.</li>
+                <li>Abra o modelo no Excel ou em um programa semelhante e escreva os dados dos seus clientes por cima da linha de exemplo. <strong>Não exclua a linha de cabeçalho.</strong> Apenas o campo <strong>Nome</strong> é obrigatório; sobrenome, telefone, e-mail e honorários podem ficar vazios. São importadas no máximo 500 linhas por vez.</li>
+                <li>Salve o arquivo, volte ao aplicativo e envie-o pela mesma janela com <strong>Selecionar arquivo</strong>.</li>
+                <li>Antes de os registros serem criados aparece uma <strong>prévia</strong>: quantos clientes serão adicionados, quais linhas serão ignoradas por já estarem na sua lista e quais linhas não podem ser importadas, cada uma com o número da linha. Os registros existentes não são sobrescritos. Se o telefone ou o e-mail não puder ser lido, o cliente é adicionado mesmo assim e apenas esse campo fica vazio.</li>
+                <li>Confirme com <strong>Adicionar clientes</strong>. Depois que o processo terminar, enquanto a janela continuar aberta, você pode remover todos os registros adicionados com o botão <strong>Desfazer esta importação</strong>. Depois de fechar a janela, não é mais possível desfazer a importação em bloco.</li>
+            </ol>
+
+            <h4>Editar os dados do cliente</h4>
+            <ol>
+                <li>Na tela <strong>Clientes</strong>, toque no nome do cliente que deseja editar.</li>
+                <li>Na tela de detalhes que abre, toque no botão <strong>Editar</strong> do grupo de botões da parte superior.</li>
+                <li>Atualize os campos que desejar.</li>
+                <li>Toque no botão <strong>Atualizar</strong> para salvar as alterações.</li>
+            </ol>
+
+            <h4>Ver os detalhes do cliente</h4>
+            <ol>
+                <li>Na tela <strong>Clientes</strong>, toque no nome do cliente.</li>
+                <li>Na tela de detalhes são exibidos todos os dados do cliente, o histórico de sessões, os registros de testes e as informações financeiras.</li>
+                <li>No histórico de sessões são listadas a data e a hora de cada registro. Ao tocar em uma linha, abrem-se as notas anteriores à sessão, as notas da sessão, as observações da IA, as notas para a próxima sessão e as imagens anexadas. Para abrir a sessão em si, toque no botão <strong>Editar</strong> da linha.</li>
+                <li>Com a barra de busca você pode pesquisar por palavra-chave no histórico de sessões.</li>
+            </ol>
+
+            <h4>Tornar um cliente ativo ou inativo</h4>
+            <ol>
+                <li>Abra a tela de detalhes do cliente.</li>
+                <li>Toque no botão <strong>Tornar inativo</strong>, na parte superior. Se o cliente já estiver inativo, esse botão aparece como <strong>Tornar ativo</strong>.</li>
+                <li>O filtro acima da lista de clientes vem com <strong>Ativos</strong> selecionado por padrão, por isso os clientes inativos não aparecem na lista. Para vê-los, toque na opção <strong>Inativos</strong> ou <strong>Todos</strong> do filtro.</li>
+            </ol>
+
+            <h4>Baixar a ficha do cliente</h4>
+            <ol>
+                <li>Abra a tela de detalhes do cliente.</li>
+                <li>Toque no botão <strong>Baixar relatório</strong> (ícone de download).</li>
+                <li>Na janela que abre, escolha o formato do relatório (<strong>Word</strong> é o padrão; você também pode escolher <strong>PDF</strong>) e toque no botão <strong>Baixar</strong>.</li>
+                <li>Depois que o relatório fica pronto, abre-se a janela de segurança: se escolher <strong>🔒 Criptografar</strong>, é baixado um ZIP protegido pela senha que você definir; se escolher <strong>Baixar sem criptografia</strong>, o arquivo é salvo como está assim que você confirmar o aviso. O relatório contém os dados do cliente, o histórico de sessões, os resultados dos testes e as avaliações da IA.</li>
+            </ol>
+
+            <h4>Excluir um cliente</h4>
+            <ol>
+                <li>Abra a tela de detalhes do cliente.</li>
+                <li>Toque no botão vermelho <strong>Excluir</strong> do grupo de botões da parte superior.</li>
+                <li>A janela de confirmação indica o que será excluído: a ficha do cliente, todos os agendamentos desse cliente e os registros de testes. Os honorários de sessão já recebidos também são excluídos junto com esses agendamentos, portanto o seu histórico de orçamento e os seus relatórios de receitas mudam; as despesas do consultório que não estão vinculadas a um cliente não são afetadas.</li>
+                <li>A exclusão não pode ser desfeita. Se você terminou o trabalho com o cliente e só quer tirar o registro da vista, <strong>recomenda-se Tornar inativo em vez de excluir</strong>: o histórico de agendamentos, os registros de testes e os dados de orçamento permanecem como estão, o cliente apenas fica oculto nas listas e pode ser reativado a qualquer momento. Por isso, para um cliente ativo, a janela de confirmação tem três botões: <strong>Cancelar</strong>, <strong>Tornar inativo</strong> e <strong>Sim, excluir</strong>. Se o cliente já estiver inativo, o botão <strong>Tornar inativo</strong> não aparece; ficam apenas <strong>Cancelar</strong> e <strong>Sim, excluir</strong>.</li>
+                <li>Para confirmar a exclusão, toque no botão <strong>Sim, excluir</strong>. Essa ação não pode ser desfeita; a única forma de voltar atrás é restaurar um backup feito antes da exclusão.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 3. Gerenciamento de agendamentos e sessões -->
+    <details class="guide-section">
+        <summary>Gerenciamento de agendamentos e sessões</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Aqui você encontra informações sobre como criar e editar agendamentos, programar sessões recorrentes e escrever notas de sessão.</p>
+
+            <h4>Criar um novo agendamento</h4>
+            <ol>
+                <li>Vá para a tela <strong>Calendário</strong>.</li>
+                <li>Toque no dia e no horário em que deseja criar o agendamento. A janela do agendamento é aberta.</li>
+                <li>Selecione o seu cliente na lista suspensa <strong>Cliente</strong>. Você pode filtrar digitando na caixa de busca.</li>
+                <li>O campo <strong>Duração (minutos)</strong> já vem preenchido com a duração padrão definida em Configurações. Para mudar, escolha na lista: 15, 30, 45, 60, 75, 90, 120, 150 ou 180 minutos.</li>
+                <li>Se precisar, escreva no campo <strong>Notas anteriores à sessão</strong> o que quer lembrar antes da sessão; essa nota aparece junto com o agendamento na seção Notas do dia da tela inicial.</li>
+                <li>Toque no botão <strong>Salvar</strong> ou <strong>Salvar e sair</strong>.</li>
+            </ol>
+
+            <h4>Adicionar um cliente rapidamente</h4>
+            <ol>
+                <li>Este caminho cria em uma única etapa a ficha do cliente e o agendamento de uma pessoa que ainda não está cadastrada. Na janela do agendamento, em vez de escolher na lista, digite o nome e o sobrenome do cliente no campo <strong>Novo cliente</strong>.</li>
+                <li>Assim que você começa a digitar, o campo de honorários aparece. Se deixar vazio, o agendamento usa os seus honorários padrão por sessão; você também pode informar um valor específico para este agendamento.</li>
+                <li>Salve o agendamento. A ficha do cliente é criada automaticamente em segundo plano — a última palavra do texto digitado vira o sobrenome e o restante, o nome — e o agendamento é vinculado a essa ficha.</li>
+                <li>Se já existir um cliente cadastrado com o mesmo nome, um aviso é exibido; se for outra pessoa, você pode confirmar para criar o novo registro.</li>
+                <li>A ficha criada é uma ficha de cliente comum; você pode preencher depois campos como telefone, e-mail e data de nascimento pela tela Clientes. Os honorários próprios da ficha ficam vazios, portanto os honorários padrão também valem para os agendamentos seguintes desse cliente.</li>
+            </ol>
+
+            <h4>Editar um agendamento</h4>
+            <ol>
+                <li>Toque no agendamento que deseja editar, no calendário ou na tela inicial.</li>
+                <li>Na janela que se abre, altere os campos que quiser (duração, notas, honorários, recebimento etc.). Para mudar o dia ou o horário do agendamento, feche a janela e arraste o agendamento para a nova posição no calendário. Se o agendamento não sair do lugar, o bloqueio de arrastar pode estar ativado; confira o botão de cadeado no centro do seletor de visão.</li>
+                <li>Toque no botão <strong>Salvar</strong>. Se o agendamento fizer parte de uma série, será solicitado que você escolha a abrangência da atualização.</li>
+            </ol>
+
+            <h4>Criar um agendamento recorrente</h4>
+            <ol>
+                <li>Ao criar um novo agendamento, marque a caixa <strong>Repetir</strong>.</li>
+                <li>Na lista suspensa ao lado da caixa <strong>Repetir</strong>, escolha o intervalo de repetição: <strong>Toda semana</strong>, <strong>A cada 2 semanas</strong>, <strong>A cada 3 semanas</strong> ou <strong>Todo mês</strong>.</li>
+                <li>No campo <strong>vezes</strong>, informe quantas sessões serão criadas (de 1 a 52).</li>
+                <li>Toque no botão <strong>Salvar</strong>. Os agendamentos são criados automaticamente na frequência indicada.</li>
+                <li>A última sessão da série aparece no calendário em <strong>roxo</strong> e, no canto inferior direito do quadro, surge uma <strong>bandeira de chegada (🏁)</strong>; assim você vê num relance onde a série termina. Na visão mensal a bandeira não aparece: o quadro com o número de sessões daquele dia fica roxo.</li>
+                <li>Ao abrir qualquer agendamento da série, o painel de informações da série aparece na parte superior da janela (no último agendamento, como aviso laranja). Ajuste ali a frequência e a caixa <strong>vezes</strong> e toque no botão <strong>Estender</strong> para adicionar mais sessões à série. Quando você estende a série, a cor roxa e a bandeira passam automaticamente para a nova última sessão.</li>
+            </ol>
+
+            <h4>Escrever notas de sessão</h4>
+            <ol>
+                <li>A janela do agendamento tem três áreas de notas distintas:</li>
+                <li><strong>Notas anteriores à sessão</strong> (laranja): o que você precisa lembrar ou verificar antes da sessão. Essa nota, escrita ao criar o agendamento, aparece abaixo do agendamento na seção <strong>Notas do dia</strong> da tela inicial; assim, ao começar o dia, você já tem diante de si o que olhar em cada sessão.</li>
+                <li><strong>Notas da sessão</strong> (verde): o registro principal da sessão. Todas as notas e observações que você faz durante ou depois da sessão — tudo o que foi conversado e o que teve importância naquela sessão — ficam aqui. Se, de forma opcional, você executar a análise da sessão com IA, a análise também lê o texto deste campo.</li>
+                <li><strong>Notas para a próxima sessão</strong> (roxo): os temas que você quer abordar na próxima sessão, com base nas suas observações. Você pode escrevê-los ou, de forma opcional, pedir uma sugestão à IA; se o campo já tiver texto, a sugestão é acrescentada ao final do que você escreveu, sem sobrescrever. Quando você cria um novo agendamento para o mesmo cliente e o seleciona, essas notas da sessão anterior passam automaticamente para o campo <strong>Notas anteriores à sessão</strong> do novo agendamento (se o campo já tiver texto, são acrescentadas ao final) e uma notificação é exibida.</li>
+                <li>Em vez de digitar as <strong>Notas da sessão</strong>: se você anotou em papel durante a sessão, pode fotografar a anotação e anexá-la ao agendamento. Ao tocar no botão de <strong>reconhecimento de escrita à mão</strong> sobre a imagem anexada, a IA converte a escrita em texto; após a janela de confirmação, você escolhe o formato das notas (Nota livre, SOAP ou DAP). O texto obtido é acrescentado ao final deste campo, sem sobrescrever o que você já escreveu.</li>
+                <li>Com o botão <strong>Modo de leitura</strong> ao lado de cada área de notas, você pode ler as notas em tela cheia.</li>
+            </ol>
+
+            <h4>Bloquear um horário (marcar como indisponível)</h4>
+            <ol>
+                <li>Na janela do agendamento, marque a caixa <strong>Bloquear este horário</strong>.</li>
+                <li>Esse modo desativa todos os campos de cliente, honorários, notas, anexos e duração. Por isso, escolha a duração <strong>antes de marcar a caixa</strong>; o bloqueio é criado com essa duração.</li>
+                <li>Toque no botão <strong>Salvar</strong>. Esse intervalo é marcado no calendário como "Indisponível".</li>
+                <li>Os horários bloqueados também podem ser configurados como recorrentes.</li>
+            </ol>
+
+            <h4>Excluir um agendamento</h4>
+            <ol>
+                <li>Toque no agendamento que deseja excluir para abrir a janela.</li>
+                <li>Toque no botão vermelho <strong>Excluir sessão</strong>, no canto inferior esquerdo.</li>
+                <li>Se for um agendamento único, toque no botão <strong>Sim, excluir</strong> na janela de confirmação (nos horários bloqueados esse botão vira <strong>Sim, remover bloqueio</strong>). Em um agendamento recorrente, em vez dessa etapa de confirmação abre-se diretamente a janela de abrangência.</li>
+                <li>Se for um agendamento recorrente, escolha a abrangência da exclusão: <strong>Excluir somente esta sessão</strong> ou <strong>Excluir esta e todas as próximas sessões</strong>.</li>
+            </ol>
+
+            <h4>Controle de pagamentos</h4>
+            <ol>
+                <li>Ao abrir um agendamento salvo, à direita do título <strong>Notas da sessão</strong> fica a caixa <strong>Recebido</strong>. Ao criar um novo agendamento essa caixa não aparece; ela surge depois que o agendamento é salvo.</li>
+                <li>Marque essa caixa quando o cliente fizer o pagamento.</li>
+                <li>Quando se acumulam sessões não pagas, na janela do agendamento do cliente é exibido o <strong>aviso de saldo em aberto acumulado</strong>.</li>
+                <li>Você não precisa abrir cada agendamento para registrar os pagamentos: na aba <strong>Orçamento > Receitas</strong> todas as sessões ficam listadas, e a caixa <strong>Recebido</strong> também pode ser marcada diretamente nessa lista.</li>
+                <li>Selecionando um cliente no filtro acima da lista, você vê apenas o histórico de pagamentos dele. Com as caixas <strong>Mostrar apenas as sessões não recebidas</strong> e <strong>Mostrar apenas as sessões recebidas</strong> você restringe a lista, e com o filtro de data escolhe o período.</li>
+                <li>Na lista, as sessões recebidas aparecem esmaecidas; as sessões cuja data já passou e que não foram recebidas são marcadas em <strong>vermelho</strong>, de modo que os pagamentos atrasados se destacam à primeira vista.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 4. Uso do calendário -->
+    <details class="guide-section">
+        <summary>Uso do calendário</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">A tela Calendário permite gerenciar seus agendamentos de forma visual.</p>
+
+            <h4>Visão mensal</h4>
+            <ol>
+                <li>Vá para a tela <strong>Calendário</strong>. Por padrão abre-se a visão dinâmica (por dia); para a visão mensal, toque no botão <strong>Mensal</strong>, à direita da linha de visões.</li>
+                <li>Em cada célula de dia, o número de sessões daquele dia é resumido em um único quadro (ex.: <strong>Sessões: 3</strong>). Os dias marcados como indisponíveis e os feriados são mostrados com um quadro vermelho <strong>Indisponível</strong>.</li>
+                <li>Toque em um dia para ver a lista detalhada dos agendamentos daquele dia.</li>
+                <li>Navegue entre os meses com os botões de seta simples na parte superior e entre os anos com os botões de seta dupla. Volte para o dia atual com o botão <strong>Hoje</strong>.</li>
+            </ol>
+
+            <h4>Visão dinâmica (1 / 3 / 5 / 7 dias)</h4>
+            <ol>
+                <li>Na tela Calendário, toque no botão <strong>3 dias</strong> (1/3/5/7 dias, conforme o dispositivo) à esquerda, na linha inferior da barra de ferramentas superior. O botão <strong>Mensal</strong>, à direita, volta para a visão mensal.</li>
+                <li>Na visão dinâmica, os dias são mostrados em colunas lado a lado e as horas em linhas. O intervalo padrão é <strong>08:00-21:00</strong>; você pode alterá-lo em <strong>Configurações > Personalização > Definir o horário de trabalho</strong>.</li>
+                <li>Para mudar o número de dias, toque no botão de seta para baixo à direita do botão de dias (nele aparece o número de dias exibidos no momento: <strong>3 dias</strong>, <strong>5 dias</strong> etc.) e escolha na lista. As opções variam conforme o dispositivo: no celular <strong>1 / 3</strong>, no tablet <strong>1 / 3 / 5</strong> e no computador <strong>1 / 3 / 5 / 7</strong> dias.</li>
+                <li>Toque em uma faixa de horário para criar um novo agendamento nesse horário.</li>
+                <li>Tocando no botão <strong>30 min</strong> do canto superior esquerdo, você pode alterar o intervalo da grade de horários para <strong>15 / 30 / 60 minutos</strong>.</li>
+            </ol>
+
+            <h4>Navegar pelo calendário</h4>
+            <ol>
+                <li>Avance e volte com os botões de seta simples dos dois lados do botão <strong>Hoje</strong>: um dia na visão por dia, um mês na visão mensal.</li>
+                <li>Os botões de seta dupla mais externos (<strong>Retroceder rápido</strong> / <strong>Avançar rápido</strong>) saltam em passos maiores: na visão por dia, tantos dias quantos estiverem na tela; na visão mensal, um ano.</li>
+                <li>Toque no botão <strong>Hoje</strong> para voltar ao dia atual.</li>
+                <li>No calendário, você pode mover os agendamentos para outros horários arrastando e soltando. Se receia movê-los sem querer, pode desativar essa função; veja o tópico <strong>Evitar movimentos acidentais</strong> abaixo.</li>
+                <li>Em dispositivos de toque, você também pode navegar para frente e para trás <strong>deslizando o calendário para a direita/esquerda</strong> com o dedo.</li>
+            </ol>
+
+            <h4>Evitar movimentos acidentais (bloqueio de arrastar)</h4>
+            <ol>
+                <li>No centro do seletor de visão, entre os botões <strong>7 dias</strong> e <strong>Mensal</strong>, há um botão com um cadeado. Ao abrir o aplicativo, esse bloqueio está desativado, ou seja, o arrastar está liberado.</li>
+                <li>Ao tocar no botão, o bloqueio entra em ação: o botão fica âmbar, o ícone vira um cadeado fechado e aparece o aviso "Arrastar e soltar desativado". A partir daí, os agendamentos não podem mais ser movidos.</li>
+                <li>Com o bloqueio ativo, você continua navegando normalmente pelo calendário: deslizar com o dedo para a direita/esquerda e rolar para cima/baixo não são afetados. Apenas o arrastar dos agendamentos e dos blocos <strong>Indisponível</strong> fica impedido.</li>
+                <li>Para liberar o arrastar novamente, toque no mesmo botão; ele volta à cor normal e você pode mover os agendamentos de novo.</li>
+                <li>Essa preferência é específica do dispositivo que você usa: ela vale nesse dispositivo até que você a desative e não é transferida para os seus outros dispositivos. Se não conseguir mover um agendamento, verifique primeiro se esse botão está âmbar.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 5. Fotos e anexos -->
+    <details class="guide-section">
+        <summary>Fotos e anexos</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Você pode anexar fotos às sessões, tirar fotos com a câmera e usar o reconhecimento de escrita à mão.</p>
+
+            <h4>Anexar uma foto a uma sessão</h4>
+            <ol>
+                <li>Abra a janela do agendamento.</li>
+                <li>Na linha <strong>Anexos</strong>, abaixo do campo <strong>Notas da sessão</strong>, toque no botão <strong>Enviar arquivo</strong>.</li>
+                <li>Escolha um arquivo de imagem no seu dispositivo. A imagem escolhida aparece como miniatura na área de imagens da sessão.</li>
+                <li>Toque na miniatura para abri-la no visualizador em tela cheia.</li>
+                <li>Para excluí-la, toque no botão vermelho <strong>✕</strong> no canto superior direito da miniatura.</li>
+            </ol>
+
+            <h4>Tirar uma foto com a câmera (celular e tablet)</h4>
+            <ol>
+                <li>Na janela do agendamento, toque no botão <strong>Enviar arquivo</strong> da linha <strong>Anexos</strong>.</li>
+                <li>No celular e no tablet, na tela de seleção que se abre, você pode tirar uma foto na hora com a opção <strong>Câmera</strong>. Se o dispositivo pedir permissão de acesso à câmera no primeiro uso, conceda a permissão.</li>
+                <li>A foto tirada é anexada diretamente ao agendamento, como se tivesse sido escolhida na galeria.</li>
+                <li>No computador (Windows e macOS), essa tela permite apenas escolher um arquivo; tirar fotos na hora com a câmera é exclusivo do celular e do tablet.</li>
+            </ol>
+
+            <h4>Reconhecimento de escrita à mão</h4>
+            <ol>
+                <li>Depois de adicionar uma imagem à sessão, toque no ícone azul e redondo de <strong>estrela</strong> no canto inferior esquerdo da miniatura. O ícone não tem texto ao lado; no computador, ao manter o cursor sobre ele, aparece a dica <strong>Digitalizar a escrita à mão</strong>.</li>
+                <li>Na janela <strong>Confirmação da análise com IA</strong> que se abre, toque em <strong>Aceitar e continuar</strong>. Em seguida, na janela <strong>Estilo das notas manuscritas</strong>, escolha o <strong>Formato das notas</strong> (Nota livre, SOAP ou DAP) e o modelo de IA a ser usado, e confirme.</li>
+                <li>A IA converte em texto a escrita à mão da imagem e a acrescenta ao final do campo <strong>Notas da sessão</strong>. O texto que já estava escrito no campo é preservado.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 6. Orçamento e gerenciamento financeiro -->
+    <details class="guide-section">
+        <summary>Orçamento e gerenciamento financeiro</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Nesta seção você aprende a acompanhar receitas e despesas, a usar a análise financeira e a exportar os dados.</p>
+
+            <h4>Acompanhamento de receitas</h4>
+            <ol>
+                <li>Vá para a tela <strong>Orçamento</strong>. Por padrão abre-se a aba <strong>Receitas</strong>.</li>
+                <li>Todas as suas sessões são listadas com data, nome do cliente, honorários e situação de recebimento.</li>
+                <li>Com o filtro de data na parte superior, você pode filtrar por um mês ou um ano específico.</li>
+                <li>Com o filtro de cliente, você pode ver os pagamentos de um cliente específico.</li>
+                <li>Abaixo da tabela são exibidos a receita total e o resumo dos valores recebidos e não recebidos.</li>
+            </ol>
+
+            <h4>Enviar uma mensagem de lembrete de pagamento</h4>
+            <ol>
+                <li>Com um único toque, você prepara uma mensagem de lembrete para um cliente com pagamentos vencidos. Na aba <strong>Receitas</strong>, toque no ícone vermelho de <strong>mensagem</strong> que aparece ao lado da data nas linhas vermelhas. O mesmo ícone está em mais dois lugares: ao lado do aviso de saldo em aberto acumulado na janela do agendamento e ao lado da linha do saldo na ficha do cliente.</li>
+                <li>Na mensagem, o número de sessões vencidas do cliente e o valor total são preenchidos automaticamente. O valor é o mesmo saldo em aberto acumulado que você vê na tela, e a mensagem abrange sempre o saldo total do cliente — não uma única sessão.</li>
+                <li>Na pré-visualização que se abre, você pode ler o texto antes de enviá-lo e editá-lo como quiser. Depois, toque em um dos botões <strong>Enviar pelo WhatsApp</strong>, <strong>Enviar por SMS</strong> ou <strong>Enviar por e-mail</strong>. O PsyAgenda não envia a mensagem sozinho; ele abre o aplicativo escolhido com o texto já pronto. A mensagem só chega ao cliente quando você toca em enviar nesse aplicativo.</li>
+                <li>Você pode editar o modelo da mensagem em <strong>Configurações > Notificações</strong>: abra o tópico <strong>Modelos de mensagem</strong> e altere o campo <strong>Mensagem de lembrete de pagamento</strong>; se quiser, pode acrescentar ao modelo seus dados de pagamento, como a chave Pix. Para acessar os modelos, não é necessário ativar a opção <strong>Mensagens para clientes</strong>.</li>
+            </ol>
+
+            <h4>Adicionar e gerenciar despesas</h4>
+            <ol>
+                <li>Vá para a aba <strong>Orçamento > Despesas</strong>.</li>
+                <li>Toque no botão <strong>Adicionar nova despesa</strong>.</li>
+                <li>No formulário que se abre, informe a data, a descrição, a categoria e o valor.</li>
+                <li>Toque no botão <strong>Salvar</strong>. A despesa é adicionada à lista.</li>
+                <li>Para editar uma despesa, toque no ícone azul de <strong>lápis</strong> da coluna <strong>Ações</strong>, no fim da linha; para excluí-la, toque no ícone vermelho de <strong>lixeira</strong>.</li>
+            </ol>
+
+            <h4>Gerenciar as categorias de despesa</h4>
+            <ol>
+                <li>Na aba <strong>Orçamento > Despesas</strong>, toque no botão <strong>Adicionar categoria</strong> (<strong>Categorias</strong> no celular). Abre-se a janela <strong>Gerenciar categorias de despesa</strong>.</li>
+                <li>Para adicionar uma nova categoria, digite o nome dela no campo superior e toque no botão <strong>Adicionar</strong>.</li>
+                <li>Com o botão <strong>Ativa</strong>/<strong>Inativa</strong> ao lado do nome da categoria, você pode ocultá-la das listas; as categorias inativas não aparecem no formulário de nova despesa nem nos filtros, e os registros antigos são preservados. Para excluir, toque no ícone de lixeira — se houver despesas registradas nessa categoria, a exclusão é bloqueada; mude antes a categoria dessas despesas.</li>
+            </ol>
+
+            <h4>Gráficos de análise financeira</h4>
+            <ol>
+                <li>Vá para a aba <strong>Orçamento > Análise</strong>.</li>
+                <li>Na parte superior são exibidos os cartões <strong>Receita total</strong>, <strong>Despesa total</strong> e <strong>Lucro líquido</strong>. Esses valores abrangem o período escolhido no <strong>filtro de data</strong>, no canto superior direito, e na receita entram apenas as sessões com a caixa <strong>Recebimento</strong> marcada.</li>
+                <li>O gráfico de tendência de receitas e despesas de 12 meses e o gráfico do número de sessões são carregados automaticamente.</li>
+                <li>Nos cartões de detalhamento mensal, você vê a receita, a despesa, o resultado líquido e os detalhes das sessões de cada mês.</li>
+            </ol>
+
+            <h4>Exportar para Excel</h4>
+            <ol>
+                <li>No canto superior direito da tela <strong>Orçamento</strong>, toque no botão com o ícone de <strong>seta verde para baixo</strong>, à esquerda do botão vermelho de fechar (✕) (botão de exportação para o Excel).</li>
+                <li>São oferecidas duas opções: <strong>Exportar dados filtrados</strong> ou <strong>Exportar todos os dados</strong>.</li>
+                <li>A opção <strong>Exportar todos os dados</strong> cria um arquivo do Excel (.xlsx) com as planilhas completas de receitas, despesas e análise. Já <strong>Exportar dados filtrados</strong> exporta as linhas filtradas que estão na tela da aba aberta no momento; se quiser obter com filtros tanto as receitas quanto as despesas, faça a exportação de cada aba separadamente.</li>
+                <li>Antes de salvar, o aplicativo pergunta se você quer proteger o arquivo com uma senha. Se definir uma senha, o arquivo é salvo como um ZIP criptografado; se optar por salvar sem criptografia, confirme o aviso e o arquivo é baixado diretamente.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 7. Testes psicológicos -->
+    <details class="guide-section">
+        <summary>Testes psicológicos</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Com os módulos de Rorschach, desenho projetivo e teste manual, você pode aplicar os testes em meio digital e gerar os relatórios.</p>
+
+            <h4>Aplicar o teste de Rorschach</h4>
+            <ol>
+                <li>Vá para a tela <strong>Módulo de testes</strong> e, na aba <strong>Iniciar novo teste</strong>, escolha <strong>Teste de Rorschach</strong>.</li>
+                <li>Na janela de configuração, informe a idade e o gênero do cliente e toque no botão <strong>Iniciar teste</strong>.</li>
+                <li>Percorra o conjunto de 10 pranchas com os botões <strong>Prancha anterior</strong> e <strong>Próxima prancha</strong>; em dispositivos móveis, você também pode deslizar para a direita/esquerda sobre a imagem da prancha. O contador no canto superior direito (ex.: 3 / 10) mostra em que prancha você está.</li>
+                <li>Para cada prancha, digite a resposta do cliente no campo <strong>Respostas do cliente</strong>.</li>
+                <li>Com o botão <strong>Obter avaliação</strong>, você pode pedir que a IA avalie aquela prancha.</li>
+                <li>Escreva suas próprias observações clínicas no campo <strong>Avaliação do terapeuta</strong>.</li>
+                <li>Depois de concluir todas as pranchas, vá para a aba <strong>Relatórios</strong> e gere os relatórios finais.</li>
+                <li>Para finalizar o teste, toque no botão <strong>Concluir teste</strong> na parte inferior; na janela <strong>Salvar o resultado do teste</strong> que se abre, escolha o cliente em cuja ficha o teste será salvo. Para interromper e continuar depois, use <strong>Salvar teste</strong>.</li>
+            </ol>
+
+            <h4>Aplicar um teste de desenho</h4>
+            <ol>
+                <li>Escolha <strong>Módulo de testes > Iniciar novo teste > Teste projetivo de desenho</strong>.</li>
+                <li>Na janela de configuração, informe o tipo de teste (Casa-Árvore-Pessoa, Desenho cinético da família etc.), a idade e o gênero.</li>
+                <li>Na tela do teste, envie a imagem do desenho ou tire a foto com a câmera.</li>
+                <li>Com o botão <strong>Obter avaliação</strong>, você pode pedir a análise do desenho.</li>
+                <li>Escreva suas próprias interpretações no campo <strong>Avaliação do terapeuta</strong>; se quiser, corrija a redação com o botão <strong>Melhorar o texto</strong> ao lado.</li>
+                <li>Com o botão <strong>Combinar relatórios</strong>, ao lado do campo <strong>Relatório híbrido</strong>, una as avaliações da IA e do terapeuta em um único relatório. Para isso, os dois campos precisam estar preenchidos.</li>
+            </ol>
+
+            <h4>Registro de teste manual</h4>
+            <ol>
+                <li>Selecione <strong>Módulo de testes > Iniciar novo teste > Registro de teste manual</strong>.</li>
+                <li>Na janela de configuração, informe o nome do teste, a idade e o gênero.</li>
+                <li>Digite os dados do teste e suas constatações no campo de texto livre.</li>
+                <li>Se necessário, adicione imagens com o botão <strong>Enviar arquivo</strong> da seção <strong>Anexos</strong> (somente arquivos de imagem são aceitos).</li>
+                <li>Salve o teste com o botão <strong>Salvar</strong>.</li>
+            </ol>
+
+            <h4>Gerar e baixar o relatório de um teste</h4>
+            <ol>
+                <li>No Rorschach, os relatórios são gerados na aba <strong>Relatórios</strong>; nos testes de desenho e manuais, os campos de relatório ficam diretamente na tela do teste. O download do relatório está disponível nos três testes.</li>
+                <li>Selecione o tipo de relatório que deseja gerar: <strong>Relatório da IA</strong>, <strong>Relatório do terapeuta</strong> ou <strong>Relatório híbrido</strong>.</li>
+                <li>Toque no botão <strong>Baixar relatório</strong>.</li>
+                <li>Na janela que se abre, selecione as seções do relatório que deseja incluir e defina o formato (<strong>Word</strong> ou <strong>PDF</strong>).</li>
+                <li>Em seguida, abre-se a janela <strong>Exportação — Segurança</strong>. Se escolher <strong>🔒 Criptografar</strong>, você baixa um arquivo ZIP protegido pela senha que definir; essa senha é necessária para abrir o arquivo, e o ZIP abre com as próprias ferramentas do Windows e do macOS, sem nenhum programa adicional. Se escolher <strong>Baixar sem criptografia</strong>, um aviso é exibido; se você confirmar, o arquivo é salvo sem proteção.</li>
+                <li>O relatório é baixado no seu dispositivo.</li>
+            </ol>
+
+            <h4>Ver os testes aplicados</h4>
+            <ol>
+                <li>Na tela <strong>Módulo de testes</strong>, vá para a aba <strong>Testes aplicados</strong>.</li>
+                <li>Todos os testes são listados por data, nome do cliente e tipo de teste.</li>
+                <li>Toque em um teste para ver os detalhes, editá-lo ou baixar o relatório.</li>
+                <li>Para excluir um teste, toque no botão <strong>Excluir</strong> na tela de detalhes.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 8. Recursos de inteligência artificial -->
+    <details class="guide-section">
+        <summary>Recursos de inteligência artificial</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Com a integração da API do Google Gemini, o PsyAgenda pode analisar suas notas de sessão, avaliar testes e gerar relatórios dos clientes. Para usar esses recursos é necessária uma chave de API.</p>
+
+            <h4>Configurar a chave de API</h4>
+            <ol>
+                <li>Acesse <strong>Configurações > Gerenciamento de API</strong>.</li>
+                <li>Cole sua chave de API do Google Gemini no campo <strong>Chave de API</strong>.</li>
+                <li>Toque no botão <strong>Salvar</strong>. Antes de ser salva, a chave é verificada junto ao Google: se for válida, é salva de forma criptografada e o texto de status na parte superior fica verde. Se não for válida, não é salva, um aviso é exibido e ela permanece no campo para que você possa corrigi-la. Se não houver conexão com a internet, a chave é salva, mas é indicado que não foi possível verificá-la.</li>
+                <li>Para informações detalhadas sobre como obter uma chave de API, toque no <strong>ícone de informação</strong> do campo.</li>
+            </ol>
+
+            <h4>Análise das notas de sessão</h4>
+            <ol>
+                <li>Na janela do agendamento, digite suas notas no campo <strong>Notas da sessão</strong>.</li>
+                <li>Toque no botão azul <strong>Avaliação da IA</strong>, ao lado do campo de notas.</li>
+                <li>Primeiro, na janela <strong>Confirmação da análise com IA</strong>, toque em <strong>Aceitar e continuar</strong>. Em seguida, na janela <strong>Configurações da análise com IA</strong> que se abre, selecione <strong>a idade e o gênero</strong> (obrigatórios), a abordagem, o nível de detalhe e o modelo, e toque em <strong>Avaliar</strong>.</li>
+                <li>Quando a análise termina, o resultado é exibido no campo <strong>Observações da IA</strong>. Para que ele seja mantido, salve o agendamento com <strong>Salvar</strong>.</li>
+                <li>Com o botão <strong>Avaliação da IA</strong>, ao lado do título <strong>Notas para a próxima sessão</strong>, você obtém sugestões baseadas nas notas da sessão atual e nas observações da IA; as sugestões são escritas no campo <strong>Notas para a próxima sessão</strong>.</li>
+            </ol>
+
+            <h4>Análise geral do cliente com IA</h4>
+            <ol>
+                <li>Abra a tela de detalhes do cliente.</li>
+                <li>Toque no botão <strong>Análise geral do cliente</strong>, acima da lista do histórico de sessões.</li>
+                <li>Primeiro, na janela <strong>Confirmação da análise com IA</strong>, toque em <strong>Aceitar e continuar</strong>. Em seguida, na janela <strong>Configurações da análise com IA</strong> que se abre, selecione a idade e o gênero (obrigatórios), a abordagem, o nível de detalhe e o modelo, e toque em <strong>Avaliar</strong>.</li>
+                <li>A IA analisa todas as notas de sessão e os resultados de testes do cliente para gerar um relatório de avaliação abrangente.</li>
+                <li>Você pode salvar o relatório gerado, gerá-lo novamente ou vê-lo no modo de leitura.</li>
+            </ol>
+
+            <h4>Avaliação de testes com IA</h4>
+            <ol>
+                <li>Na tela do teste de Rorschach ou do teste de desenho, toque no botão <strong>Obter avaliação</strong> de cada prancha/página.</li>
+                <li>Na janela que se abre, selecione o nível de detalhe e o <strong>modelo</strong>. No Rorschach, defina também o <strong>método de análise</strong> (Exner CS etc.); no teste de desenho essa opção não aparece.</li>
+                <li>A IA analisa a resposta ou o desenho do cliente e escreve o resultado no campo correspondente.</li>
+                <li>Com o botão <strong>Melhorar o texto</strong>, ao lado de um campo de nota ou relatório do terapeuta que já tenha conteúdo, você pode pedir à IA que corrija e enriqueça seu texto.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 9. Backup e restauração -->
+    <details class="guide-section">
+        <summary>Backup e restauração</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Você pode armazenar seus dados em um arquivo de backup criptografado e restaurá-los quando quiser.</p>
+
+            <h4>Criar um backup</h4>
+            <ol>
+                <li>Acesse <strong>Configurações > Backup</strong>.</li>
+                <li>Toque no botão <strong>Fazer backup</strong>.</li>
+                <li>Na janela <strong>Criptografar backup</strong> que se abre, defina uma senha, digite a mesma senha novamente no campo abaixo e toque no botão <strong>Fazer backup e criptografar</strong>.</li>
+                <li><strong>Anote esta senha em um lugar seguro.</strong> O arquivo de backup é totalmente criptografado com ela; se você esquecer a senha, nunca mais conseguirá acessar os dados desse backup.</li>
+                <li>Enquanto o backup é preparado, uma janela de progresso é exibida. Não feche o aplicativo durante esse processo.</li>
+                <li>O local em que o backup é salvo depende do seu dispositivo:<br><strong>Windows / macOS:</strong> abre-se a janela para salvar o arquivo; escolha a pasta e clique em <strong>Salvar</strong>. Se você cancelar essa janela, o backup não é criado.<br><strong>Android:</strong> o backup é salvo diretamente na pasta <strong>Downloads</strong> do seu dispositivo.<br><strong>iPhone / iPad:</strong> o backup é salvo primeiro na pasta do próprio aplicativo; logo em seguida, abre-se a tela de compartilhamento, que permite salvar o arquivo no local que você escolher (iCloud Drive, memória do celular etc.) ou enviá-lo para onde quiser.</li>
+                <li><strong>No iPhone / iPad, não pule esta última etapa:</strong> pela tela de compartilhamento, envie uma cópia do backup para fora do aplicativo — <strong>Salvar em Arquivos</strong>, AirDrop, WhatsApp, Mail ou iCloud Drive. Se você fechar essa tela, o backup fica apenas dentro do aplicativo; ao excluir o aplicativo, o backup também é excluído.</li>
+            </ol>
+
+            <h4>Restaurar a partir de um backup</h4>
+            <ol>
+                <li>Acesse <strong>Configurações > Backup</strong>.</li>
+                <li>Toque no botão <strong>Restaurar backup</strong>.</li>
+                <li>Selecione no seu dispositivo o arquivo <strong>.thnbak</strong> criado anteriormente.</li>
+                <li>Digite a senha que você definiu ao criar o backup.</li>
+                <li>Uma barra de progresso é exibida. Ao terminar, seus dados são restaurados. Suas configurações de sincronização são preservadas.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 10. Sincronização com o Google Drive -->
+    <details class="guide-section">
+        <summary>Sincronização com o Google Drive</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Você pode sincronizar seus dados de forma criptografada entre vários dispositivos por meio do Google Drive.</p>
+
+            <h4>Conectar uma conta do Google</h4>
+            <ol>
+                <li>Acesse <strong>Configurações > Sincronização</strong>.</li>
+                <li>Toque no botão <strong>Conectar com o Google</strong>.</li>
+                <li>Entre com sua conta do Google e conceda as permissões necessárias.</li>
+                <li>Quando a conexão é estabelecida, o e-mail da sua conta é exibido.</li>
+            </ol>
+
+            <h4>Definir a senha de sincronização</h4>
+            <ol>
+                <li>A tela que aparece depois de conectar sua conta do Google depende de essa conta já ter ou não dados sincronizados: no <strong>seu primeiro dispositivo</strong> aparece a tela para definir a senha; no <strong>segundo dispositivo e nos seguintes</strong> aparecem o campo "Sua senha atual..." e o botão <strong>Conectar</strong>. No segundo dispositivo, digite a mesma senha do outro dispositivo e toque em <strong>Conectar</strong>; se não lembrar a senha, responda à sua pergunta de segurança pelo link <strong>Esqueci minha senha</strong>.</li>
+                <li>Digite sua senha de sincronização e repita a mesma senha no campo abaixo. Não há exigência de tamanho, mas, como todos os seus dados são criptografados com ela, recomendamos escolher uma senha difícil de adivinhar, com pelo menos 8 caracteres.</li>
+                <li>Mais abaixo, preencha a seção <strong>Pergunta de recuperação de senha</strong>: uma pergunta de segurança, a resposta e a repetição da resposta. Esses campos são obrigatórios — se você os deixar vazios, a sincronização não começa. Em seguida, toque no botão <strong>Iniciar sincronização</strong>; a primeira sincronização começa automaticamente.</li>
+                <li><strong>Importante:</strong> não esqueça esta senha. Todos os seus dados são criptografados com ela. Se você perder a senha, não será possível acessar os dados.</li>
+            </ol>
+
+            <h4>Alterar a senha de sincronização</h4>
+            <ol>
+                <li>Em <strong>Configurações > Sincronização</strong>, toque no botão <strong>Alterar senha</strong>.</li>
+                <li>Digite sua senha de sincronização atual no campo <strong>Senha atual</strong>. Se não lembrar, toque no link <strong>Esqueci minha senha</strong> e responda à sua pergunta de segurança.</li>
+                <li>Digite a nova senha e repita-a para confirmar.</li>
+                <li>Toque no botão <strong>Salvar</strong>; seus dados são criptografados novamente com a nova senha e enviados para o Drive.</li>
+                <li><strong>Importante:</strong> você também precisa digitar a nova senha em todos os seus outros dispositivos.</li>
+            </ol>
+
+            <h4>Sincronização manual</h4>
+            <ol>
+                <li>Acesse <strong>Configurações > Sincronização</strong>.</li>
+                <li>Toque no botão <strong>Sincronizar</strong>.</li>
+                <li>Uma barra de progresso é exibida. Quando a sincronização termina, o horário da última sincronização é atualizado.</li>
+                <li>Em caso de problemas, você pode usar os botões <strong>Forçar envio</strong> ou <strong>Forçar download</strong>. <strong>Atenção:</strong> Forçar envio substitui todos os dados do Drive pelos dados deste dispositivo; Forçar download substitui todos os dados deste dispositivo pelos dados do Drive. Nos dois casos, leia a janela de confirmação que aparece antes de confirmá-la; se não tiver certeza de qual lado está com os dados atualizados, não use esses botões.</li>
+            </ol>
+
+            <h4>Ver os dispositivos conectados</h4>
+            <ol>
+                <li>Em <strong>Configurações > Sincronização</strong> é exibida a lista <strong>Dispositivos conectados</strong>.</li>
+                <li>De cada dispositivo são exibidos o nome (por ex. iPhone, iPad, o nome do modelo Android ou o nome do computador), o ícone do tipo e o horário do último acesso.</li>
+                <li>O dispositivo que você está usando é marcado com uma etiqueta.</li>
+            </ol>
+
+            <h4>Desativar a sincronização</h4>
+            <ol>
+                <li>Em <strong>Configurações > Sincronização</strong>, toque no botão <strong>Desconectar</strong>.</li>
+                <li>Na janela de confirmação que se abre, toque novamente no botão <strong>Desconectar</strong>.</li>
+                <li>A sincronização é desativada. Seus dados no dispositivo são preservados, mas não são mais sincronizados com os outros dispositivos.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 11. Configurações de segurança -->
+    <details class="guide-section">
+        <summary>Configurações de segurança</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Com o bloqueio do aplicativo e as configurações de senha, você protege seus dados contra acessos não autorizados. Todas as configurações desta seção são <strong>específicas de cada dispositivo</strong>: sua senha, sua pergunta de segurança, o tempo de bloqueio automático e o acesso biométrico não passam para os outros dispositivos pela sincronização. Em cada dispositivo você define uma senha própria, e uma alteração feita em um deles não afeta os demais.</p>
+
+            <h4>Configurar o bloqueio do aplicativo</h4>
+            <ol>
+                <li><strong>Na configuração inicial do aplicativo</strong>, a tela para definir a senha aparece automaticamente; esta etapa não pode ser pulada.</li>
+                <li>O bloqueio do aplicativo não é ativado por uma opção separada — a definição da senha é obrigatória na primeira abertura. <strong>Configurações > Segurança</strong> contém apenas as configurações do bloqueio já existente.</li>
+                <li>A configuração tem duas etapas. Na primeira, digite sua senha, repita a mesma senha no campo abaixo e toque no botão <strong>Continuar</strong>.</li>
+                <li>Na segunda etapa, digite uma <strong>pergunta de segurança</strong>, a resposta e a repetição da resposta, e toque no botão <strong>Concluir</strong>. Esses três campos são obrigatórios e não podem ficar vazios — se você esquecer sua senha, essa pergunta é o único caminho de recuperação.</li>
+                <li>Selecione o <strong>Tempo de inatividade</strong> em <strong>Bloqueio automático</strong> para definir depois de quanto tempo sem nenhuma ação o aplicativo é bloqueado: Nunca, 30 segundos, 1, 5, 15, 30 minutos ou 1 hora.</li>
+                <li>Se quiser que a senha seja solicitada toda vez que você colocar o aplicativo em segundo plano e abri-lo de novo, ative a opção <strong>Bloquear ao retornar</strong> (desativada por padrão).</li>
+                <li>Se o seu dispositivo for compatível, ative o <strong>Acesso biométrico</strong> para desbloquear rapidamente com impressão digital, rosto ou o PIN do dispositivo; sua senha atual é solicitada durante a ativação.</li>
+            </ol>
+
+            <h4>Desativar o bloqueio do aplicativo</h4>
+            <ol>
+                <li>Em <strong>Configurações > Segurança</strong>, ative a opção <strong>Confiar neste dispositivo</strong>.</li>
+                <li>Confirme o aviso exibido e digite sua senha atual.</li>
+                <li>Neste dispositivo, a senha não será mais solicitada na abertura nem após um período de inatividade. O nível de segurança diminui; use essa opção apenas em dispositivos que sejam só seus e aos quais ninguém mais tenha acesso.</li>
+            </ol>
+
+            <h4>Alterar a senha</h4>
+            <ol>
+                <li>Acesse <strong>Configurações > Segurança</strong>.</li>
+                <li>Toque no botão <strong>Alterar senha</strong>.</li>
+                <li>Digite sua senha atual e, em seguida, digite a nova senha e confirme-a.</li>
+            </ol>
+
+            <h4>Se você esquecer a senha</h4>
+            <ol>
+                <li>Na tela de bloqueio do aplicativo, toque no link <strong>Esqueci minha senha?</strong></li>
+                <li>Sua pergunta de segurança é exibida. Digite a resposta correta.</li>
+                <li>Se a verificação for bem-sucedida, será solicitado que você defina uma nova senha. Se você fez a recuperação pela tela de bloqueio exibida <strong>na abertura</strong> do aplicativo, logo em seguida abre-se a tela de configuração e, além da nova senha, você precisa definir também <strong>uma nova pergunta de segurança com sua resposta</strong>. Se você fez a recuperação pela tela de bloqueio que aparece após um período de inatividade com o aplicativo aberto, apenas a nova senha é solicitada; sua pergunta de segurança permanece como está.</li>
+                <li><strong>Se você esquecer ao mesmo tempo sua senha e a resposta da sua pergunta de segurança</strong> (e o acesso biométrico não estiver ativado nesse dispositivo), não resta nenhuma forma de acessar seus dados. Isso não é uma falha, mas uma consequência da arquitetura de segurança do aplicativo: seu banco de dados é criptografado com uma chave que só pode ser aberta com sua senha ou com sua resposta de segurança — nem nós nem ninguém tem uma senha mestra, uma porta dos fundos ou uma cópia de recuperação.</li>
+                <li>Nesse caso, resta apenas uma opção: a etapa <strong>excluir os dados e começar do zero</strong> na tela de bloqueio (para evitar toques acidentais, é solicitado que você digite manualmente uma frase de confirmação). Se seus dados estiverem na sincronização com o Google Drive ou em um arquivo de backup, eles voltam de lá; <strong>se você não tiver nenhum dos dois, os dados são perdidos permanentemente.</strong> Por isso, recomendamos manter a sincronização ativada ou fazer backups regulares.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 12. Notificações e lembretes -->
+    <details class="guide-section">
+        <summary>Notificações e lembretes</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Nesta seção, você pode gerenciar os lembretes de sessão, os lembretes com alarme e as mensagens de notificação enviadas aos seus clientes.</p>
+
+            <h4>Notificações de lembrete de sessão (dispositivos móveis)</h4>
+            <ol>
+                <li>Em <strong>Configurações &gt; Notificações</strong>, ative os <strong>Lembretes de sessão</strong>. Se o dispositivo pedir permissão para as notificações, conceda-a; sem a permissão, a opção permanece desativada.</li>
+                <li>Com o <strong>Horário da notificação</strong>, escolha quanto tempo antes da sessão a notificação chega: <strong>5, 10, 15, 30 minutos</strong> ou <strong>1, 2, 4, 8, 24 horas</strong> antes (15 minutos por padrão).</li>
+                <li>Com a opção ativada, a notificação chega automaticamente para <strong>todas as sessões</strong> futuras; não é preciso selecionar sessões. Somente agendamentos do tipo sessão são incluídos. É uma notificação padrão do dispositivo, enviada uma única vez; se você quiser um som que toque até que você o interrompa, use os <strong>Lembretes com alarme</strong>.</li>
+                <li>Por privacidade, o nome do cliente <strong>não aparece</strong> no título da notificação por padrão; se quiser vê-lo, desative a opção <strong>Ocultar o nome do cliente na notificação</strong>. Essas configurações existem apenas no Android e no iOS.</li>
+            </ol>
+
+            <h4>Configurações de alarme (dispositivos móveis)</h4>
+            <ol>
+                <li>Primeiro, em <strong>Configurações &gt; Notificações</strong>, ative os <strong>Lembretes com alarme</strong> e defina o <strong>Comportamento do alarme</strong> como <strong>Apenas sessões selecionadas</strong>; depois, na janela do agendamento, marque a caixa <strong>Definir um alarme especial para esta sessão</strong>.</li>
+                <li>Escolha quanto tempo antes da sessão o alarme deve tocar: <strong>5, 10, 15, 30 minutos</strong> ou <strong>1, 2, 4, 8, 24 horas</strong> antes.</li>
+                <li>Nas sessões com alarme configurado, aparece um ícone de sino ao lado do cartão da sessão na <strong>tela inicial</strong>.</li>
+                <li>O <strong>Horário padrão do alarme</strong> em <strong>Configurações > Notificações</strong> define a antecedência usada quando você não faz uma escolha para uma sessão específica; com o <strong>Comportamento do alarme</strong> em <strong>Todas as sessões</strong>, todas as sessões tocam com essa antecedência.</li>
+            </ol>
+
+            <h4>Mensagem de notificação ao cliente</h4>
+            <ol>
+                <li>A opção <strong>Mensagens para clientes</strong> em <strong>Configurações > Notificações</strong> determina quando a janela de notificação é aberta. <strong>Se estiver ativada:</strong> quando você cria um agendamento com cliente, altera sua data ou seu horário, transforma um agendamento único em série, estende a série ou exclui o agendamento, a janela abre sozinha — você não precisa marcar nenhuma caixa. <strong>Se estiver desativada:</strong> nenhuma janela é aberta.</li>
+                <li>Mesmo com a opção desativada, você pode enviar mensagens: basta marcar a caixa <strong>Informar o cliente</strong> na janela do agendamento e salvar. Essa caixa prevalece sobre a opção, ou seja, você aciona a mensagem manualmente para um único agendamento. (Com a opção ativada, a janela abre de qualquer forma, então não é necessário marcar a caixa.)</li>
+                <li>Com a opção ativada ou não, <strong>a mensagem nunca é enviada sozinha.</strong> Automática é apenas a abertura da janela; a decisão de enviar é sempre sua.</li>
+                <li>Na janela <strong>Informar o cliente</strong> que se abre, você pode editar a mensagem na pré-visualização e depois escolher <strong>Enviar pelo WhatsApp</strong>, <strong>Enviar por SMS</strong> ou <strong>Enviar por e-mail</strong>; a mensagem abre pronta no aplicativo correspondente e é você quem toca no botão de enviar. Se o telefone ou o e-mail do cliente não estiverem cadastrados, o aplicativo pede que você os informe naquele momento. Se não quiser enviar, toque em <strong>Não enviar</strong>.</li>
+                <li>Ao abrir um agendamento de hoje ou futuro para o qual a notificação já foi enviada, aparece o botão <strong>Enviar lembrete</strong>. <strong>Os lembretes nunca são acionados sozinhos</strong> — nem mesmo com as mensagens automáticas ativadas. Se quiser que o cliente receba um lembrete adicional, você precisa tocar nesse botão.</li>
+                <li>Em um agendamento recorrente, você pode escolher a abrangência da notificação: <strong>Somente para esta sessão</strong> ou <strong>Para toda a série/programa</strong>.</li>
+            </ol>
+        </div>
+    </details>
+<!-- GENERATED:GUIDE-END -->
+        </article>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <span>&copy; 2026 PsyAgenda. Todos os direitos reservados.</span>
+        <nav>
+            <a href="privacy-pt.html">Política de Privacidade</a>
+            <a href="terms-pt.html">Termos de uso</a>
+            <a href="faq-pt.html">FAQ</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+(function () {
+    /* Dil menüsü: aramalı açılır liste. Diller HTML'deki listeden okunur; JS dil bilgisi taşımaz. */
+    var menu = document.getElementById('lang-menu'), btn = document.getElementById('lang-btn');
+    if (!menu || !btn) return;
+    var input = document.getElementById('lang-search'), empty = document.getElementById('lang-empty');
+    var items = Array.prototype.slice.call(document.getElementById('lang-list').children);
+    var norm = function (s) { return s.toLowerCase().replace(/ı/g, 'i').normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
+    var visible = function () { return items.filter(function (li) { return !li.hidden; }).map(function (li) { return li.firstElementChild; }); };
+    var filter = function () {
+        var q = norm(input.value.trim()), n = 0;
+        items.forEach(function (li) {
+            var a = li.firstElementChild, hit = !q || norm(a.textContent).indexOf(q) !== -1 || a.getAttribute('lang').indexOf(q) === 0;
+            li.hidden = !hit; if (hit) n++;
+        });
+        empty.hidden = n > 0;
+    };
+    var setOpen = function (open) {
+        menu.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { input.value = ''; filter(); setTimeout(function () { input.focus(); }, 0); }
+    };
+    btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+    input.addEventListener('input', filter);
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) setOpen(false); });
+    menu.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { setOpen(false); btn.focus(); return; }
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            var vis = visible(); if (!vis.length) return;
+            var i = vis.indexOf(document.activeElement), next = e.key === 'ArrowDown' ? (i + 1) % vis.length : (i <= 0 ? vis.length - 1 : i - 1);
+            vis[next].focus(); e.preventDefault();
+        } else if (e.key === 'Enter' && e.target === input) { var v = visible(); if (v.length) v[0].click(); }
+    });
+})();
+(function () {
+    /* Özellik kartları: ilk cümle görünür, gerisi tıklayınca açılır. JS yoksa hepsi açık kalır. */
+    var grid = document.querySelector('.feature-grid');
+    if (!grid) return;
+    grid.classList.add('js');
+    Array.prototype.forEach.call(grid.querySelectorAll('.feature-card'), function (card) {
+        var btn = card.querySelector('.acc-btn');
+        if (!btn) return;
+        var set = function (open) {
+            card.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.firstChild.nodeValue = open ? btn.dataset.less : btn.dataset.more;
+        };
+        card.addEventListener('click', function (e) {
+            if (e.target.closest('a')) return;
+            if (window.getSelection && String(window.getSelection()).length) return; /* metin seçerken açma */
+            set(!card.classList.contains('open'));
+        });
+    });
+})();
+(function () {
+    /* Dar ekranda gezinme şeridi yana kayar: aktif sekmeyi görünür alana getir, sağda devam varsa kenarı soldur. */
+    var nav = document.querySelector('.mainnav');
+    if (nav) {
+        var more = function () { nav.classList.toggle('more', nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 2); };
+        var act = nav.querySelector('a.active');
+        var reveal = function () { if (act && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, act.offsetLeft - 16); more(); };
+        nav.addEventListener('scroll', more, { passive: true }); window.addEventListener('resize', more); reveal();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(reveal); /* yazı tipi gelince genişlikler değişir */
+    }
+    var bar = document.getElementById('topbar');
+    if (bar) {
+        var onScroll = function () { bar.classList.toggle('stuck', window.scrollY > 8); };
+        onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    }
+    var rise = document.querySelectorAll('.rise');
+    if ('IntersectionObserver' in window && rise.length) {
+        var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        rise.forEach(function (el) { io.observe(el); });
+        /* Emniyet: gözlemci ne olursa olsun içerik 1.2 sn sonra görünür olur. */
+        setTimeout(function () { rise.forEach(function (el) { el.classList.add('in'); }); }, 1200);
+    } else { rise.forEach(function (el) { el.classList.add('in'); }); }
+
+    /* Bölüm listesi sayfadaki başlıklardan üretilir — içerik iki yere yazılmaz. */
+    var doc = document.querySelector('.doc'), list = document.getElementById('toc-list');
+    if (!doc || !list) return;
+    var sel = doc.dataset.toc || 'h2';
+    var heads = doc.querySelectorAll(sel);
+    if (heads.length < 3) { ['.toc-title', '.toc-list'].forEach(function (c) { var t = document.querySelector(c); if (t) t.hidden = true; }); return; }
+    var links = [];
+    Array.prototype.forEach.call(heads, function (h, i) {
+        var target = h.tagName === 'SUMMARY' ? h.parentNode : h;
+        if (!target.id) target.id = 'b' + (i + 1);
+        var a = document.createElement('a'); a.href = '#' + target.id; a.textContent = h.textContent.trim();
+        if (h.tagName === 'SUMMARY') a.addEventListener('click', function () { h.parentNode.open = true; });
+        list.appendChild(a); links.push(a);
+    });
+    var tick = false;
+    var spy = function () {
+        tick = false; var best = 0;
+        for (var i = 0; i < heads.length; i++) { if (heads[i].closest('[hidden]')) continue; if (heads[i].getBoundingClientRect().top <= 120) best = i; }
+        links.forEach(function (a, i) { a.classList.toggle('current', i === best); });
+    };
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+    spy();
+    /* Arama filtreledikçe bölüm listesi de daralır. */
+    document.addEventListener('docsearch', function () {
+        links.forEach(function (a, i) { var target = heads[i].tagName === 'SUMMARY' ? heads[i].parentNode : heads[i]; a.hidden = !!target.closest('[hidden]'); });
+        spy();
+    });
+})();
+(function () {
+    /* Sayfa içi arama — uygulamadaki "Bu sayfada ara" ile aynı davranış: eşleşen bölümler açılır ve
+       gösterilir, eşleşmeyenler gizlenir, kelimeler işaretlenir. Türkçe harflere ve aksana duyarsız. */
+    var input = document.getElementById('doc-search'), art = document.querySelector('article.doc');
+    if (!input || !art) return;
+    var clearBtn = document.getElementById('doc-search-clear'), status = document.getElementById('doc-search-status');
+    var fold = function (s) {
+        var out = '';
+        for (var i = 0; i < s.length; i++) {
+            var c = s[i];
+            if (c === 'ı' || c === 'İ') { out += 'i'; continue; }
+            var b = c.normalize('NFD')[0] || c, l = b.toLowerCase();
+            out += l.length === 1 ? l : b;
+        }
+        return out;
+    };
+    /* Birimler: h2 bir grup açar; her <details> kendi başına birim; h2 altındaki düz metin tek birim. */
+    var groups = [], cur = null;
+    Array.prototype.forEach.call(art.children, function (el) {
+        if (el.tagName === 'H2') { cur = { head: el, items: [] }; groups.push(cur); return; }
+        if (!cur) { cur = { head: null, items: [] }; groups.push(cur); }
+        if (el.tagName === 'DETAILS') { cur.items.push({ nodes: [el], det: el }); return; }
+        var last = cur.items[cur.items.length - 1];
+        if (!last || last.det) { last = { nodes: [], det: null }; cur.items.push(last); }
+        last.nodes.push(el);
+    });
+    var saved = null; /* arama başlamadan önceki açık/kapalı durumu */
+    var textOf = function (nodes) { return nodes.map(function (n) { return n.textContent; }).join(' '); };
+    var unmark = function () {
+        Array.prototype.forEach.call(art.querySelectorAll('mark.hit'), function (m) { m.replaceWith(m.textContent); });
+        art.normalize();
+    };
+    var mark = function (root, q) {
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), nodes = [], n = 0;
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach(function (t) {
+            var v = t.nodeValue, f = fold(v), i = f.indexOf(q);
+            if (i < 0) return;
+            var frag = document.createDocumentFragment(), last = 0;
+            while (i >= 0) {
+                if (i > last) frag.appendChild(document.createTextNode(v.slice(last, i)));
+                var m = document.createElement('mark'); m.className = 'hit'; m.textContent = v.slice(i, i + q.length); frag.appendChild(m);
+                last = i + q.length; n++; i = f.indexOf(q, last);
+            }
+            if (last < v.length) frag.appendChild(document.createTextNode(v.slice(last)));
+            t.parentNode.replaceChild(frag, t);
+        });
+        return n;
+    };
+    var setHidden = function (nodes, h) { nodes.forEach(function (n) { n.hidden = h; }); };
+    var reset = function () {
+        unmark();
+        groups.forEach(function (g) { if (g.head) g.head.hidden = false; g.items.forEach(function (it) { setHidden(it.nodes, false); }); });
+        if (saved) { saved.forEach(function (o, d) { d.open = o; }); saved = null; }
+        Array.prototype.forEach.call(art.querySelectorAll('h2.first-visible'), function (h) { h.classList.remove('first-visible'); });
+        status.textContent = ''; clearBtn.hidden = true;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var run = function () {
+        var q = fold(input.value.trim());
+        clearBtn.hidden = !input.value;
+        if (q.length < 2) { if (saved) reset(); else { status.textContent = ''; } return; }
+        if (!saved) { saved = new Map(); Array.prototype.forEach.call(art.querySelectorAll('details'), function (d) { saved.set(d, d.open); }); }
+        unmark();
+        var hits = 0, sections = 0;
+        groups.forEach(function (g) {
+            var whole = g.head && g.items.length && !g.items[0].det; /* gizlilik/koşullar: başlık + metin tek birim */
+            var any = false;
+            if (whole) {
+                var all = [g.head].concat(g.items[0].nodes);
+                any = fold(textOf(all)).indexOf(q) !== -1;
+                g.head.hidden = !any; setHidden(g.items[0].nodes, !any);
+                if (any) { sections++; all.forEach(function (n) { hits += mark(n, q); }); }
+            } else {
+                g.items.forEach(function (it) {
+                    var ok = fold(textOf(it.nodes)).indexOf(q) !== -1;
+                    setHidden(it.nodes, !ok);
+                    if (ok) { any = true; sections++; if (it.det) it.det.open = true; it.nodes.forEach(function (n) { hits += mark(n, q); }); }
+                });
+                if (g.head) g.head.hidden = !any;
+            }
+        });
+        var firstSeen = false;
+        Array.prototype.forEach.call(art.querySelectorAll(':scope > h2'), function (h) { var f = !firstSeen && !h.hidden; h.classList.toggle('first-visible', f); if (f) firstSeen = true; });
+        status.textContent = hits ? status.dataset.count.replace('{n}', hits).replace('{m}', sections).replace('{es}', hits === 1 ? '' : 'es').replace('{s}', sections === 1 ? '' : 's') : status.dataset.none;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var timer = null;
+    input.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(run, 220); });
+    input.addEventListener('keydown', function (e) { if (e.key === 'Escape') { input.value = ''; reset(); } });
+    clearBtn.addEventListener('click', function () { input.value = ''; reset(); input.focus(); });
+})();
+</script>
+</body>
+</html>

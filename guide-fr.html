@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide d'utilisation — PsyAgenda</title>
+    <meta name="description" content="Guide d'utilisation de PsyAgenda&nbsp;: gestion des clients, création de rendez-vous, calendrier, tests, intelligence artificielle, synchronisation et plus encore.">
+    <link rel="canonical" href="https://www.psyagenda.app/guide-fr.html">
+    <link rel="alternate" hreflang="tr" href="https://www.psyagenda.app/guide-tr.html">
+    <link rel="alternate" hreflang="en" href="https://www.psyagenda.app/guide-en.html">
+    <link rel="alternate" hreflang="es" href="https://www.psyagenda.app/guide-es.html">
+    <link rel="alternate" hreflang="de" href="https://www.psyagenda.app/guide-de.html">
+    <link rel="alternate" hreflang="fr" href="https://www.psyagenda.app/guide-fr.html">
+    <link rel="alternate" hreflang="pt" href="https://www.psyagenda.app/guide-pt.html">
+    <link rel="alternate" hreflang="it" href="https://www.psyagenda.app/guide-it.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PsyAgenda">
+    <meta property="og:title" content="Guide d'utilisation — PsyAgenda">
+    <meta property="og:description" content="Guide d'utilisation de PsyAgenda&nbsp;: gestion des clients, création de rendez-vous, calendrier, tests, intelligence artificielle, synchronisation et plus encore.">
+    <meta property="og:url" content="https://www.psyagenda.app/guide-fr.html">
+    <meta property="og:image" content="https://www.psyagenda.app/app-icon.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Guide d'utilisation — PsyAgenda">
+    <meta name="twitter:description" content="Guide d'utilisation de PsyAgenda&nbsp;: gestion des clients, création de rendez-vous, calendrier, tests, intelligence artificielle, synchronisation et plus encore.">
+    <link rel="icon" href="app-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="index-fr.html"><img src="app-icon.png" alt=""><span>PsyAgenda</span></a>
+        <div class="nav-right">
+            <nav class="mainnav">
+                <a href="index-fr.html">Accueil</a>
+                <a href="guide-fr.html" class="active">Guide d'utilisation</a>
+                <a href="faq-fr.html">FAQ</a>
+                <a href="terms-fr.html">Conditions d'utilisation</a>
+                <a href="privacy-fr.html">Politique de confidentialité</a>
+            </nav>
+            <div class="lang-menu" id="lang-menu">
+                <button type="button" class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-panel" aria-label="Sélection de la langue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.7 3.9 5.8 3.9 9.2s-1.3 6.5-3.9 9.2c-2.6-2.7-3.9-5.8-3.9-9.2s1.3-6.5 3.9-9.2z"/></svg><span>Langue</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                <div class="lang-panel" id="lang-panel">
+                    <label class="lang-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="lang-search" placeholder="Rechercher une langue" autocomplete="off" spellcheck="false" aria-label="Rechercher une langue"></label>
+                    <ul class="lang-list" id="lang-list">
+                        <li><a href="guide-tr.html" lang="tr" hreflang="tr">Türkçe</a></li>
+                        <li><a href="guide-en.html" lang="en" hreflang="en">English</a></li>
+                        <li><a href="guide-es.html" lang="es" hreflang="es">Español</a></li>
+                        <li><a href="guide-de.html" lang="de" hreflang="de">Deutsch</a></li>
+                        <li><a href="guide-fr.html" lang="fr" hreflang="fr" class="current" aria-current="true">Français</a></li>
+                        <li><a href="guide-pt.html" lang="pt" hreflang="pt">Português</a></li>
+                        <li><a href="guide-it.html" lang="it" hreflang="it">Italiano</a></li>
+                    </ul>
+                    <p class="lang-empty" id="lang-empty" hidden>Aucun résultat</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="topbar-spacer" aria-hidden="true"></div>
+
+<main>
+    <div class="wrap page-head">
+        <h1>Guide d'utilisation</h1>
+        <p class="subtitle">Un guide complet qui présente pas à pas toutes les fonctionnalités de PsyAgenda. Ouvrez chaque section pour afficher les instructions détaillées.</p>
+    </div>
+    <div class="wrap doc-layout">
+        <aside class="toc">
+            <div class="doc-search">
+                <label class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="doc-search" placeholder="Rechercher dans cette page..." autocomplete="off" spellcheck="false" aria-label="Rechercher dans cette page..."><button type="button" class="search-clear" id="doc-search-clear" aria-label="Effacer" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></label>
+                <p class="search-status" id="doc-search-status" aria-live="polite" data-none="Aucun résultat." data-count="Résultats : {n} · Sections : {m}"></p>
+            </div>
+            <div class="toc-title">Sur cette page</div>
+            <div class="toc-list" id="toc-list"></div>
+        </aside>
+        <article class="doc" data-toc=".guide-section > summary">
+<!-- GENERATED:GUIDE-START -->
+    <!-- 1. Premiers pas -->
+    <details class="guide-section">
+        <summary>Premiers pas</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Découvrez les paramètres essentiels à configurer lors de votre première utilisation de PsyAgenda.</p>
+
+            <h4>Découvrir l'écran d'accueil</h4>
+            <ol>
+                <li>À l'ouverture de l'application, l'écran <strong>Accueil</strong> s'affiche.</li>
+                <li>En haut se trouvent le nom de votre cabinet et le bouton <strong>Paramètres</strong> (icône d'engrenage). Le bouton <strong>Synchroniser</strong> n'apparaît à gauche de l'engrenage qu'après la configuration de la synchronisation Google Drive.</li>
+                <li>Au centre se trouvent quatre grands boutons de navigation : <strong>Calendrier</strong>, <strong>Clients</strong>, <strong>Budget</strong> et <strong>Module de tests</strong>.</li>
+                <li>La section <strong>Notes du jour</strong> liste les séances du jour sélectionné. Utilisez le bouton <strong>date</strong> de l'en-tête pour consulter un autre jour, et le bouton <strong>Aujourd'hui</strong> pour revenir à la date du jour. Vous pouvez masquer les séances terminées avec l'icône en forme d'œil à droite.</li>
+            </ol>
+
+            <h4>Changer de langue</h4>
+            <ol>
+                <li>Touchez <strong>Paramètres</strong> (icône d'engrenage) en haut à droite de l'écran d'accueil.</li>
+                <li>Passez à l'onglet <strong>Langue</strong> et ouvrez la liste <strong>Langue de l'application</strong>.</li>
+                <li>Choisissez la langue souhaitée dans la liste et confirmez. L'application change immédiatement de langue.</li>
+            </ol>
+
+            <h4>Définir la devise</h4>
+            <ol>
+                <li>Allez dans <strong>Paramètres > Personnalisation</strong>.</li>
+                <li>Touchez le champ <strong>Choisir la devise</strong>.</li>
+                <li>Choisissez la devise souhaitée dans la liste. Dans l'avertissement qui s'affiche, touchez <strong>Oui, j'ai compris, continuer</strong>. Tous les champs d'honoraires et de budget sont affichés dans cette devise ; les montants des enregistrements existants ne sont pas convertis, seul le symbole change.</li>
+            </ol>
+
+            <h4>Définir le tarif standard par séance</h4>
+            <ol>
+                <li>Allez dans <strong>Paramètres > Personnalisation</strong>.</li>
+                <li>Touchez le champ <strong>Tarif standard par séance</strong>.</li>
+                <li>Saisissez vos honoraires de séance par défaut et quittez le champ ; le paramètre est enregistré automatiquement (la notification "Enregistré !" s'affiche). Ce tarif est renseigné automatiquement lors de la création d'un nouveau rendez-vous.</li>
+            </ol>
+
+            <h4>Définir le nom du cabinet</h4>
+            <ol>
+                <li>Allez dans <strong>Paramètres > Personnalisation</strong>.</li>
+                <li>Saisissez le nom de votre cabinet ou de votre bureau dans le champ <strong>Nom de votre cabinet</strong>.</li>
+                <li>Le nom saisi apparaîtra comme titre sur l'écran d'accueil.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 2. Gestion des clients -->
+    <details class="guide-section">
+        <summary>Gestion des clients</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Ajoutez et modifiez vos clients, consultez leurs détails et téléchargez leurs rapports.</p>
+
+            <h4>Ajouter un nouveau client</h4>
+            <ol>
+                <li>Allez à l'écran <strong>Clients</strong> depuis la barre de navigation supérieure ou l'écran d'accueil.</li>
+                <li>Touchez le bouton <strong>Nouvelle fiche client</strong> en haut. Sur téléphone et tablette, une fenêtre s'affiche : choisissez <strong>Créer manuellement</strong> pour ouvrir un formulaire vierge, ou <strong>Ajouter depuis les contacts</strong> pour que le prénom, le nom, le téléphone et l'e-mail du contact choisi soient renseignés automatiquement dans le formulaire.</li>
+                <li>Remplissez les champs <strong>Prénom</strong> et <strong>Nom</strong> (obligatoires).</li>
+                <li>Renseignez éventuellement le téléphone, l'e-mail, la date de naissance, le genre, la situation familiale, la profession, le niveau d'études et les notes privées. Sur téléphone et tablette, le bouton <strong>contacts</strong> à côté du champ téléphone vous permet de reprendre le numéro directement depuis votre carnet d'adresses ; ce bouton est aussi disponible lors de la modification d'un client existant.</li>
+                <li>Saisissez des honoraires personnalisés pour ce client dans le champ <strong>Honoraires nets de séance</strong>. S'il est vide, le tarif standard est utilisé.</li>
+                <li>Touchez <strong>Enregistrer</strong> pour créer le client.</li>
+            </ol>
+
+            <h4>Importer une liste de clients depuis Excel</h4>
+            <ol>
+                <li>Dans l'écran <strong>Clients</strong>, touchez le bouton <strong>Importer</strong> à côté de <strong>Nouvelle fiche client</strong>.</li>
+                <li>Dans la fenêtre qui s'ouvre, touchez <strong>Télécharger le modèle</strong>. Un fichier Excel vierge (.xlsx) avec les colonnes Prénom, Nom, Téléphone, E-mail et Honoraires de séance est enregistré sur votre appareil. Sa deuxième feuille contient les instructions de remplissage.</li>
+                <li>Ouvrez le modèle dans Excel ou un programme similaire et saisissez vos clients par-dessus la ligne d'exemple. <strong>Ne supprimez pas la ligne d'en-tête.</strong> Seul le champ <strong>Prénom</strong> est obligatoire ; le nom, le téléphone, l'e-mail et les honoraires peuvent rester vides. Jusqu'à 500 lignes sont importées à la fois.</li>
+                <li>Enregistrez le fichier, revenez dans l'application et chargez-le avec <strong>Choisir un fichier</strong> dans la même fenêtre.</li>
+                <li>Avant la création des fiches, un <strong>aperçu</strong> s'affiche : combien de clients seront ajoutés, quelles lignes seront ignorées parce qu'elles figurent déjà dans votre liste et quelles lignes ne peuvent pas être importées, chacune avec son numéro de ligne. Les fiches existantes ne sont jamais écrasées. Si un numéro de téléphone ou un e-mail est illisible, le client est quand même ajouté et seul ce champ reste vide.</li>
+                <li>Confirmez avec <strong>Ajouter les clients</strong>. Une fois l'import terminé, vous pouvez retirer toutes les fiches ajoutées d'un seul geste avec <strong>Annuler cet import</strong>, tant que la fenêtre reste ouverte. Après sa fermeture, le lot ne peut plus être annulé.</li>
+            </ol>
+
+            <h4>Modifier les informations d'un client</h4>
+            <ol>
+                <li>Dans l'écran <strong>Clients</strong>, touchez le nom du client à modifier.</li>
+                <li>Dans la vue détaillée qui s'ouvre, touchez le bouton <strong>Modifier</strong> dans le groupe de boutons en haut.</li>
+                <li>Mettez à jour les champs souhaités.</li>
+                <li>Touchez <strong>Mettre à jour</strong> pour enregistrer vos modifications.</li>
+            </ol>
+
+            <h4>Consulter les détails d'un client</h4>
+            <ol>
+                <li>Dans l'écran <strong>Clients</strong>, touchez le nom du client.</li>
+                <li>La vue détaillée affiche toutes les informations du client, l'historique des séances, les tests et les informations financières.</li>
+                <li>L'historique des séances liste la date et l'heure de chaque enregistrement. Touchez une ligne pour déplier les notes avant la séance, les notes de séance, les observations de l'IA, les notes pour la prochaine séance et les images jointes. Pour ouvrir la séance elle-même, touchez le bouton <strong>Modifier</strong> de cette ligne.</li>
+                <li>Utilisez la barre de recherche pour rechercher un mot-clé dans l'historique des séances.</li>
+            </ol>
+
+            <h4>Rendre un client actif/inactif</h4>
+            <ol>
+                <li>Ouvrez la vue détaillée du client.</li>
+                <li>Touchez le bouton <strong>Désactiver</strong> en haut. Si le client est déjà inactif, ce bouton indique <strong>Activer</strong>.</li>
+                <li>Le filtre au-dessus de la liste des clients est réglé par défaut sur <strong>Actifs</strong> ; les clients inactifs n'apparaissent donc pas dans la liste. Pour les voir, touchez <strong>Inactifs</strong> ou <strong>Tous</strong> dans le filtre.</li>
+            </ol>
+
+            <h4>Télécharger une fiche client</h4>
+            <ol>
+                <li>Ouvrez la vue détaillée du client.</li>
+                <li>Touchez le bouton <strong>Télécharger le rapport</strong> (icône de téléchargement).</li>
+                <li>Dans la fenêtre, choisissez le format du rapport (<strong>Word</strong> par défaut ; vous pouvez aussi choisir <strong>PDF</strong>) et touchez <strong>Télécharger</strong>.</li>
+                <li>Une fois le rapport prêt, une fenêtre de sécurité s'ouvre : touchez <strong>🔒 Chiffrer</strong> pour télécharger un ZIP protégé par un mot de passe de votre choix, ou touchez <strong>Télécharger sans chiffrement</strong> et confirmez l'avertissement pour enregistrer le fichier tel quel. Le rapport contient les informations du client, l'historique des séances, les résultats des tests et les évaluations de l'IA.</li>
+            </ol>
+
+            <h4>Supprimer un client</h4>
+            <ol>
+                <li>Ouvrez la vue détaillée du client.</li>
+                <li>Touchez le bouton rouge <strong>Supprimer</strong> dans le groupe de boutons en haut.</li>
+                <li>La fenêtre de confirmation indique ce qui sera supprimé : la fiche client, tous les rendez-vous de ce client et ses tests. Les honoraires de séance déjà encaissés disparaissent avec ces rendez-vous, ce qui modifie votre historique budgétaire et vos rapports de revenus ; les dépenses du cabinet, non liées à un client, ne sont pas affectées.</li>
+                <li>La suppression étant irréversible, si vous avez simplement fini de travailler avec le client et souhaitez ne plus voir la fiche, <strong>la désactivation est recommandée plutôt que la suppression</strong> : l'historique des rendez-vous, les tests et les données budgétaires restent intacts, le client est seulement masqué de vos listes et vous pouvez le réactiver à tout moment. C'est pourquoi la fenêtre de confirmation d'un client actif propose trois boutons : <strong>Annuler</strong>, <strong>Désactiver</strong> et <strong>Oui, supprimer</strong>. Si le client est déjà inactif, le bouton <strong>Désactiver</strong> n'apparaît pas ; seuls <strong>Annuler</strong> et <strong>Oui, supprimer</strong> restent.</li>
+                <li>Touchez <strong>Oui, supprimer</strong> pour confirmer la suppression. Cette action est irréversible ; le seul retour possible est la restauration d'une sauvegarde faite avant la suppression.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 3. Rendez-vous et séances -->
+    <details class="guide-section">
+        <summary>Rendez-vous et séances</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Apprenez à créer, modifier et gérer les rendez-vous, les séances récurrentes et les notes de séance.</p>
+
+            <h4>Créer un nouveau rendez-vous</h4>
+            <ol>
+                <li>Allez à l'écran <strong>Calendrier</strong>.</li>
+                <li>Touchez le jour et l'heure où vous souhaitez créer un rendez-vous. La fenêtre du rendez-vous s'ouvre.</li>
+                <li>Choisissez votre client dans la liste déroulante <strong>Client</strong>. Vous pouvez filtrer la liste en saisissant du texte dans le champ de recherche.</li>
+                <li>Le champ <strong>Durée (minutes)</strong> est prérempli avec la durée par défaut définie dans les Paramètres. Pour la modifier, choisissez dans la liste : 15, 30, 45, 60, 75, 90, 120, 150 ou 180 minutes.</li>
+                <li>Si nécessaire, écrivez dans la zone <strong>Notes avant la séance</strong> ce que vous souhaitez avoir en tête avant la séance ; cette note apparaît avec le rendez-vous dans le flux Notes du jour de l'écran d'accueil.</li>
+                <li>Touchez <strong>Enregistrer</strong> ou <strong>Enregistrer et fermer</strong>.</li>
+            </ol>
+
+            <h4>Ajout rapide d'un client</h4>
+            <ol>
+                <li>Ce parcours crée en une seule étape la fiche client et le rendez-vous pour une personne qui n'est pas encore enregistrée. Dans la fenêtre du rendez-vous, saisissez le prénom et le nom du client dans le champ <strong>Nouveau client</strong> au lieu de choisir dans la liste.</li>
+                <li>Le champ des honoraires s'ouvre dès que vous commencez à taper. Si vous le laissez vide, votre tarif standard s'applique au rendez-vous ; vous pouvez aussi saisir un montant propre à ce rendez-vous.</li>
+                <li>Enregistrez le rendez-vous. La fiche client est créée en arrière-plan — le dernier mot saisi devient le nom, le reste le prénom — et le rendez-vous est lié à cette fiche.</li>
+                <li>S'il existe déjà un client enregistré portant le même nom, un avertissement s'affiche ; s'il s'agit d'une autre personne, vous pouvez confirmer pour créer la nouvelle fiche.</li>
+                <li>La fiche obtenue est une fiche client ordinaire ; vous pourrez compléter plus tard le téléphone, l'e-mail, la date de naissance, etc. depuis l'écran Clients. Les honoraires propres à la fiche restent vides, de sorte que votre tarif standard s'applique aussi à ses futurs rendez-vous.</li>
+            </ol>
+
+            <h4>Modifier un rendez-vous</h4>
+            <ol>
+                <li>Touchez le rendez-vous à modifier dans le calendrier ou sur l'écran d'accueil.</li>
+                <li>Dans la fenêtre qui s'ouvre, modifiez les champs souhaités (durée, notes, honoraires, encaissement, etc.). Pour changer le jour ou l'heure du rendez-vous, fermez la fenêtre et faites glisser le rendez-vous vers son nouvel emplacement dans le calendrier. Si le rendez-vous ne bouge pas, le verrou de déplacement est peut-être actif ; vérifiez le bouton cadenas au centre du sélecteur de vue.</li>
+                <li>Touchez <strong>Enregistrer</strong>. Si le rendez-vous fait partie d'une série, il vous est demandé de choisir la portée de la modification.</li>
+            </ol>
+
+            <h4>Créer un rendez-vous récurrent</h4>
+            <ol>
+                <li>Lors de la création d'un nouveau rendez-vous, cochez la case <strong>Répéter</strong>.</li>
+                <li>Dans la liste déroulante à côté de <strong>Répéter</strong>, choisissez l'intervalle : <strong>Chaque semaine</strong>, <strong>Toutes les 2 semaines</strong>, <strong>Toutes les 3 semaines</strong> ou <strong>Chaque mois</strong>.</li>
+                <li>Dans le champ <strong>fois</strong>, saisissez le nombre de séances à créer (de 1 à 52).</li>
+                <li>Touchez <strong>Enregistrer</strong>. Les rendez-vous sont créés automatiquement à la fréquence indiquée.</li>
+                <li>La dernière séance de la série apparaît en <strong>violet</strong> dans le calendrier et un <strong>drapeau d'arrivée (🏁)</strong> s'affiche en bas à droite de sa case ; vous voyez ainsi d'un coup d'œil où se termine la série. En vue mensuelle, le drapeau n'apparaît pas ; c'est l'encadré du nombre de séances de ce jour qui devient violet.</li>
+                <li>Lorsque vous ouvrez un rendez-vous de la série, un panneau d'information sur la série s'affiche en haut de la fenêtre (sous forme d'avertissement orange pour le dernier rendez-vous). Réglez-y la fréquence et le champ <strong>fois</strong>, puis touchez <strong>Prolonger</strong> pour ajouter des séances à la série. Lorsque vous prolongez la série, la couleur violette et le drapeau passent automatiquement à la nouvelle dernière séance.</li>
+            </ol>
+
+            <h4>Rédiger les notes de séance</h4>
+            <ol>
+                <li>La fenêtre du rendez-vous comporte trois zones de notes distinctes :</li>
+                <li><strong>Notes avant la séance</strong> (orange) : ce que vous devez vous rappeler ou vérifier avant la séance. Cette note, rédigée lors de la création du rendez-vous, apparaît sous le rendez-vous dans le flux <strong>Notes du jour</strong> de l'écran d'accueil ; vous avez ainsi sous les yeux, en début de journée, ce à quoi prêter attention dans chaque séance.</li>
+                <li><strong>Notes de séance</strong> (vert) : le compte rendu principal de la séance. Toutes les notes et observations que vous prenez pendant ou après la séance — tout ce qui a été abordé et qui compte dans cette séance — se trouvent ici. Si vous lancez, en option, l'analyse de séance par l'IA, celle-ci lit également le texte de cette zone.</li>
+                <li><strong>Notes pour la prochaine séance</strong> (violet) : les sujets que vous souhaitez aborder lors de la prochaine séance, sur la base de vos observations. Vous pouvez les rédiger vous-même ou, en option, demander une suggestion à l'IA ; si la zone est déjà remplie, la suggestion est ajoutée à la suite de votre texte sans l'écraser. Lorsque vous créez un nouveau rendez-vous pour le même client et que vous le sélectionnez, ces notes de la séance précédente sont reprises automatiquement dans la zone <strong>Notes avant la séance</strong> du nouveau rendez-vous (ajoutées à la suite si la zone est remplie), et une notification s'affiche.</li>
+                <li>Au lieu de taper les <strong>Notes de séance</strong> : si vous avez pris des notes sur papier pendant la séance, vous pouvez photographier la note et la joindre au rendez-vous. Touchez le bouton <strong>reconnaissance de l'écriture manuscrite</strong> sur l'image ajoutée, et l'IA convertit l'écriture en texte ; après la fenêtre de confirmation, vous choisissez le format des notes (Texte libre, SOAP ou DAP). Le texte obtenu est ajouté à la fin de cette zone, sans écraser ce que vous avez déjà écrit.</li>
+                <li>Le bouton <strong>Mode lecture</strong> à côté de chaque zone de notes permet de lire les notes en plein écran.</li>
+            </ol>
+
+            <h4>Bloquer un créneau (marquer comme indisponible)</h4>
+            <ol>
+                <li>Dans la fenêtre du rendez-vous, cochez la case <strong>Bloquer ce créneau</strong>.</li>
+                <li>Ce mode désactive entièrement les champs client, honoraires, notes, pièces jointes et durée. Choisissez donc la durée <strong>avant de cocher la case</strong> ; le blocage est créé avec cette durée.</li>
+                <li>Touchez <strong>Enregistrer</strong>. Ce créneau est marqué "Indisponible" dans le calendrier.</li>
+                <li>Les créneaux bloqués peuvent aussi être définis comme récurrents.</li>
+            </ol>
+
+            <h4>Supprimer un rendez-vous</h4>
+            <ol>
+                <li>Touchez le rendez-vous à supprimer pour ouvrir la fenêtre.</li>
+                <li>Touchez le bouton rouge <strong>Supprimer la séance</strong> en bas à gauche.</li>
+                <li>S'il s'agit d'un rendez-vous unique, touchez <strong>Oui, supprimer</strong> dans la fenêtre de confirmation (pour les créneaux bloqués, ce bouton devient <strong>Oui, débloquer</strong>). Pour un rendez-vous récurrent, la fenêtre de choix de la portée s'ouvre directement à la place de cette étape.</li>
+                <li>S'il s'agit d'un rendez-vous récurrent, choisissez la portée de la suppression : <strong>Supprimer cette séance uniquement</strong> ou <strong>Supprimer cette séance et toutes les suivantes</strong>.</li>
+            </ol>
+
+            <h4>Suivi des paiements</h4>
+            <ol>
+                <li>Lorsque vous ouvrez un rendez-vous enregistré, la case <strong>Encaissé</strong> se trouve à droite du titre <strong>Notes de séance</strong>. Elle n'apparaît pas lors de la création d'un nouveau rendez-vous ; elle s'affiche une fois le rendez-vous enregistré.</li>
+                <li>Cochez cette case lorsque le client a payé.</li>
+                <li>Lorsque des séances non encaissées s'accumulent, un <strong>avertissement de solde impayé</strong> s'affiche dans la fenêtre du rendez-vous du client.</li>
+                <li>Vous n'êtes pas obligé d'ouvrir chaque rendez-vous pour enregistrer les paiements : dans l'onglet <strong>Budget > Revenus</strong>, toutes les séances figurent sous forme de liste et la case <strong>Encaissé</strong> peut être cochée directement depuis cette liste.</li>
+                <li>En choisissant un client dans le filtre au-dessus de la liste, vous ne voyez que son historique de paiements. Les cases <strong>Afficher uniquement les non encaissés</strong> et <strong>Afficher uniquement les encaissés</strong> permettent de restreindre la liste ; le filtre de date permet de choisir la période.</li>
+                <li>Dans la liste, les séances encaissées apparaissent estompées ; les séances dont la date est passée et qui ne sont pas encaissées sont marquées en <strong>rouge</strong>, de sorte que les paiements en retard se repèrent au premier coup d'œil.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 4. Utiliser le calendrier -->
+    <details class="guide-section">
+        <summary>Utiliser le calendrier</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">L'écran Calendrier vous permet de gérer visuellement vos rendez-vous.</p>
+
+            <h4>Vue mensuelle</h4>
+            <ol>
+                <li>Allez à l'écran <strong>Calendrier</strong>. Par défaut, la vue dynamique (par jour) s'ouvre ; pour la vue mensuelle, touchez le bouton <strong>Mois</strong> à droite de la ligne des vues.</li>
+                <li>Dans chaque case de jour, le nombre de séances du jour est résumé dans un seul encadré (par ex. <strong>Séances : 3</strong>). Les jours marqués comme indisponibles ou les jours de congé sont indiqués par un encadré rouge <strong>Indisponible</strong>.</li>
+                <li>Touchez un jour pour voir la liste détaillée de ses rendez-vous.</li>
+                <li>Naviguez entre les mois avec les boutons à flèche simple en haut, et entre les années avec les boutons à double flèche. Revenez au jour actuel avec le bouton <strong>Aujourd'hui</strong>.</li>
+            </ol>
+
+            <h4>Vue dynamique (1 / 3 / 5 / 7 jours)</h4>
+            <ol>
+                <li>Dans l'écran Calendrier, touchez le bouton <strong>3 jours</strong> (1/3/5/7 jours selon l'appareil) à gauche, sur la ligne inférieure de la barre d'outils supérieure. Le bouton <strong>Mois</strong> à droite ramène à la vue mensuelle.</li>
+                <li>En vue dynamique, les jours sont affichés en colonnes côte à côte et les heures ligne par ligne. La plage par défaut est <strong>08:00-21:00</strong> ; vous pouvez la modifier dans <strong>Paramètres > Personnalisation > Définir les heures de travail</strong>.</li>
+                <li>Pour changer le nombre de jours, touchez le bouton à flèche vers le bas situé à droite du bouton des jours (il indique le nombre de jours affichés : <strong>3 jours</strong>, <strong>5 jours</strong>, etc.) et choisissez dans la liste. Les options dépendent de l'appareil : <strong>1 / 3</strong> jours sur téléphone, <strong>1 / 3 / 5</strong> sur tablette, <strong>1 / 3 / 5 / 7</strong> sur ordinateur.</li>
+                <li>Touchez un créneau horaire pour créer un nouveau rendez-vous à cette heure.</li>
+                <li>Touchez le bouton <strong>30 min</strong> en haut à gauche pour régler l'intervalle de la grille horaire sur <strong>15 / 30 / 60 minutes</strong>.</li>
+            </ol>
+
+            <h4>Naviguer dans le calendrier</h4>
+            <ol>
+                <li>Avancez et reculez avec les boutons à flèche simple de part et d'autre de <strong>Aujourd'hui</strong> : d'un jour en vue par jour, d'un mois en vue mensuelle.</li>
+                <li>Les boutons à double flèche les plus à l'extérieur (<strong>Retour rapide</strong> / <strong>Avance rapide</strong>) sautent plus loin : en vue par jour, d'autant de jours que l'écran en affiche ; en vue mensuelle, d'un an.</li>
+                <li>Touchez le bouton <strong>Aujourd'hui</strong> pour revenir au jour actuel.</li>
+                <li>Dans le calendrier, vous pouvez déplacer les rendez-vous vers d'autres horaires par glisser-déposer. Si vous craignez les déplacements accidentels, vous pouvez désactiver cette fonction ; voir la section <strong>Éviter les déplacements accidentels</strong> ci-dessous.</li>
+                <li>Sur les appareils tactiles, vous pouvez aussi naviguer dans le calendrier en <strong>balayant vers la droite/gauche</strong> avec le doigt.</li>
+            </ol>
+
+            <h4>Éviter les déplacements accidentels (verrou de déplacement)</h4>
+            <ol>
+                <li>Au centre du sélecteur de vue, entre les boutons <strong>7 jours</strong> et <strong>Mois</strong>, se trouve un bouton cadenas. Au lancement de l'application, ce cadenas est ouvert, c'est-à-dire que le déplacement est actif.</li>
+                <li>Lorsque vous touchez le bouton, le verrou s'active : le bouton devient ambré, l'icône se transforme en cadenas fermé et la notification "Glisser-déposer désactivé" s'affiche. Les rendez-vous ne peuvent plus être déplacés.</li>
+                <li>Lorsque le verrou est actif, vous continuez à naviguer normalement dans le calendrier : le balayage vers la droite/gauche et le défilement vers le haut/bas ne sont pas affectés. Seul le déplacement des rendez-vous et des blocs <strong>Indisponible</strong> est empêché.</li>
+                <li>Pour réactiver le déplacement, touchez à nouveau le même bouton ; il reprend sa couleur normale et vous pouvez de nouveau déplacer les rendez-vous.</li>
+                <li>Ce réglage est propre à l'appareil utilisé ; il reste actif sur cet appareil jusqu'à ce que vous le désactiviez et n'est pas transféré à vos autres appareils. Si vous ne parvenez pas à déplacer un rendez-vous, vérifiez d'abord si ce bouton est ambré.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 5. Photos et pièces jointes -->
+    <details class="guide-section">
+        <summary>Photos et pièces jointes</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Vous pouvez ajouter des photos aux séances, en prendre directement avec l'appareil photo et utiliser la reconnaissance de l'écriture manuscrite.</p>
+
+            <h4>Ajouter une photo à une séance</h4>
+            <ol>
+                <li>Ouvrez la fenêtre du rendez-vous.</li>
+                <li>Sous la zone <strong>Notes de séance</strong>, dans la ligne <strong>Pièces jointes</strong>, touchez le bouton <strong>Charger un fichier</strong>.</li>
+                <li>Choisissez un fichier image sur votre appareil. L'image choisie apparaît en miniature dans la zone des images de séance.</li>
+                <li>Touchez la miniature pour l'ouvrir dans la visionneuse plein écran.</li>
+                <li>Pour supprimer, touchez le bouton rouge <strong>✕</strong> en haut à droite de la miniature.</li>
+            </ol>
+
+            <h4>Prendre une photo avec l'appareil photo (téléphone et tablette)</h4>
+            <ol>
+                <li>Dans la fenêtre du rendez-vous, touchez le bouton <strong>Charger un fichier</strong> de la ligne <strong>Pièces jointes</strong>.</li>
+                <li>Sur téléphone et tablette, dans l'écran de sélection qui s'ouvre, l'option <strong>Appareil photo</strong> permet de prendre une photo sur-le-champ. Si l'appareil demande l'autorisation d'accès à l'appareil photo lors de la première utilisation, accordez-la.</li>
+                <li>La photo prise est ajoutée directement au rendez-vous comme pièce jointe, exactement comme une image choisie dans la galerie.</li>
+                <li>Sur ordinateur (Windows et macOS), cet écran permet uniquement de choisir un fichier ; la prise de photo instantanée avec l'appareil photo est réservée au téléphone et à la tablette.</li>
+            </ol>
+
+            <h4>Reconnaissance de l'écriture manuscrite</h4>
+            <ol>
+                <li>Après avoir ajouté une image de séance, touchez l'icône bleue ronde en forme d'<strong>étoile</strong> en bas à gauche de la miniature. L'icône n'a pas de libellé ; sur ordinateur, en laissant le curseur dessus, l'infobulle <strong>Numériser l'écriture manuscrite</strong> s'affiche.</li>
+                <li>Dans la fenêtre <strong>Confirmer l'analyse par l'IA</strong> qui s'ouvre, touchez <strong>Accepter et continuer</strong>. Ensuite, dans la fenêtre <strong>Format des notes manuscrites</strong>, choisissez le <strong>Format des notes</strong> (Texte libre, SOAP ou DAP) et le modèle d'IA à utiliser, puis confirmez.</li>
+                <li>L'IA convertit l'écriture manuscrite de l'image en texte et l'ajoute à la fin de la zone <strong>Notes de séance</strong>. Le texte déjà présent dans la zone n'est pas supprimé.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 6. Budget et gestion financière -->
+    <details class="guide-section">
+        <summary>Budget et gestion financière</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Découvrez dans cette section le suivi des revenus et dépenses, l'analyse financière et les fonctions d'exportation.</p>
+
+            <h4>Suivi des revenus</h4>
+            <ol>
+                <li>Allez à l'écran <strong>Budget</strong>. L'onglet <strong>Revenus</strong> s'ouvre par défaut.</li>
+                <li>Toutes vos séances sont listées avec la date, le nom du client, les honoraires et le statut d'encaissement.</li>
+                <li>Utilisez le filtre de date en haut pour filtrer par mois ou par année.</li>
+                <li>Utilisez le filtre client pour voir les paiements d'un client donné.</li>
+                <li>Sous le tableau s'affichent le total des revenus et le résumé des montants encaissés/non encaissés.</li>
+            </ol>
+
+            <h4>Envoyer un message de rappel de paiement</h4>
+            <ol>
+                <li>Vous pouvez préparer d'un seul geste un message de rappel pour un client ayant un paiement en retard. Dans l'onglet <strong>Revenus</strong>, sur les lignes rouges, touchez l'icône rouge de <strong>message</strong> à côté de la date. La même icône se trouve à deux autres endroits : à côté de l'avertissement de solde impayé dans la fenêtre du rendez-vous et à côté de la ligne du solde dans la fiche client.</li>
+                <li>Le nombre de séances impayées du client et le montant total sont renseignés automatiquement dans le message. Le montant est identique au solde impayé affiché à l'écran, et le message couvre toujours la totalité du solde du client — et non une seule séance.</li>
+                <li>Dans l'aperçu qui s'ouvre, vous pouvez relire le texte avant l'envoi et le modifier à votre guise. Touchez ensuite <strong>Envoyer par WhatsApp</strong>, <strong>Envoyer par SMS</strong> ou <strong>Envoyer par e-mail</strong>. PsyAgenda n'envoie pas le message lui-même ; il ouvre l'application choisie avec le texte déjà rédigé. Le message ne parvient au client que lorsque vous appuyez sur envoyer dans cette application.</li>
+                <li>Vous pouvez modifier le modèle du message dans <strong>Paramètres > Notifications</strong>, en ouvrant la section <strong>Modèles de messages</strong> puis en modifiant le champ <strong>Message de rappel de paiement</strong> ; vous pouvez y ajouter vos coordonnées de paiement, comme votre IBAN. Il n'est pas nécessaire d'activer l'interrupteur <strong>Messages aux clients</strong> pour accéder aux modèles.</li>
+            </ol>
+
+            <h4>Ajouter et gérer les dépenses</h4>
+            <ol>
+                <li>Passez à l'onglet <strong>Budget > Dépenses</strong>.</li>
+                <li>Touchez le bouton <strong>Ajouter une dépense</strong>.</li>
+                <li>Dans le formulaire, saisissez la date, la description, la catégorie et le montant.</li>
+                <li>Touchez <strong>Enregistrer</strong>. La dépense est ajoutée à la liste.</li>
+                <li>Pour modifier une dépense, touchez l'icône bleue de <strong>crayon</strong> dans la colonne <strong>Actions</strong> en fin de ligne ; pour la supprimer, l'icône rouge de <strong>corbeille</strong>.</li>
+            </ol>
+
+            <h4>Gérer les catégories de dépenses</h4>
+            <ol>
+                <li>Dans l'onglet <strong>Budget > Dépenses</strong>, touchez le bouton <strong>Ajouter une catégorie</strong> (<strong>Catégories</strong> sur téléphone). La fenêtre <strong>Gérer les catégories de dépenses</strong> s'ouvre.</li>
+                <li>Pour ajouter une nouvelle catégorie, saisissez son nom dans le champ en haut et touchez <strong>Ajouter</strong>.</li>
+                <li>Le bouton <strong>Active</strong>/<strong>Inactive</strong> à côté du nom permet de masquer la catégorie dans les listes ; les catégories inactives n'apparaissent ni dans le formulaire de nouvelle dépense ni dans les filtres, et les anciens enregistrements sont conservés. Pour supprimer, touchez l'icône de corbeille — si des dépenses sont enregistrées dans cette catégorie, la suppression est bloquée ; changez d'abord la catégorie de ces dépenses.</li>
+            </ol>
+
+            <h4>Graphiques d'analyse financière</h4>
+            <ol>
+                <li>Passez à l'onglet <strong>Budget > Analyse</strong>.</li>
+                <li>En haut s'affichent les cartes <strong>Revenus totaux</strong>, <strong>Dépenses totales</strong> et <strong>Bénéfice net</strong>. Ces montants couvrent la période choisie avec le <strong>filtre de date</strong> en haut à droite, et seules les séances dont la case <strong>Encaissé</strong> est cochée sont comptées dans les revenus.</li>
+                <li>Le graphique de tendance des revenus et dépenses sur 12 mois et le graphique du nombre de séances se chargent automatiquement.</li>
+                <li>Dans les cartes du détail mensuel, vous voyez pour chaque mois les revenus, les dépenses, le solde net et le détail des séances.</li>
+            </ol>
+
+            <h4>Exporter vers Excel</h4>
+            <ol>
+                <li>En haut à droite de l'écran <strong>Budget</strong>, à gauche du bouton rouge de fermeture (✕), touchez le bouton à <strong>flèche verte vers le bas</strong> (bouton d'exportation Excel).</li>
+                <li>Deux options sont proposées : <strong>Exporter les données filtrées</strong> ou <strong>Exporter toutes les données</strong>.</li>
+                <li><strong>Exporter toutes les données</strong> crée un fichier Excel (.xlsx) contenant l'intégralité des feuilles revenus, dépenses et analyse. <strong>Exporter les données filtrées</strong> exporte les lignes filtrées affichées dans l'onglet ouvert ; si vous souhaitez à la fois les revenus et les dépenses filtrés, exportez chaque onglet séparément.</li>
+                <li>Avant l'enregistrement, il vous est demandé si vous souhaitez protéger le fichier par un mot de passe. Si vous en définissez un, le fichier est enregistré sous forme de ZIP chiffré ; si vous choisissez d'enregistrer sans mot de passe, confirmez l'avertissement et le fichier est téléchargé directement.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 7. Tests psychologiques -->
+    <details class="guide-section">
+        <summary>Tests psychologiques</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Grâce aux modules Rorschach, dessin projectif et test manuel, vous pouvez faire passer les tests au format numérique et en produire les rapports.</p>
+
+            <h4>Faire passer le test de Rorschach</h4>
+            <ol>
+                <li>Allez à l'écran <strong>Module de tests</strong> et, dans l'onglet <strong>Nouveau test</strong>, choisissez <strong>Test de Rorschach</strong>.</li>
+                <li>Dans la fenêtre de configuration, saisissez l'âge et le genre du client, puis touchez <strong>Commencer le test</strong>.</li>
+                <li>Parcourez le jeu de 10 planches avec les boutons <strong>Planche précédente</strong> et <strong>Planche suivante</strong> ; sur mobile, vous pouvez aussi balayer l'image de la planche vers la droite ou la gauche. Le compteur en haut à droite (par ex. 3 / 10) indique la planche en cours.</li>
+                <li>Pour chaque planche, saisissez la réponse du client dans la zone <strong>Réponses du client</strong>.</li>
+                <li>Le bouton <strong>Obtenir l'évaluation</strong> permet à l'IA d'évaluer cette planche.</li>
+                <li>Saisissez vos propres observations cliniques dans la zone <strong>Évaluation du thérapeute</strong>.</li>
+                <li>Après avoir traité toutes les planches, passez à l'onglet <strong>Rapports</strong> pour créer les rapports finaux.</li>
+                <li>Pour terminer le test, touchez le bouton <strong>Terminer le test</strong> en bas ; dans la fenêtre <strong>Enregistrer le résultat du test</strong>, choisissez la fiche client dans laquelle enregistrer le test. Pour interrompre et reprendre plus tard, utilisez <strong>Enregistrer le test</strong>.</li>
+            </ol>
+
+            <h4>Faire passer un test de dessin</h4>
+            <ol>
+                <li>Choisissez <strong>Module de tests > Nouveau test > Test projectif de dessin</strong>.</li>
+                <li>Dans la fenêtre de configuration, saisissez le type de test (Maison-Arbre-Personne, Famille en action, etc.), l'âge et le genre.</li>
+                <li>Dans l'écran du test, chargez l'image du dessin ou prenez-la avec l'appareil photo.</li>
+                <li>Le bouton <strong>Obtenir l'évaluation</strong> vous donne l'analyse du dessin.</li>
+                <li>Saisissez vos propres interprétations dans la zone <strong>Évaluation du thérapeute</strong> ; si vous le souhaitez, faites corriger le texte avec le bouton <strong>Améliorer le texte</strong> situé à côté.</li>
+                <li>Avec le bouton <strong>Fusionner les rapports</strong> à côté de la zone <strong>Rapport hybride</strong>, fusionnez les évaluations de l'IA et du thérapeute en un seul rapport. Les deux zones doivent être remplies pour cela.</li>
+            </ol>
+
+            <h4>Saisie manuelle de test</h4>
+            <ol>
+                <li>Choisissez <strong>Module de tests > Nouveau test > Saisie manuelle de test</strong>.</li>
+                <li>Dans la fenêtre de configuration, saisissez le nom du test, l'âge et le genre.</li>
+                <li>Saisissez les données du test et vos constats dans la zone de texte libre.</li>
+                <li>Si nécessaire, ajoutez des images avec le bouton <strong>Charger un fichier</strong> de la section <strong>Pièces jointes</strong> (seuls les fichiers image sont pris en charge).</li>
+                <li>Enregistrez le test avec le bouton <strong>Enregistrer</strong>.</li>
+            </ol>
+
+            <h4>Créer et télécharger un rapport de test</h4>
+            <ol>
+                <li>Pour le Rorschach, les rapports se créent dans l'onglet <strong>Rapports</strong> ; pour le test de dessin et le test manuel, les zones de rapport se trouvent directement dans l'écran du test. Le téléchargement du rapport est possible pour les trois tests.</li>
+                <li>Choisissez le type de rapport à créer : <strong>Rapport de l'IA</strong>, <strong>Rapport du thérapeute</strong> ou <strong>Rapport hybride</strong>.</li>
+                <li>Touchez le bouton <strong>Télécharger le rapport</strong>.</li>
+                <li>Dans la fenêtre qui s'ouvre, choisissez les sections à inclure et le format (<strong>Word</strong> ou <strong>PDF</strong>).</li>
+                <li>La fenêtre <strong>Exportation — Sécurité</strong> s'ouvre ensuite. Avec <strong>🔒 Chiffrer</strong>, vous téléchargez un fichier ZIP protégé par le mot de passe que vous définissez ; ce mot de passe est nécessaire pour ouvrir le fichier, et le ZIP s'ouvre avec les outils intégrés de Windows et macOS, sans programme supplémentaire. Avec <strong>Télécharger sans chiffrement</strong>, un avertissement s'affiche ; si vous le confirmez, le fichier est enregistré sans protection.</li>
+                <li>Le rapport est téléchargé sur votre appareil.</li>
+            </ol>
+
+            <h4>Consulter les tests réalisés</h4>
+            <ol>
+                <li>Dans l'écran <strong>Module de tests</strong>, passez à l'onglet <strong>Tests réalisés</strong>.</li>
+                <li>Tous les tests sont listés par date, nom du client et type de test.</li>
+                <li>Touchez un test pour en voir les détails, le modifier ou télécharger son rapport.</li>
+                <li>Pour supprimer un test, touchez le bouton <strong>Supprimer</strong> dans la vue détaillée.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 8. Fonctions d'IA -->
+    <details class="guide-section">
+        <summary>Fonctions d'IA</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Grâce à l'intégration de l'API Google Gemini, PsyAgenda peut analyser vos notes de séance, évaluer les tests et produire des rapports sur les clients. Une clé API est nécessaire pour utiliser ces fonctions.</p>
+
+            <h4>Configurer la clé API</h4>
+            <ol>
+                <li>Allez dans <strong>Paramètres > Gestion de l'API</strong>.</li>
+                <li>Collez votre clé API Google Gemini dans le champ <strong>Clé API</strong>.</li>
+                <li>Touchez <strong>Enregistrer</strong>. Avant l'enregistrement, la clé est vérifiée auprès de Google : si elle est valide, elle est enregistrée chiffrée et le texte d'état en haut passe au vert. Si elle n'est pas valide, elle n'est pas enregistrée, un avertissement s'affiche et elle reste dans le champ pour que vous puissiez la corriger. Sans connexion Internet, la clé est enregistrée mais signalée comme non vérifiée.</li>
+                <li>Pour des informations détaillées sur l'obtention d'une clé API, touchez l'<strong>icône d'information</strong> du champ.</li>
+            </ol>
+
+            <h4>Analyse des notes de séance</h4>
+            <ol>
+                <li>Dans la fenêtre du rendez-vous, rédigez vos notes dans la zone <strong>Notes de séance</strong>.</li>
+                <li>Touchez le bouton bleu <strong>Évaluation IA</strong> à côté de la zone de notes.</li>
+                <li>Touchez d'abord <strong>Accepter et continuer</strong> dans la fenêtre <strong>Confirmer l'analyse par l'IA</strong>. Ensuite, dans la fenêtre <strong>Paramètres de l'analyse IA</strong>, choisissez <strong>l'âge et le genre</strong> (obligatoires), l'approche, le niveau de détail et le modèle, puis touchez <strong>Évaluer</strong>.</li>
+                <li>Une fois l'analyse terminée, le résultat s'affiche dans la zone <strong>Observations de l'IA</strong>. Pour le conserver, enregistrez le rendez-vous avec <strong>Enregistrer</strong>.</li>
+                <li>Avec le bouton <strong>Évaluation IA</strong> à côté du titre <strong>Notes pour la prochaine séance</strong>, vous obtenez des suggestions fondées sur les notes de séance actuelles et les observations de l'IA ; les suggestions sont écrites dans la zone <strong>Notes pour la prochaine séance</strong>.</li>
+            </ol>
+
+            <h4>Analyse globale du client par l'IA</h4>
+            <ol>
+                <li>Ouvrez la vue détaillée du client.</li>
+                <li>Touchez le bouton <strong>Analyse globale du client</strong> au-dessus de la liste de l'historique des séances.</li>
+                <li>Touchez d'abord <strong>Accepter et continuer</strong> dans la fenêtre <strong>Confirmer l'analyse par l'IA</strong>. Ensuite, dans la fenêtre <strong>Paramètres de l'analyse IA</strong>, choisissez l'âge et le genre (obligatoires), l'approche, le niveau de détail et le modèle, puis touchez <strong>Évaluer</strong>.</li>
+                <li>L'IA analyse toutes les notes de séance et tous les résultats de tests du client pour produire un rapport d'évaluation complet.</li>
+                <li>Vous pouvez enregistrer le rapport produit, le régénérer ou l'afficher en mode lecture.</li>
+            </ol>
+
+            <h4>Évaluation des tests par l'IA</h4>
+            <ol>
+                <li>Dans l'écran du Rorschach ou du test de dessin, touchez <strong>Obtenir l'évaluation</strong> pour chaque planche/page.</li>
+                <li>Dans la fenêtre qui s'ouvre, choisissez le niveau de détail et le <strong>modèle</strong>. Pour le Rorschach, précisez aussi la <strong>méthode d'analyse</strong> (Exner CS, etc.) ; pour le test de dessin, cette option n'apparaît pas.</li>
+                <li>L'IA analyse la réponse ou le dessin du client et écrit le résultat dans la zone correspondante.</li>
+                <li>Avec le bouton <strong>Améliorer le texte</strong> à côté d'une zone de notes/rapport du thérapeute contenant du texte, vous pouvez demander à l'IA de le corriger et de l'enrichir.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 9. Sauvegarde et restauration -->
+    <details class="guide-section">
+        <summary>Sauvegarde et restauration</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Vous pouvez conserver vos données sous forme de fichier de sauvegarde chiffré et les restaurer à tout moment.</p>
+
+            <h4>Créer une sauvegarde</h4>
+            <ol>
+                <li>Allez dans <strong>Paramètres > Sauvegarde</strong>.</li>
+                <li>Touchez le bouton <strong>Sauvegarder les données</strong>.</li>
+                <li>Dans la fenêtre <strong>Chiffrer la sauvegarde</strong>, définissez un mot de passe, saisissez-le à nouveau dans le champ du dessous et touchez <strong>Sauvegarder et chiffrer</strong>.</li>
+                <li><strong>Notez ce mot de passe en lieu sûr.</strong> Le fichier de sauvegarde est entièrement chiffré avec ce mot de passe ; si vous l'oubliez, vous ne pourrez plus jamais accéder aux données de cette sauvegarde.</li>
+                <li>Une fenêtre de progression s'affiche pendant la préparation de la sauvegarde. Ne fermez pas l'application durant cette opération.</li>
+                <li>L'emplacement d'enregistrement de la sauvegarde dépend de votre appareil :<br><strong>Windows / macOS :</strong> une fenêtre d'enregistrement s'ouvre ; choisissez le dossier et cliquez sur <strong>Enregistrer</strong>. Si vous annulez cette fenêtre, aucune sauvegarde n'est créée.<br><strong>Android :</strong> la sauvegarde est enregistrée directement dans le dossier <strong>Téléchargements</strong> de votre appareil.<br><strong>iPhone / iPad :</strong> la sauvegarde est d'abord enregistrée dans le dossier propre à l'application ; juste après, la feuille de partage s'ouvre pour vous permettre d'enregistrer le fichier à l'emplacement de votre choix (iCloud Drive, mémoire du téléphone, etc.) ou de l'envoyer où vous voulez.</li>
+                <li><strong>Sur iPhone / iPad, ne sautez pas cette dernière étape :</strong> depuis la feuille de partage, envoyez une copie de la sauvegarde hors de l'application — <strong>Enregistrer dans Fichiers</strong>, AirDrop, WhatsApp, Mail ou iCloud Drive. Si vous fermez cette feuille, la sauvegarde ne reste que dans l'application ; si vous supprimez l'application, la sauvegarde est supprimée aussi.</li>
+            </ol>
+
+            <h4>Restaurer une sauvegarde</h4>
+            <ol>
+                <li>Allez dans <strong>Paramètres > Sauvegarde</strong>.</li>
+                <li>Touchez le bouton <strong>Restaurer une sauvegarde</strong>.</li>
+                <li>Choisissez sur votre appareil le fichier <strong>.thnbak</strong> créé précédemment.</li>
+                <li>Saisissez le mot de passe que vous avez défini lors de la création de la sauvegarde.</li>
+                <li>Une barre de progression s'affiche. À la fin, vos données sont restaurées. Vos paramètres de synchronisation sont conservés.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 10. Synchronisation Google Drive -->
+    <details class="guide-section">
+        <summary>Synchronisation Google Drive</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Vous pouvez synchroniser vos données de façon chiffrée entre plusieurs appareils via Google Drive.</p>
+
+            <h4>Connecter un compte Google</h4>
+            <ol>
+                <li>Allez dans <strong>Paramètres > Synchronisation</strong>.</li>
+                <li>Touchez le bouton <strong>Se connecter avec Google</strong>.</li>
+                <li>Connectez-vous avec votre compte Google et accordez les autorisations nécessaires.</li>
+                <li>Une fois la connexion établie, l'e-mail de votre compte s'affiche.</li>
+            </ol>
+
+            <h4>Définir le mot de passe de synchronisation</h4>
+            <ol>
+                <li>L'écran qui s'ouvre après la connexion de votre compte Google dépend de la présence ou non de données déjà synchronisées dans ce compte : sur <strong>votre premier appareil</strong>, l'écran de définition du mot de passe ; sur <strong>votre deuxième appareil et les suivants</strong>, le champ "Votre mot de passe existant..." et le bouton <strong>Se connecter</strong>. Sur le deuxième appareil, saisissez le même mot de passe que sur l'autre appareil et touchez <strong>Se connecter</strong> ; si vous ne vous souvenez pas du mot de passe, répondez à votre question de sécurité via le lien <strong>Mot de passe oublié</strong>.</li>
+                <li>Saisissez votre mot de passe de synchronisation, puis répétez-le dans le champ ci-dessous. Il n'y a pas de longueur obligatoire, mais comme toutes vos données sont chiffrées avec ce mot de passe, nous vous recommandons un mot de passe d'au moins 8 caractères, difficile à deviner.</li>
+                <li>Remplissez, plus bas, la section <strong>Question de récupération du mot de passe</strong> : une question de sécurité, sa réponse et la confirmation de celle-ci. Ces champs sont obligatoires — si vous les laissez vides, la synchronisation ne démarre pas. Touchez ensuite <strong>Démarrer la synchronisation</strong> ; la première synchronisation se lance automatiquement.</li>
+                <li><strong>Important :</strong> n'oubliez pas ce mot de passe. Toutes vos données sont chiffrées avec celui-ci. Si vous le perdez, vos données deviennent inaccessibles.</li>
+            </ol>
+
+            <h4>Changer le mot de passe de synchronisation</h4>
+            <ol>
+                <li>Dans <strong>Paramètres > Synchronisation</strong>, touchez le bouton <strong>Changer le mot de passe</strong>.</li>
+                <li>Saisissez votre mot de passe de synchronisation actuel dans le champ <strong>Mot de passe actuel</strong>. Si vous ne vous en souvenez pas, touchez le lien <strong>Mot de passe oublié</strong> et répondez à votre question de sécurité.</li>
+                <li>Saisissez le nouveau mot de passe, puis confirmez-le en le répétant.</li>
+                <li>Touchez <strong>Enregistrer</strong> ; vos données sont rechiffrées avec le nouveau mot de passe et envoyées vers Drive.</li>
+                <li><strong>Important :</strong> vous devez aussi saisir le nouveau mot de passe sur tous vos autres appareils.</li>
+            </ol>
+
+            <h4>Synchronisation manuelle</h4>
+            <ol>
+                <li>Allez dans <strong>Paramètres > Synchronisation</strong>.</li>
+                <li>Touchez le bouton <strong>Synchroniser</strong>.</li>
+                <li>Une barre de progression s'affiche. Une fois la synchronisation terminée, l'heure de la dernière synchronisation est mise à jour.</li>
+                <li>En cas de problème, vous pouvez utiliser les boutons <strong>Forcer l'envoi</strong> ou <strong>Forcer le téléchargement</strong>. <strong>Attention :</strong> Forcer l'envoi remplace toutes les données sur Drive par celles de cet appareil ; Forcer le téléchargement remplace toutes les données de cet appareil par celles de Drive. Dans les deux cas, lisez la fenêtre de confirmation qui s'affiche avant de la valider ; si vous n'êtes pas sûr du côté où se trouvent les données à jour, n'utilisez pas ces boutons.</li>
+            </ol>
+
+            <h4>Consulter les appareils connectés</h4>
+            <ol>
+                <li>Dans <strong>Paramètres > Synchronisation</strong>, la liste <strong>Appareils connectés</strong> s'affiche.</li>
+                <li>Pour chaque appareil, le nom (par ex. iPhone, iPad, nom du modèle Android ou nom de l'ordinateur), une icône indiquant son type et l'heure de dernière connexion sont affichés.</li>
+                <li>Votre appareil actuel est signalé par une étiquette.</li>
+            </ol>
+
+            <h4>Désactiver la synchronisation</h4>
+            <ol>
+                <li>Dans <strong>Paramètres > Synchronisation</strong>, touchez le bouton <strong>Se déconnecter</strong>.</li>
+                <li>Dans la fenêtre de confirmation, touchez à nouveau <strong>Se déconnecter</strong>.</li>
+                <li>La synchronisation est désactivée. Vos données sur l'appareil sont conservées, mais elles ne sont plus synchronisées avec vos autres appareils.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 11. Paramètres de sécurité -->
+    <details class="guide-section">
+        <summary>Paramètres de sécurité</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Grâce au verrouillage de l'application et aux paramètres de mot de passe, vous protégez vos données contre les accès non autorisés. Tous les paramètres de cette section sont <strong>propres à chaque appareil</strong> : votre mot de passe, votre question de sécurité, la durée du verrouillage automatique et la connexion biométrique ne sont pas transférés aux autres appareils par la synchronisation. Vous définissez un mot de passe distinct sur chaque appareil, et une modification sur l'un n'affecte pas les autres.</p>
+
+            <h4>Configurer le verrouillage de l'application</h4>
+            <ol>
+                <li><strong>Lors de la première installation de l'application</strong>, l'écran de définition du mot de passe s'affiche automatiquement ; cette étape ne peut pas être sautée.</li>
+                <li>Le verrouillage de l'application ne s'active pas par une option distincte — la configuration du mot de passe est obligatoire au premier lancement. <strong>Paramètres > Sécurité</strong> ne contient que les paramètres du verrouillage existant.</li>
+                <li>La configuration comporte deux étapes. À la première, saisissez votre mot de passe, répétez-le dans le champ ci-dessous et touchez le bouton <strong>Continuer</strong>.</li>
+                <li>À la deuxième étape, saisissez une <strong>question de sécurité</strong>, sa réponse et la confirmation de celle-ci, puis touchez <strong>Terminer la configuration</strong>. Ces trois champs sont obligatoires et ne peuvent pas rester vides — si vous oubliez votre mot de passe, cette question est le seul moyen de récupération.</li>
+                <li>Choisissez la <strong>Durée d'inactivité</strong> sous <strong>Verrouillage automatique</strong> pour définir au bout de combien de temps sans action l'application se verrouille : Jamais, 30 secondes, 1, 5, 15, 30 minutes ou 1 heure.</li>
+                <li>Si vous souhaitez que le mot de passe soit demandé chaque fois que vous mettez l'application en arrière-plan puis la rouvrez, activez l'option <strong>Verrouiller au retour</strong> (désactivée par défaut).</li>
+                <li>Si votre appareil le permet, activez la <strong>Connexion biométrique</strong> pour déverrouiller rapidement par empreinte / visage / code PIN de l'appareil ; votre mot de passe actuel est demandé lors de l'activation.</li>
+            </ol>
+
+            <h4>Désactiver le verrouillage de l'application</h4>
+            <ol>
+                <li>Dans <strong>Paramètres > Sécurité</strong>, activez l'option <strong>Faire confiance à cet appareil</strong>.</li>
+                <li>Confirmez l'avertissement et saisissez votre mot de passe actuel.</li>
+                <li>Sur cet appareil, le mot de passe n'est plus demandé au lancement ni après une inactivité. Le niveau de sécurité baisse ; n'utilisez cette option que sur des appareils qui vous appartiennent et auxquels personne d'autre n'a accès.</li>
+            </ol>
+
+            <h4>Changer le mot de passe</h4>
+            <ol>
+                <li>Allez dans <strong>Paramètres > Sécurité</strong>.</li>
+                <li>Touchez le bouton <strong>Changer le mot de passe</strong>.</li>
+                <li>Saisissez votre mot de passe actuel, puis le nouveau, et confirmez-le.</li>
+            </ol>
+
+            <h4>En cas d'oubli du mot de passe</h4>
+            <ol>
+                <li>Sur l'écran de verrouillage de l'application, touchez le lien <strong>Mot de passe oublié ?</strong>.</li>
+                <li>Votre question de sécurité s'affiche. Saisissez la bonne réponse.</li>
+                <li>Si la vérification réussit, il vous est demandé de définir un nouveau mot de passe. Si vous avez effectué la récupération depuis l'écran de verrouillage <strong>au lancement</strong> de l'application, l'écran de configuration s'ouvre juste après et vous devez aussi définir, en plus du nouveau mot de passe, <strong>une nouvelle question de sécurité avec sa réponse</strong>. Si vous avez effectué la récupération depuis l'écran de verrouillage qui apparaît après une période d'inactivité, alors que l'application est déjà ouverte, seul un nouveau mot de passe est demandé ; votre question de sécurité reste inchangée.</li>
+                <li><strong>Si vous oubliez à la fois votre mot de passe et la réponse à votre question de sécurité</strong> (et que la connexion biométrique n'est pas activée sur cet appareil), il n'existe plus aucun moyen d'accéder à vos données. Ce n'est pas une lacune, mais une conséquence de l'architecture de sécurité de l'application : votre base de données est chiffrée avec une clé qui ne peut être ouverte qu'avec votre mot de passe ou votre réponse de sécurité — ni nous ni personne d'autre ne détenons de mot de passe maître, de porte dérobée ou de copie de récupération.</li>
+                <li>Dans ce cas, il ne reste qu'une option : l'étape <strong>supprimer les données et repartir de zéro</strong> sur l'écran de verrouillage (pour éviter un déclenchement accidentel, il vous est demandé de saisir une phrase de confirmation). Si vos données se trouvent dans la synchronisation Google Drive ou dans un fichier de sauvegarde, vous pouvez les récupérer depuis cette source ; <strong>si vous n'avez ni l'un ni l'autre, les données sont définitivement perdues.</strong> C'est pourquoi nous recommandons de garder la synchronisation active ou de faire des sauvegardes régulières.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 12. Notifications et rappels -->
+    <details class="guide-section">
+        <summary>Notifications et rappels</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Cette section vous permet de gérer les rappels de séance, les rappels avec alarme et les messages envoyés à vos clients.</p>
+
+            <h4>Rappels de séance (appareils mobiles)</h4>
+            <ol>
+                <li>Dans <strong>Paramètres &gt; Notifications</strong>, activez les <strong>Rappels de séance</strong>. Si l'appareil demande l'autorisation de notification, accordez-la ; sans autorisation, l'interrupteur reste désactivé.</li>
+                <li>Avec <strong>Moment de la notification</strong>, choisissez combien de temps avant la séance la notification doit arriver : <strong>5, 10, 15, 30 minutes</strong> ou <strong>1, 2, 4, 8, 24 heures</strong> avant (15 minutes par défaut).</li>
+                <li>Lorsque l'interrupteur est activé, la notification arrive automatiquement pour <strong>toutes les séances</strong> à venir ; vous n'avez pas à sélectionner de séances. Seuls les rendez-vous de type séance sont concernés. Il s'agit d'une notification standard de l'appareil, envoyée une seule fois ; si vous voulez un son qui se répète jusqu'à ce que vous l'arrêtiez, utilisez les <strong>Rappels avec alarme</strong>.</li>
+                <li>Par souci de confidentialité, le nom du client <strong>n'apparaît pas</strong> par défaut dans le titre de la notification ; si vous souhaitez le voir, désactivez l'option <strong>Masquer le nom du client dans les notifications</strong>. Ces paramètres n'existent que sur Android et iOS.</li>
+            </ol>
+
+            <h4>Paramètres des alarmes (appareils mobiles)</h4>
+            <ol>
+                <li>Activez d'abord les <strong>Rappels avec alarme</strong> dans <strong>Paramètres &gt; Notifications</strong> et réglez le <strong>Comportement de l'alarme</strong> sur <strong>Séances sélectionnées uniquement</strong> ; cochez ensuite la case <strong>Définir une alarme spécifique pour cette séance</strong> dans la fenêtre du rendez-vous.</li>
+                <li>Choisissez combien de temps avant la séance l'alarme doit sonner : <strong>5, 10, 15, 30 minutes</strong> ou <strong>1, 2, 4, 8, 24 heures</strong> avant.</li>
+                <li>Pour les séances avec alarme, une icône de cloche apparaît à côté de la carte de la séance <strong>sur l'écran d'accueil</strong>.</li>
+                <li>Le <strong>Délai d'alarme par défaut</strong> dans <strong>Paramètres > Notifications</strong> définit le délai utilisé lorsque vous ne faites pas de choix pour une séance donnée ; lorsque le <strong>Comportement de l'alarme</strong> est sur <strong>Toutes les séances</strong>, toutes les séances sonnent selon ce délai.</li>
+            </ol>
+
+            <h4>Messages aux clients</h4>
+            <ol>
+                <li>L'interrupteur <strong>Messages aux clients</strong> dans <strong>Paramètres > Notifications</strong> détermine quand la fenêtre de message s'ouvre. <strong>S'il est activé :</strong> lorsque vous créez un rendez-vous avec un client, modifiez sa date ou son heure, transformez un rendez-vous unique en série, prolongez une série ou supprimez un rendez-vous, la fenêtre s'ouvre d'elle-même — vous n'avez aucune case à cocher. <strong>S'il est désactivé :</strong> aucune fenêtre ne s'ouvre.</li>
+                <li>Même lorsque l'interrupteur est désactivé, vous pouvez envoyer un message : il suffit de cocher la case <strong>Informer le client</strong> dans la fenêtre du rendez-vous et d'enregistrer. Cette case prime sur l'interrupteur ; vous déclenchez ainsi manuellement le message pour un seul rendez-vous. (Lorsque l'interrupteur est activé, la fenêtre s'ouvre de toute façon, il est donc inutile de cocher la case.)</li>
+                <li>Que l'interrupteur soit activé ou non, <strong>le message n'est jamais envoyé de lui-même.</strong> Seule l'ouverture de la fenêtre est automatique ; la décision d'envoyer vous appartient toujours.</li>
+                <li>Dans la fenêtre <strong>Informer le client</strong>, vous pouvez modifier le message dans l'aperçu, puis choisir <strong>Envoyer par WhatsApp</strong>, <strong>Envoyer par SMS</strong> ou <strong>Envoyer par e-mail</strong> ; le message s'ouvre prêt à l'envoi dans l'application correspondante et c'est vous qui appuyez sur envoyer. Si le téléphone ou l'e-mail du client n'est pas enregistré, l'application vous demande de le saisir à ce moment-là. Si vous ne souhaitez pas envoyer, touchez <strong>Ne pas envoyer</strong>.</li>
+                <li>Lorsque vous ouvrez un rendez-vous d'aujourd'hui ou à venir pour lequel un message a déjà été envoyé, le bouton <strong>Envoyer un rappel</strong> apparaît. <strong>Les rappels ne se déclenchent jamais d'eux-mêmes</strong> — même lorsque les messages automatiques sont activés. Si vous souhaitez que le client reçoive un rappel supplémentaire, vous devez toucher ce bouton.</li>
+                <li>Pour un rendez-vous récurrent, vous pouvez choisir la portée de la notification : <strong>Cette séance uniquement</strong> ou <strong>Toute la série</strong>.</li>
+            </ol>
+        </div>
+    </details>
+<!-- GENERATED:GUIDE-END -->
+        </article>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <span>&copy; 2026 PsyAgenda. Tous droits réservés.</span>
+        <nav>
+            <a href="privacy-fr.html">Politique de confidentialité</a>
+            <a href="terms-fr.html">Conditions d'utilisation</a>
+            <a href="faq-fr.html">FAQ</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+(function () {
+    /* Dil menüsü: aramalı açılır liste. Diller HTML'deki listeden okunur; JS dil bilgisi taşımaz. */
+    var menu = document.getElementById('lang-menu'), btn = document.getElementById('lang-btn');
+    if (!menu || !btn) return;
+    var input = document.getElementById('lang-search'), empty = document.getElementById('lang-empty');
+    var items = Array.prototype.slice.call(document.getElementById('lang-list').children);
+    var norm = function (s) { return s.toLowerCase().replace(/ı/g, 'i').normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
+    var visible = function () { return items.filter(function (li) { return !li.hidden; }).map(function (li) { return li.firstElementChild; }); };
+    var filter = function () {
+        var q = norm(input.value.trim()), n = 0;
+        items.forEach(function (li) {
+            var a = li.firstElementChild, hit = !q || norm(a.textContent).indexOf(q) !== -1 || a.getAttribute('lang').indexOf(q) === 0;
+            li.hidden = !hit; if (hit) n++;
+        });
+        empty.hidden = n > 0;
+    };
+    var setOpen = function (open) {
+        menu.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { input.value = ''; filter(); setTimeout(function () { input.focus(); }, 0); }
+    };
+    btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+    input.addEventListener('input', filter);
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) setOpen(false); });
+    menu.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { setOpen(false); btn.focus(); return; }
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            var vis = visible(); if (!vis.length) return;
+            var i = vis.indexOf(document.activeElement), next = e.key === 'ArrowDown' ? (i + 1) % vis.length : (i <= 0 ? vis.length - 1 : i - 1);
+            vis[next].focus(); e.preventDefault();
+        } else if (e.key === 'Enter' && e.target === input) { var v = visible(); if (v.length) v[0].click(); }
+    });
+})();
+(function () {
+    /* Özellik kartları: ilk cümle görünür, gerisi tıklayınca açılır. JS yoksa hepsi açık kalır. */
+    var grid = document.querySelector('.feature-grid');
+    if (!grid) return;
+    grid.classList.add('js');
+    Array.prototype.forEach.call(grid.querySelectorAll('.feature-card'), function (card) {
+        var btn = card.querySelector('.acc-btn');
+        if (!btn) return;
+        var set = function (open) {
+            card.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.firstChild.nodeValue = open ? btn.dataset.less : btn.dataset.more;
+        };
+        card.addEventListener('click', function (e) {
+            if (e.target.closest('a')) return;
+            if (window.getSelection && String(window.getSelection()).length) return; /* metin seçerken açma */
+            set(!card.classList.contains('open'));
+        });
+    });
+})();
+(function () {
+    /* Dar ekranda gezinme şeridi yana kayar: aktif sekmeyi görünür alana getir, sağda devam varsa kenarı soldur. */
+    var nav = document.querySelector('.mainnav');
+    if (nav) {
+        var more = function () { nav.classList.toggle('more', nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 2); };
+        var act = nav.querySelector('a.active');
+        var reveal = function () { if (act && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, act.offsetLeft - 16); more(); };
+        nav.addEventListener('scroll', more, { passive: true }); window.addEventListener('resize', more); reveal();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(reveal); /* yazı tipi gelince genişlikler değişir */
+    }
+    var bar = document.getElementById('topbar');
+    if (bar) {
+        var onScroll = function () { bar.classList.toggle('stuck', window.scrollY > 8); };
+        onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    }
+    var rise = document.querySelectorAll('.rise');
+    if ('IntersectionObserver' in window && rise.length) {
+        var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        rise.forEach(function (el) { io.observe(el); });
+        /* Emniyet: gözlemci ne olursa olsun içerik 1.2 sn sonra görünür olur. */
+        setTimeout(function () { rise.forEach(function (el) { el.classList.add('in'); }); }, 1200);
+    } else { rise.forEach(function (el) { el.classList.add('in'); }); }
+
+    /* Bölüm listesi sayfadaki başlıklardan üretilir — içerik iki yere yazılmaz. */
+    var doc = document.querySelector('.doc'), list = document.getElementById('toc-list');
+    if (!doc || !list) return;
+    var sel = doc.dataset.toc || 'h2';
+    var heads = doc.querySelectorAll(sel);
+    if (heads.length < 3) { ['.toc-title', '.toc-list'].forEach(function (c) { var t = document.querySelector(c); if (t) t.hidden = true; }); return; }
+    var links = [];
+    Array.prototype.forEach.call(heads, function (h, i) {
+        var target = h.tagName === 'SUMMARY' ? h.parentNode : h;
+        if (!target.id) target.id = 'b' + (i + 1);
+        var a = document.createElement('a'); a.href = '#' + target.id; a.textContent = h.textContent.trim();
+        if (h.tagName === 'SUMMARY') a.addEventListener('click', function () { h.parentNode.open = true; });
+        list.appendChild(a); links.push(a);
+    });
+    var tick = false;
+    var spy = function () {
+        tick = false; var best = 0;
+        for (var i = 0; i < heads.length; i++) { if (heads[i].closest('[hidden]')) continue; if (heads[i].getBoundingClientRect().top <= 120) best = i; }
+        links.forEach(function (a, i) { a.classList.toggle('current', i === best); });
+    };
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+    spy();
+    /* Arama filtreledikçe bölüm listesi de daralır. */
+    document.addEventListener('docsearch', function () {
+        links.forEach(function (a, i) { var target = heads[i].tagName === 'SUMMARY' ? heads[i].parentNode : heads[i]; a.hidden = !!target.closest('[hidden]'); });
+        spy();
+    });
+})();
+(function () {
+    /* Sayfa içi arama — uygulamadaki "Bu sayfada ara" ile aynı davranış: eşleşen bölümler açılır ve
+       gösterilir, eşleşmeyenler gizlenir, kelimeler işaretlenir. Türkçe harflere ve aksana duyarsız. */
+    var input = document.getElementById('doc-search'), art = document.querySelector('article.doc');
+    if (!input || !art) return;
+    var clearBtn = document.getElementById('doc-search-clear'), status = document.getElementById('doc-search-status');
+    var fold = function (s) {
+        var out = '';
+        for (var i = 0; i < s.length; i++) {
+            var c = s[i];
+            if (c === 'ı' || c === 'İ') { out += 'i'; continue; }
+            var b = c.normalize('NFD')[0] || c, l = b.toLowerCase();
+            out += l.length === 1 ? l : b;
+        }
+        return out;
+    };
+    /* Birimler: h2 bir grup açar; her <details> kendi başına birim; h2 altındaki düz metin tek birim. */
+    var groups = [], cur = null;
+    Array.prototype.forEach.call(art.children, function (el) {
+        if (el.tagName === 'H2') { cur = { head: el, items: [] }; groups.push(cur); return; }
+        if (!cur) { cur = { head: null, items: [] }; groups.push(cur); }
+        if (el.tagName === 'DETAILS') { cur.items.push({ nodes: [el], det: el }); return; }
+        var last = cur.items[cur.items.length - 1];
+        if (!last || last.det) { last = { nodes: [], det: null }; cur.items.push(last); }
+        last.nodes.push(el);
+    });
+    var saved = null; /* arama başlamadan önceki açık/kapalı durumu */
+    var textOf = function (nodes) { return nodes.map(function (n) { return n.textContent; }).join(' '); };
+    var unmark = function () {
+        Array.prototype.forEach.call(art.querySelectorAll('mark.hit'), function (m) { m.replaceWith(m.textContent); });
+        art.normalize();
+    };
+    var mark = function (root, q) {
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), nodes = [], n = 0;
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach(function (t) {
+            var v = t.nodeValue, f = fold(v), i = f.indexOf(q);
+            if (i < 0) return;
+            var frag = document.createDocumentFragment(), last = 0;
+            while (i >= 0) {
+                if (i > last) frag.appendChild(document.createTextNode(v.slice(last, i)));
+                var m = document.createElement('mark'); m.className = 'hit'; m.textContent = v.slice(i, i + q.length); frag.appendChild(m);
+                last = i + q.length; n++; i = f.indexOf(q, last);
+            }
+            if (last < v.length) frag.appendChild(document.createTextNode(v.slice(last)));
+            t.parentNode.replaceChild(frag, t);
+        });
+        return n;
+    };
+    var setHidden = function (nodes, h) { nodes.forEach(function (n) { n.hidden = h; }); };
+    var reset = function () {
+        unmark();
+        groups.forEach(function (g) { if (g.head) g.head.hidden = false; g.items.forEach(function (it) { setHidden(it.nodes, false); }); });
+        if (saved) { saved.forEach(function (o, d) { d.open = o; }); saved = null; }
+        Array.prototype.forEach.call(art.querySelectorAll('h2.first-visible'), function (h) { h.classList.remove('first-visible'); });
+        status.textContent = ''; clearBtn.hidden = true;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var run = function () {
+        var q = fold(input.value.trim());
+        clearBtn.hidden = !input.value;
+        if (q.length < 2) { if (saved) reset(); else { status.textContent = ''; } return; }
+        if (!saved) { saved = new Map(); Array.prototype.forEach.call(art.querySelectorAll('details'), function (d) { saved.set(d, d.open); }); }
+        unmark();
+        var hits = 0, sections = 0;
+        groups.forEach(function (g) {
+            var whole = g.head && g.items.length && !g.items[0].det; /* gizlilik/koşullar: başlık + metin tek birim */
+            var any = false;
+            if (whole) {
+                var all = [g.head].concat(g.items[0].nodes);
+                any = fold(textOf(all)).indexOf(q) !== -1;
+                g.head.hidden = !any; setHidden(g.items[0].nodes, !any);
+                if (any) { sections++; all.forEach(function (n) { hits += mark(n, q); }); }
+            } else {
+                g.items.forEach(function (it) {
+                    var ok = fold(textOf(it.nodes)).indexOf(q) !== -1;
+                    setHidden(it.nodes, !ok);
+                    if (ok) { any = true; sections++; if (it.det) it.det.open = true; it.nodes.forEach(function (n) { hits += mark(n, q); }); }
+                });
+                if (g.head) g.head.hidden = !any;
+            }
+        });
+        var firstSeen = false;
+        Array.prototype.forEach.call(art.querySelectorAll(':scope > h2'), function (h) { var f = !firstSeen && !h.hidden; h.classList.toggle('first-visible', f); if (f) firstSeen = true; });
+        status.textContent = hits ? status.dataset.count.replace('{n}', hits).replace('{m}', sections).replace('{es}', hits === 1 ? '' : 'es').replace('{s}', sections === 1 ? '' : 's') : status.dataset.none;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var timer = null;
+    input.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(run, 220); });
+    input.addEventListener('keydown', function (e) { if (e.key === 'Escape') { input.value = ''; reset(); } });
+    clearBtn.addEventListener('click', function () { input.value = ''; reset(); input.focus(); });
+})();
+</script>
+</body>
+</html>

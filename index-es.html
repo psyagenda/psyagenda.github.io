@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsyAgenda — Agenda inteligente para terapeutas</title>
+    <meta name="description" content="Aplicación de gestión de citas, consultantes, tests psicológicos y presupuesto para terapeutas. Los datos se guardan únicamente en el dispositivo y cifrados. iPhone, iPad, Android, Mac y Windows.">
+    <link rel="canonical" href="https://www.psyagenda.app/index-es.html">
+    <link rel="alternate" hreflang="tr" href="https://www.psyagenda.app/">
+    <link rel="alternate" hreflang="en" href="https://www.psyagenda.app/index-en.html">
+    <link rel="alternate" hreflang="es" href="https://www.psyagenda.app/index-es.html">
+    <link rel="alternate" hreflang="de" href="https://www.psyagenda.app/index-de.html">
+    <link rel="alternate" hreflang="fr" href="https://www.psyagenda.app/index-fr.html">
+    <link rel="alternate" hreflang="pt" href="https://www.psyagenda.app/index-pt.html">
+    <link rel="alternate" hreflang="it" href="https://www.psyagenda.app/index-it.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.psyagenda.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PsyAgenda">
+    <meta property="og:title" content="PsyAgenda — Agenda inteligente para terapeutas">
+    <meta property="og:description" content="Aplicación de gestión de citas, consultantes, tests psicológicos y presupuesto para terapeutas. Los datos se guardan únicamente en el dispositivo y cifrados. iPhone, iPad, Android, Mac y Windows.">
+    <meta property="og:url" content="https://www.psyagenda.app/index-es.html">
+    <meta property="og:image" content="https://www.psyagenda.app/app-icon.png">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PsyAgenda — Agenda inteligente para terapeutas">
+    <meta name="twitter:description" content="Aplicación de gestión de citas, consultantes, tests psicológicos y presupuesto para terapeutas. Los datos se guardan únicamente en el dispositivo y cifrados.">
+    <meta name="twitter:image" content="https://www.psyagenda.app/app-icon.png">
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="index-es.html"><img src="app-icon.png" alt=""><span>PsyAgenda</span></a>
+        <div class="nav-right">
+            <nav class="mainnav">
+                <a href="index-es.html" class="active">Inicio</a>
+                <a href="guide-es.html">Guía de uso</a>
+                <a href="faq-es.html">FAQ</a>
+                <a href="terms-es.html">Términos de uso</a>
+                <a href="privacy-es.html">Política de privacidad</a>
+            </nav>
+            <div class="lang-menu" id="lang-menu">
+                <button type="button" class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-panel" aria-label="Selección de idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.7 3.9 5.8 3.9 9.2s-1.3 6.5-3.9 9.2c-2.6-2.7-3.9-5.8-3.9-9.2s1.3-6.5 3.9-9.2z"/></svg><span>Idioma</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                <div class="lang-panel" id="lang-panel">
+                    <label class="lang-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="lang-search" placeholder="Buscar idioma" autocomplete="off" spellcheck="false" aria-label="Buscar idioma"></label>
+                    <ul class="lang-list" id="lang-list">
+                        <li><a href="index.html" lang="tr" hreflang="tr">Türkçe</a></li>
+                        <li><a href="index-en.html" lang="en" hreflang="en">English</a></li>
+                        <li><a href="index-es.html" lang="es" hreflang="es" class="current" aria-current="true">Español</a></li>
+                        <li><a href="index-de.html" lang="de" hreflang="de">Deutsch</a></li>
+                        <li><a href="index-fr.html" lang="fr" hreflang="fr">Français</a></li>
+                        <li><a href="index-pt.html" lang="pt" hreflang="pt">Português</a></li>
+                        <li><a href="index-it.html" lang="it" hreflang="it">Italiano</a></li>
+                    </ul>
+                    <p class="lang-empty" id="lang-empty" hidden>Sin resultados</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="topbar-spacer" aria-hidden="true"></div>
+
+<main>
+    <section class="wrap hero">
+        <div class="hero-text">
+            <h1>Agenda inteligente para terapeutas. <span class="soft">Le facilita la vida.</span></h1>
+        <p class="lede">PsyAgenda es una aplicación de agenda que digitaliza de principio a fin los procesos de trabajo de psicólogos, psiquiatras y orientadores. Las fichas de consultantes, el calendario de citas, las notas de sesión, los tests psicológicos aplicados y el seguimiento de ingresos y gastos se reúnen en un solo lugar.</p>
+        <p class="lede">La aplicación está diseñada con una arquitectura sin servidor; todos los registros se guardan únicamente en el dispositivo del usuario y de forma cifrada.</p>
+        </div>
+        <div class="notice pending">
+            <span class="dot"></span>
+            <p><strong>En preparación para su lanzamiento</strong>; PsyAgenda está en fase de preparación para su lanzamiento. Los enlaces de descarga de esta página se irán activando a medida que la aplicación se publique en cada tienda. La aplicación se usará con exactamente la misma interfaz en iPhone, iPad, Mac, Android y Windows, y se distribuirá únicamente a través de la App Store de Apple, Google Play y Microsoft Store.</p>
+        </div>
+        <div class="stores">
+                <span class="store" aria-disabled="true" title="Aún no disponible"><small>iPhone y iPad</small><strong>Consíguelo en el App Store</strong></span>
+                <span class="store" aria-disabled="true" title="Aún no disponible"><small>Mac</small><strong>Consíguelo en el Mac App Store</strong></span>
+                <span class="store" aria-disabled="true" title="Aún no disponible"><small>Android</small><strong>Disponible en Google Play</strong></span>
+                <span class="store" aria-disabled="true" title="Aún no disponible"><small>Windows</small><strong>Descárgalo en Microsoft Store</strong></span>
+        </div>
+    </section>
+
+    <section class="wrap section" id="ozellikler">
+        <div class="section-head rise">
+            <h2>Funciones principales de la aplicación</h2>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card rise">
+                <p><strong class="rt">Arquitectura sin servidor:</strong> La aplicación no tiene ningún servidor central; una vez instalada, de forma predeterminada funciona por completo en local, solo en el dispositivo del usuario.</p>
+                <div class="acc-body"><div><p>Para empezar a usarla no hace falta crear una cuenta ni registrarse; en el primer inicio solo se definen el idioma, la contraseña de la aplicación y una pregunta de seguridad que se usará si se olvida esa contraseña. Todos los datos que se escriben en la aplicación se guardan únicamente en el dispositivo del usuario, en una base de datos cifrada; ningún registro se envía a ningún servidor. Aparte del usuario, nadie puede acceder a esa base de datos, ni siquiera el desarrollador. No hay un depósito central de datos que pueda quedar expuesto en una filtración masiva, y ninguna interrupción del servicio impide al usuario acceder a sus propios registros. El uso diario no requiere conexión a internet; el registro de datos, la búsqueda y la generación de informes funcionan sin conexión. La aplicación no contiene publicidad, ni analítica, ni seguimiento de los usuarios. El usuario puede eliminar en cualquier momento, de forma completa y permanente, todos los datos que ha escrito en la aplicación.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Cifrado en cada etapa:</strong> Los datos están cifrados no solo cuando están en reposo, sino también cuando se mueven.</p>
+                <div class="acc-body"><div><p>Las fichas de consultantes, las notas de sesión y los datos financieros se guardan en el dispositivo en una base de datos cifrada con AES-256; las imágenes de sesiones y de tests quedan fuera de esa base de datos, como archivos separados cifrados con la misma fuerza. La clave se conserva en el almacén seguro de claves del sistema operativo y está protegida con la contraseña de la aplicación. La aplicación se bloquea con contraseña y con verificación biométrica; cuando termina el tiempo de inactividad definido, se activa el bloqueo automático. Si se activa la sincronización, los datos se cifran, antes de salir del dispositivo, con una contraseña aparte definida por el usuario; Drive solo ve el bloque cifrado y el dispositivo receptor lo descifra localmente. Los archivos de copia de seguridad se cifran de forma obligatoria. En ninguno de los caminos de almacenamiento, sincronización y copia de seguridad hay un momento en el que los datos queden sin cifrar.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Sincronización opcional:</strong> La aplicación se puede instalar en más de un dispositivo; si se desea, se puede activar la sincronización entre ellos, y la función está desactivada de forma predeterminada.</p>
+                <div class="acc-body"><div><p>Las notas de sesión de una cita creada en un iPhone se pueden escribir desde un iPad o una tableta Android. La sincronización se realiza sin ningún servidor intermedio, a través del espacio privado de la aplicación en la cuenta de Google Drive del propio usuario; ese espacio no es visible en la interfaz de Drive. Google Drive solo aloja los datos cifrados y no puede acceder al contenido. Los cambios hechos en distintos dispositivos se combinan registro a registro, sin que uno sobrescriba el otro. Todos los datos guardados en Drive se pueden eliminar de forma permanente en cualquier momento.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">La pantalla de inicio y el flujo del día:</strong> Al abrir la aplicación, el día completo se ve en una sola pantalla.</p>
+                <div class="acc-body"><div><p>Las sesiones de ese día se listan en orden con sus horas y la nota de cada sesión aparece en su propia fila; las horas marcadas como no disponibles también se ven en el mismo flujo. Las sesiones finalizadas se pueden ocultar con un solo toque para destacar las citas restantes. Si un consultante tiene un pago vencido, el aviso aparece en esa misma lista junto con el importe, sin necesidad de abrir la pantalla de presupuesto. Se puede consultar otro día sin abrir el calendario y volver a hoy con un solo toque. Desde esta pantalla también se pasa al calendario, a los consultantes, al presupuesto y al módulo de tests; en la parte superior están el nombre del consultorio junto con el estado de la sincronización y la configuración.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Calendario y citas:</strong> Ofrece una gestión del calendario muy flexible y dinámica, que se puede personalizar según cada necesidad.</p>
+                <div class="acc-body"><div><p>Además de las vistas de 1, 3, 5 y 7 días, el calendario tiene una vista mensual. La cuadrícula horaria se puede ajustar a 15, 30 o 60 minutos; el horario de trabajo y las horas de pausa se pueden definir según la organización de cada usuario. Un registro de cita puede recoger el consultante, la duración, los honorarios de la sesión, el estado de cobro, la frecuencia de repetición, las notas de sesión y las imágenes adjuntas. Además de las sesiones, se puede marcar cualquier hora o día como &ldquo;no disponible&rdquo;. Las sesiones recurrentes se pueden crear como una serie y las citas se pueden mover arrastrando y soltando; no se abre ningún registro en un horario que se solape.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Notificaciones y recordatorios:</strong> Las notificaciones sirven a dos fines distintos: el recordatorio propio del terapeuta y el mensaje informativo o de recordatorio que se envía al consultante.</p>
+                <div class="acc-body"><div><p>Antes de la sesión llega una notificación al teléfono, y se puede ajustar con cuánta antelación se recibe. Se pueden activar recordatorios con alarma que suenan hasta que se silencian; también se define si se aplican a todas las sesiones o solo a las seleccionadas. En la notificación de la pantalla de bloqueo se puede optar por ocultar el nombre del consultante. Las plantillas de los mensajes informativos y de recordatorio que se envían al consultante se pueden personalizar; la aplicación no envía el mensaje directamente, sino que abre WhatsApp, SMS o la aplicación de correo electrónico del dispositivo con el texto ya preparado, y el envío se completa con la aprobación del usuario. Las notificaciones y las alarmas funcionan en teléfonos y tabletas.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Gestión de consultantes:</strong> Ofrece una estructura de registro en la que toda la información de cada consultante se reúne en una sola ficha y se puede seguir hacia atrás en el tiempo.</p>
+                <div class="acc-body"><div><p>En la ficha se pueden escribir, además de los datos de contacto y demográficos, la formación y la profesión, unos honorarios por sesión propios de ese consultante y notas. No hay límite en el número de consultantes; los registros se pueden separar en activos e inactivos y la lista se puede buscar por nombre. El historial de sesiones y los tests aplicados se listan en el mismo flujo; se puede buscar dentro del historial y leerlo entero, sin interrupciones, en el modo de lectura. Los pagos de sesión vencidos aparecen en la ficha como saldo pendiente. Al pasar a PsyAgenda, la lista de consultantes se puede importar de una sola vez con una plantilla de Excel; o bien, al agregarlos uno a uno, se pueden elegir desde la agenda de contactos del teléfono. La ficha del consultante se puede exportar como Word o PDF.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Notas de sesión y archivos adjuntos:</strong> Cada cita tiene tres campos de notas distintos: las notas previas a la sesión, lo que se escribe durante ella o después y los temas que se tratarán en la próxima sesión.</p>
+                <div class="acc-body"><div><p>Cada campo se puede ver a pantalla completa en el modo de lectura. Al registro se pueden agregar imágenes de la sesión, o tomarlas directamente con la cámara del dispositivo. La foto de una nota manuscrita se puede convertir en texto digital con el apoyo opcional de la inteligencia artificial, según el estilo de escritura que se elija. A partir de las notas de sesión se puede obtener un análisis con IA y pedir una sugerencia para la próxima sesión. Si la aplicación se cierra de forma inesperada, la nota a medio escribir se restaura.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Módulos de tests psicológicos:</strong> Ofrece una sección de tests que abarca los tests proyectivos más habituales y permite el registro manual de los que quedan fuera de ese alcance.</p>
+                <div class="acc-body"><div><p>El test de Rorschach se puede aplicar sobre diez láminas y la respuesta dada a cada lámina se registra por separado. En los tests proyectivos de dibujo (figura humana, Casa-Árbol-Persona, familia kinética, árbol, animal, escuela) se puede agregar la foto del dibujo al registro. Cada test aplicado ocupa su lugar en el historial del consultante por orden cronológico. El terapeuta puede escribir su propia evaluación para cada test y obtener además una evaluación con IA; de forma opcional, puede generar un único informe que combina sus propias opiniones con las observaciones de la IA. El test completado se puede exportar como Word o PDF.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Presupuesto y seguimiento de ingresos:</strong> El registro de ingresos se crea automáticamente para cada sesión; solo queda marcar el cobro y, para los pagos vencidos, se puede preparar con un solo toque un mensaje de recordatorio de pago para el consultante.</p>
+                <div class="acc-body"><div><p>Las sesiones se listan con los honorarios brutos, el porcentaje y el importe del descuento y los honorarios netos; los importes pendientes, vencidos y no vencidos se muestran por separado. Los gastos se registran por categorías; hay categorías predefinidas como alquiler, servicios (luz, agua, internet) o supervisión, y se pueden agregar otras nuevas. Los registros se pueden filtrar por consultante, categoría, fecha y estado de cobro; los filtros de uso frecuente se pueden guardar. En la sección de análisis están los ingresos totales, los gastos totales y la ganancia neta, junto con los gráficos de doce meses de ingresos y gastos y del número de sesiones; se puede exportar a Excel la lista completa o la filtrada.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">Copia de seguridad y exportación:</strong> Aunque no se use la sincronización, todos los datos, incluidas las imágenes de las sesiones, se pueden guardar en un único archivo de copia de seguridad cifrado; durante la copia, el cifrado con AES-256 es obligatorio.</p>
+                <div class="acc-body"><div><p>Con ese archivo los datos se pueden llevar sin conexión a un dispositivo nuevo; la copia, sea cual sea la plataforma en la que se creó, se puede restaurar en la aplicación PsyAgenda que el usuario haya descargado en cualquier otra. Como la contraseña la tiene únicamente el usuario, si se olvida no se puede acceder al contenido de esa copia. Las fichas de consultantes, el historial de sesiones, los informes de tests y los desgloses financieros también se pueden exportar como Word, PDF o Excel; durante la exportación se puede optar por cifrar el archivo con una contraseña.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+            <div class="feature-card rise">
+                <p><strong class="rt">IA opcional:</strong> Las funciones de inteligencia artificial están desactivadas de forma predeterminada y solo funcionan con la clave de Google Gemini del propio usuario; la clave se guarda cifrada en el dispositivo.</p>
+                <div class="acc-body"><div><p>Una vez activadas, la foto de unas notas manuscritas se puede convertir en texto digital; se pueden obtener observaciones a partir de las notas de sesión, de las respuestas de Rorschach o de los tests de dibujo, pedir una sugerencia para la próxima sesión y mejorar el texto escrito. En cada evaluación, el usuario elige el modelo, el método de análisis y el nivel de detalle (resumido, medio o detallado). Como la operación ocurre directamente entre el dispositivo del usuario y Google, el desarrollador no ve ninguna de sus fases. En las solicitudes solo se envían la edad y el género del consultante, junto con el contenido correspondiente; el nombre, el teléfono y el correo electrónico no se envían en ningún caso. La IA no establece diagnósticos; la evaluación final y la responsabilidad corresponden siempre al terapeuta.</p></div></div>
+                <button type="button" class="acc-btn" aria-expanded="false" data-more="Mostrar más" data-less="Mostrar menos">Mostrar más<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrap section closing rise">
+        <div class="closing-band">
+        <div class="closing-col">
+            <p class="eyebrow">Licencia y período de prueba</p>
+            <p>La aplicación se puede usar de forma gratuita con todas sus funciones durante 30 días. Al terminar el período de prueba los registros no se eliminan; la aplicación pasa al modo de solo lectura y los datos existentes se pueden seguir viendo. Se ofrecen opciones de suscripción mensual y anual. La compra se realiza únicamente desde la pestaña Licencia dentro de la aplicación, a través de la tienda oficial de la plataforma correspondiente; no hay ningún otro canal de compra.</p>
+        </div>
+        <div class="closing-col">
+            <p class="eyebrow">Contacto</p>
+            <p>PsyAgenda lo desarrolla <strong>Mustafa Can</strong>, un desarrollador independiente.</p>
+            <p>Para sus preguntas y para estar al tanto del anuncio de lanzamiento:</p>
+            <a class="mail" href="mailto:info@psyagenda.app"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>info@psyagenda.app</a>
+        </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <span>&copy; 2026 PsyAgenda. Todos los derechos reservados.</span>
+        <nav>
+            <a href="privacy-es.html">Política de privacidad</a>
+            <a href="terms-es.html">Términos de uso</a>
+            <a href="faq-es.html">FAQ</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+(function () {
+    /* Dil menüsü: aramalı açılır liste. Diller HTML'deki listeden okunur; JS dil bilgisi taşımaz. */
+    var menu = document.getElementById('lang-menu'), btn = document.getElementById('lang-btn');
+    if (!menu || !btn) return;
+    var input = document.getElementById('lang-search'), empty = document.getElementById('lang-empty');
+    var items = Array.prototype.slice.call(document.getElementById('lang-list').children);
+    var norm = function (s) { return s.toLowerCase().replace(/ı/g, 'i').normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
+    var visible = function () { return items.filter(function (li) { return !li.hidden; }).map(function (li) { return li.firstElementChild; }); };
+    var filter = function () {
+        var q = norm(input.value.trim()), n = 0;
+        items.forEach(function (li) {
+            var a = li.firstElementChild, hit = !q || norm(a.textContent).indexOf(q) !== -1 || a.getAttribute('lang').indexOf(q) === 0;
+            li.hidden = !hit; if (hit) n++;
+        });
+        empty.hidden = n > 0;
+    };
+    var setOpen = function (open) {
+        menu.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { input.value = ''; filter(); setTimeout(function () { input.focus(); }, 0); }
+    };
+    btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+    input.addEventListener('input', filter);
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) setOpen(false); });
+    menu.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { setOpen(false); btn.focus(); return; }
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            var vis = visible(); if (!vis.length) return;
+            var i = vis.indexOf(document.activeElement), next = e.key === 'ArrowDown' ? (i + 1) % vis.length : (i <= 0 ? vis.length - 1 : i - 1);
+            vis[next].focus(); e.preventDefault();
+        } else if (e.key === 'Enter' && e.target === input) { var v = visible(); if (v.length) v[0].click(); }
+    });
+})();
+(function () {
+    /* Özellik kartları: ilk cümle görünür, gerisi tıklayınca açılır. JS yoksa hepsi açık kalır. */
+    var grid = document.querySelector('.feature-grid');
+    if (!grid) return;
+    grid.classList.add('js');
+    Array.prototype.forEach.call(grid.querySelectorAll('.feature-card'), function (card) {
+        var btn = card.querySelector('.acc-btn');
+        if (!btn) return;
+        var set = function (open) {
+            card.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.firstChild.nodeValue = open ? btn.dataset.less : btn.dataset.more;
+        };
+        card.addEventListener('click', function (e) {
+            if (e.target.closest('a')) return;
+            if (window.getSelection && String(window.getSelection()).length) return; /* metin seçerken açma */
+            set(!card.classList.contains('open'));
+        });
+    });
+})();
+(function () {
+    /* Dar ekranda gezinme şeridi yana kayar: aktif sekmeyi görünür alana getir, sağda devam varsa kenarı soldur. */
+    var nav = document.querySelector('.mainnav');
+    if (nav) {
+        var more = function () { nav.classList.toggle('more', nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 2); };
+        var act = nav.querySelector('a.active');
+        var reveal = function () { if (act && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, act.offsetLeft - 16); more(); };
+        nav.addEventListener('scroll', more, { passive: true }); window.addEventListener('resize', more); reveal();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(reveal); /* yazı tipi gelince genişlikler değişir */
+    }
+    var bar = document.getElementById('topbar');
+    if (bar) {
+        var onScroll = function () { bar.classList.toggle('stuck', window.scrollY > 8); };
+        onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    }
+    var rise = document.querySelectorAll('.rise');
+    if ('IntersectionObserver' in window && rise.length) {
+        var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        rise.forEach(function (el) { io.observe(el); });
+        /* Emniyet: gözlemci ne olursa olsun içerik 1.2 sn sonra görünür olur. */
+        setTimeout(function () { rise.forEach(function (el) { el.classList.add('in'); }); }, 1200);
+    } else { rise.forEach(function (el) { el.classList.add('in'); }); }
+
+    /* Bölüm listesi sayfadaki başlıklardan üretilir — içerik iki yere yazılmaz. */
+    var doc = document.querySelector('.doc'), list = document.getElementById('toc-list');
+    if (!doc || !list) return;
+    var sel = doc.dataset.toc || 'h2';
+    var heads = doc.querySelectorAll(sel);
+    if (heads.length < 3) { ['.toc-title', '.toc-list'].forEach(function (c) { var t = document.querySelector(c); if (t) t.hidden = true; }); return; }
+    var links = [];
+    Array.prototype.forEach.call(heads, function (h, i) {
+        var target = h.tagName === 'SUMMARY' ? h.parentNode : h;
+        if (!target.id) target.id = 'b' + (i + 1);
+        var a = document.createElement('a'); a.href = '#' + target.id; a.textContent = h.textContent.trim();
+        if (h.tagName === 'SUMMARY') a.addEventListener('click', function () { h.parentNode.open = true; });
+        list.appendChild(a); links.push(a);
+    });
+    var tick = false;
+    var spy = function () {
+        tick = false; var best = 0;
+        for (var i = 0; i < heads.length; i++) { if (heads[i].closest('[hidden]')) continue; if (heads[i].getBoundingClientRect().top <= 120) best = i; }
+        links.forEach(function (a, i) { a.classList.toggle('current', i === best); });
+    };
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+    spy();
+    /* Arama filtreledikçe bölüm listesi de daralır. */
+    document.addEventListener('docsearch', function () {
+        links.forEach(function (a, i) { var target = heads[i].tagName === 'SUMMARY' ? heads[i].parentNode : heads[i]; a.hidden = !!target.closest('[hidden]'); });
+        spy();
+    });
+})();
+(function () {
+    /* Sayfa içi arama — uygulamadaki "Bu sayfada ara" ile aynı davranış: eşleşen bölümler açılır ve
+       gösterilir, eşleşmeyenler gizlenir, kelimeler işaretlenir. Türkçe harflere ve aksana duyarsız. */
+    var input = document.getElementById('doc-search'), art = document.querySelector('article.doc');
+    if (!input || !art) return;
+    var clearBtn = document.getElementById('doc-search-clear'), status = document.getElementById('doc-search-status');
+    var fold = function (s) {
+        var out = '';
+        for (var i = 0; i < s.length; i++) {
+            var c = s[i];
+            if (c === 'ı' || c === 'İ') { out += 'i'; continue; }
+            var b = c.normalize('NFD')[0] || c, l = b.toLowerCase();
+            out += l.length === 1 ? l : b;
+        }
+        return out;
+    };
+    /* Birimler: h2 bir grup açar; her <details> kendi başına birim; h2 altındaki düz metin tek birim. */
+    var groups = [], cur = null;
+    Array.prototype.forEach.call(art.children, function (el) {
+        if (el.tagName === 'H2') { cur = { head: el, items: [] }; groups.push(cur); return; }
+        if (!cur) { cur = { head: null, items: [] }; groups.push(cur); }
+        if (el.tagName === 'DETAILS') { cur.items.push({ nodes: [el], det: el }); return; }
+        var last = cur.items[cur.items.length - 1];
+        if (!last || last.det) { last = { nodes: [], det: null }; cur.items.push(last); }
+        last.nodes.push(el);
+    });
+    var saved = null; /* arama başlamadan önceki açık/kapalı durumu */
+    var textOf = function (nodes) { return nodes.map(function (n) { return n.textContent; }).join(' '); };
+    var unmark = function () {
+        Array.prototype.forEach.call(art.querySelectorAll('mark.hit'), function (m) { m.replaceWith(m.textContent); });
+        art.normalize();
+    };
+    var mark = function (root, q) {
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), nodes = [], n = 0;
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach(function (t) {
+            var v = t.nodeValue, f = fold(v), i = f.indexOf(q);
+            if (i < 0) return;
+            var frag = document.createDocumentFragment(), last = 0;
+            while (i >= 0) {
+                if (i > last) frag.appendChild(document.createTextNode(v.slice(last, i)));
+                var m = document.createElement('mark'); m.className = 'hit'; m.textContent = v.slice(i, i + q.length); frag.appendChild(m);
+                last = i + q.length; n++; i = f.indexOf(q, last);
+            }
+            if (last < v.length) frag.appendChild(document.createTextNode(v.slice(last)));
+            t.parentNode.replaceChild(frag, t);
+        });
+        return n;
+    };
+    var setHidden = function (nodes, h) { nodes.forEach(function (n) { n.hidden = h; }); };
+    var reset = function () {
+        unmark();
+        groups.forEach(function (g) { if (g.head) g.head.hidden = false; g.items.forEach(function (it) { setHidden(it.nodes, false); }); });
+        if (saved) { saved.forEach(function (o, d) { d.open = o; }); saved = null; }
+        Array.prototype.forEach.call(art.querySelectorAll('h2.first-visible'), function (h) { h.classList.remove('first-visible'); });
+        status.textContent = ''; clearBtn.hidden = true;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var run = function () {
+        var q = fold(input.value.trim());
+        clearBtn.hidden = !input.value;
+        if (q.length < 2) { if (saved) reset(); else { status.textContent = ''; } return; }
+        if (!saved) { saved = new Map(); Array.prototype.forEach.call(art.querySelectorAll('details'), function (d) { saved.set(d, d.open); }); }
+        unmark();
+        var hits = 0, sections = 0;
+        groups.forEach(function (g) {
+            var whole = g.head && g.items.length && !g.items[0].det; /* gizlilik/koşullar: başlık + metin tek birim */
+            var any = false;
+            if (whole) {
+                var all = [g.head].concat(g.items[0].nodes);
+                any = fold(textOf(all)).indexOf(q) !== -1;
+                g.head.hidden = !any; setHidden(g.items[0].nodes, !any);
+                if (any) { sections++; all.forEach(function (n) { hits += mark(n, q); }); }
+            } else {
+                g.items.forEach(function (it) {
+                    var ok = fold(textOf(it.nodes)).indexOf(q) !== -1;
+                    setHidden(it.nodes, !ok);
+                    if (ok) { any = true; sections++; if (it.det) it.det.open = true; it.nodes.forEach(function (n) { hits += mark(n, q); }); }
+                });
+                if (g.head) g.head.hidden = !any;
+            }
+        });
+        var firstSeen = false;
+        Array.prototype.forEach.call(art.querySelectorAll(':scope > h2'), function (h) { var f = !firstSeen && !h.hidden; h.classList.toggle('first-visible', f); if (f) firstSeen = true; });
+        status.textContent = hits ? status.dataset.count.replace('{n}', hits).replace('{m}', sections).replace('{es}', hits === 1 ? '' : 'es').replace('{s}', sections === 1 ? '' : 's') : status.dataset.none;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var timer = null;
+    input.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(run, 220); });
+    input.addEventListener('keydown', function (e) { if (e.key === 'Escape') { input.value = ''; reset(); } });
+    clearBtn.addEventListener('click', function () { input.value = ''; reset(); input.focus(); });
+})();
+</script>
+</body>
+</html>

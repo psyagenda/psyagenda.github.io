@@ -1,0 +1,67 @@
+{
+ "es": {
+  "desc": {
+   "guide": "Guía de uso de PsyAgenda: gestión de consultantes, creación de citas, calendario, tests, funciones de IA, sincronización y más.",
+   "faq": "Preguntas frecuentes sobre PsyAgenda y sus respuestas.",
+   "terms": "Términos de uso de PsyAgenda",
+   "privacy": "Política de privacidad de PsyAgenda"
+  },
+  "sub": {
+   "guide": "Guía completa que explica paso a paso todas las funciones de PsyAgenda. Abra cada sección para ver las instrucciones detalladas.",
+   "faq": "Las preguntas más frecuentes sobre PsyAgenda y sus respuestas.",
+   "terms": "PsyAgenda — Información importante y términos de uso"
+  }
+ },
+ "de": {
+  "desc": {
+   "guide": "PsyAgenda-Benutzerhandbuch: Klientenverwaltung, Termine anlegen, Kalender, Tests, KI-Funktionen, Synchronisierung und mehr.",
+   "faq": "Häufig gestellte Fragen zu PsyAgenda und die Antworten darauf.",
+   "terms": "PsyAgenda Nutzungsbedingungen",
+   "privacy": "PsyAgenda Datenschutzerklärung"
+  },
+  "sub": {
+   "guide": "Ein umfassendes Handbuch, das alle Funktionen von PsyAgenda Schritt für Schritt erklärt. Öffnen Sie einen Abschnitt, um die ausführlichen Anleitungen zu sehen.",
+   "faq": "Die häufigsten Fragen zu PsyAgenda und die Antworten darauf.",
+   "terms": "PsyAgenda — Wichtige Hinweise und Nutzungsbedingungen"
+  }
+ },
+ "fr": {
+  "desc": {
+   "guide": "Guide d'utilisation de PsyAgenda&nbsp;: gestion des clients, création de rendez-vous, calendrier, tests, intelligence artificielle, synchronisation et plus encore.",
+   "faq": "Questions fréquentes sur PsyAgenda et leurs réponses.",
+   "terms": "Conditions d'utilisation de PsyAgenda",
+   "privacy": "Politique de confidentialité de PsyAgenda"
+  },
+  "sub": {
+   "guide": "Un guide complet qui présente pas à pas toutes les fonctionnalités de PsyAgenda. Ouvrez chaque section pour afficher les instructions détaillées.",
+   "faq": "Les questions les plus fréquentes sur PsyAgenda et leurs réponses.",
+   "terms": "PsyAgenda — Informations importantes et conditions d'utilisation"
+  }
+ },
+ "pt": {
+  "desc": {
+   "guide": "Guia de uso do PsyAgenda: gerenciamento de clientes, criação de agendamentos, calendário, testes, inteligência artificial, sincronização e muito mais.",
+   "faq": "Perguntas frequentes sobre o PsyAgenda.",
+   "terms": "Termos de uso do PsyAgenda",
+   "privacy": "Política de Privacidade do PsyAgenda"
+  },
+  "sub": {
+   "guide": "Guia completo que explica passo a passo todos os recursos do PsyAgenda. Abra cada seção para ver as instruções detalhadas.",
+   "faq": "As perguntas mais comuns sobre o PsyAgenda e suas respostas.",
+   "terms": "PsyAgenda — Informações importantes e termos de uso"
+  }
+ },
+ "it": {
+  "desc": {
+   "guide": "Guida all'uso di PsyAgenda: gestione dei clienti, creazione degli appuntamenti, calendario, test, intelligenza artificiale, sincronizzazione e altro ancora.",
+   "faq": "Domande frequenti su PsyAgenda e relative risposte.",
+   "terms": "Condizioni d'uso di PsyAgenda",
+   "privacy": "Informativa sulla privacy di PsyAgenda"
+  },
+  "sub": {
+   "guide": "Guida completa che illustra passo passo tutte le funzioni di PsyAgenda. Aprendo ogni sezione può consultare le istruzioni dettagliate.",
+   "faq": "Le domande più frequenti su PsyAgenda e le relative risposte.",
+   "terms": "PsyAgenda — Informazioni importanti e Condizioni d'uso"
+  }
+ }
+}

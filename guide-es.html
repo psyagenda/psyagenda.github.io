@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de uso — PsyAgenda</title>
+    <meta name="description" content="Guía de uso de PsyAgenda: gestión de consultantes, creación de citas, calendario, tests, funciones de IA, sincronización y más.">
+    <link rel="canonical" href="https://www.psyagenda.app/guide-es.html">
+    <link rel="alternate" hreflang="tr" href="https://www.psyagenda.app/guide-tr.html">
+    <link rel="alternate" hreflang="en" href="https://www.psyagenda.app/guide-en.html">
+    <link rel="alternate" hreflang="es" href="https://www.psyagenda.app/guide-es.html">
+    <link rel="alternate" hreflang="de" href="https://www.psyagenda.app/guide-de.html">
+    <link rel="alternate" hreflang="fr" href="https://www.psyagenda.app/guide-fr.html">
+    <link rel="alternate" hreflang="pt" href="https://www.psyagenda.app/guide-pt.html">
+    <link rel="alternate" hreflang="it" href="https://www.psyagenda.app/guide-it.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PsyAgenda">
+    <meta property="og:title" content="Guía de uso — PsyAgenda">
+    <meta property="og:description" content="Guía de uso de PsyAgenda: gestión de consultantes, creación de citas, calendario, tests, funciones de IA, sincronización y más.">
+    <meta property="og:url" content="https://www.psyagenda.app/guide-es.html">
+    <meta property="og:image" content="https://www.psyagenda.app/app-icon.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Guía de uso — PsyAgenda">
+    <meta name="twitter:description" content="Guía de uso de PsyAgenda: gestión de consultantes, creación de citas, calendario, tests, funciones de IA, sincronización y más.">
+    <link rel="icon" href="app-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+        <a class="brand" href="index-es.html"><img src="app-icon.png" alt=""><span>PsyAgenda</span></a>
+        <div class="nav-right">
+            <nav class="mainnav">
+                <a href="index-es.html">Inicio</a>
+                <a href="guide-es.html" class="active">Guía de uso</a>
+                <a href="faq-es.html">FAQ</a>
+                <a href="terms-es.html">Términos de uso</a>
+                <a href="privacy-es.html">Política de privacidad</a>
+            </nav>
+            <div class="lang-menu" id="lang-menu">
+                <button type="button" class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-panel" aria-label="Selección de idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.7 3.9 5.8 3.9 9.2s-1.3 6.5-3.9 9.2c-2.6-2.7-3.9-5.8-3.9-9.2s1.3-6.5 3.9-9.2z"/></svg><span>Idioma</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                <div class="lang-panel" id="lang-panel">
+                    <label class="lang-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="lang-search" placeholder="Buscar idioma" autocomplete="off" spellcheck="false" aria-label="Buscar idioma"></label>
+                    <ul class="lang-list" id="lang-list">
+                        <li><a href="guide-tr.html" lang="tr" hreflang="tr">Türkçe</a></li>
+                        <li><a href="guide-en.html" lang="en" hreflang="en">English</a></li>
+                        <li><a href="guide-es.html" lang="es" hreflang="es" class="current" aria-current="true">Español</a></li>
+                        <li><a href="guide-de.html" lang="de" hreflang="de">Deutsch</a></li>
+                        <li><a href="guide-fr.html" lang="fr" hreflang="fr">Français</a></li>
+                        <li><a href="guide-pt.html" lang="pt" hreflang="pt">Português</a></li>
+                        <li><a href="guide-it.html" lang="it" hreflang="it">Italiano</a></li>
+                    </ul>
+                    <p class="lang-empty" id="lang-empty" hidden>Sin resultados</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="topbar-spacer" aria-hidden="true"></div>
+
+<main>
+    <div class="wrap page-head">
+        <h1>Guía de uso</h1>
+        <p class="subtitle">Guía completa que explica paso a paso todas las funciones de PsyAgenda. Abra cada sección para ver las instrucciones detalladas.</p>
+    </div>
+    <div class="wrap doc-layout">
+        <aside class="toc">
+            <div class="doc-search">
+                <label class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="doc-search" placeholder="Buscar en esta página..." autocomplete="off" spellcheck="false" aria-label="Buscar en esta página..."><button type="button" class="search-clear" id="doc-search-clear" aria-label="Borrar" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></label>
+                <p class="search-status" id="doc-search-status" aria-live="polite" data-none="No se encontraron resultados." data-count="Coincidencias: {n} · Secciones: {m}"></p>
+            </div>
+            <div class="toc-title">En esta página</div>
+            <div class="toc-list" id="toc-list"></div>
+        </aside>
+        <article class="doc" data-toc=".guide-section > summary">
+<!-- GENERATED:GUIDE-START -->
+    <!-- 1. Primeros pasos -->
+    <details class="guide-section">
+        <summary>Primeros pasos</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">En esta sección encontrará la configuración básica que debe realizar al usar PsyAgenda por primera vez.</p>
+
+            <h4>Conocer la pantalla de inicio</h4>
+            <ol>
+                <li>Al abrir la aplicación aparece la pantalla de <strong>Inicio</strong>.</li>
+                <li>En la parte superior están el nombre de su consultorio y el botón de <strong>Configuración</strong> (rueda dentada). El botón de <strong>Sincronización</strong> solo aparece a la izquierda de la rueda dentada después de configurar la sincronización con Google Drive.</li>
+                <li>En el centro hay cuatro botones grandes de navegación: <strong>Calendario</strong>, <strong>Consultantes</strong>, <strong>Presupuesto</strong> y <strong>Módulo de tests</strong>.</li>
+                <li>En la sección <strong>Notas de hoy</strong> se listan las sesiones del día seleccionado. Con el botón de <strong>fecha</strong> del título puede consultar otro día y volver con <strong>Ir a hoy</strong>. Puede ocultar las sesiones finalizadas con el icono del ojo de la derecha.</li>
+            </ol>
+
+            <h4>Cambiar el idioma</h4>
+            <ol>
+                <li>En la pantalla de inicio, toque el icono de <strong>Configuración</strong> (rueda dentada), arriba a la derecha.</li>
+                <li>Vaya a la pestaña <strong>Idioma</strong> y abra la lista <strong>Idioma de la aplicación</strong>.</li>
+                <li>Seleccione el idioma que desee en la lista y confirme. La aplicación cambia al idioma elegido al instante.</li>
+            </ol>
+
+            <h4>Configurar la moneda</h4>
+            <ol>
+                <li>Vaya a <strong>Configuración > Personalización</strong>.</li>
+                <li>Toque el campo <strong>Moneda</strong>.</li>
+                <li>Seleccione en la lista la moneda que desea usar. En el aviso que aparece, pulse <strong>Sí, entiendo y deseo continuar</strong>. Todos los campos de honorarios y presupuesto se muestran con esa moneda; los importes de los registros existentes no se convierten, solo cambia el símbolo.</li>
+            </ol>
+
+            <h4>Definir la tarifa estándar por sesión</h4>
+            <ol>
+                <li>Vaya a <strong>Configuración > Personalización</strong>.</li>
+                <li>Toque el campo <strong>Tarifa estándar por sesión</strong>.</li>
+                <li>Escriba sus honorarios predeterminados por sesión y salga del campo; el ajuste se guarda automáticamente (verá el aviso "¡Guardado!"). Esta tarifa aparece de forma automática al crear una nueva cita.</li>
+            </ol>
+
+            <h4>Configurar el nombre del consultorio</h4>
+            <ol>
+                <li>Vaya a <strong>Configuración > Personalización</strong>.</li>
+                <li>Escriba el nombre de su clínica o consultorio en el campo <strong>Nombre del consultorio</strong>.</li>
+                <li>El nombre que escriba aparecerá como título en la parte superior de la pantalla de inicio.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 2. Gestión de consultantes -->
+    <details class="guide-section">
+        <summary>Gestión de consultantes</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Puede agregar y editar consultantes, ver sus detalles y descargar sus informes.</p>
+
+            <h4>Agregar un nuevo consultante</h4>
+            <ol>
+                <li>Vaya a la pantalla <strong>Consultantes</strong> desde la barra de navegación superior o desde la pantalla de inicio.</li>
+                <li>Toque el botón <strong>Nueva ficha de consultante</strong>, en la parte superior. En la ventana que aparece en teléfonos y tabletas, <strong>Crear manualmente</strong> abre un formulario vacío; si elige <strong>Agregar desde contactos</strong>, el nombre, el apellido, el teléfono y el correo electrónico del contacto que seleccione se completan automáticamente en el formulario.</li>
+                <li>En el formulario, complete los campos <strong>Nombre</strong> y <strong>Apellido</strong> (obligatorios).</li>
+                <li>Si lo desea, complete los campos de teléfono, correo electrónico, fecha de nacimiento, género, estado civil, profesión, nivel educativo y notas privadas. En teléfonos y tabletas, con el botón de <strong>contactos</strong> situado junto al campo del teléfono puede elegir el número directamente de su agenda de contactos; este botón también está disponible al editar un consultante existente.</li>
+                <li>En el campo <strong>Honorarios netos por sesión</strong> puede indicar una tarifa específica para este consultante. Si lo deja vacío, se usa la tarifa estándar.</li>
+                <li>Pulse el botón <strong>Guardar</strong> para crear el consultante.</li>
+            </ol>
+
+            <h4>Importar la lista de consultantes desde Excel</h4>
+            <ol>
+                <li>En la pantalla <strong>Consultantes</strong>, toque el botón <strong>Importar</strong>, junto al botón <strong>Nueva ficha de consultante</strong>.</li>
+                <li>En la ventana que se abre, pulse <strong>Descargar plantilla</strong>. Se descargará en su dispositivo un archivo de Excel vacío (.xlsx) con las columnas Nombre, Apellido, Teléfono, Correo electrónico y Honorarios por sesión. En la segunda hoja del archivo encontrará las instrucciones para completarlo.</li>
+                <li>Abra la plantilla en Excel o en un programa similar y escriba sus consultantes sobre la fila de ejemplo. <strong>No elimine la fila de encabezado.</strong> Solo el campo <strong>Nombre</strong> es obligatorio; el apellido, el teléfono, el correo electrónico y los honorarios pueden dejarse vacíos. Se importan hasta 500 filas a la vez.</li>
+                <li>Guarde el archivo, vuelva a la aplicación y súbalo desde la misma ventana con <strong>Seleccionar archivo</strong>.</li>
+                <li>Antes de que se creen los registros aparece una <strong>vista previa</strong>: se indica cuántos consultantes se agregarán, qué filas se omitirán por estar ya en su lista y qué filas no se pueden importar, con su número de fila. Los registros existentes no se sobrescriben. Si no se pudo leer el teléfono o el correo electrónico, el consultante se agrega igualmente y solo ese campo queda vacío.</li>
+                <li>Confirme con <strong>Agregar consultantes</strong>. Una vez terminado el proceso, mientras la ventana siga abierta, puede eliminar todos los registros agregados con el botón <strong>Deshacer esta importación</strong>. Después de cerrar la ventana ya no es posible deshacer la importación en bloque.</li>
+            </ol>
+
+            <h4>Editar los datos de un consultante</h4>
+            <ol>
+                <li>En la pantalla <strong>Consultantes</strong>, toque el nombre del consultante que desea editar.</li>
+                <li>En la pantalla de detalles, toque el botón <strong>Editar</strong> del grupo de botones superior.</li>
+                <li>Actualice los campos que desee.</li>
+                <li>Pulse el botón <strong>Actualizar</strong> para guardar los cambios.</li>
+            </ol>
+
+            <h4>Ver los detalles de un consultante</h4>
+            <ol>
+                <li>En la pantalla <strong>Consultantes</strong>, toque el nombre del consultante.</li>
+                <li>En la pantalla de detalles se muestran todos los datos del consultante, su historial de sesiones, sus registros de tests y su información financiera.</li>
+                <li>En el historial de sesiones se listan la fecha y la hora de cada registro. Al tocar una fila se despliegan las notas previas a la sesión, las notas de la sesión, las observaciones de la IA, las notas para la próxima sesión y las imágenes adjuntas. Para abrir la sesión en sí, toque el botón <strong>Editar</strong> de la fila.</li>
+                <li>Con la barra de búsqueda puede buscar por palabra clave en el historial de sesiones.</li>
+            </ol>
+
+            <h4>Activar o desactivar un consultante</h4>
+            <ol>
+                <li>Abra la pantalla de detalles del consultante.</li>
+                <li>Toque el botón <strong>Desactivar</strong>, en la parte superior. Si el consultante ya está inactivo, este botón se muestra como <strong>Activar</strong>.</li>
+                <li>El filtro situado sobre la lista de consultantes tiene seleccionado <strong>Activos</strong> de forma predeterminada, por lo que los consultantes inactivos no aparecen en la lista. Para verlos, toque la opción <strong>Inactivos</strong> o <strong>Todos</strong> del filtro.</li>
+            </ol>
+
+            <h4>Descargar la ficha de un consultante</h4>
+            <ol>
+                <li>Abra la pantalla de detalles del consultante.</li>
+                <li>Toque el botón <strong>Descargar informe</strong> (icono de descarga).</li>
+                <li>En la ventana que se abre, elija el formato del informe (<strong>Word</strong> es el predeterminado; también puede elegir <strong>PDF</strong>) y pulse el botón <strong>Descargar</strong>.</li>
+                <li>Una vez preparado el informe se abre la ventana de seguridad: si elige <strong>🔒 Cifrar</strong>, se descarga un ZIP protegido con la contraseña que defina; si elige <strong>Descargar sin cifrar</strong>, tras confirmar el aviso el archivo se guarda tal cual. El informe incluye los datos del consultante, el historial de sesiones, los resultados de los tests y las evaluaciones de la IA.</li>
+            </ol>
+
+            <h4>Eliminar un consultante</h4>
+            <ol>
+                <li>Abra la pantalla de detalles del consultante.</li>
+                <li>Toque el botón rojo <strong>Eliminar</strong> del grupo de botones superior.</li>
+                <li>La ventana de confirmación indica qué se eliminará: la ficha del consultante, todas sus citas y sus registros de tests. Los honorarios de sesión ya cobrados también se eliminan junto con esas citas, por lo que su historial de presupuesto y sus informes de ingresos cambiarán; los gastos del consultorio no vinculados al consultante no se ven afectados.</li>
+                <li>La eliminación no se puede deshacer. Si ha terminado de trabajar con el consultante y solo quiere quitar el registro de la vista, <strong>se recomienda Desactivar en lugar de eliminar</strong>: el historial de citas, los registros de tests y los datos de presupuesto se conservan tal cual, el consultante solo se oculta de las listas y puede reactivarse en cualquier momento. Por eso, en un consultante activo la ventana de confirmación tiene tres botones: <strong>Cancelar</strong>, <strong>Desactivar</strong> y <strong>Sí, eliminar</strong>. Si el consultante ya está inactivo, el botón <strong>Desactivar</strong> no aparece; solo quedan <strong>Cancelar</strong> y <strong>Sí, eliminar</strong>.</li>
+                <li>Para confirmar la eliminación, toque el botón <strong>Sí, eliminar</strong>. Esta acción no se puede deshacer; la única forma de recuperar los datos es restaurar una copia de seguridad creada antes de la eliminación.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 3. Gestión de citas y sesiones -->
+    <details class="guide-section">
+        <summary>Gestión de citas y sesiones</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Aquí encontrará información sobre cómo crear y editar citas, programar sesiones recurrentes y escribir notas de sesión.</p>
+
+            <h4>Crear una nueva cita</h4>
+            <ol>
+                <li>Vaya a la pantalla <strong>Calendario</strong>.</li>
+                <li>Toque el día y la hora en los que desea crear la cita. Se abre la ventana de la cita.</li>
+                <li>Seleccione a su consultante en la lista desplegable <strong>Consultante</strong>. Puede filtrar escribiendo en el cuadro de búsqueda.</li>
+                <li>El campo <strong>Duración (minutos)</strong> viene ya completado con la duración predeterminada de Configuración. Si desea cambiarla, elija en la lista: 15, 30, 45, 60, 75, 90, 120, 150 o 180 minutos.</li>
+                <li>Si lo necesita, escriba en el campo <strong>Notas previas a la sesión</strong> lo que quiera recordar antes de la sesión; esta nota aparece junto con la cita en la sección Notas de hoy de la pantalla de inicio.</li>
+                <li>Pulse el botón <strong>Guardar</strong> o <strong>Guardar y salir</strong>.</li>
+            </ol>
+
+            <h4>Agregar un consultante rápidamente</h4>
+            <ol>
+                <li>Esta opción crea en un solo paso la ficha y la cita de un consultante que todavía no está registrado. En la ventana de la cita, en lugar de elegir en la lista, escriba el nombre y el apellido del consultante en el campo <strong>Nuevo consultante</strong>.</li>
+                <li>En cuanto empiece a escribir aparece el campo de honorarios. Si lo deja vacío, a la cita se le aplica su tarifa estándar por sesión; también puede indicar un importe específico para esta cita.</li>
+                <li>Guarde la cita. La ficha del consultante se crea automáticamente en segundo plano (la última palabra del texto se toma como apellido y el resto como nombre) y la cita queda vinculada a esa ficha.</li>
+                <li>Si ya existe un consultante registrado con el mismo nombre, se muestra un aviso; si se trata de otra persona, puede confirmar para crear el registro nuevo.</li>
+                <li>La ficha creada es una ficha de consultante normal; puede completar más tarde campos como el teléfono, el correo electrónico o la fecha de nacimiento desde la pantalla Consultantes. Los honorarios propios de la ficha quedan vacíos, por lo que en sus citas posteriores también se aplica la tarifa estándar.</li>
+            </ol>
+
+            <h4>Editar una cita</h4>
+            <ol>
+                <li>Toque la cita que desea editar en el calendario o en la pantalla de inicio.</li>
+                <li>En la ventana que se abre, modifique los campos que desee (duración, notas, honorarios, cobro, etc.). Para cambiar el día o la hora de la cita, cierre la ventana y arrastre la cita a su nueva posición en el calendario. Si la cita no se mueve, puede que el bloqueo de arrastre esté activado; fíjese en el botón del candado situado en el centro del selector de vista.</li>
+                <li>Pulse el botón <strong>Guardar</strong>. Si la cita forma parte de una serie, se le pedirá que elija el alcance de la actualización.</li>
+            </ol>
+
+            <h4>Crear una cita recurrente</h4>
+            <ol>
+                <li>Al crear una nueva cita, marque la casilla <strong>Repetir</strong>.</li>
+                <li>En la lista desplegable situada junto a la casilla <strong>Repetir</strong>, elija la frecuencia: <strong>Cada semana</strong>, <strong>Cada 2 semanas</strong>, <strong>Cada 3 semanas</strong> o <strong>Cada mes</strong>.</li>
+                <li>En el campo <strong>veces</strong>, indique cuántas sesiones se crearán (de 1 a 52).</li>
+                <li>Pulse el botón <strong>Guardar</strong>. Las citas se crean automáticamente con la frecuencia indicada.</li>
+                <li>La última sesión de la serie se muestra en el calendario en <strong>color morado</strong> y en la esquina inferior derecha de su recuadro aparece una <strong>bandera de fin (🏁)</strong>; así ve de un vistazo dónde termina la serie. En la vista mensual no aparece la bandera: el recuadro con el número de sesiones de ese día se muestra en morado.</li>
+                <li>Al abrir cualquier cita de la serie, en la parte superior de la ventana aparece el panel de información de la serie (en la última cita, como aviso en naranja). Ajuste aquí la frecuencia y el cuadro <strong>veces</strong> y pulse el botón <strong>Extender</strong> para agregar más sesiones a la serie. Al extender la serie, el color morado y la bandera pasan automáticamente a la nueva última sesión.</li>
+            </ol>
+
+            <h4>Escribir notas de sesión</h4>
+            <ol>
+                <li>La ventana de la cita tiene tres áreas de notas distintas:</li>
+                <li><strong>Notas previas a la sesión</strong> (naranja): lo que necesita recordar o comprobar antes de la sesión. Esta nota, que escribe al crear la cita, aparece debajo de la cita en la sección <strong>Notas de hoy</strong> de la pantalla de inicio; así, al empezar el día tiene delante qué revisar en cada sesión.</li>
+                <li><strong>Notas de la sesión</strong> (verde): el registro principal de la sesión. Aquí se guardan todas las notas y observaciones tomadas durante o después de la sesión: todo lo que se habló y resultó importante en esa sesión. Si, de forma opcional, ejecuta el análisis de la sesión con IA, el análisis también lee el texto de este campo.</li>
+                <li><strong>Notas para la próxima sesión</strong> (morado): los temas que desea abordar en la próxima sesión a partir de sus observaciones. Puede escribirlas por su cuenta o, de forma opcional, pedir una sugerencia a la IA; la sugerencia se agrega al final de lo que haya escrito, sin sobrescribirlo. Cuando cree una nueva cita para el mismo consultante y lo seleccione, estas notas de la sesión anterior pasan automáticamente al campo <strong>Notas previas a la sesión</strong> de la nueva cita (si el campo tiene contenido, se agregan al final) y se muestra un aviso.</li>
+                <li>En lugar de teclear las <strong>Notas de la sesión</strong>: si tomó notas en papel durante la sesión, puede fotografiarlas y adjuntarlas a la cita. Al tocar el botón de <strong>reconocimiento de escritura a mano</strong> sobre la imagen adjunta, la IA digitaliza el texto; tras la ventana de confirmación, elige el formato de las notas (Nota libre, SOAP o DAP). El texto resultante se agrega al final de este campo, sin sobrescribir lo que ya había escrito.</li>
+                <li>Con el botón <strong>Modo de lectura</strong> situado junto a cada área de notas puede leer las notas a pantalla completa.</li>
+            </ol>
+
+            <h4>Bloquear un horario (marcar como no disponible)</h4>
+            <ol>
+                <li>En la ventana de la cita, marque la casilla <strong>Bloquear este horario</strong>.</li>
+                <li>Este modo desactiva todos los campos de consultante, honorarios, notas, adjuntos y duración. Por eso, elija la duración <strong>antes de marcar la casilla</strong>; el bloqueo se crea con esa duración.</li>
+                <li>Pulse el botón <strong>Guardar</strong>. Ese intervalo se marca en el calendario como "No disponible".</li>
+                <li>Los horarios bloqueados también pueden configurarse como recurrentes.</li>
+            </ol>
+
+            <h4>Eliminar una cita</h4>
+            <ol>
+                <li>Toque la cita que desea eliminar para abrir su ventana.</li>
+                <li>Toque el botón rojo <strong>Eliminar</strong>, abajo a la izquierda.</li>
+                <li>Si es una cita individual, pulse el botón <strong>Sí, eliminar</strong> en la ventana de confirmación (en los horarios bloqueados este botón es <strong>Sí, quitar bloqueo</strong>). En una cita recurrente, en lugar de este paso de confirmación se abre directamente la ventana de alcance.</li>
+                <li>Si es una cita recurrente, elija el alcance de la eliminación: <strong>Eliminar solo esta sesión</strong> o <strong>Eliminar esta y todas las siguientes</strong>.</li>
+            </ol>
+
+            <h4>Seguimiento de pagos</h4>
+            <ol>
+                <li>Al abrir una cita guardada, a la derecha del título <strong>Notas de la sesión</strong> se encuentra la casilla <strong>Cobrado</strong>. Al crear una cita nueva esta casilla no aparece; se muestra después de guardar la cita.</li>
+                <li>Marque esta casilla cuando el consultante realice el pago.</li>
+                <li>Cuando se acumulan sesiones sin pagar, en la ventana de la cita del consultante se muestra el <strong>aviso de saldo pendiente acumulado</strong>.</li>
+                <li>No es necesario abrir las citas una por una para registrar los pagos: en la pestaña <strong>Presupuesto > Ingresos</strong> todas las sesiones aparecen en forma de lista, y la casilla <strong>Cobrado</strong> también puede marcarse directamente desde esa lista.</li>
+                <li>Seleccionando un consultante en el filtro situado sobre la lista puede ver solo su historial de pagos. Con las casillas <strong>Mostrar solo las sesiones sin cobrar</strong> y <strong>Mostrar solo las sesiones cobradas</strong> puede acotar la lista, y con el filtro de fecha puede elegir el período.</li>
+                <li>En la lista, las sesiones cobradas se muestran atenuadas; las sesiones ya pasadas y sin cobrar se marcan en <strong>rojo</strong>, de modo que los pagos atrasados se distinguen a primera vista.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 4. Uso del calendario -->
+    <details class="guide-section">
+        <summary>Uso del calendario</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">La pantalla del calendario le permite gestionar sus citas de forma visual.</p>
+
+            <h4>Vista mensual</h4>
+            <ol>
+                <li>Vaya a la pantalla <strong>Calendario</strong>. De forma predeterminada se abre la vista dinámica (por días); para la vista mensual, toque el botón <strong>Mensual</strong>, a la derecha de la fila de vistas.</li>
+                <li>En cada celda de día, el número de sesiones de ese día se resume en un único recuadro (p. ej., <strong>3 Sesiones</strong>). Los días marcados como no disponibles o festivos se muestran con un recuadro rojo <strong>No disponible</strong>.</li>
+                <li>Tocando un día puede ver la lista detallada de citas de ese día.</li>
+                <li>Con los botones de flecha simple de la parte superior se desplaza entre meses, y con los de flecha doble entre años. Con el botón <strong>Hoy</strong> vuelve al día actual.</li>
+            </ol>
+
+            <h4>Vista dinámica (1 / 3 / 5 / 7 días)</h4>
+            <ol>
+                <li>En la pantalla del calendario, toque el botón <strong>3 días</strong> (1/3/5/7 días según el dispositivo), a la izquierda de la fila inferior de la barra de herramientas superior. El botón <strong>Mensual</strong>, a la derecha, vuelve a la vista mensual.</li>
+                <li>En la vista dinámica los días se muestran en columnas contiguas y las horas en filas. El intervalo predeterminado es <strong>08:00-21:00</strong>; puede cambiarlo en <strong>Configuración > Personalización > Definir el horario de trabajo</strong>.</li>
+                <li>Para cambiar el número de días, toque el botón de flecha hacia abajo situado a la derecha del botón de días (que muestra el número de días visibles en ese momento: <strong>3 días</strong>, <strong>5 días</strong>, etc.) y elija en la lista. Las opciones dependen del dispositivo: en el teléfono <strong>1 / 3</strong>, en la tableta <strong>1 / 3 / 5</strong> y en el escritorio <strong>1 / 3 / 5 / 7</strong> días.</li>
+                <li>Tocando una franja horaria puede crear una nueva cita para esa hora.</li>
+                <li>Tocando el botón <strong>30 min</strong> de la esquina superior izquierda puede cambiar el intervalo de la cuadrícula horaria a <strong>15 / 30 / 60 minutos</strong>.</li>
+            </ol>
+
+            <h4>Navegar por el calendario</h4>
+            <ol>
+                <li>Con los botones de flecha simple a ambos lados del botón <strong>Hoy</strong> avanza y retrocede: un día en la vista por días, un mes en la vista mensual.</li>
+                <li>Los botones de flecha doble de los extremos (<strong>Retroceso rápido</strong> / <strong>Avance rápido</strong>) saltan en pasos más grandes: en la vista por días, tantos días como se muestren en pantalla; en la vista mensual, un año.</li>
+                <li>Toque el botón <strong>Hoy</strong> para volver al día actual.</li>
+                <li>En el calendario puede mover las citas a otras horas arrastrándolas y soltándolas. Si teme moverlas por accidente, puede desactivar esta función; consulte el apartado <strong>Evitar movimientos accidentales</strong> más abajo.</li>
+                <li>En dispositivos táctiles también puede navegar hacia delante y hacia atrás <strong>deslizando el calendario hacia la izquierda o la derecha</strong> con el dedo.</li>
+            </ol>
+
+            <h4>Evitar movimientos accidentales (bloqueo de arrastre)</h4>
+            <ol>
+                <li>En el centro del selector de vista, entre los botones <strong>7 días</strong> y <strong>Mensual</strong>, hay un botón con un candado. Al abrir la aplicación este bloqueo está desactivado, es decir, el arrastre está permitido.</li>
+                <li>Al tocar el botón se activa el bloqueo: el botón se vuelve de color ámbar, el icono cambia a un candado cerrado y aparece el aviso "Arrastrar y soltar desactivado". A partir de ese momento las citas no se pueden mover.</li>
+                <li>Con el bloqueo activado, sigue navegando por el calendario con normalidad: deslizar con el dedo a izquierda/derecha y arriba/abajo no se ve afectado. Solo se impide arrastrar las citas y los bloques <strong>No disponible</strong>.</li>
+                <li>Para volver a permitir el arrastre, toque el mismo botón; recupera su color normal y puede mover las citas de nuevo.</li>
+                <li>Esta preferencia es específica del dispositivo que está usando: se mantiene en ese dispositivo hasta que la desactive y no se transfiere a sus otros dispositivos. Si no puede mover una cita, revise primero si este botón está en color ámbar.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 5. Fotos y archivos adjuntos -->
+    <details class="guide-section">
+        <summary>Fotos y archivos adjuntos</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Puede adjuntar fotos a las sesiones, tomar fotos con la cámara y usar el reconocimiento de escritura a mano.</p>
+
+            <h4>Adjuntar una foto a una sesión</h4>
+            <ol>
+                <li>Abra la ventana de la cita.</li>
+                <li>En la fila <strong>Archivos adjuntos</strong>, debajo del área <strong>Notas de la sesión</strong>, toque el botón <strong>Subir archivo</strong>.</li>
+                <li>Elija un archivo de imagen de su dispositivo. La imagen seleccionada aparece como miniatura en el área de imágenes de la sesión.</li>
+                <li>Tocando la miniatura puede abrirla en el visor a pantalla completa.</li>
+                <li>Para eliminarla, toque el botón rojo <strong>✕</strong> en la esquina superior derecha de la miniatura.</li>
+            </ol>
+
+            <h4>Tomar una foto con la cámara (teléfono y tableta)</h4>
+            <ol>
+                <li>En la ventana de la cita, toque el botón <strong>Subir archivo</strong> de la fila <strong>Archivos adjuntos</strong>.</li>
+                <li>En teléfonos y tabletas, en la pantalla de selección que se abre puede tomar una foto en ese momento con la opción <strong>Cámara</strong>. Si el dispositivo pide permiso para usar la cámara la primera vez, concédalo.</li>
+                <li>La foto tomada se adjunta directamente a la cita, como si se hubiera elegido de la galería.</li>
+                <li>En el escritorio (Windows y macOS) esta pantalla solo permite elegir un archivo; tomar fotos al instante con la cámara es exclusivo de teléfonos y tabletas.</li>
+            </ol>
+
+            <h4>Reconocimiento de escritura a mano</h4>
+            <ol>
+                <li>Después de adjuntar una imagen a la sesión, toque el icono redondo azul con una <strong>estrella</strong> en la esquina inferior izquierda de la miniatura. El icono no lleva texto; en el escritorio, si mantiene el cursor sobre él, aparece la indicación <strong>Digitalizar escritura a mano</strong>.</li>
+                <li>En la ventana <strong>Confirmación del análisis con IA</strong> que se abre, pulse <strong>Aceptar y continuar</strong>. A continuación, en la ventana <strong>Estilo de las notas manuscritas</strong>, elija el <strong>Formato de las notas</strong> (Nota libre, SOAP o DAP) y el modelo de IA que se usará, y confirme.</li>
+                <li>La IA convierte la escritura a mano de la imagen en texto y lo agrega al final del área <strong>Notas de la sesión</strong>. El texto que ya estaba escrito no se elimina.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 6. Gestión del presupuesto y las finanzas -->
+    <details class="guide-section">
+        <summary>Gestión del presupuesto y las finanzas</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">En esta sección aprenderá a controlar ingresos y gastos, a usar el análisis financiero y a exportar los datos.</p>
+
+            <h4>Seguimiento de ingresos</h4>
+            <ol>
+                <li>Vaya a la pantalla <strong>Presupuesto</strong>. De forma predeterminada se abre la pestaña <strong>Ingresos</strong>.</li>
+                <li>Todas sus sesiones se listan con la fecha, el nombre del consultante, los honorarios y el estado de cobro.</li>
+                <li>Con el filtro de fecha de la parte superior puede filtrar por un mes o un año concretos.</li>
+                <li>Con el filtro de consultante puede ver los pagos de un consultante determinado.</li>
+                <li>Debajo de la tabla se muestra el resumen con los ingresos totales y los importes cobrados y sin cobrar.</li>
+            </ol>
+
+            <h4>Enviar un mensaje de recordatorio de pago</h4>
+            <ol>
+                <li>Puede preparar con un solo toque un mensaje de recordatorio para un consultante con pagos vencidos. En la pestaña <strong>Ingresos</strong>, toque el icono rojo de <strong>mensaje</strong> que aparece junto a la fecha en las filas rojas. El mismo icono está en dos lugares más: junto al aviso de saldo pendiente acumulado en la ventana de la cita y junto a la línea de saldo pendiente en la ficha del consultante.</li>
+                <li>En el mensaje se rellenan automáticamente el número de sesiones vencidas del consultante y el importe total. El importe coincide con el saldo pendiente acumulado que ve en pantalla, y el mensaje siempre abarca el saldo pendiente total del consultante, no una sola sesión.</li>
+                <li>En la vista previa que se abre puede leer el texto antes de enviarlo y editarlo como desee. Después, toque uno de los botones <strong>Enviar por WhatsApp</strong>, <strong>Enviar por SMS</strong> o <strong>Enviar por correo electrónico</strong>. PsyAgenda no envía el mensaje por sí misma: abre la aplicación elegida con el texto ya escrito. El mensaje solo llega al consultante cuando usted pulsa enviar en esa aplicación.</li>
+                <li>Puede editar la plantilla del mensaje en <strong>Configuración > Notificaciones</strong>, abriendo el apartado <strong>Plantillas de mensajes</strong> y modificando el campo <strong>Mensaje de recordatorio de pago</strong>; si lo desea, puede agregar a la plantilla sus datos de pago, como el IBAN. Para acceder a las plantillas no es necesario activar el interruptor <strong>Mensajes informativos para consultantes</strong>.</li>
+            </ol>
+
+            <h4>Agregar y gestionar gastos</h4>
+            <ol>
+                <li>Vaya a la pestaña <strong>Presupuesto > Gastos</strong>.</li>
+                <li>Toque el botón <strong>Agregar nuevo gasto</strong>.</li>
+                <li>En el formulario, indique la fecha, la descripción, la categoría y el importe.</li>
+                <li>Pulse el botón <strong>Guardar</strong>. El gasto se agrega a la lista.</li>
+                <li>Para editar un gasto, toque el icono azul del <strong>lápiz</strong> en la columna <strong>Acciones</strong>, al final de la fila; para eliminarlo, toque el icono rojo de la <strong>papelera</strong>.</li>
+            </ol>
+
+            <h4>Gestionar las categorías de gastos</h4>
+            <ol>
+                <li>En la pestaña <strong>Presupuesto > Gastos</strong>, toque el botón <strong>Agregar categoría</strong> (<strong>Categorías</strong> en el teléfono). Se abre la ventana <strong>Administrar categorías de gastos</strong>.</li>
+                <li>Para agregar una nueva categoría, escriba el nombre en el campo superior y pulse el botón <strong>Agregar</strong>.</li>
+                <li>Con el botón <strong>Activa</strong>/<strong>Inactiva</strong> junto al nombre de la categoría puede ocultarla de las listas; las categorías inactivas no aparecen en el formulario de nuevo gasto ni en los filtros, y los registros antiguos se conservan. Para eliminarla, toque el icono de la papelera; si hay gastos registrados en esa categoría, la eliminación se bloquea: cambie antes la categoría de esos gastos.</li>
+            </ol>
+
+            <h4>Gráficos de análisis financiero</h4>
+            <ol>
+                <li>Vaya a la pestaña <strong>Presupuesto > Análisis</strong>.</li>
+                <li>En la parte superior se muestran las tarjetas <strong>Ingresos totales</strong>, <strong>Gastos totales</strong> y <strong>Ganancia neta</strong>. Estos importes abarcan el período que elija con el <strong>filtro de fecha</strong>, arriba a la derecha, y en los ingresos solo se incluyen las sesiones con la casilla <strong>Cobro</strong> marcada.</li>
+                <li>El gráfico de tendencia de ingresos y gastos de 12 meses y el gráfico del número de sesiones se cargan automáticamente.</li>
+                <li>En las tarjetas de desglose mensual puede ver los ingresos, los gastos, el resultado neto y el detalle de sesiones de cada mes.</li>
+            </ol>
+
+            <h4>Exportar a Excel</h4>
+            <ol>
+                <li>En la esquina superior derecha de la pantalla <strong>Presupuesto</strong>, toque el botón con el icono de la <strong>flecha verde hacia abajo</strong>, a la izquierda del botón rojo de cerrar (✕) (botón de exportación a Excel).</li>
+                <li>Se ofrecen dos opciones: <strong>Exportar datos filtrados</strong> o <strong>Exportar todos los datos</strong>.</li>
+                <li>La opción <strong>Exportar todos los datos</strong> crea un archivo de Excel (.xlsx) que incluye las hojas completas de ingresos, gastos y análisis. <strong>Exportar datos filtrados</strong> exporta las filas filtradas que se ven en pantalla en la pestaña abierta en ese momento; si desea obtener con filtros tanto los ingresos como los gastos, exporte cada pestaña por separado.</li>
+                <li>Antes de guardar se le pregunta si desea proteger el archivo con una contraseña. Si define una contraseña, el archivo se guarda como un ZIP cifrado; si elige guardarlo sin cifrar, confirme el aviso y el archivo se descarga directamente.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 7. Tests psicológicos -->
+    <details class="guide-section">
+        <summary>Tests psicológicos</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Con los módulos de Rorschach, dibujo proyectivo y test manual puede aplicar los tests en formato digital y elaborar sus informes.</p>
+
+            <h4>Aplicar el test de Rorschach</h4>
+            <ol>
+                <li>Vaya a la pantalla <strong>Módulo de tests</strong> y, en la pestaña <strong>Iniciar nuevo test</strong>, elija <strong>Test de Rorschach</strong>.</li>
+                <li>En la ventana de configuración, indique la edad y el género del consultante y pulse el botón <strong>Iniciar test</strong>.</li>
+                <li>Recorra el conjunto de 10 láminas con los botones <strong>Lámina anterior</strong> y <strong>Lámina siguiente</strong>; en dispositivos móviles también puede deslizar a izquierda o derecha sobre la imagen de la lámina. El contador de la esquina superior derecha (p. ej., 3 / 10) indica en qué lámina se encuentra.</li>
+                <li>Para cada lámina, escriba la respuesta del consultante en el campo <strong>Respuestas del consultante</strong>.</li>
+                <li>Con el botón <strong>Obtener evaluación</strong> puede pedir a la IA que evalúe esa lámina.</li>
+                <li>Escriba sus propias observaciones clínicas en el campo <strong>Evaluación del terapeuta</strong>.</li>
+                <li>Cuando haya completado todas las láminas, vaya a la pestaña <strong>Informes</strong> para generar los informes finales.</li>
+                <li>Para finalizar el test, toque el botón <strong>Completar test</strong> de la parte inferior; en la ventana <strong>Guardar el resultado del test</strong> elija el consultante en cuya ficha se guardará. Para dejarlo a medias y continuar más tarde, use <strong>Guardar test</strong>.</li>
+            </ol>
+
+            <h4>Aplicar un test de dibujo</h4>
+            <ol>
+                <li>Elija <strong>Módulo de tests > Iniciar nuevo test > Test proyectivo de dibujo</strong>.</li>
+                <li>En la ventana de configuración, indique el tipo de test (Casa-Árbol-Persona, familia kinética, etc.), la edad y el género.</li>
+                <li>En la pantalla del test, suba la imagen del dibujo o fotografíela con la cámara.</li>
+                <li>Con el botón <strong>Obtener evaluación</strong> puede pedir el análisis del dibujo.</li>
+                <li>Escriba sus propias interpretaciones en el campo <strong>Evaluación del terapeuta</strong>; si lo desea, corrija la redacción con el botón <strong>Mejorar el texto</strong> situado a su lado.</li>
+                <li>Con el botón <strong>Combinar informes</strong> junto al campo <strong>Informe híbrido</strong>, integre en un solo informe las evaluaciones de la IA y del terapeuta. Para ello, ambos campos deben tener contenido.</li>
+            </ol>
+
+            <h4>Registro de test manual</h4>
+            <ol>
+                <li>Elija <strong>Módulo de tests > Iniciar nuevo test > Registro de test manual</strong>.</li>
+                <li>En la ventana de configuración, indique el nombre del test, la edad y el género.</li>
+                <li>Escriba los datos del test y sus hallazgos en el campo de texto libre.</li>
+                <li>Si es necesario, adjunte imágenes con el botón <strong>Subir archivo</strong> de la sección <strong>Archivos adjuntos</strong> (solo se admiten archivos de imagen).</li>
+                <li>Guarde el test con el botón <strong>Guardar</strong>.</li>
+            </ol>
+
+            <h4>Generar y descargar el informe de un test</h4>
+            <ol>
+                <li>En el Rorschach, los informes se generan en la pestaña <strong>Informes</strong>; en los tests de dibujo y manuales, los campos de informe están directamente en la pantalla del test. La descarga del informe está disponible en los tres tests.</li>
+                <li>Elija el tipo de informe que desea generar: <strong>Informe de la IA</strong>, <strong>Informe del terapeuta</strong> o <strong>Informe híbrido</strong>.</li>
+                <li>Toque el botón <strong>Descargar informe</strong>.</li>
+                <li>En la ventana que se abre, elija las secciones del informe que desea incluir y el formato (<strong>Word</strong> o <strong>PDF</strong>).</li>
+                <li>A continuación se abre la ventana <strong>Exportación: seguridad</strong>. Si elige <strong>🔒 Cifrar</strong>, descargará un archivo ZIP protegido con la contraseña que defina; esa contraseña es necesaria para abrir el archivo, y el ZIP se abre con las herramientas propias de Windows y macOS, sin programas adicionales. Si elige <strong>Descargar sin cifrar</strong>, se muestra un aviso; si lo confirma, el archivo se guarda sin protección.</li>
+                <li>El informe se descarga en su dispositivo.</li>
+            </ol>
+
+            <h4>Ver los tests aplicados</h4>
+            <ol>
+                <li>En la pantalla <strong>Módulo de tests</strong>, vaya a la pestaña <strong>Tests aplicados</strong>.</li>
+                <li>Todos los tests se listan por fecha, nombre del consultante y tipo de test.</li>
+                <li>Tocando un test puede ver sus detalles, editarlo o descargar su informe.</li>
+                <li>Para eliminar un test, toque el botón <strong>Eliminar</strong> en la pantalla de detalles.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 8. Funciones de inteligencia artificial -->
+    <details class="guide-section">
+        <summary>Funciones de inteligencia artificial</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Gracias a la integración con la API de Google Gemini, PsyAgenda puede analizar sus notas de sesión, evaluar tests y generar informes de consultantes. Para usar estas funciones se necesita una clave de API.</p>
+
+            <h4>Configurar la clave de API</h4>
+            <ol>
+                <li>Vaya a <strong>Configuración > Gestión de API</strong>.</li>
+                <li>Pegue su clave de API de Google Gemini en el campo <strong>Clave de API</strong>.</li>
+                <li>Pulse el botón <strong>Guardar</strong>. Antes de guardarse, la clave se verifica con Google: si es válida, se guarda cifrada y el texto de estado de la parte superior se pone en verde. Si no es válida, no se guarda, se muestra un aviso y permanece en el campo para que pueda corregirla. Si no hay conexión a internet, la clave se guarda, pero se indica que no se pudo verificar.</li>
+                <li>Para obtener información detallada sobre cómo conseguir una clave de API, toque el <strong>icono de información</strong> del campo.</li>
+            </ol>
+
+            <h4>Análisis de las notas de sesión</h4>
+            <ol>
+                <li>Escriba sus notas en el área <strong>Notas de la sesión</strong> de la ventana de la cita.</li>
+                <li>Toque el botón azul <strong>Evaluación con IA</strong>, junto al área de notas.</li>
+                <li>Primero, en la ventana <strong>Confirmación del análisis con IA</strong>, pulse <strong>Aceptar y continuar</strong>. Después, en la ventana <strong>Configuración del análisis con IA</strong>, indique la <strong>edad y el género</strong> (obligatorios), el enfoque, el nivel de detalle y el modelo, y pulse <strong>Evaluar</strong>.</li>
+                <li>Cuando el análisis termina, el resultado se muestra en el área <strong>Observaciones de la IA</strong>. Para que se conserve, guarde la cita con <strong>Guardar</strong>.</li>
+                <li>Con el botón <strong>Evaluación con IA</strong> junto al título <strong>Notas para la próxima sesión</strong> puede obtener sugerencias basadas en las notas de la sesión actual y en las observaciones de la IA; las sugerencias se escriben en el área <strong>Notas para la próxima sesión</strong>.</li>
+            </ol>
+
+            <h4>Análisis general del consultante con IA</h4>
+            <ol>
+                <li>Abra la pantalla de detalles del consultante.</li>
+                <li>Toque el botón <strong>Análisis general del consultante</strong>, situado sobre la lista del historial de sesiones.</li>
+                <li>Primero, en la ventana <strong>Confirmación del análisis con IA</strong>, pulse <strong>Aceptar y continuar</strong>. Después, en la ventana <strong>Configuración del análisis con IA</strong>, indique la edad y el género (obligatorios), el enfoque, el nivel de detalle y el modelo, y pulse <strong>Evaluar</strong>.</li>
+                <li>La IA analiza todas las notas de sesión y los resultados de tests del consultante para generar un informe de evaluación completo.</li>
+                <li>Puede guardar el informe generado, volver a generarlo o verlo en modo de lectura.</li>
+            </ol>
+
+            <h4>Evaluación de tests con IA</h4>
+            <ol>
+                <li>En la pantalla del test de Rorschach o del test de dibujo, toque el botón <strong>Obtener evaluación</strong> de cada lámina o página.</li>
+                <li>En la ventana que se abre, elija el nivel de detalle y el <strong>modelo</strong>. En el Rorschach, indique además el <strong>método de análisis</strong> (Exner CS, etc.); en el test de dibujo esta opción no aparece.</li>
+                <li>La IA analiza la respuesta o el dibujo del consultante y escribe el resultado en el campo correspondiente.</li>
+                <li>Con el botón <strong>Mejorar el texto</strong> situado junto a un campo de notas o informe del terapeuta que tenga contenido, puede pedir a la IA que corrija y enriquezca su texto.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 9. Copia de seguridad y restauración -->
+    <details class="guide-section">
+        <summary>Copia de seguridad y restauración</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Puede guardar sus datos como un archivo de copia de seguridad cifrado y restaurarlos cuando quiera.</p>
+
+            <h4>Crear una copia de seguridad</h4>
+            <ol>
+                <li>Vaya a <strong>Configuración > Copia de seguridad</strong>.</li>
+                <li>Toque el botón <strong>Crear copia de seguridad</strong>.</li>
+                <li>En la ventana <strong>Cifrar la copia de seguridad</strong> que se abre, defina una contraseña, repítala en el campo inferior y pulse el botón <strong>Cifrar y crear copia</strong>.</li>
+                <li><strong>Anote esta contraseña en un lugar seguro.</strong> El archivo de copia de seguridad se cifra por completo con esta contraseña; si la olvida, no podrá volver a acceder a los datos de esa copia.</li>
+                <li>Mientras se prepara la copia se muestra una ventana de progreso. No cierre la aplicación durante ese tiempo.</li>
+                <li>Dónde se guarda la copia depende de su dispositivo:<br><strong>Windows / macOS:</strong> se abre la ventana de guardado; elija la carpeta y pulse <strong>Guardar</strong>. Si cancela esta ventana, la copia no se crea.<br><strong>Android:</strong> la copia se guarda directamente en la carpeta <strong>Descargas</strong> de su dispositivo.<br><strong>iPhone / iPad:</strong> la copia se guarda primero en la carpeta propia de la aplicación; inmediatamente después se abre la hoja de compartir, que le permite guardar el archivo en la ubicación que elija (iCloud Drive, memoria del teléfono, etc.) o enviarlo adonde desee.</li>
+                <li><strong>En iPhone / iPad no omita este último paso:</strong> envíe una copia del archivo fuera de la aplicación desde la hoja de compartir — <strong>Guardar en Archivos</strong>, AirDrop, WhatsApp, Mail o iCloud Drive. Si cierra esa hoja, la copia queda solo dentro de la aplicación, y al eliminar la aplicación se elimina también la copia.</li>
+            </ol>
+
+            <h4>Restaurar desde una copia de seguridad</h4>
+            <ol>
+                <li>Vaya a <strong>Configuración > Copia de seguridad</strong>.</li>
+                <li>Toque el botón <strong>Restaurar copia de seguridad</strong>.</li>
+                <li>Elija en su dispositivo el archivo <strong>.thnbak</strong> creado anteriormente.</li>
+                <li>Escriba la contraseña que definió al crear la copia.</li>
+                <li>Se muestra la barra de progreso. Al terminar, sus datos quedan restaurados. La configuración de sincronización se conserva.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 10. Sincronización con Google Drive -->
+    <details class="guide-section">
+        <summary>Sincronización con Google Drive</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Puede sincronizar sus datos de forma cifrada entre varios dispositivos a través de Google Drive.</p>
+
+            <h4>Conectar una cuenta de Google</h4>
+            <ol>
+                <li>Vaya a <strong>Configuración > Sincronización</strong>.</li>
+                <li>Toque el botón <strong>Conectar con Google</strong>.</li>
+                <li>Acceda con su cuenta de Google y conceda los permisos necesarios.</li>
+                <li>Cuando la conexión se establece, se muestra el correo electrónico de la cuenta.</li>
+            </ol>
+
+            <h4>Definir la contraseña de sincronización</h4>
+            <ol>
+                <li>La pantalla que aparece tras conectar su cuenta de Google depende de si esa cuenta ya tiene datos sincronizados: en <strong>su primer dispositivo</strong> aparece la pantalla para definir la contraseña; en <strong>el segundo y los siguientes</strong> aparecen el campo "Su contraseña actual..." y el botón <strong>Conectar</strong>. En el segundo dispositivo, escriba la misma contraseña que en el otro dispositivo y pulse <strong>Conectar</strong>; si no la recuerda, responda a su pregunta de seguridad mediante el enlace <strong>Olvidé mi contraseña</strong>.</li>
+                <li>Escriba su contraseña de sincronización y repítala en el campo inferior. No hay una longitud obligatoria, pero como todos sus datos se cifran con esta contraseña, le recomendamos elegir una difícil de adivinar, de al menos 8 caracteres.</li>
+                <li>Más abajo, complete la sección <strong>Pregunta de recuperación de contraseña</strong>: una pregunta de seguridad, su respuesta y la repetición de la respuesta. Estos campos son obligatorios: si los deja vacíos, la sincronización no se inicia. Después pulse el botón <strong>Iniciar sincronización</strong>; la primera sincronización comienza automáticamente.</li>
+                <li><strong>Importante:</strong> no olvide esta contraseña. Todos sus datos se cifran con ella. Si la pierde, no será posible acceder a los datos.</li>
+            </ol>
+
+            <h4>Cambiar la contraseña de sincronización</h4>
+            <ol>
+                <li>En <strong>Configuración > Sincronización</strong>, toque el botón <strong>Cambiar contraseña</strong>.</li>
+                <li>Escriba su contraseña de sincronización actual en el campo <strong>Contraseña actual</strong>. Si no la recuerda, toque el enlace <strong>Olvidé mi contraseña</strong> y responda a su pregunta de seguridad.</li>
+                <li>Escriba la nueva contraseña y confírmela repitiéndola.</li>
+                <li>Pulse el botón <strong>Guardar</strong>; sus datos se vuelven a cifrar con la nueva contraseña y se suben a Drive.</li>
+                <li><strong>Importante:</strong> también deberá escribir la nueva contraseña en todos sus demás dispositivos.</li>
+            </ol>
+
+            <h4>Sincronización manual</h4>
+            <ol>
+                <li>Vaya a <strong>Configuración > Sincronización</strong>.</li>
+                <li>Toque el botón <strong>Sincronizar ahora</strong>.</li>
+                <li>Se muestra la barra de progreso. Cuando termina la sincronización, se actualiza la hora de la última sincronización.</li>
+                <li>En caso de problemas puede usar los botones <strong>Forzar subida</strong> o <strong>Forzar descarga</strong>. <strong>Atención:</strong> Forzar subida sustituye todos los datos de Drive por los de este dispositivo; Forzar descarga sustituye todos los datos de este dispositivo por los de Drive. En ambos casos, lea la ventana de confirmación que aparece antes de aceptarla; si no sabe con certeza qué lado tiene los datos más recientes, no use estos botones.</li>
+            </ol>
+
+            <h4>Ver los dispositivos conectados</h4>
+            <ol>
+                <li>En <strong>Configuración > Sincronización</strong> se muestra la lista <strong>Dispositivos conectados</strong>.</li>
+                <li>De cada dispositivo se muestran el nombre (p. ej., iPhone, iPad, el modelo de Android o el nombre del equipo), el icono de tipo y la última conexión.</li>
+                <li>Su dispositivo actual se distingue con una etiqueta.</li>
+            </ol>
+
+            <h4>Desactivar la sincronización</h4>
+            <ol>
+                <li>En <strong>Configuración > Sincronización</strong>, toque el botón <strong>Desconectar</strong>.</li>
+                <li>En la ventana de confirmación, pulse de nuevo el botón <strong>Desconectar</strong>.</li>
+                <li>La sincronización se desactiva. Sus datos en el dispositivo se conservan, pero ya no se sincronizan con los demás dispositivos.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 11. Configuración de seguridad -->
+    <details class="guide-section">
+        <summary>Configuración de seguridad</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">Con el bloqueo de la aplicación y las opciones de contraseña puede proteger sus datos frente a accesos no autorizados. Todas las opciones de esta sección son <strong>específicas de cada dispositivo</strong>: su contraseña, su pregunta de seguridad, el tiempo de bloqueo automático y el acceso biométrico no pasan a otros dispositivos mediante la sincronización. En cada dispositivo define una contraseña propia, y un cambio en uno de ellos no afecta a los demás.</p>
+
+            <h4>Configurar el bloqueo de la aplicación</h4>
+            <ol>
+                <li><strong>En la configuración inicial de la aplicación</strong>, la pantalla para definir la contraseña aparece automáticamente; este paso no se puede omitir.</li>
+                <li>El bloqueo de la aplicación no se activa con una opción aparte: la configuración de la contraseña se realiza de forma obligatoria en la primera apertura. <strong>Configuración > Seguridad</strong> solo contiene las opciones del bloqueo existente.</li>
+                <li>La configuración tiene dos pasos. En el primero, escriba su contraseña, repítala en el campo inferior y pulse el botón <strong>Continuar</strong>.</li>
+                <li>En el segundo paso, escriba una <strong>pregunta de seguridad</strong>, su respuesta y la repetición de la respuesta, y pulse el botón <strong>Finalizar</strong>. Estos tres campos son obligatorios y no pueden quedar vacíos: si olvida su contraseña, esta pregunta es la única vía de recuperación.</li>
+                <li>Elija el <strong>Tiempo de inactividad</strong> en <strong>Bloqueo automático</strong> para definir cuánto tiempo sin actividad debe pasar para que la aplicación se bloquee: Nunca, 30 segundos, 1, 5, 15, 30 minutos o 1 hora.</li>
+                <li>Si desea que se pida la contraseña cada vez que la aplicación pasa a segundo plano y vuelve a abrirse, active la opción <strong>Bloquear al volver del segundo plano</strong> (desactivada de forma predeterminada).</li>
+                <li>Si su dispositivo lo admite, active el <strong>Acceso biométrico</strong> para desbloquear rápidamente con la huella, el rostro o el PIN del dispositivo; al activarlo se le pedirá su contraseña actual.</li>
+            </ol>
+
+            <h4>Desactivar el bloqueo de la aplicación</h4>
+            <ol>
+                <li>En <strong>Configuración > Seguridad</strong>, active la opción <strong>Confiar en este dispositivo</strong>.</li>
+                <li>Confirme el aviso que aparece y escriba su contraseña actual.</li>
+                <li>En este dispositivo ya no se pedirá la contraseña al abrir la aplicación ni tras un período de inactividad. El nivel de seguridad disminuye; use esta opción solo en dispositivos que sean exclusivamente suyos y a los que nadie más tenga acceso.</li>
+            </ol>
+
+            <h4>Cambiar la contraseña</h4>
+            <ol>
+                <li>Vaya a <strong>Configuración > Seguridad</strong>.</li>
+                <li>Toque el botón <strong>Cambiar contraseña</strong>.</li>
+                <li>Escriba su contraseña actual y, a continuación, escriba la nueva y confírmela.</li>
+            </ol>
+
+            <h4>Si olvida la contraseña</h4>
+            <ol>
+                <li>En la pantalla de bloqueo de la aplicación, toque el enlace <strong>¿Olvidó su contraseña?</strong></li>
+                <li>Se muestra su pregunta de seguridad. Escriba la respuesta correcta.</li>
+                <li>Si la verificación es correcta, se le pedirá que defina una nueva contraseña. Si hizo la recuperación desde la pantalla de bloqueo <strong>al abrir</strong> la aplicación, inmediatamente después se abre la pantalla de configuración y, además de la nueva contraseña, deberá definir <strong>una nueva pregunta de seguridad con su respuesta</strong>. Si hizo la recuperación desde la pantalla de bloqueo que aparece por inactividad con la aplicación abierta, solo se le pide la nueva contraseña; su pregunta de seguridad se mantiene.</li>
+                <li><strong>Si olvida a la vez su contraseña y la respuesta de su pregunta de seguridad</strong> (y el acceso biométrico no está activado en ese dispositivo), no queda ninguna forma de acceder a sus datos. No es una carencia, sino una consecuencia de la arquitectura de seguridad de la aplicación: su base de datos se cifra con una clave que solo puede abrirse con su contraseña o con su respuesta de seguridad; ni nosotros ni nadie tiene una contraseña maestra, una puerta trasera ni una copia de recuperación.</li>
+                <li>En ese caso solo queda una opción: el paso <strong>eliminar los datos y empezar de cero</strong> de la pantalla de bloqueo (para evitar pulsaciones accidentales, se le pide escribir a mano una frase de confirmación). Si sus datos están en la sincronización con Google Drive o en un archivo de copia de seguridad, se recuperan desde ahí; <strong>si no tiene ninguna de las dos cosas, los datos se pierden de forma permanente.</strong> Por eso le recomendamos mantener activada la sincronización o hacer copias de seguridad periódicas.</li>
+            </ol>
+        </div>
+    </details>
+
+    <!-- 12. Notificaciones y recordatorios -->
+    <details class="guide-section">
+        <summary>Notificaciones y recordatorios</summary>
+        <div class="guide-section-content">
+            <p class="guide-intro">En esta sección puede gestionar los recordatorios de sesión, los recordatorios con alarma y los mensajes informativos que se envían a sus consultantes.</p>
+
+            <h4>Notificaciones de recordatorio de sesión (dispositivos móviles)</h4>
+            <ol>
+                <li>En <strong>Configuración &gt; Notificaciones</strong>, active <strong>Recordatorios de sesión</strong>. Si el dispositivo pide permiso para las notificaciones, concédalo; sin el permiso, el interruptor permanece desactivado.</li>
+                <li>Con <strong>Momento de la notificación</strong>, elija con cuánta antelación llegará la notificación: <strong>5, 10, 15 o 30 minutos</strong>, o <strong>1, 2, 4, 8 o 24 horas</strong> antes (15 minutos de forma predeterminada).</li>
+                <li>Con el interruptor activado, la notificación llega automáticamente para <strong>todas las sesiones</strong> futuras; no es necesario elegir sesiones. Solo se incluyen las citas de tipo sesión. Es una notificación estándar del dispositivo, de una sola vez; si desea un sonido que suene hasta que usted lo detenga, use los <strong>Recordatorios con alarma</strong>.</li>
+                <li>Por privacidad, el nombre del consultante <strong>no se muestra</strong> de forma predeterminada en el título de la notificación; si desea verlo, desactive la opción <strong>Ocultar el nombre del consultante en la notificación</strong>. Estas opciones solo están disponibles en Android y iOS.</li>
+            </ol>
+
+            <h4>Configuración de alarmas (dispositivos móviles)</h4>
+            <ol>
+                <li>Primero, en <strong>Configuración &gt; Notificaciones</strong>, active <strong>Recordatorios con alarma</strong> y establezca <strong>Comportamiento de la alarma</strong> en <strong>Solo sesiones seleccionadas</strong>; después, en la ventana de la cita, marque la casilla <strong>Configurar una alarma especial para esta sesión</strong>.</li>
+                <li>Elija con cuánta antelación debe sonar la alarma: <strong>5, 10, 15 o 30 minutos</strong>, o <strong>1, 2, 4, 8 o 24 horas</strong> antes.</li>
+                <li>En las sesiones con alarma configurada aparece un icono de campana junto a la tarjeta de la sesión en la <strong>pantalla de inicio</strong>.</li>
+                <li>El <strong>Tiempo de alarma predeterminado</strong> de <strong>Configuración > Notificaciones</strong> define la antelación que se usará cuando no elija una para una sesión concreta; con <strong>Comportamiento de la alarma</strong> en <strong>Todas las sesiones</strong>, todas las sesiones suenan con esa antelación.</li>
+            </ol>
+
+            <h4>Mensaje informativo al consultante</h4>
+            <ol>
+                <li>El interruptor <strong>Mensajes informativos para consultantes</strong> de <strong>Configuración > Notificaciones</strong> determina cuándo se abre la ventana de información. <strong>Si está activado:</strong> cuando crea una cita con consultante, cambia su fecha u hora, convierte una cita individual en una serie, extiende la serie o elimina la cita, la ventana se abre automáticamente, sin que tenga que marcar ninguna casilla. <strong>Si está desactivado:</strong> no se abre ninguna ventana.</li>
+                <li>Con el interruptor desactivado también puede enviar mensajes: basta con marcar la casilla <strong>Notificar al consultante</strong> en la ventana de la cita y guardar. Esta casilla prevalece sobre el interruptor, es decir, activa el mensaje manualmente para una sola cita. (Con el interruptor activado, la ventana se abre de todos modos, así que no es necesario marcar la casilla.)</li>
+                <li>Esté el interruptor activado o no, <strong>el mensaje nunca se envía por sí solo.</strong> Lo único automático es que se abra la ventana; la decisión de enviar es siempre suya.</li>
+                <li>En la ventana <strong>Notificar al consultante</strong> puede editar el mensaje en la vista previa y después elegir <strong>Enviar por WhatsApp</strong>, <strong>Enviar por SMS</strong> o <strong>Enviar por correo electrónico</strong>; el mensaje se abre ya escrito en la aplicación correspondiente y usted pulsa el botón de enviar. Si el teléfono o el correo electrónico del consultante no están registrados, la aplicación se los pide en ese momento. Si no desea enviarlo, toque <strong>No enviar</strong>.</li>
+                <li>Al abrir una cita de hoy o futura para la que ya se envió una notificación, aparece el botón <strong>Enviar recordatorio</strong>. <strong>Los recordatorios nunca se activan por sí solos</strong>, ni siquiera con los mensajes automáticos activados. Si desea que el consultante reciba un recordatorio adicional, debe pulsar este botón.</li>
+                <li>En una cita recurrente puede elegir el alcance de la notificación: <strong>Solo para esta sesión</strong> o <strong>Para toda la serie/programa</strong>.</li>
+            </ol>
+        </div>
+    </details>
+<!-- GENERATED:GUIDE-END -->
+        </article>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <span>&copy; 2026 PsyAgenda. Todos los derechos reservados.</span>
+        <nav>
+            <a href="privacy-es.html">Política de privacidad</a>
+            <a href="terms-es.html">Términos de uso</a>
+            <a href="faq-es.html">FAQ</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+(function () {
+    /* Dil menüsü: aramalı açılır liste. Diller HTML'deki listeden okunur; JS dil bilgisi taşımaz. */
+    var menu = document.getElementById('lang-menu'), btn = document.getElementById('lang-btn');
+    if (!menu || !btn) return;
+    var input = document.getElementById('lang-search'), empty = document.getElementById('lang-empty');
+    var items = Array.prototype.slice.call(document.getElementById('lang-list').children);
+    var norm = function (s) { return s.toLowerCase().replace(/ı/g, 'i').normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
+    var visible = function () { return items.filter(function (li) { return !li.hidden; }).map(function (li) { return li.firstElementChild; }); };
+    var filter = function () {
+        var q = norm(input.value.trim()), n = 0;
+        items.forEach(function (li) {
+            var a = li.firstElementChild, hit = !q || norm(a.textContent).indexOf(q) !== -1 || a.getAttribute('lang').indexOf(q) === 0;
+            li.hidden = !hit; if (hit) n++;
+        });
+        empty.hidden = n > 0;
+    };
+    var setOpen = function (open) {
+        menu.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { input.value = ''; filter(); setTimeout(function () { input.focus(); }, 0); }
+    };
+    btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+    input.addEventListener('input', filter);
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) setOpen(false); });
+    menu.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { setOpen(false); btn.focus(); return; }
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            var vis = visible(); if (!vis.length) return;
+            var i = vis.indexOf(document.activeElement), next = e.key === 'ArrowDown' ? (i + 1) % vis.length : (i <= 0 ? vis.length - 1 : i - 1);
+            vis[next].focus(); e.preventDefault();
+        } else if (e.key === 'Enter' && e.target === input) { var v = visible(); if (v.length) v[0].click(); }
+    });
+})();
+(function () {
+    /* Özellik kartları: ilk cümle görünür, gerisi tıklayınca açılır. JS yoksa hepsi açık kalır. */
+    var grid = document.querySelector('.feature-grid');
+    if (!grid) return;
+    grid.classList.add('js');
+    Array.prototype.forEach.call(grid.querySelectorAll('.feature-card'), function (card) {
+        var btn = card.querySelector('.acc-btn');
+        if (!btn) return;
+        var set = function (open) {
+            card.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.firstChild.nodeValue = open ? btn.dataset.less : btn.dataset.more;
+        };
+        card.addEventListener('click', function (e) {
+            if (e.target.closest('a')) return;
+            if (window.getSelection && String(window.getSelection()).length) return; /* metin seçerken açma */
+            set(!card.classList.contains('open'));
+        });
+    });
+})();
+(function () {
+    /* Dar ekranda gezinme şeridi yana kayar: aktif sekmeyi görünür alana getir, sağda devam varsa kenarı soldur. */
+    var nav = document.querySelector('.mainnav');
+    if (nav) {
+        var more = function () { nav.classList.toggle('more', nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 2); };
+        var act = nav.querySelector('a.active');
+        var reveal = function () { if (act && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, act.offsetLeft - 16); more(); };
+        nav.addEventListener('scroll', more, { passive: true }); window.addEventListener('resize', more); reveal();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(reveal); /* yazı tipi gelince genişlikler değişir */
+    }
+    var bar = document.getElementById('topbar');
+    if (bar) {
+        var onScroll = function () { bar.classList.toggle('stuck', window.scrollY > 8); };
+        onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    }
+    var rise = document.querySelectorAll('.rise');
+    if ('IntersectionObserver' in window && rise.length) {
+        var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        rise.forEach(function (el) { io.observe(el); });
+        /* Emniyet: gözlemci ne olursa olsun içerik 1.2 sn sonra görünür olur. */
+        setTimeout(function () { rise.forEach(function (el) { el.classList.add('in'); }); }, 1200);
+    } else { rise.forEach(function (el) { el.classList.add('in'); }); }
+
+    /* Bölüm listesi sayfadaki başlıklardan üretilir — içerik iki yere yazılmaz. */
+    var doc = document.querySelector('.doc'), list = document.getElementById('toc-list');
+    if (!doc || !list) return;
+    var sel = doc.dataset.toc || 'h2';
+    var heads = doc.querySelectorAll(sel);
+    if (heads.length < 3) { ['.toc-title', '.toc-list'].forEach(function (c) { var t = document.querySelector(c); if (t) t.hidden = true; }); return; }
+    var links = [];
+    Array.prototype.forEach.call(heads, function (h, i) {
+        var target = h.tagName === 'SUMMARY' ? h.parentNode : h;
+        if (!target.id) target.id = 'b' + (i + 1);
+        var a = document.createElement('a'); a.href = '#' + target.id; a.textContent = h.textContent.trim();
+        if (h.tagName === 'SUMMARY') a.addEventListener('click', function () { h.parentNode.open = true; });
+        list.appendChild(a); links.push(a);
+    });
+    var tick = false;
+    var spy = function () {
+        tick = false; var best = 0;
+        for (var i = 0; i < heads.length; i++) { if (heads[i].closest('[hidden]')) continue; if (heads[i].getBoundingClientRect().top <= 120) best = i; }
+        links.forEach(function (a, i) { a.classList.toggle('current', i === best); });
+    };
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+    spy();
+    /* Arama filtreledikçe bölüm listesi de daralır. */
+    document.addEventListener('docsearch', function () {
+        links.forEach(function (a, i) { var target = heads[i].tagName === 'SUMMARY' ? heads[i].parentNode : heads[i]; a.hidden = !!target.closest('[hidden]'); });
+        spy();
+    });
+})();
+(function () {
+    /* Sayfa içi arama — uygulamadaki "Bu sayfada ara" ile aynı davranış: eşleşen bölümler açılır ve
+       gösterilir, eşleşmeyenler gizlenir, kelimeler işaretlenir. Türkçe harflere ve aksana duyarsız. */
+    var input = document.getElementById('doc-search'), art = document.querySelector('article.doc');
+    if (!input || !art) return;
+    var clearBtn = document.getElementById('doc-search-clear'), status = document.getElementById('doc-search-status');
+    var fold = function (s) {
+        var out = '';
+        for (var i = 0; i < s.length; i++) {
+            var c = s[i];
+            if (c === 'ı' || c === 'İ') { out += 'i'; continue; }
+            var b = c.normalize('NFD')[0] || c, l = b.toLowerCase();
+            out += l.length === 1 ? l : b;
+        }
+        return out;
+    };
+    /* Birimler: h2 bir grup açar; her <details> kendi başına birim; h2 altındaki düz metin tek birim. */
+    var groups = [], cur = null;
+    Array.prototype.forEach.call(art.children, function (el) {
+        if (el.tagName === 'H2') { cur = { head: el, items: [] }; groups.push(cur); return; }
+        if (!cur) { cur = { head: null, items: [] }; groups.push(cur); }
+        if (el.tagName === 'DETAILS') { cur.items.push({ nodes: [el], det: el }); return; }
+        var last = cur.items[cur.items.length - 1];
+        if (!last || last.det) { last = { nodes: [], det: null }; cur.items.push(last); }
+        last.nodes.push(el);
+    });
+    var saved = null; /* arama başlamadan önceki açık/kapalı durumu */
+    var textOf = function (nodes) { return nodes.map(function (n) { return n.textContent; }).join(' '); };
+    var unmark = function () {
+        Array.prototype.forEach.call(art.querySelectorAll('mark.hit'), function (m) { m.replaceWith(m.textContent); });
+        art.normalize();
+    };
+    var mark = function (root, q) {
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), nodes = [], n = 0;
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach(function (t) {
+            var v = t.nodeValue, f = fold(v), i = f.indexOf(q);
+            if (i < 0) return;
+            var frag = document.createDocumentFragment(), last = 0;
+            while (i >= 0) {
+                if (i > last) frag.appendChild(document.createTextNode(v.slice(last, i)));
+                var m = document.createElement('mark'); m.className = 'hit'; m.textContent = v.slice(i, i + q.length); frag.appendChild(m);
+                last = i + q.length; n++; i = f.indexOf(q, last);
+            }
+            if (last < v.length) frag.appendChild(document.createTextNode(v.slice(last)));
+            t.parentNode.replaceChild(frag, t);
+        });
+        return n;
+    };
+    var setHidden = function (nodes, h) { nodes.forEach(function (n) { n.hidden = h; }); };
+    var reset = function () {
+        unmark();
+        groups.forEach(function (g) { if (g.head) g.head.hidden = false; g.items.forEach(function (it) { setHidden(it.nodes, false); }); });
+        if (saved) { saved.forEach(function (o, d) { d.open = o; }); saved = null; }
+        Array.prototype.forEach.call(art.querySelectorAll('h2.first-visible'), function (h) { h.classList.remove('first-visible'); });
+        status.textContent = ''; clearBtn.hidden = true;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var run = function () {
+        var q = fold(input.value.trim());
+        clearBtn.hidden = !input.value;
+        if (q.length < 2) { if (saved) reset(); else { status.textContent = ''; } return; }
+        if (!saved) { saved = new Map(); Array.prototype.forEach.call(art.querySelectorAll('details'), function (d) { saved.set(d, d.open); }); }
+        unmark();
+        var hits = 0, sections = 0;
+        groups.forEach(function (g) {
+            var whole = g.head && g.items.length && !g.items[0].det; /* gizlilik/koşullar: başlık + metin tek birim */
+            var any = false;
+            if (whole) {
+                var all = [g.head].concat(g.items[0].nodes);
+                any = fold(textOf(all)).indexOf(q) !== -1;
+                g.head.hidden = !any; setHidden(g.items[0].nodes, !any);
+                if (any) { sections++; all.forEach(function (n) { hits += mark(n, q); }); }
+            } else {
+                g.items.forEach(function (it) {
+                    var ok = fold(textOf(it.nodes)).indexOf(q) !== -1;
+                    setHidden(it.nodes, !ok);
+                    if (ok) { any = true; sections++; if (it.det) it.det.open = true; it.nodes.forEach(function (n) { hits += mark(n, q); }); }
+                });
+                if (g.head) g.head.hidden = !any;
+            }
+        });
+        var firstSeen = false;
+        Array.prototype.forEach.call(art.querySelectorAll(':scope > h2'), function (h) { var f = !firstSeen && !h.hidden; h.classList.toggle('first-visible', f); if (f) firstSeen = true; });
+        status.textContent = hits ? status.dataset.count.replace('{n}', hits).replace('{m}', sections).replace('{es}', hits === 1 ? '' : 'es').replace('{s}', sections === 1 ? '' : 's') : status.dataset.none;
+        document.dispatchEvent(new Event('docsearch'));
+    };
+    var timer = null;
+    input.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(run, 220); });
+    input.addEventListener('keydown', function (e) { if (e.key === 'Escape') { input.value = ''; reset(); } });
+    clearBtn.addEventListener('click', function () { input.value = ''; reset(); input.focus(); });
+})();
+</script>
+</body>
+</html>
