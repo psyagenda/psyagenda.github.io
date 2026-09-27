@@ -18,7 +18,7 @@ HOME_SRC = os.path.join(SRC, '_src')   # anasayfa kaynakları (elle yazılan)
 # Dosya adı kuralı: anasayfa TR'de index.html (tarihsel), diğer dillerde index-<dil>.html;
 # belge sayfaları her dilde <slug>-<dil>.html. Tek yerden türetilir ki dil eklemek
 # NAV/FOOT/hreflang/dil-menüsünü elle güncellemeyi gerektirmesin.
-PAGES = ['home', 'guide', 'faq', 'terms', 'privacy']
+PAGES = ['home', 'guide', 'faq', 'terms', 'privacy', 'updates']
 
 def pfile(slug, lang):
     if slug == 'home':
@@ -37,6 +37,10 @@ PAGE_LABEL = {
     'privacy': {'tr':'Gizlilik Politikası','en':'Privacy Policy','es':'Política de privacidad',
                 'de':'Datenschutzerklärung','fr':'Politique de confidentialité',
                 'pt':'Política de Privacidade','it':'Informativa sulla privacy'},
+    # Uygulamadaki Hakkında > Güncellemeler (settings.about.updatesTitle) — 2026-09-27.
+    # İçerik scripts/generate-website-legal.mjs ile src/updates-changelog.json'dan üretilir.
+    'updates': {'tr':'Güncellemeler','en':'Updates','es':'Actualizaciones','de':'Aktualisierungen',
+                'fr':'Mises à jour','pt':'Atualizações','it':'Aggiornamenti'},
 }
 RIGHTS = {'tr':'Tüm hakları saklıdır.','en':'All rights reserved.','es':'Todos los derechos reservados.',
           'de':'Alle Rechte vorbehalten.','fr':'Tous droits réservés.','pt':'Todos os direitos reservados.',
@@ -535,7 +539,7 @@ def build_home(lang):
     return len(cards)
 
 SITEMAP_META = {'home': ('monthly', '1.0'), 'guide': ('monthly', '0.8'), 'faq': ('monthly', '0.8'),
-                'terms': ('yearly', '0.5'), 'privacy': ('yearly', '0.5')}
+                'terms': ('yearly', '0.5'), 'privacy': ('yearly', '0.5'), 'updates': ('monthly', '0.5')}
 
 def build_sitemap(lastmod):
     """sitemap.xml'i PAGES × LANGS'tan üretir — elle tutulan 10 satırlık liste 7 dilde 35 olur
@@ -561,12 +565,12 @@ def build_sitemap(lastmod):
     io.open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf-8').write(xml)
     return len(urls)
 
-TOC_SEL = {'privacy': 'h2', 'terms': 'h2', 'faq': 'h2.faq-group', 'guide': '.guide-section > summary'}
+TOC_SEL = {'privacy': 'h2', 'terms': 'h2', 'faq': 'h2.faq-group', 'guide': '.guide-section > summary', 'updates': 'h2'}
 
 os.makedirs(OUT, exist_ok=True)
 built, missing = [], []
 for lang, _ in LANGS:
-    for slug in ('privacy', 'terms', 'faq', 'guide'):
+    for slug in ('privacy', 'terms', 'faq', 'guide', 'updates'):
         # Kaynak yoksa ATLA: dil eklerken iskeletler kademeli açılıyor, tek eksik dosya
         # bütün üretimi durdurmasın.
         if not os.path.exists(os.path.join(SRC, pfile(slug, lang))):
