@@ -99,12 +99,18 @@ h1, h2, h3 { color: var(--head); }
   transition: border-color 0.25s var(--ease), background 0.25s var(--ease);
 }
 .topbar.stuck { border-bottom-color: var(--border-soft); }
-/* Çubuk sayfa başında geniş (80px), kaydırınca 64px'e iner; marka onunla birlikte küçülür.
-   Sabit konumlu olduğu için küçülme içeriği oynatmaz; yer tutucu (spacer) akıştaki boşluğu korur. */
-.topbar-spacer { height: 92px; }
-.topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 92px; transition: height 0.28s var(--ease); }
-.topbar.stuck .topbar-inner { height: 64px; }
-.brand { display: flex; align-items: center; gap: 14px; color: var(--head); transition: gap 0.28s var(--ease); }
+/* İKİ SATIR (PM, 2026-09-28): üstte marka + Dil, altta sayfa bağlantıları — telefondaki düzenin aynısı.
+   Tek satırda altı bağlantı, kenar boşluğu 112px'e çıkan geniş ekranlarda ve 1152px altında sığmayıp
+   ikinci satıra düşüyordu. Çubuk sabit; kaydırınca marka küçülür (134px → 98px), yer tutucu içerik
+   oynamasın diye başlangıç yüksekliğini korur. Yükseklik = 18 + 54 (logo) + 12 + 38 (bağlantı) + 12. */
+.topbar-spacer { height: 134px; }
+.topbar-inner {
+  position: relative; display: flex; flex-direction: column; align-items: stretch; gap: 12px;
+  padding-top: 18px; padding-bottom: 12px;
+  transition: padding 0.28s var(--ease), gap 0.28s var(--ease);
+}
+.topbar.stuck .topbar-inner { gap: 8px; padding-top: 10px; padding-bottom: 8px; }
+.brand { align-self: flex-start; display: flex; align-items: center; gap: 14px; color: var(--head); transition: gap 0.28s var(--ease); }
 .topbar.stuck .brand { gap: 10px; }
 .brand:hover { color: var(--head); }
 .brand img {
@@ -115,9 +121,16 @@ h1, h2, h3 { color: var(--head); }
 .topbar.stuck .brand img { width: 34px; height: 34px; border-radius: 9px; }
 .brand span { font-size: 28px; font-weight: 700; letter-spacing: -0.028em; transition: font-size 0.28s var(--ease); }
 .topbar.stuck .brand span { font-size: 20px; }
-.nav-right { display: flex; align-items: center; }
-.mainnav { display: flex; align-items: center; gap: 4px; font-size: 14px; flex-wrap: wrap; }
+.nav-right { display: flex; align-items: center; width: 100%; }
+/* Sığmazsa (dar ekran, uzun dilde) sararak bozulmaz: yatay kayar, sağ kenar solar (.more). */
+.mainnav {
+  position: relative; flex: 1; min-width: 0; display: flex; align-items: center; gap: 4px; font-size: 14px;
+  flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+}
+.mainnav::-webkit-scrollbar { display: none; }
+.mainnav.more { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); }
 .mainnav > a {
+  white-space: nowrap; flex-shrink: 0;
   color: var(--text); padding: 7px 13px; border-radius: var(--r);
   transition: color 0.16s var(--ease), background 0.16s var(--ease);
 }
@@ -125,7 +138,11 @@ h1, h2, h3 { color: var(--head); }
 .mainnav > a.active { color: #fff; font-weight: 500; background: var(--accent-deep); } /* uygulamadaki aktif sekme: bg-emerald-600 */
 
 /* Dil menüsü — aramalı açılır liste */
-.lang-menu { position: relative; flex-shrink: 0; margin-left: 10px; padding-left: 12px; border-left: 1px solid var(--border-soft); }
+.lang-menu {
+  position: absolute; top: 18px; right: var(--gut); height: 54px; display: flex; align-items: center;
+  transition: top 0.28s var(--ease), height 0.28s var(--ease);
+}
+.topbar.stuck .lang-menu { top: 10px; height: 34px; }
 .lang-btn {
   display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 9px 0 11px;
   border: 0; border-radius: var(--r); background: transparent; color: var(--text);
@@ -420,7 +437,7 @@ mark.hit { background: #fde047; color: #1e293b; padding: 0 2px; border-radius: 2
   .mainnav::-webkit-scrollbar { display: none; }
   .mainnav.more { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); }
   .mainnav > a { white-space: nowrap; flex-shrink: 0; padding: 6px 12px; }
-  .lang-menu { position: absolute; top: 16px; right: var(--gut); height: 40px; display: flex; align-items: center; margin-left: 0; padding-left: 0; border-left: 0; }
+  .topbar .lang-menu, .topbar.stuck .lang-menu { top: 16px; height: 40px; }
   .lang-btn { padding: 0 6px 0 8px; }
   .feature-grid { --stagger: 0px; }
   .feature-card { padding: 18px 20px 20px 40px; }
